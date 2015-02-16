@@ -11,8 +11,10 @@ Jouer avec Modules Cléopâtre
    fapachemodules
    fapachereverseproxy
    fapachevirtualhost
+   fapt
    faptana
    fautopilot
+   fbehat
    fcassandra
    fchgrp
 

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Composer &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="composer">
+<h1>Composer<a class="headerlink" href="#composer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Composer est un gestionnaire de dépendance niveau de l&#8217;application pour le langage de programmation PHP qui fournit un format standard pour la gestion des dépendances de logiciels PHP et les bibliothèques requises.</p>
+<p>Il vous permet de déclarer les bibliothèques dépendantes votre projet a besoin et il va les installer dans votre projet pour vous. Composer est multi-plate-forme et nous nous efforçons de le faire fonctionner aussi bien sur Windows, Linux et OSX.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de déterminer l&#8217;utilisation de module de compositeur. L&#8217;utilisateur viendra à connaître les différentes façons / format à exécuter ce module. Cette commande guide l&#8217;utilisateur final concernant les paramètres alternatifs et commande pour l&#8217;installation. Ci-dessous sont donnés la commande et la capture d&#8217;écran de la même.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra composer <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra composer <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to update Composer.
+
+ Composer, composer
+
+       - install
+       Installs the latest version of composer
+       example: cleopatra composer install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit installer le module de compositeur dans la machine, la commande ci-dessous donnée exécuter le processus d&#8217;installation.
+.. code-block:: bash</p>
+<blockquote>
+<div>cleopatra composer install</div></blockquote>
+<p>Lors de l&#8217;installation, le système demande le nom du répertoire, si vous veut mettre en place votre PATH, vous pouvez définir votre chemin. Définissez votre chemin doit être suivie par le symbole «/». Appuyez sur Entrée pour utiliser le chemin par défaut.</p>
+<p>&#8220;Quel est le répertoire des données du programme?&#8221; / Opt / compositeur &#8220;- utiliser cette fonction?</p>
+<p>Lors de l&#8217;installation, le système demande pour exécuter nom de répertoire, si vous veut mettre en place votre PATH, vous pouvez définir votre chemin. Définissez votre chemin doit être suivie par le symbole «/». Appuyez sur Entrée pour utiliser le chemin par défaut.</p>
+<p>&#8220;Quel est le répertoire programme de exécuteur Trouvé?&#8221; / Usr / bin &#8220;- Utilisez ce?&#8221;</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="20%" />
+<col width="19%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">Alternative Paramètre</th>
+<th class="head">option</th>
+<th class="head">commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cleopatra composer Install</td>
+<td>Composer , composer</td>
+<td>Y</td>
+<td>Le système démarre processus d&#8217;installation</td>
+</tr>
+<tr class="row-odd"><td>cleopatra composer Install</td>
+<td>Composer , composer</td>
+<td>N</td>
+<td>Système arrête processus d&#8217;installation|</td>
+</tr>
+</tbody>
+</table>
+<p>Est listé ci-dessous la capture d&#8217;écran pour la commande d&#8217;installation,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>cleopatra composer install
+Install Composer - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          Composer!          *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/composer&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;https://github.com/phpengine/composer-phar.git&#39;</span>  /tmp/composer/composerCloning into <span class="s1">&#39;/tmp/composer/composer&#39;</span>...
+remote: Counting objects: 6, <span class="k">done</span>.
+remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+cp: cannot create directory ‘/opt/composer’: Permission denied
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+chmod: cannot access ‘/opt/composer’: No such file or directory
+chmod: cannot access ‘/usr/bin/composer’: No such file or directory
+... All <span class="k">done</span>!
+************************************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+
+*************************************************
+
+
+Single App Installer:
+--------------------------------------------
+Composer: Success
+------------------------------
+Installer Finished
+**************************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Il installe les dépendances (bibliothèques) pour une application.</li>
+<li>Il permet également aux utilisateurs d&#8217;installer des applications PHP qui sont disponibles sur &#8220;Packagist&#8221; qui est son principal référentiel
+contenant les packages disponibles.</li>
+<li>Il fournit également des capacités de charge de l&#8217;automobile pour les bibliothèques qui spécifient des informations de chargement
+automatique pour faciliter l&#8217;utilisation de code tiers.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Composer</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fcomposer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, kevells.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
