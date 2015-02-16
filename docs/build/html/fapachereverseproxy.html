@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ApacheReverseProxyModules &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="next" title="ApacheVHostEditor" href="fapachevirtualhost.html" />
+    <link rel="prev" title="ApacheModules" href="fapachemodules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fapachevirtualhost.html" title="ApacheVHostEditor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fapachemodules.html" title="ApacheModules"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" accesskey="U">Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apachereverseproxymodules">
+<h1>ApacheReverseProxyModules<a class="headerlink" href="#apachereverseproxymodules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module vise à installer les fonctions de la bibliothèque. Lors de l&#8217;installation des fonctions de la bibliothèque, il va vérifier la disponibilité des fonctions de la bibliothèque déjà existants. Il aide à gérer et configurer les paramètres de l&#8217;application. L&#8217;utilisateur peut spécifier les valeurs par défaut pour les paramètres d&#8217;application.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Les guides de la commande d&#8217;aide l&#8217;utilisateur obtiennent au courant des usages, ainsi que les options et les actions qui peuvent être effectuées. Il énumère les aboutissants des paramètres alternatifs</p>
+<p>Le codage de faire usage de commande d&#8217;aide sous Apache Module proxy inverse, est donné comme suit</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheReverseProxyModules <span class="nb">help</span>
+</pre></div>
+</div>
+<p>la capture d&#8217;écran ci-dessous vous donne une représentation imagée d&#8217;utilisation de la commande d&#8217;aide.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp/# cleopatra ApacheReverseProxyModules <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>is part of Core and provides you  with a method by which you can configure Application Settings.
+You can configure default application settings, ie: mysql admin user, host, pass
+
+ApacheReverseProxyModules, apache-reverse-proxy-modules, apache-proxy-mods, apacheproxymodules, apache-lb-mods,
+apache-load-balancer-modules
+
+- install
+      Installs Load Balancer/Reverse Proxy Apache Modules
+      example: cleopatra apache-lb-mods install
+
+------------------------------
+End Help
+****************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Si l&#8217;utilisateur souhaite installer le module proxy apache inverse à leur système, ils peuvent saisir la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheReverseProxyModules install
+</pre></div>
+</div>
+</div>
+<div class="section" id="option">
+<h2>Option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="35%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">paramètre alternatif</th>
+<th class="head">requis</th>
+<th class="head">commentaire</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install ApacheReverse
+ProxyModules (Y/N)</td>
+<td>au lieu de Reverse Proxy Apache Module the
+user peut utiliser
+apache-reverse-proxy-modules,
+apache-proxy-mods, apacheproxymodules,
+apache-lb-mods, apache-load-balancer-modules</td>
+<td>Yes</td>
+<td>Si les entrées de l&#8217;utilisateur que Y,
+le module proxy inverse Apache sera
+installé.</td>
+</tr>
+<tr class="row-odd"><td>Install ApacheReverse
+ProxyModules (Y/N)</td>
+<td>au lieu de Reverse Proxy Apache Module the
+user peut utiliser
+apache-reverse-proxy-modules,
+apache-proxy-mods, apacheproxymodules,
+apache-lb-mods, apache-load-balancer-modules|</td>
+<td>No</td>
+<td>Si les entrées de l&#8217;utilisateur que le N,
+le processus se arrêter de l&#8217;installation</td>
+</tr>
+</tbody>
+</table>
+<p>Lors de l&#8217;installation des modules proxy inverse, il sera lit la liste des paquets, des informations d&#8217;état, construit l&#8217;arbre des dépendances. Si tous les paquets sont manquants, les nouveaux paquets seront installés. Explique la capture d&#8217;écran ci-dessous volonté le processus d&#8217;installation graphique.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#: cleopatra ApacheReverseProxyModules install
+Install Apache Rev. Proxy Modules? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Apache Proxy Mods!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ libapache2-mod-proxy-html
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">229</span> not upgraded.
+Need to get 1,464 B of archives.
+After this operation, 22.5 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/universe libapache2-mod-proxy-html amd64 1:2.4.7-1ubuntu4.1 <span class="o">[</span>1,464 B<span class="o">]</span>
+Fetched 1,464 B in 1s <span class="o">(</span>1,323 B/s<span class="o">)</span>
+Selecting previously unselected package libapache2-mod-proxy-html.
+<span class="o">(</span>Reading database ... <span class="m">181545</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libapache2-mod-proxy-html_1%3a2.4.7-1ubuntu4.1_amd64.deb ...
+Unpacking libapache2-mod-proxy-html <span class="o">(</span>1:2.4.7-1ubuntu4.1<span class="o">)</span> ...
+Setting up libapache2-mod-proxy-html <span class="o">(</span>1:2.4.7-1ubuntu4.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libapache2-mod-proxy-html from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libxml2-dev from the Packager Apt is already installed, so not installing
+Creating /tmp/cleopatra-temp-script-49127207421.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-49127207421.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-49127207421.sh Permissions
+Executing /tmp/cleopatra-temp-script-49127207421.sh
+Considering dependency proxy_balancer <span class="k">for</span> lbmethod_byrequests:
+Considering dependency proxy <span class="k">for</span> proxy_balancer:
+Enabling module proxy.
+Considering dependency <span class="nb">alias </span><span class="k">for</span> proxy_balancer:
+Module <span class="nb">alias </span>already enabled
+Considering dependency slotmem_shm <span class="k">for</span> proxy_balancer:
+Enabling module slotmem_shm.
+Enabling module proxy_balancer.
+Enabling module lbmethod_byrequests.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-49127207421.sh Removed
+Creating /tmp/cleopatra-temp-script-12740464083.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-12740464083.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-12740464083.sh Permissions
+Executing /tmp/cleopatra-temp-script-12740464083.sh
+Module proxy already enabled
+Temp File /tmp/cleopatra-temp-script-12740464083.sh Removed
+Creating /tmp/cleopatra-temp-script-61839737362.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-61839737362.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-61839737362.sh Permissions
+Executing /tmp/cleopatra-temp-script-61839737362.sh
+Considering dependency proxy <span class="k">for</span> proxy_http:
+Module proxy already enabled
+Enabling module proxy_http.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-61839737362.sh Removed
+Creating /tmp/cleopatra-temp-script-22752304452.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-22752304452.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-22752304452.sh Permissions
+Executing /tmp/cleopatra-temp-script-22752304452.sh
+ERROR: Module mod_proxy_http does not exist!
+Temp File /tmp/cleopatra-temp-script-22752304452.sh Removed
+Creating /tmp/cleopatra-temp-script-19250932602.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-19250932602.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-19250932602.sh Permissions
+Executing /tmp/cleopatra-temp-script-19250932602.sh
+Considering dependency proxy <span class="k">for</span> proxy_ftp:
+Module proxy already enabled
+Enabling module proxy_ftp.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-19250932602.sh Removed
+Creating /tmp/cleopatra-temp-script-38556602379.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-38556602379.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-38556602379.sh Permissions
+Executing /tmp/cleopatra-temp-script-38556602379.sh
+Considering dependency proxy <span class="k">for</span> proxy_connect:
+Module proxy already enabled
+Enabling module proxy_connect.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-38556602379.sh Removed
+Creating /tmp/cleopatra-temp-script-85272088847.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-85272088847.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-85272088847.sh Permissions
+Executing /tmp/cleopatra-temp-script-85272088847.sh
+Considering dependency proxy <span class="k">for</span> proxy_ajp:
+Module proxy already enabled
+Enabling module proxy_ajp.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-85272088847.sh Removed
+Creating /tmp/cleopatra-temp-script-31029043648.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-31029043648.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-31029043648.sh Permissions
+Executing /tmp/cleopatra-temp-script-31029043648.sh
+Considering dependency proxy <span class="k">for</span> proxy_wstunnel:
+Module proxy already enabled
+Enabling module proxy_wstunnel.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-31029043648.sh Removed
+Creating /tmp/cleopatra-temp-script-2400353229.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-2400353229.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-2400353229.sh Permissions
+Executing /tmp/cleopatra-temp-script-2400353229.sh
+Considering dependency proxy <span class="k">for</span> proxy_balancer:
+Module proxy already enabled
+Considering dependency <span class="nb">alias </span><span class="k">for</span> proxy_balancer:
+Module <span class="nb">alias </span>already enabled
+Considering dependency slotmem_shm <span class="k">for</span> proxy_balancer:
+Module slotmem_shm already enabled
+Module proxy_balancer already enabled
+Temp File /tmp/cleopatra-temp-script-2400353229.sh Removed
+Creating /tmp/cleopatra-temp-script-88564779807.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-88564779807.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-88564779807.sh Permissions
+Executing /tmp/cleopatra-temp-script-88564779807.sh
+Enabling module cache.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-88564779807.sh Removed
+Creating /tmp/cleopatra-temp-script-68936090528.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-68936090528.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-68936090528.sh Permissions
+Executing /tmp/cleopatra-temp-script-68936090528.sh
+Enabling module headers.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-68936090528.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting apache2 service
+Output of config <span class="nb">test </span>was:
+apache2: Syntax error on line <span class="m">214</span> of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/httpd.conf: No such file or dir ectory.
+Action <span class="s1">&#39;configtest&#39;</span> failed.
+The Apache error log may have more information.
+* Restarting web server apache2
+  ...fail!
+* The apache2 configtest failed.
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ApacheReverseProxyModules: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="avantages-pour-les-utilisateurs">
+<h2>Avantages pour les utilisateurs<a class="headerlink" href="#avantages-pour-les-utilisateurs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Il affiche la liste des paquets disponibles, et à son tour installe les paquets manquants et nécessaires.</li>
+<li>Les avants de proxy inverse vers une destination fixe le compte de clients arbitraires.</li>
+<li>Il sera incorpore le contenu qui est hébergée par un serveur dans un site plus grand.</li>
+<li>Il aide à la configuration des paramètres d&#8217;applications.</li>
+<li>Il est bien de choses à faire dans Cent OS et ainsi que dans ubuntu.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ApacheReverseProxyModules</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#option">Option</a></li>
+<li><a class="reference internal" href="#avantages-pour-les-utilisateurs">Avantages pour les utilisateurs</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fapachemodules.html"
+                        title="previous chapter">ApacheModules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="fapachevirtualhost.html"
+                        title="next chapter">ApacheVHostEditor</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fapachereverseproxy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fapachevirtualhost.html" title="ApacheVHostEditor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fapachemodules.html" title="ApacheModules"
+             >previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" >Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, kevells.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

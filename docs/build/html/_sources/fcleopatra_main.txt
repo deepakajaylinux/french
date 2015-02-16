@@ -9,6 +9,7 @@ Jouer avec Modules Cléopâtre
 
    fapacheconf
    fapachemodules
+   fapachereverseproxy
    fapachevirtualhost
    faptana
    fautopilot
