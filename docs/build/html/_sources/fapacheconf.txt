@@ -1,0 +1,130 @@
+============
+ApacheConf
+============
+
+
+synopsis
+-------------
+
+Ce module est un des modules par défaut qui vise à manipuler les fonctions de commande du serveur Apache. Il permet et facilite les fonctions de contrôle nécessaires qui doivent être effectuées dans le serveur Apache. Voyons, le fonctionnement et le but des fonctions de contrôle et comment ces modules liés à la manipulation de ces fonctions de contrôle du serveur Apache.
+
+Commande Aide
+---------------------
+
+Les actes de commandement de l'aide comme un guide de l'utilisateur brève qui conduit les utilisateurs comment manipuler et à utiliser ce module particulier.
+
+La syntaxe de commande help sous le contrôle Apache est indiqué ci-dessous:
+
+.. code-block:: bash
+
+	cleopatra apacheconf help
+
+La capture d'écran comme indiqué ci-dessous, représenter visuellement l'utilisation de la commande d'aide en vertu de ce module.
+
+.. code-block:: bash
+	
+ kevell@corp:/# cleopatra apacheconf help
+ ******************************
+
+
+  This module lets you install a configuration for Apache HTTP Server. The only commands available are this help  and install.
+
+  ApacheConf, apache-configure, apache-configuration, apache-conf, apacheconf
+
+        - install
+        Installs a configuration for Apache
+        example: cleopatra apacheconf install
+
+ ------------------------------
+ End Help
+ ******************************
+
+
+
+installation
+------------
+
+Il est plus facile d'installer cet outil particulier en vertu de Cléopâtre en utilisant simplement la commande ci-dessous,
+
+.. code-block:: bash
+ 
+  cleopatra apacheconf install
+
+After giving the command above, the tool will ask as
+
+.. code-block:: bash
+
+  Install Apache conf? (Y/N)
+
+si vous donnez une entrée en Y, le module va se installé avec succès.
+
+Il sera également jeter quelques commandes pour spécifier les valeurs par défaut pour non-LockFile, PidFile, Timeout, KeepAlive, MaxKeepAliveRequest, KeepAliveTimeout. Si l'utilisateur donne entrée en Y (Oui), il sera automatiquement fixer la valeur par défaut. Si l'utilisateur donne entrée N (Non), alors il se renseignera sur les valeurs de l'utilisateur.
+
+La capture d'écran ci-dessous explique visuellement sur les étapes et les commandes implique l'installation.
+
+.. code-block:: bash
+
+
+ kevell@corp:/# cleopatra apacheconf install
+ Install Apache Conf? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         Apache Conf!        *
+ *******************************
+ Set non-default value for LockFile? Default is ${APACHE_LOCK_DIR}/accept.lock (Y/N) 
+
+ Set non-default value for PidFile? Default is ${APACHE_PID_FILE} (Y/N) 
+
+ Set non-default value for Timeout? Default is 300 (Y/N) 
+
+ Set non-default value for KeepAlive? Default is On (Y/N) 
+
+ Set non-default value for MaxKeepAliveRequests? Default is 100 (Y/N) 
+
+ Set non-default value for KeepAliveTimeout? Default is 5 (Y/N) 
+
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Installer:
+ --------------------------------------------
+ ApacheConf: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
+options
+------------
+
+
+.. cssclass:: table-bordered
+
+ +------------------------------+----------------------------------------+-------------------+------------------------------------------+
+ | paramètres	                | Autres paramètres                      | requis            | commentaire	                        |
+ +==============================+========================================+===================+==========================================+
+ |Install Apache conf? (Y/N)    | au lieu deapachemodules, nous pouvons  | Yes		     | Si l'utilisateur donne entrée que oui,   |
+ |                              | utiliser ApacheModules, apachemods,    |                   | il va installer le module. le module.    |
+ |                              | apache-modules also                    |                   |                                          |
+ +------------------------------+----------------------------------------+-------------------+------------------------------------------+
+ |Install Apache conf? (Y/N)    | au lieu deapachemodules, nous pouvons  | No                | Si l'utilisateur donne entrée comme Non, |
+ |                              | utiliser ApacheModules, apachemods,    |                   | il obtiendra la sortie.                  |
+ |                              | apache-modules also|                   |                   |                                          |
+ +------------------------------+----------------------------------------+-------------------+------------------------------------------+
+
+
+
+avantages
+------------
+
+* Le module aide l'utilisateur final dans l'installation et la gestion de la configuration d'Apache.
+* Lors de l'installation de l'outil Apache, l'utilisateur final peut concevoir et gérer la configuration selon leurs besoins en utilisant ce 
+  module.
+* Si il fonde la configuration existe déjà, elle écrasera celle existante.
+* Il est bien de choses à faire dans Cent OS et ainsi que dans Ubuntu.
+* Les paramètres utilisés dans la déclaration ne est pas sensible à la casse, ce qui est un avantage supplémentaire.
+
