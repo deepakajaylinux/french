@@ -8,6 +8,7 @@ Jouer avec Modules Cléopâtre
 
 
    fapacheconf
+   fapachemodules
    fapachevirtualhost
    faptana
    fautopilot

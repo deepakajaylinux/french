@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ApacheModules &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="next" title="ApacheVHostEditor" href="fapachevirtualhost.html" />
+    <link rel="prev" title="ApacheConf" href="fapacheconf.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fapachevirtualhost.html" title="ApacheVHostEditor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fapacheconf.html" title="ApacheConf"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" accesskey="U">Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apachemodules">
+<h1>ApacheModules<a class="headerlink" href="#apachemodules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module facilite pour installer les modules Apache. Il spécifie la configuration de votre environnement. Vérifier la disponibilité de modules est possible. Il est à l&#8217;aise dans Ubuntu ainsi que dans Cent OS.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande d&#8217;aide explique sur le but d&#8217;un module particulier. La syntaxe pour l&#8217;installation est représentée sous le commandement de l&#8217;aide. Il indique également les autres paramètres qui peuvent être utilisés pour la déclaration. La commande d&#8217;aide est facile à utiliser par l&#8217;utilisateur final. La commande suivante guide l&#8217;utilisateur sur l&#8217;utilisation de ce module.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apache modules <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Après avoir donné la commande, la commande affiche la liste des options d&#8217;aide. Les captures d&#8217;écran suivantes donneront effet visuel pour l&#8217;utilisation de ce module.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ApacheModules <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can configure Application Settings.
+ You can configure default application settings, ie: mysql admin user, host, pass
+
+ ApacheModules, apachemods, apache-modules, apachemodules
+
+       - install
+       Installs common apache Modules
+       example: cleopatra apache-modules install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Installation ne est pas un processus difficile à installer ce module sous Cleopatra en utilisant simplement la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>Install apache-modules install
+</pre></div>
+</div>
+<p>Après avoir donné la commande, il vous demandera,</p>
+<div class="highlight-bash"><div class="highlight"><pre>Install Apache module? <span class="o">(</span>Y/N<span class="o">)</span>
+
+If you give an input as ‘Y’, the module will be installed successfully.
+If you give an input as ‘N’, <span class="k">then</span> it will come out of the installation.
+</pre></div>
+</div>
+<p>Les captures d&#8217;écran suivantes donneront effet visuel pour l&#8217;installation de ce module.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra apache-modules install
+Install Apache Modules? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Apache Mods!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ libxml2-dev
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">229</span> not upgraded.
+Need to get <span class="m">630</span> kB of archives.
+After this operation, 2,928 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2-dev amd64 2.9.1+dfsg1-3ubuntu4.4 <span class="o">[</span><span class="m">630</span> kB<span class="o">]</span>
+Fetched <span class="m">630</span> kB in 2min 38s <span class="o">(</span>3,990 B/s<span class="o">)</span>
+Selecting previously unselected package libxml2-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">181481</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libxml2-dev_2.9.1+dfsg1-3ubuntu4.4_amd64.deb ...
+Unpacking libxml2-dev:amd64 <span class="o">(</span>2.9.1+dfsg1-3ubuntu4.4<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up libxml2-dev:amd64 <span class="o">(</span>2.9.1+dfsg1-3ubuntu4.4<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libxml2-dev from the Packager Apt executed correctly
+Creating /tmp/cleopatra-temp-script-11435369770.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-11435369770.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-11435369770.sh Permissions
+Executing /tmp/cleopatra-temp-script-11435369770.sh
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-11435369770.sh Removed
+Creating /tmp/cleopatra-temp-script-95277456152.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-95277456152.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-95277456152.sh Permissions
+Executing /tmp/cleopatra-temp-script-95277456152.sh
+Considering dependency filter <span class="k">for</span> deflate:
+Module filter already enabled
+Module deflate already enabled
+Temp File /tmp/cleopatra-temp-script-95277456152.sh Removed
+Creating /tmp/cleopatra-temp-script-1351048337.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-1351048337.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-1351048337.sh Permissions
+Executing /tmp/cleopatra-temp-script-1351048337.sh
+Considering dependency setenvif <span class="k">for</span> ssl:
+Module setenvif already enabled
+Considering dependency mime <span class="k">for</span> ssl:
+Module mime already enabled
+Considering dependency socache_shmcb <span class="k">for</span> ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+To activate the new configuration, you need to run:
+  service apache2 restart
+Temp File /tmp/cleopatra-temp-script-1351048337.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libapache2-mod-php5 from the Packager Apt is already installed, so not installing
+Creating /tmp/cleopatra-temp-script-89813944614.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-89813944614.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-89813944614.sh Permissions
+Executing /tmp/cleopatra-temp-script-89813944614.sh
+Module php5 already enabled
+Temp File /tmp/cleopatra-temp-script-89813944614.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting apache2 service
+Output of config <span class="nb">test </span>was:
+apache2: Syntax error on line <span class="m">214</span> of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/httpd.conf: No such file or
+directory
+Action <span class="s1">&#39;configtest&#39;</span> failed.
+The Apache error log may have more information.
+* Restarting web server apache2
+  ...fail!
+* The apache2 configtest failed.
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ApacheModules: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="option">
+<h2>Option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="13%" />
+<col width="34%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">option</th>
+<th class="head">paramètre alternatif</th>
+<th class="head">Commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Apache
+module?(Y/N)</td>
+<td>Yes</td>
+<td>Au lieu d&#8217;utiliser apachemodules the
+utilisateur peut utiliser
+ApacheModules,apachemods,
+apache-modules</td>
+<td>Il va installer le module
+Apache sous Cleopatra</td>
+</tr>
+<tr class="row-odd"><td>Install Apache
+module?(Y/N)</td>
+<td>No</td>
+<td>Au lieu d&#8217;utiliser apachemodules the
+utilisateur peut utiliser
+ApacheModules,apachemods,
+apache-modules|</td>
+<td>L&#8217;utilisateur doit quitter
+l&#8217;installation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Le module est une aide à Link avec Cléopâtre.</li>
+<li>Lors de l&#8217;installation des modules Apache, il sera accepter les fichiers de configuration.</li>
+<li>Si les fichiers de configuration ne sont pas disponibles dans le système ce module sera automatiquement installer.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ApacheModules</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#option">Option</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fapacheconf.html"
+                        title="previous chapter">ApacheConf</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="fapachevirtualhost.html"
+                        title="next chapter">ApacheVHostEditor</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fapachemodules.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fapachevirtualhost.html" title="ApacheVHostEditor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fapacheconf.html" title="ApacheConf"
+             >previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" >Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, kevells.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
