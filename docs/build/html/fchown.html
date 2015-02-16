@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chown &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="prev" title="Chmode" href="fchmode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fchmode.html" title="Chmode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" accesskey="U">Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chown">
+<h1>Chown<a class="headerlink" href="#chown" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module permet de changer la permission du propriétaire. Il peut changer la permission sur fichier ou répertoire individuel. Avant que vous devez être conscient de l&#8217;autorisation par défaut attribué à vos fichiers et répertoires au moment de sa création.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande d&#8217;aide explique à propos de l&#8217;installation d&#8217;un module particulier. La commande d&#8217;aide est facile à utiliser par l&#8217;utilisateur final. Il indique également les paramètres de substitution qui sont utilisés dans la déclaration. La commande suivante guide l&#8217;utilisateur sur la manipulation de ce module.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra chown <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Après avoir donné la commande, la commande affiche la liste des options d&#8217;aide. Les captures d&#8217;écran suivantes donneront effet visuel pour l&#8217;utilisation de ce module.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# cleopatra chown <span class="nb">help</span>
+******************************
+
+ This <span class="nb">command </span>handles file user ownership changing functions.
+
+  Chown, chown
+
+- path
+Will change the user ownership of a path
+example: cleopatra chown path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --owner<span class="o">=</span>golden
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="chemin">
+<h2>chemin<a class="headerlink" href="#chemin" title="Permalink to this headline">¶</a></h2>
+<p>Ce est un excellent processus pour ce module sous Cléopâtre légèrement en utilisant la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra chown path –yes—guess—recursive—path<span class="o">=</span>/Cleopatra—owner<span class="o">=</span>Kevells
+</pre></div>
+</div>
+<p>Ensuite, nous pouvons entrer dans l&#8217;entrée.
+Entrez propriété utilisateur
+Après avoir tapé le nom du propriétaire
+Il affichera Chown résultat succès.</p>
+<p>Ce est visuellement représentée par la capture d&#8217;écran suivante.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chown path --yes --guess --recursive --path<span class="o">=</span>/phj.php --owner<span class="o">=</span>deepak
+
+Enter ownership user:
+deepak
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>Chown<span class="o">]</span> Executing chown -R deepak /phj.php
+******************************
+
+
+Chown Result: Success
+------------------------------
+Chown Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="option">
+<h2>option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="41%" />
+<col width="10%" />
+<col width="24%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">Required</th>
+<th class="head">option</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Chown</td>
+<td>Yes</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Path</td>
+<td>Yes</td>
+<td>&nbsp;</td>
+<td>L&#8217;utilisateur doit donner le
+chemin</td>
+</tr>
+<tr class="row-even"><td>Owner</td>
+<td>Yes</td>
+<td>Chown</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Owner</td>
+<td>No</td>
+<td>Chown</td>
+<td>L&#8217;utilisateur donne entrée
+que non, il vous demandera
+le nom du propriétaire|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp; * Le module peut changer le propriétaire à tout moment avec Cléopâtre.
+&nbsp; * Tout en faisant processus récursif si vous changez un seul fichier l&#8217;ensemble du dossier peut également être modifié.
+&nbsp; * Nous pouvons vérifier l&#8217;état actuel du propriétaire.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Chown</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#chemin">chemin</a></li>
+<li><a class="reference internal" href="#option">option</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fchmode.html"
+                        title="previous chapter">Chmode</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fchown.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fchmode.html" title="Chmode"
+             >previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" >Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, kevells.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

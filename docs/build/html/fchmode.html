@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chmode &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="prev" title="chgrp" href="fchgrp.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fchgrp.html" title="chgrp"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" accesskey="U">Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chmode">
+<h1>Chmode<a class="headerlink" href="#chmode" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Fichiers et répertoires appartiennent à la fois propriétaire et un groupe. Un groupe est généralement constitué d&#8217;un ensemble d&#8217;utilisateurs, tous appartenant à un même groupe. La première série de trois est la lecture, d&#8217;écriture et d&#8217;exécution pour le propriétaire du fichier.</p>
+<p>chmod est utilisé pour changer les permissions des fichiers ou des répertoires. Sur les autres systèmes d&#8217;exploitation de type Unix Linux et, il ya un ensemble de règles pour chaque fichier qui définit qui peut accéder à ce fichier, et comment ils peuvent y accéder. Ces règles sont appelées autorisations de fichiers ou des modes de fichiers. Le nom de la commande chmod signifie &#8220;changement de mode&#8221;, et il est utilisé pour définir la façon dont un fichier peut être consulté.</p>
+<p>Il ya trois classes générales des utilisateurs:</p>
+<ul class="simple">
+<li>L&#8217;utilisateur qui possède le fichier (&#8220;Utilisateur&#8221;)</li>
+<li>Les utilisateurs appartenant au groupe de propriété définie du fichier («Groupe»)</li>
+<li>Tout le monde («Autres»)</li>
+</ul>
+<p>À son tour, pour chacune de ces catégories d&#8217;utilisateurs, il ya trois types d&#8217;accès de fichier:</p>
+<ul class="simple">
+<li>La capacité de regarder le contenu du fichier (&#8220;Read&#8221;)</li>
+<li>La possibilité de changer le contenu du fichier (&#8220;Write&#8221;)</li>
+<li>La possibilité d&#8217;exécuter le contenu du fichier comme un programme sur le système (&#8220;Execute&#8221;)</li>
+</ul>
+<p>Pour chacune des trois catégories d&#8217;utilisateurs, il existe trois types d&#8217;accès.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">symbols</th>
+<th class="head">Signification</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rwx</td>
+<td>le propriétaire du fichier peut lire, écrire ou exécuter ce fichier
+comme un processus sur le système.</td>
+</tr>
+<tr class="row-odd"><td>r-x</td>
+<td>ne importe qui dans le groupe du fichier peut lire ou exécuter ce
+fichier, mais pas écrire</td>
+</tr>
+<tr class="row-even"><td>r–</td>
+<td>ne importe qui peut lire ce fichier, mais pas y écrire ou exécuter
+son contenu comme un processus.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de déterminer l&#8217;utilisation de changement module de mode. L&#8217;utilisateur viendra à savoir sur la manière différente / format à exécuter ce module. Cette commande guide l&#8217;utilisateur final de connaître le but de cette commande. Ci-dessous sont donnés la commande et la capture d&#8217;écran de la même.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chmod <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La représentation picturale de la commande ci-dessus est listé ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Chmod <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles file permission functions.
+
+ Chmod, chmod
+
+       - path
+       Will change the file permission mode of a path
+       example: cleopatra chmod path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --mode<span class="o">=</span>0777
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="chemin">
+<h2>chemin<a class="headerlink" href="#chemin" title="Permalink to this headline">¶</a></h2>
+<p>Chemin chmod est la commande qui modifient les autorisations d&#8217;accès pour déposer les objets du système (fichiers et répertoires).</p>
+<p>Le nombre 1, 2 et 4 représente exécuter, écrire et lire. Ces numéros sont utilisés parce que toute combinaison de ces trois numéros seront
+être unique.</p>
+<p>Lorsque l&#8217;utilisateur a besoin de changer le mode de fichier, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra chmod path –yes –guess –recursive –path<span class="o">=</span>/”File path” –mode<span class="o">=</span>0777
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-parametre">
+<h2>Alternative Paramètre<a class="headerlink" href="#alternative-parametre" title="Permalink to this headline">¶</a></h2>
+<p>Il ya deux autres paramètres qui peuvent être utilisés dans la ligne de commande.</p>
+<p>chmod, Chmod</p>
+<p>Par exemple: chemin de chmod cleopatra CHMODE chemin / cleopatra</p>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<p>chmod modifie les permissions du fichier spécifié par nom de fichier pour les autorisations spécifiées par les autorisations. Permission        définit les autorisations pour le propriétaire du fichier («l&#8217;utilisateur»), les membres du groupe qui possède le fichier (le «groupe»), et     toute autre personne («autres»). Il existe deux manières de représenter ces autorisations: avec des symboles (caractères alphanumériques), ou avec des chiffres en octal (les chiffres de 0 à 7).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Chmode</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#chemin">chemin</a></li>
+<li><a class="reference internal" href="#alternative-parametre">Alternative Paramètre</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fchgrp.html"
+                        title="previous chapter">chgrp</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fchmode.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fchgrp.html" title="chgrp"
+             >previous</a> |</li>
+        <li><a href="index.html">kevellfrench 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="fcleopatra_main.html" >Jouer avec Modules Cléopâtre</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, kevells.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

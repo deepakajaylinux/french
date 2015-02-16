@@ -14,9 +14,14 @@ Jouer avec Modules Cléopâtre
    fapt
    faptana
    fautopilot
+   fawstats
    fbehat
+   fboxify
    fcassandra
    fchgrp
+   fchmode 
+   fchown
+   fchrome
 
 
  
