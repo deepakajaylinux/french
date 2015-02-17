@@ -22,6 +22,8 @@ Jouer avec Modules Cléopâtre
    fchmode 
    fchown
    fchrome
-
-
+   fchromedriver
+   fcitadel
+   fcleofy
+   fcleopatra
  
