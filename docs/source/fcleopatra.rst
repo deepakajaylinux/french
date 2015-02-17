@@ -44,15 +44,20 @@ installation
   cleopatra Cleopatra install
 
 Après avoir donné la commande Cléopâtre sera installé avec de nouvelles mises à jour.
+
 Après la saisie de l'utilisateur est passé il va vérifier si un fichier est manquant et à la main, il se installera automatiquement.
+
 La capture d'écran ci-dessous énumère il.
+
+
 .. code-block:: bash
 
- kevells@corp:/# cleopatra cleopatra install
+
+ kevell@corp:/# cleopatra cleopatra install
 
  Install Cleopatra - Update to latest version ? (Y/N)
  y
- *******************************
+  *******************************
  *        Pharaoh Tools        *
  *          Cleopatra!         *
  *******************************
