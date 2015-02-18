@@ -26,4 +26,6 @@ Jouer avec Modules Cléopâtre
    fcitadel
    fcleofy
    fcleopatra
- 
+   fdnsify
+   fdevelopertools
+   fenvironmentconfig

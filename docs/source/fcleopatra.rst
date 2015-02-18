@@ -92,15 +92,19 @@ option
 
 .. cssclass:: table-bordered
 
- +-------------------------------------------------+--------------+-----------------------------------+
- | Paramètres                                      | options      |  Commentaires                     |
- +=================================================+==============+===================================+
- |Install cleopatra cleopatra Update to latest     | Y(Yes)       | Il va installer cleopatra sous    |
- |version? (Y/N)                                   |              | cleopatra                         |
- +-------------------------------------------------+--------------+-----------------------------------+
- |Install cleopatra cleopatra Update to latest     | N(No)        | Il sortira de l'installation      |
- |version? (Y/N)|                                  |              |                                   |
- +-------------------------------------------------+--------------+-----------------------------------+
+
+ +----------------------------------+-------------------------------------------+-----------+-------------------------------------+
+ | Paramètres                       | Alternative Paramètre                     | options   | commentaires                        |
+ +==================================+===========================================+===========+=====================================+
+ |Install cleopatra cleopatra       | Il existe trois paramètres qui peuvent    | Y(Yes)    | Il va installer cleopatra sous      |        
+ |Update to latest version? (Y/N)   | être utilisés . Cléopâtre, Cleo ,         |           | cleopatra                           |
+ |                                  | Cléopâtre                                 |           |                                     |
+ +----------------------------------+-------------------------------------------+-----------+-------------------------------------+
+ |Install cleopatra cleopatra       | Il existe trois paramètres qui peuvent    | N(No)     | Il sortira de l'installation        |
+ |Update to latest version? (Y/N)   | être utilisés . Cléopâtre, Cleo ,         |           |                                     |
+ |                                  | Cléopâtre|                                |           |                                     |
+ +----------------------------------+-------------------------------------------+-----------+-------------------------------------+
+
 
 
 avantages
