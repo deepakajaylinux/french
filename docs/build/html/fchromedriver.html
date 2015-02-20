@@ -31,7 +31,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
+    <link rel="next" title="Citadel" href="fcitadel.html" />
     <link rel="prev" title="Chrome" href="fchrome.html" />
 
 
@@ -79,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -104,6 +105,8 @@
                 
   <li><a href="fchrome.html"
          title="Previous Chapter: Chrome">&laquo; Chrome</a></li>
+  <li><a href="fcitadel.html"
+         title="Next Chapter: Citadel">Citadel &raquo;</a></li>
               
             
             
@@ -139,7 +142,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -157,11 +160,11 @@
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>La commande help conduit les utilisateurs concernant l&#8217;objet et ainsi que sur les options qui sont inclus dans le module du pilote Chrome. La commande help répertorie les autres paramètres du module de pilote Chrome. Il décrit également la syntaxe pour l&#8217;installation module du pilote Chrome. La commande d&#8217;aide pour le module du pilote Chrome est représentée ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra ChromeDriver <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ChromeDriver <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu pilote Chrome.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ChromeDriver help
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ChromeDriver help
 
 ********************************************
 
@@ -176,7 +179,7 @@
        - install
        Installs ChromeDriver. Note, you&#39;ll also need Java installed
        as it is a prerequisite for ChromeDriver
-       example: cleopatra chromedriver install
+       example: ptconfigure chromedriver install
 
 ------------------------------------------------
 End Help
@@ -187,7 +190,7 @@ End Help
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Installation du pilote chrome à votre machine, qui peut être fait simplement en utilisant la commande suivante comme indiqué:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra chromedriver install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure chromedriver install
 </pre></div>
 </div>
 <p>Après avoir saisi la commande ci-dessus, les opérations suivantes se produit comme indiqué dans le format tabulaire.</p>
@@ -249,7 +252,7 @@ peuvent entrée comme N.|</td>
 </div>
 <p>L&#8217;utilisateur doit spécifier les numéros de 0 à 11 en fonction de leurs exigences de la version.</p>
 <p>Après que l&#8217;utilisateur en spécifiant la version, le processus d&#8217;installation commence et se rempli comme représenté imagée de la capture d&#8217;écran suivante.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chromedriver install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure chromedriver install
 
 Install ChromeDriver Server? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -271,14 +274,14 @@ Enter Chrome Driver Version
 <span class="o">(</span>10<span class="o">)</span> 2.8
 <span class="o">(</span>11<span class="o">)</span> 2.9
 11
-PHP Notice:  Undefined index: version in /opt/cleopatra/cleopatra/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
-Creating /tmp/cleopatra-temp-script-26804823734.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-26804823734.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-26804823734.sh Permissions
-Executing /tmp/cleopatra-temp-script-26804823734.sh
+Creating /tmp/ptconfigure-temp-script-26804823734.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-26804823734.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-26804823734.sh Permissions
+Executing /tmp/ptconfigure-temp-script-26804823734.sh
 --2015-02-02 21:35:49--  http://chromedriver.storage.googleapis.com//chromedriver_linux64.zip
 Resolving chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span>... 74.125.236.44, 74.125.236.43, 74.125.236.42, ...
 Connecting to chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span><span class="p">|</span>74.125.236.44<span class="p">|</span>:80... connected.
@@ -287,7 +290,7 @@ HTTP request sent, awaiting response... <span class="m">404</span> Not Found
 
 mv: cannot stat <span class="s1">&#39;/tmp/chromedriver/*&#39;</span>: No such file or directory
 unzip:  cannot find or open chromedriver_linux64.zip, chromedriver_linux64.zip.zip or chromedriver_linux64.zip.ZIP.
-Temp File /tmp/cleopatra-temp-script-26804823734.sh Removed
+Temp File /tmp/ptconfigure-temp-script-26804823734.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
@@ -306,8 +309,8 @@ Installer Finished
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Les paramètres utilisés pour déclarer commande d&#8217;aide, l&#8217;installation ne sont pas sensibles à la casse qui est un avantage supplémentaire en
-rapport aux autres.</li>
+<li>Les paramètres utilisés pour déclarer commande d&#8217;aide, l&#8217;installation ne sont pas sensibles à la casse qui est un avantage
+supplémentaire  en rapport aux autres.</li>
 <li>Il est bien de choses à faire à la fois Cent OS et ainsi que dans Ubuntu.</li>
 <li>L&#8217;utilisateur peut spécifier la version qu&#8217;ils souhaitent installer lors de l&#8217;installation.</li>
 </ul>

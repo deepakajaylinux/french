@@ -1,6 +1,6 @@
 
 Jouer avec Modules ptconfigure
-=============================
+================================
 
 .. toctree::
    :maxdepth: 6
@@ -25,7 +25,7 @@ Jouer avec Modules ptconfigure
    fchromedriver
    fcitadel
    fcleofy
-   fcleopatra
    fdnsify
    fdevelopertools
    fenvironmentconfig
+   fptconfigure

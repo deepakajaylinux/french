@@ -14,13 +14,13 @@ Cette commande d'aide explique à propos de l'installation d'un module particuli
 
 .. code-block:: bash
 	
-	cleopatra chown help
+	ptconfigure chown help
 
 Après avoir donné la commande, la commande affiche la liste des options d'aide. Les captures d'écran suivantes donneront effet visuel pour l'utilisation de ce module.
 
 .. code-block:: bash
 
-	Kevell@corp:/# cleopatra chown help
+	Kevell@corp:/# ptconfigure chown help
 	******************************
 
 	 This command handles file user ownership changing functions.
@@ -29,7 +29,7 @@ Après avoir donné la commande, la commande affiche la liste des options d'aide
 
         - path
         Will change the user ownership of a path
-        example: cleopatra chown path --yes --guess --recursive --path=/a/file/path --owner=golden
+        example: ptconfigure chown path --yes --guess --recursive --path=/a/file/path --owner=golden
 
 	------------------------------
 	End Help
@@ -38,11 +38,11 @@ Après avoir donné la commande, la commande affiche la liste des options d'aide
 chemin
 --------
 
-Ce est un excellent processus pour ce module sous Cléopâtre légèrement en utilisant la commande ci-dessous,
+Ce est un excellent processus pour ce module sous ptconfigure légèrement en utilisant la commande ci-dessous,
 
 .. code-block:: bash
 
-	cleopatra chown path –yes—guess—recursive—path=/Cleopatra—owner=Kevells
+	ptconfigure chown path –yes—guess—recursive—path=/ptconfigure—owner=Kevells
 
 Ensuite, nous pouvons entrer dans l'entrée.
 Entrez propriété utilisateur
@@ -55,7 +55,7 @@ Ce est visuellement représentée par la capture d'écran suivante.
 
 .. code-block:: bash
 
-	kevell@corp:/# cleopatra chown path --yes --guess --recursive --path=/phj.php --owner=deepak
+	kevell@corp:/# ptconfigure chown path --yes --guess --recursive --path=/phj.php --owner=deepak
 
 	Enter ownership user:
 	deepak
@@ -96,7 +96,7 @@ option
 avantages
 ----------------
 
-  * Le module peut changer le propriétaire à tout moment avec Cléopâtre.
+  * Le module peut changer le propriétaire à tout moment avec ptconfigure.
   * Tout en faisant processus récursif si vous changez un seul fichier l'ensemble du dossier peut également être modifié.
   * Nous pouvons vérifier l'état actuel du propriétaire.
 

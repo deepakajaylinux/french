@@ -18,13 +18,13 @@ Cette commande permet de déterminer l'utilisation de Chrome. Cette commande gui
 
 .. code-block:: bash
         
-	        cleopatra Chrome help
+	        ptconfigure Chrome help
 
 La représentation picturale de la commande ci-dessus est listé ci-dessous,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra Chrome help
+ kevell@corp:/# ptconfigure Chrome help
  ******************************
 
 
@@ -35,7 +35,7 @@ La représentation picturale de la commande ci-dessus est listé ci-dessous,
 
         - install
         Installs Chrome
-        example: cleopatra chrome install
+        example: ptconfigure chrome install
 
  ------------------------------
  End Help
@@ -48,29 +48,29 @@ Ouvrez le terminal et tapez la commande suivante pour installer le même sous Li
 
 .. code-block:: bash
         
-	        cleopatra Chrome install
+	        ptconfigure Chrome install
 
 La représentation picturale de la commande ci-dessus est listé ci-dessous,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra chrome install
+ kevell@corp:/# ptconfigure chrome install
  Install Chrome? (Y/N) 
  Y
  *******************************
  *        Pharaoh Tools        *
  *         GoogleChrome        *
  *******************************
- Creating /tmp/cleopatra-temp-script-93431196740.sh
- chmod 755 /tmp/cleopatra-temp-script-93431196740.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-93431196740.sh Permissions
- Executing /tmp/cleopatra-temp-script-93431196740.sh
+ Creating /tmp/ptconfigure-temp-script-93431196740.sh
+ chmod 755 /tmp/ptconfigure-temp-script-93431196740.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-93431196740.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-93431196740.sh
  OK
- Temp File /tmp/cleopatra-temp-script-93431196740.sh Removed
- Creating /tmp/cleopatra-temp-script-93753948068.sh
- chmod 755 /tmp/cleopatra-temp-script-93753948068.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-93753948068.sh Permissions
- Executing /tmp/cleopatra-temp-script-93753948068.sh
+ Temp File /tmp/ptconfigure-temp-script-93431196740.sh Removed
+ Creating /tmp/ptconfigure-temp-script-93753948068.sh
+ chmod 755 /tmp/ptconfigure-temp-script-93753948068.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-93753948068.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-93753948068.sh
  Hit http://downloads.hipchat.com stable InRelease
  Ign http://security.ubuntu.com trusty-security InRelease
  Hit http://security.ubuntu.com trusty-security Release.gpg
@@ -171,7 +171,7 @@ La représentation picturale de la commande ci-dessus est listé ci-dessous,
  Ign http://in.archive.ubuntu.com trusty/universe Translation-en_IN
  Fetched 1,671 kB in 5min 51s (4,761 B/s)
  Reading package lists...
- Temp File /tmp/cleopatra-temp-script-93753948068.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-93753948068.sh Removed
  [Pharaoh Logging] [File] Creating File /etc/apt/sources.list.d/google.list
  [Pharaoh Logging] [File] Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
  [Pharaoh Logging] [File] Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -195,17 +195,17 @@ options
 .. cssclass:: table-bordered
 
 
- +--------------------------------+--------------------------------------------+----------------+-------------------------------------+
- | Paramètres                     | requis 				       | options        | Commentaires                        |
- +================================+============================================+================+=====================================+
- |cleopatra Chrome Install (Y/N)  | Chacun des deux paramètre alternatif peut  | Y              | Une fois que l'utilisateur fournit  |
- |                                | être utilisé dans commandement Chrome ,    |                | l'option, système démarre processus |
- |				  | chrome eg: cleopatra chrome Install        |                | d'installation                      |
- +--------------------------------+--------------------------------------------+----------------+-------------------------------------+
- |cleopatra Chrome Install (Y/N)  | Chacun des deux paramètre alternatif peut  | N              | Une fois que l'utilisateur fournit  |
- |                                | être utilisé dans commandement Chrome ,    |                | l'option, le système se arrête      |
- |                                | chrome eg: cleopatra chrome Install        |                | processus d'installation|           |
- +--------------------------------+--------------------------------------------+----------------+-------------------------------------+
+ +----------------------------------+--------------------------------------------+----------------+-------------------------------------+
+ | Paramètres                       | requis 				         | options        | Commentaires                        |
+ +==================================+============================================+================+=====================================+
+ |ptconfigure Chrome Install (Y/N)  | Chacun des deux paramètre alternatif peut  | Y              | Une fois que l'utilisateur fournit  |
+ |                                  | être utilisé dans commandement Chrome ,    |                | l'option, système démarre processus |
+ |				    | chrome eg: ptconfigure chrome Install      |                | d'installation                      |
+ +----------------------------------+--------------------------------------------+----------------+-------------------------------------+
+ |ptconfigure Chrome Install (Y/N)  | Chacun des deux paramètre alternatif peut  | N              | Une fois que l'utilisateur fournit  |
+ |                                  | être utilisé dans commandement Chrome ,    |                | l'option, le système se arrête      |
+ |                                  | chrome eg: ptconfigure chrome Install      |                | processus d'installation|           |
+ +----------------------------------+--------------------------------------------+----------------+-------------------------------------+
 
 
 avantages

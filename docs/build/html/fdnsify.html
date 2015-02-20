@@ -31,8 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
-    <link rel="prev" title="Cleopatra" href="fcleopatra.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
+    <link rel="next" title="DeveloperTools" href="fdevelopertools.html" />
+    <link rel="prev" title="PTConfigure" href="fcleopatra.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -79,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -109,7 +110,9 @@
               
                 
   <li><a href="fcleopatra.html"
-         title="Previous Chapter: Cleopatra">&laquo; Cleopatra</a></li>
+         title="Previous Chapter: PTConfigure">&laquo; PTConfigure</a></li>
+  <li><a href="fdevelopertools.html"
+         title="Next Chapter: DeveloperTools">DeveloperTools &raquo;</a></li>
               
             
             
@@ -145,7 +148,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -163,11 +166,11 @@
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>La commande help guide les utilisateurs dans la manipulation de ce module, afin de gérer et d&#8217;effectuer diverses fonctions d&#8217;une boîte. Il énumère les aboutissants d&#8217;autres paramètres, et met en évidence la syntaxe pour diverses fonctions d&#8217;utilisation et de modification d&#8217;une boîte. La syntaxe de l&#8217;aide option dans le module dnsify est illustré ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra DNSify <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure DNSify <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu dnsify.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Dnsify <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Dnsify <span class="nb">help</span>
 ************************************
 
 
@@ -177,16 +180,16 @@
 
        - install-generic-autopilots
        Install the generic Dnsify autopilot templates <span class="k">for</span> a Tiny or Medium <span class="o">(</span>Current Default<span class="o">)</span> <span class="nb">set </span>of Environments
-       example: cleopatra dnsify install-generic-autopilots
-       example: cleopatra dnsify install-generic-autopilots
+       example: ptconfigure dnsify install-generic-autopilots
+       example: ptconfigure dnsify install-generic-autopilots
                    --yes
-                   --guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/dnsify/autopilots/</span>
+                   --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/dnsify/autopilots/</span>
                    --template-group<span class="o">=</span>tiny
                    --destination-dir<span class="o">=</span>*path-to-destination*
 
        - box-add
        Installs a Box through a cloud provider
-       example: cleopatra dnsify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
+       example: ptconfigure dnsify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
            --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
            --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
            --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
@@ -198,18 +201,18 @@
 
        - box-remove
        Removes a Box from the papyrus
-       example: cleopatra dnsify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+       example: ptconfigure dnsify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
 
        - box-destroy
        Removes a Box from both papyrus and the cloud provider
-       example: cleopatra dnsify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+       example: ptconfigure dnsify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
            --destroy-all-boxes
            --destroy
 
        - list-papyrus
        List all servers in papyrus, or those of a particular environment
-       example: cleopatra dnsify list-papyrus --yes
-       example: cleopatra dnsify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+       example: ptconfigure dnsify list-papyrus --yes
+       example: ptconfigure dnsify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 
 
 ------------------------------------------------------------------------------------------------
@@ -232,9 +235,9 @@ End Help
 <div class="section" id="installez-les-pilotes-automatiques-generiques">
 <h2>Installez les pilotes automatiques génériques<a class="headerlink" href="#installez-les-pilotes-automatiques-generiques" title="Permalink to this headline">¶</a></h2>
 <p>Cette fonction vise à l&#8217;installation de pilotes automatiques applicables à un ensemble petit ou moyen d&#8217;environnements. Ceci peut être mis en œuvre en appliquant la commande comme indiqué ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra dnsify install-generic-autopilots
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify install-generic-autopilots
             --yes
-            --guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/dnsify/autopilots/</span>
+            --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/dnsify/autopilots/</span>
             --template-group<span class="o">=</span>tiny
             --destination-dir<span class="o">=</span>*path-to-destination*
 </pre></div>
@@ -248,7 +251,7 @@ End Help
 <div class="section" id="ajout-de-la-boite">
 <h2>Ajout de la boîte<a class="headerlink" href="#ajout-de-la-boite" title="Permalink to this headline">¶</a></h2>
 <p>Cette fonction vise à ajouter une boîte par un fournisseur de cloud, simplement en utilisant la commande suivante,</p>
-<div class="highlight-bash"><div class="highlight"><pre>example: cleopatra dnsify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>example: ptconfigure dnsify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
            --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
            --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
            --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
@@ -273,7 +276,7 @@ End Help
 <div class="section" id="case-retrait">
 <h2>case Retrait<a class="headerlink" href="#case-retrait" title="Permalink to this headline">¶</a></h2>
 <p>Cette fonction vise à supprimer une boîte du papyrus. Ceci peut être réalisé en utilisant la commande ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra dnsify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
 </pre></div>
 </div>
 <p>L&#8217;utilisateur doit indiquer les domaines suivants comme décrit dans la commande ci-dessus,</p>
@@ -286,7 +289,7 @@ End Help
 <div class="section" id="detruire-une-boite">
 <h2>Détruire une boîte<a class="headerlink" href="#detruire-une-boite" title="Permalink to this headline">¶</a></h2>
 <p>Cette fonction vise à supprimer une boîte du papyrus. Cette fonction peut être implémentée en utilisant simplement la commande suivante,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra dnsify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
     --destroy-all-boxes
     --destroy
 </pre></div>
@@ -296,7 +299,7 @@ End Help
 <div class="section" id="liste">
 <h2>liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
 <p>Le principal objectif de cette fonction est de lister tous les serveurs d&#8217;un papyrus en particulier ou dans un environnement. La syntaxe de la liste tous les serveurs est représentée ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra dnsify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 </pre></div>
 </div>
 <p>La commande ci-dessus mentionnée donnera la liste de papyrus d&#8217;un environnement spécifié.</p>

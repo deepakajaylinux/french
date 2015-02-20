@@ -16,14 +16,14 @@ Cette commande permet de déterminer l'utilisation d'un module Citadelle. L'util
 
 .. code-block:: bash
      	
-		cleopatra  Citadel help
+		ptconfigure  Citadel help
 
 La représentation picturale de la capture d'écran ci-dessous est,
 
 .. code-block:: bash
  
 
- kevell@corp:/# cleopatra Citadel help
+ kevell@corp:/# ptconfigure Citadel help
  ******************************
 
 
@@ -33,11 +33,11 @@ La représentation picturale de la capture d'écran ci-dessous est,
 
         - install
         Installs Citadel Server
-        example: cleopatra citadel install
+        example: ptconfigure citadel install
 
         - configure
         Configure E-Mail with Citadel Server
-        example: cleopatra citadel configure
+        example: ptconfigure citadel configure
 
  ------------------------------
  End Help
@@ -50,21 +50,21 @@ Lorsque l'utilisateur doit installer le serveur Citadelle de machine, vous pouve
 
 .. code-block:: bash
        
-	        cleopatra Citadel  install
+	        ptconfigure Citadel  install
 
 
- kevell@corp:/# cleopatra Citadel install
+ kevell@corp:/# ptconfigure Citadel install
  Install Citadel Server? (Y/N) 
  Y
  *******************************
  *        Pharaoh Tools        *
  *         Citadel Server!     *
  *******************************
- Creating /tmp/cleopatra-temp-script-11993825383.sh
- chmod 755 /tmp/cleopatra-temp-script-11993825383.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-11993825383.sh Permissions
- Executing /tmp/cleopatra-temp-script-11993825383.sh
- Temp File /tmp/cleopatra-temp-script-11993825383.sh Removed
+ Creating /tmp/ptconfigure-temp-script-11993825383.sh
+ chmod 755 /tmp/ptconfigure-temp-script-11993825383.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-11993825383.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-11993825383.sh
+ Temp File /tmp/ptconfigure-temp-script-11993825383.sh Removed
  Reading package lists...
  Building dependency tree...
  Reading state information...
@@ -85,11 +85,11 @@ Lorsque l'utilisateur doit installer le serveur Citadelle de machine, vous pouve
  [Pharaoh Logging] Stopping apache2 service
  * Stopping web server apache2
  * 
- Creating /tmp/cleopatra-temp-script-74031405363.sh
- chmod 755 /tmp/cleopatra-temp-script-74031405363.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-74031405363.sh Permissions
- Executing /tmp/cleopatra-temp-script-74031405363.sh
- Temp File /tmp/cleopatra-temp-script-74031405363.sh Removed
+ Creating /tmp/ptconfigure-temp-script-74031405363.sh
+ chmod 755 /tmp/ptconfigure-temp-script-74031405363.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-74031405363.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-74031405363.sh
+ Temp File /tmp/ptconfigure-temp-script-74031405363.sh Removed
  apache2_invoke: Enable configuration javascript-common
  invoke-rc.d: initscript apache2, action "reload" failed.
  Reading package lists...
@@ -220,13 +220,13 @@ option
  +-------------------------+-------------------------------------------------------+--------------+-------------------------------------+
  | paramètres              | Alternative Paramètre                                 | options      |  de Commentaires                    |
  +=========================+=======================================================+==============+=====================================+
- |cleopatra Citadel        | Soit des trois paramètre alternatif peut être utilisé | Y            | Une fois que l'utilisateur fournit  |
+ |ptconfigure Citadel      | Soit des trois paramètre alternatif peut être utilisé | Y            | Une fois que l'utilisateur fournit  |
  |Install? (Y/N)           | en commande- Citadel, citadel-server, citadel         |              | cette option , système démarre      |
- |                         | eg: Cleopatra citadel-server installer                |              | processus d'installation            |
+ |                         | eg: ptconfigure citadel-server installer              |              | processus d'installation            |
  +-------------------------+-------------------------------------------------------+--------------+-------------------------------------+
- |cleopatra Citadel        | Soit des trois paramètre alternatif peut être utilisé | N            | Une fois que l'utilisateur fournit  |
+ |ptconfigure Citadel      | Soit des trois paramètre alternatif peut être utilisé | N            | Une fois que l'utilisateur fournit  |
  |Install? (Y/N)           | en commande- Citadel, citadel-server, citadel         |              | cette option , système se           |
- |                         | eg: Cleopatra citadel-server installer                |              | arrête processus d'installation|    |
+ |                         | eg: ptconfigure citadel-server installer              |              | arrête processus d'installation|    |
  +-------------------------+-------------------------------------------------------+--------------+-------------------------------------+
 
 
@@ -237,7 +237,7 @@ Cette commande permet de configurer le serveur Citadelle. Une fois la commande c
 
 .. code-block:: bash
          
-	        cleopatra Citadel configure
+	        ptconfigure Citadel configure
 
 avantages
 --------------

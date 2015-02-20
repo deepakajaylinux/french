@@ -31,7 +31,7 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
     <link rel="next" title="ApacheReverseProxyModules" href="fapachereverseproxy.html" />
     <link rel="prev" title="ApacheConf" href="fapacheconf.html" />
 
@@ -80,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -143,7 +143,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -161,11 +161,11 @@
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>Cette commande d&#8217;aide explique sur le but d&#8217;un module particulier. La syntaxe pour l&#8217;installation est représentée sous le commandement de l&#8217;aide. Il indique également les autres paramètres qui peuvent être utilisés pour la déclaration. La commande d&#8217;aide est facile à utiliser par l&#8217;utilisateur final. La commande suivante guide l&#8217;utilisateur sur l&#8217;utilisation de ce module.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apache modules <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apache modules <span class="nb">help</span>
 </pre></div>
 </div>
 <p>Après avoir donné la commande, la commande affiche la liste des options d&#8217;aide. Les captures d&#8217;écran suivantes donneront effet visuel pour l&#8217;utilisation de ce module.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ApacheModules <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ApacheModules <span class="nb">help</span>
 ******************************
 
 
@@ -176,7 +176,7 @@
 
        - install
        Installs common apache Modules
-       example: cleopatra apache-modules install
+       example: ptconfigure apache-modules install
 
 ------------------------------
 End Help
@@ -186,7 +186,7 @@ End Help
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Installation ne est pas un processus difficile à installer ce module sous Cleopatra en utilisant simplement la commande ci-dessous,</p>
+<p>Installation ne est pas un processus difficile à installer ce module sous ptconfigure en utilisant simplement la commande ci-dessous,</p>
 <div class="highlight-bash"><div class="highlight"><pre>Install apache-modules install
 </pre></div>
 </div>
@@ -198,7 +198,7 @@ If you give an input as ‘N’, <span class="k">then</span> it will come out of
 </pre></div>
 </div>
 <p>Les captures d&#8217;écran suivantes donneront effet visuel pour l&#8217;installation de ce module.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra apache-modules install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure apache-modules install
 Install Apache Modules? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -222,26 +222,26 @@ Unpacking libxml2-dev:amd64 <span class="o">(</span>2.9.1+dfsg1-3ubuntu4.4<span 
 Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
 Setting up libxml2-dev:amd64 <span class="o">(</span>2.9.1+dfsg1-3ubuntu4.4<span class="o">)</span> ...
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libxml2-dev from the Packager Apt executed correctly
-Creating /tmp/cleopatra-temp-script-11435369770.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-11435369770.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-11435369770.sh Permissions
-Executing /tmp/cleopatra-temp-script-11435369770.sh
+Creating /tmp/ptconfigure-temp-script-11435369770.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-11435369770.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-11435369770.sh Permissions
+Executing /tmp/ptconfigure-temp-script-11435369770.sh
 Enabling module rewrite.
 To activate the new configuration, you need to run:
  service apache2 restart
-Temp File /tmp/cleopatra-temp-script-11435369770.sh Removed
-Creating /tmp/cleopatra-temp-script-95277456152.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-95277456152.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-95277456152.sh Permissions
-Executing /tmp/cleopatra-temp-script-95277456152.sh
+Temp File /tmp/ptconfigure-temp-script-11435369770.sh Removed
+Creating /tmp/ptconfigure-temp-script-95277456152.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-95277456152.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-95277456152.sh Permissions
+Executing /tmp/ptconfigure-temp-script-95277456152.sh
 Considering dependency filter <span class="k">for</span> deflate:
 Module filter already enabled
 Module deflate already enabled
-Temp File /tmp/cleopatra-temp-script-95277456152.sh Removed
-Creating /tmp/cleopatra-temp-script-1351048337.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-1351048337.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-1351048337.sh Permissions
-Executing /tmp/cleopatra-temp-script-1351048337.sh
+Temp File /tmp/ptconfigure-temp-script-95277456152.sh Removed
+Creating /tmp/ptconfigure-temp-script-1351048337.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-1351048337.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-1351048337.sh Permissions
+Executing /tmp/ptconfigure-temp-script-1351048337.sh
 Considering dependency setenvif <span class="k">for</span> ssl:
 Module setenvif already enabled
 Considering dependency mime <span class="k">for</span> ssl:
@@ -252,14 +252,14 @@ Enabling module ssl.
 See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
 To activate the new configuration, you need to run:
   service apache2 restart
-Temp File /tmp/cleopatra-temp-script-1351048337.sh Removed
+Temp File /tmp/ptconfigure-temp-script-1351048337.sh Removed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libapache2-mod-php5 from the Packager Apt is already installed, so not installing
-Creating /tmp/cleopatra-temp-script-89813944614.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-89813944614.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-89813944614.sh Permissions
-Executing /tmp/cleopatra-temp-script-89813944614.sh
+Creating /tmp/ptconfigure-temp-script-89813944614.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-89813944614.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-89813944614.sh Permissions
+Executing /tmp/ptconfigure-temp-script-89813944614.sh
 Module php5 already enabled
-Temp File /tmp/cleopatra-temp-script-89813944614.sh Removed
+Temp File /tmp/ptconfigure-temp-script-89813944614.sh Removed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting apache2 service
 Output of config <span class="nb">test </span>was:
 apache2: Syntax error on line <span class="m">214</span> of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/httpd.conf: No such file or
@@ -309,7 +309,7 @@ utilisateur peut utiliser
 ApacheModules,apachemods,
 apache-modules</td>
 <td>Il va installer le module
-Apache sous Cleopatra</td>
+Apache sous ptconfigure</td>
 </tr>
 <tr class="row-odd"><td>Install Apache
 module?(Y/N)</td>
@@ -327,7 +327,7 @@ l&#8217;installation.</td>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Le module est une aide à Link avec Cléopâtre.</li>
+<li>Le module est une aide à Link avec ptconfigure.</li>
 <li>Lors de l&#8217;installation des modules Apache, il sera accepter les fichiers de configuration.</li>
 <li>Si les fichiers de configuration ne sont pas disponibles dans le système ce module sera automatiquement installer.</li>
 </ul>

@@ -17,13 +17,13 @@ La syntaxe de commande help sous le contrôle Apache est indiqué ci-dessous:
 
 .. code-block:: bash
 
-	cleopatra apacheconf help
+	ptconfigure apacheconf help
 
 La capture d'écran comme indiqué ci-dessous, représenter visuellement l'utilisation de la commande d'aide en vertu de ce module.
 
 .. code-block:: bash
 	
- kevell@corp:/# cleopatra apacheconf help
+ kevell@corp:/# ptconfigure apacheconf help
  ******************************
 
 
@@ -33,7 +33,7 @@ La capture d'écran comme indiqué ci-dessous, représenter visuellement l'utili
 
         - install
         Installs a configuration for Apache
-        example: cleopatra apacheconf install
+        example: ptconfigure apacheconf install
 
  ------------------------------
  End Help
@@ -44,11 +44,11 @@ La capture d'écran comme indiqué ci-dessous, représenter visuellement l'utili
 installation
 ------------
 
-Il est plus facile d'installer cet outil particulier en vertu de Cléopâtre en utilisant simplement la commande ci-dessous,
+Il est plus facile d'installer cet outil particulier en vertu de ptconfigure en utilisant simplement la commande ci-dessous,
 
 .. code-block:: bash
  
-  cleopatra apacheconf install
+  ptconfigure apacheconf install
 
 After giving the command above, the tool will ask as
 
@@ -65,7 +65,7 @@ La capture d'écran ci-dessous explique visuellement sur les étapes et les comm
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra apacheconf install
+ kevell@corp:/# ptconfigure apacheconf install
  Install Apache Conf? (Y/N) 
  y
  *******************************

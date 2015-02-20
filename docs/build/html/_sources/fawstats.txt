@@ -18,7 +18,7 @@ La commande help guide les utilisateurs au sujet de l'objet et ainsi que sur les
 
 .. code-block:: bash
 	
-		cleopatra AWStats help
+		ptconfigure AWStats help
 
 La syntaxe pour déclarer la commande d'aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d'écran ci-dessous vous visualiser sur la commande d'aide en vertu AWStats.
 
@@ -30,7 +30,7 @@ La commande utilisée pour installer les AWStats à la machine des utilisateurs 
 
 .. code-block:: bash
 
-		cleopatra AWStats install
+		ptconfigure AWStats install
 
 Après avoir saisi la commande ci-dessus, le processus suivant se produit comme indiqué dans le format tabulaire.
 
@@ -154,5 +154,5 @@ avantages
 * Les développeurs peuvent contribuer au projet AWStats par SourceForge.net.
 * Écrit en Perl, AWStats peuvent être déployés sur presque ne importe quel système d'exploitation
 * Ce est un outil d'administration du serveur, avec des forfaits disponibles pour la plupart des distributions Linux.
-* AWStats peuvent être installés sur un poste de travail, tels que MS Windows, pour une utilisation locale dans des situations où les fichiers 
-  journaux peuvent être téléchargés à partir d'une télécommande serveur.
+* AWStats peuvent être installés sur un poste de travail, tels que MS Windows, pour une utilisation locale dans des situations où les
+  fichiers journaux peuvent être téléchargés à partir d'une télécommande serveur.

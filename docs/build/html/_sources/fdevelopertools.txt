@@ -14,13 +14,13 @@ Devtools rend le développement de package une brise: cela fonctionne avec les c
 
 .. code-block:: bash
 
-                cleopatra devtools help
+                ptconfigure devtools help
 
 La capture d'écran ci-dessous explique.
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra devtools help
+ kevell@corp:/# ptconfigure devtools help
  ******************************
 
 
@@ -31,7 +31,7 @@ La capture d'écran ci-dessous explique.
 
         - install
         Installs the latest version of Developer Tools
-        example: cleopatra devtools install
+        example: ptconfigure devtools install
 
  ------------------------------
  End Help
@@ -40,11 +40,11 @@ La capture d'écran ci-dessous explique.
 installation
 ------------------
 
-L'installation comprend la fourniture ou la connexion aux services nécessaires pour rendre l'équipement installé prêt à fonctionner. Ce est un processus manifeste d'installer module devtools sous Cleopatra en utilisant simplement la commande ci-dessous,
+L'installation comprend la fourniture ou la connexion aux services nécessaires pour rendre l'équipement installé prêt à fonctionner. Ce est un processus manifeste d'installer module devtools sous ptconfigure en utilisant simplement la commande ci-dessous,
 
 .. code-block:: bash
 
-	 cleopatra devtools install
+	 ptconfigure devtools install
 
 Après dynamiser la commande il catéchiser entrée.
 
@@ -53,7 +53,7 @@ Lorsque l'entrée d'utilisateur comme il sera automatiquement oui installer devt
 .. code-block:: bash
 
 
- kevell@corp:/$ cleopatra devtools install
+ kevell@corp:/$ ptconfigure devtools install
  Install Developer Tools? (Y/N)
  y
  *******************************
@@ -114,7 +114,7 @@ Lorsque l'entrée d'utilisateur comme il sera automatiquement oui installer devt
  Setting up bluefish-plugins (2.2.5-1) ...
  Setting up bluefish (2.2.5-1) ...
  [Pharaoh Logging] Adding Package bluefish from the Packager Apt executed correctly
- PHP Warning:  file_put_contents(/opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/../../../cleovars): failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/AppConfig.php on line 115
+ PHP Warning:  file_put_contents(/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars): failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
@@ -137,8 +137,8 @@ Options
  | Paramètres        | Alternate parameter              | Option | Commentaires                                |
  +-------------------+----------------------------------+--------+---------------------------------------------+
  |Install devtools?  | Au lieu d'utiliser  devtools     | Y      | Il va installer éditeur et base de données  | 
- |(Y/N) 	     | nous pouvons utiliser Developer  |        | de données devtools sous cleopatra          |
- |                   | Tools, devtools,dev-tools 	| 	 | devtools sous cleopatra                     |
+ |(Y/N) 	     | nous pouvons utiliser Developer  |        | de données devtools sous ptconfigure        |
+ |                   | Tools, devtools,dev-tools 	| 	 | devtools sous ptconfigure                   |
  +-------------------+----------------------------------+--------+---------------------------------------------+
  |Install devtools?  | Au lieu d'utiliser  devtools     | N      | La sortie du système d'installation         |
  |(Y/N) 	     | nous pouvons utiliser Developer  |        |                                             |

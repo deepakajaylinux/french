@@ -31,7 +31,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
+    <link rel="next" title="Environment config" href="fenvironmentconfig.html" />
     <link rel="prev" title="Dnsify" href="fdnsify.html" />
 
 
@@ -79,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -105,6 +106,8 @@
                 
   <li><a href="fdnsify.html"
          title="Previous Chapter: Dnsify">&laquo; Dnsify</a></li>
+  <li><a href="fenvironmentconfig.html"
+         title="Next Chapter: Environment config">Environment conf... &raquo;</a></li>
               
             
             
@@ -140,7 +143,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -158,11 +161,11 @@
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>Devtools rend le développement de package une brise: cela fonctionne avec les conventions existantes pour la structure du code, en ajoutant des outils efficaces pour soutenir le cycle de développement de package. Avec devtools, élaboration d&#8217;un ensemble devient si facile que ce sera la configuration par défaut de l&#8217;utilisateur lorsque l&#8217;utilisateur est en train d&#8217;écrire une quantité importante de code.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra devtools <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure devtools <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La capture d&#8217;écran ci-dessous explique.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra devtools <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure devtools <span class="nb">help</span>
 ******************************
 
 
@@ -173,7 +176,7 @@
 
        - install
        Installs the latest version of Developer Tools
-       example: cleopatra devtools install
+       example: ptconfigure devtools install
 
 ------------------------------
 End Help
@@ -183,13 +186,13 @@ End Help
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>L&#8217;installation comprend la fourniture ou la connexion aux services nécessaires pour rendre l&#8217;équipement installé prêt à fonctionner. Ce est un processus manifeste d&#8217;installer module devtools sous Cleopatra en utilisant simplement la commande ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra devtools install
+<p>L&#8217;installation comprend la fourniture ou la connexion aux services nécessaires pour rendre l&#8217;équipement installé prêt à fonctionner. Ce est un processus manifeste d&#8217;installer module devtools sous ptconfigure en utilisant simplement la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure devtools install
 </pre></div>
 </div>
 <p>Après dynamiser la commande il catéchiser entrée.</p>
 <p>Lorsque l&#8217;entrée d&#8217;utilisateur comme il sera automatiquement oui installer devtools avec vérification du système. Si pas quitter l&#8217;installation. ce qui suit capture d&#8217;écran démontre.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>cleopatra devtools install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>ptconfigure devtools install
 Install Developer Tools? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -250,7 +253,7 @@ Setting up bluefish-data <span class="o">(</span>2.2.5-1<span class="o">)</span>
 Setting up bluefish-plugins <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
 Setting up bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bluefish from the Packager Apt executed correctly
-PHP Warning:  file_put_contents<span class="o">(</span>/opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/AppConfig.php on line 115
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
@@ -288,8 +291,8 @@ nous pouvons utiliser Developer
 Tools, devtools,dev-tools</td>
 <td>Y</td>
 <td>Il va installer éditeur et base de données
-de données devtools sous cleopatra
-devtools sous cleopatra</td>
+de données devtools sous ptconfigure
+devtools sous ptconfigure</td>
 </tr>
 <tr class="row-odd"><td>Install devtools?
 (Y/N)</td>

@@ -31,7 +31,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules Cléopâtre" href="fcleopatra_main.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
+    <link rel="next" title="PTConfigure" href="fcleopatra.html" />
     <link rel="prev" title="Citadel" href="fcitadel.html" />
 
 
@@ -79,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -112,6 +113,8 @@
                 
   <li><a href="fcitadel.html"
          title="Previous Chapter: Citadel">&laquo; Citadel</a></li>
+  <li><a href="fcleopatra.html"
+         title="Next Chapter: PTConfigure">PTConfigure &raquo;</a></li>
               
             
             
@@ -147,7 +150,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules Cléopâtre</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -166,11 +169,11 @@
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>La commande d&#8217;aide est un manuel d&#8217;utilisation brève qui facilite les utilisateurs d&#8217;obtenir conscience concernant l&#8217;utilisation, la manipulation des méthodologies de ce module pour effectuer des fonctions différentes. Il indique également les sorties de paramètres alternatifs qui peuvent être utilisés dans les déclarations. Il souligne l&#8217;exemple de syntaxe pour l&#8217;utilisation et l&#8217;accès à différentes fonctions en vertu cleofy.</p>
 <p>La commande utilisée pour déclarer aide option sous cleofy est illustré ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu cleofy.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra cleofy <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure cleofy <span class="nb">help</span>
 
 ******************************
 
@@ -181,38 +184,38 @@ This <span class="nb">command </span>is part of a default Module Core and provid
 Cleofy, cleofy
 
 - list
-       List all of the autopilot files in your build/config/cleopatra/autopilots
-       example: cleopatra cleofy list
+       List all of the autopilot files in your build/config/ptconfigure/autopilots
+       example: ptconfigure cleofy list
 
 - standard
-       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> your project.
-       example: cleopatra cleofy standard
+       Create a default <span class="nb">set </span>of ptconfigure autopilots in build/config/ptconfigure/autopilots <span class="k">for</span> your project.
+       example: ptconfigure cleofy standard
 
 - tiny
-       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;tiny&quot;</span> style infrastructure.             example: cleopatra cleofy tiny
+       Create a default <span class="nb">set </span>of ptconfigure autopilots in build/config/ptconfigure/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;tiny&quot;</span> style infrastructure.         example: ptconfigure cleofy tiny
 
 - medium
-       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;medium&quot;</span> style infrastructure.           example: cleopatra cleofy medium
+       Create a default <span class="nb">set </span>of ptconfigure autopilots in build/config/ptconfigure/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;medium&quot;</span> style infrastructure.               example: ptconfigure cleofy medium
 
 - medium-web
-       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;medium&quot;</span> style infrastructure,
+       Create a default <span class="nb">set </span>of ptconfigure autopilots in build/config/ptconfigure/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;medium&quot;</span> style infrastructure,
        with web but not database.
-       example: cleopatra cleofy medium-web
+       example: ptconfigure cleofy medium-web
 
 - db-cluster
 
-       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> your project.
-       example: cleopatra cleofy db-cluster
+       Create a default <span class="nb">set </span>of ptconfigure autopilots in build/config/ptconfigure/autopilots <span class="k">for</span> your project.
+       example: ptconfigure cleofy db-cluster
 --yes
 --guess
 --database-nodes-env<span class="o">=</span>*db-nodes-environment-name*
 
 - install-generic-autopilots
        Install the generic Cleofy autopilot templates <span class="k">for</span> a Tiny or Medium <span class="o">(</span>Current Default<span class="o">)</span> <span class="nb">set </span>of Environments
-example: cleopatra cleofy install-generic-autopilots
-       example: cleopatra cleofy install-generic-autopilots
+example: ptconfigure cleofy install-generic-autopilots
+       example: ptconfigure cleofy install-generic-autopilots
 --yes
---guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/cleofy/autopilots/</span>
+--guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/cleofy/autopilots/</span>
 --template-group<span class="o">=</span>tiny <span class="c"># tiny, medium, dbcluster, phlagrant || db-cluster, workstation</span>
 --destination-dir<span class="o">=</span>*path-to-destination*
 
@@ -237,44 +240,44 @@ End Help
 </div>
 <div class="section" id="liste">
 <h2>liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
-<p>Cette fonction vise à la liste de tous les fichiers du pilote automatique dans votre emplacement spécifié (build / config / Cléopâtre / pilotes automatiques). La syntaxe pour appliquer cette fonction est illustré ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy list
+<p>Cette fonction vise à la liste de tous les fichiers du pilote automatique dans votre emplacement spécifié (build / config / ptconfigure / pilotes automatiques). La syntaxe pour appliquer cette fonction est illustré ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy list
 </pre></div>
 </div>
 </div>
 <div class="section" id="standard">
 <h2>standard<a class="headerlink" href="#standard" title="Permalink to this headline">¶</a></h2>
-<p>Cette fonction contribue à la création d&#8217;un ensemble par défaut de pilotes automatiques de Cléopâtre (dans build / config / Cléopâtre / de pilotes automatiques) pour le projet des utilisateurs. Cette fonction peut être appliquée en utilisant simplement la commande ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy standard
+<p>Cette fonction contribue à la création d&#8217;un ensemble par défaut de pilotes automatiques de ptconfigure (dans build / config / ptconfigure / de pilotes automatiques) pour le projet des utilisateurs. Cette fonction peut être appliquée en utilisant simplement la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy standard
 </pre></div>
 </div>
 </div>
 <div class="section" id="minuscule">
 <h2>minuscule<a class="headerlink" href="#minuscule" title="Permalink to this headline">¶</a></h2>
-<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de Cléopâtre (dans build / config / Cléopâtre / de pilotes automatiques) pour un projet avec petite infrastructure. Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy tiny
+<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de ptconfigure (dans build / config / ptconfigure / de pilotes automatiques) pour un projet avec petite infrastructure. Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy tiny
 </pre></div>
 </div>
 </div>
 <div class="section" id="moyen">
 <h2>moyen<a class="headerlink" href="#moyen" title="Permalink to this headline">¶</a></h2>
-<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de Cléopâtre (dans build / config / Cléopâtre / de pilotes automatiques) pour un projet d&#8217;infrastructures moyenne. Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy medium
+<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de ptconfigure (dans build / config / ptconfigure / de pilotes automatiques) pour un projet d&#8217;infrastructures moyenne. Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy medium
 </pre></div>
 </div>
 </div>
 <div class="section" id="medium-web">
 <h2>Medium_Web<a class="headerlink" href="#medium-web" title="Permalink to this headline">¶</a></h2>
-<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de Cléopâtre (dans build / config / Cléopâtre / de pilotes automatiques) pour un projet avec le milieu avec l&#8217;infrastructure Web, mais pas la base de données. Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy medium-web
+<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de ptconfigure (dans build / config / ptconfigure / de pilotes automatiques) pour un projet avec le milieu avec l&#8217;infrastructure Web, mais pas la base de données. Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy medium-web
 </pre></div>
 </div>
 </div>
 <div class="section" id="db-cluster">
 <h2>DB_cluster<a class="headerlink" href="#db-cluster" title="Permalink to this headline">¶</a></h2>
-<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de Cléopâtre (dans build / config / Cléopâtre / de pilotes automatiques) pour le projet de l&#8217;utilisateur.
+<p>Cette fonction vise à créer un ensemble par défaut de pilotes automatiques de ptconfigure (dans build / config / ptconfigure / de pilotes automatiques) pour le projet de l&#8217;utilisateur.
 Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>       cleopatra cleofy db-cluster
+<div class="highlight-bash"><div class="highlight"><pre>       ptconfigure cleofy db-cluster
 --yes
 --guess
 --database-nodes-env<span class="o">=</span>*db-nodes-environment-name*
@@ -285,13 +288,13 @@ Pour mettre en œuvre cette fonction utilisez la commande suivante comme ci-dess
 <h2>Install_generic_autopilots<a class="headerlink" href="#install-generic-autopilots" title="Permalink to this headline">¶</a></h2>
 <p>Cette fonction aide à l&#8217;installation de modèles de pilote automatique génériques pour petit ou moyen ensemble de l&#8217;environnement en utilisant simplement la commande comme donnée
 dessous</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy install-generic-autopilots
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cleofy install-generic-autopilots
 </pre></div>
 </div>
 <p>Or,</p>
-<div class="highlight-bash"><div class="highlight"><pre>       cleopatra cleofy install-generic-autopilots
+<div class="highlight-bash"><div class="highlight"><pre>       ptconfigure cleofy install-generic-autopilots
 --yes
---guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/cleofy/autopilots/</span>
+--guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/cleofy/autopilots/</span>
 --template-group<span class="o">=</span>tiny <span class="c"># tiny, medium, dbcluster, phlagrant || db-cluster, workstation</span>
 --destination-dir<span class="o">=</span>*path-to-destination*
 </pre></div>

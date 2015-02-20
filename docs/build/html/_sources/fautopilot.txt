@@ -13,33 +13,33 @@ Nous prenons les tracas de la technologie de l'utilisateur. Dans l'environnement
 Commande Aide
 ----------------------
 
-La commande help conduit les utilisateurs concernant l'objet et ainsi que sur les options qui sont inclus dans les modules de pilote automatique. Les listes de commande d'aide sur les alternatives aux paramètres du module cleopatra du pilote automatique. Il décrit également la syntaxe pour détecter la machine de l'utilisateur. La commande d'aide pour le pilote automatique ci-dessous.
+La commande help conduit les utilisateurs concernant l'objet et ainsi que sur les options qui sont inclus dans les modules de pilote automatique. Les listes de commande d'aide sur les alternatives aux paramètres du module ptconfigure du pilote automatique. Il décrit également la syntaxe pour détecter la machine de l'utilisateur. La commande d'aide pour le pilote automatique ci-dessous.
 
 .. code-block:: bash
 
-	cleopatra autopilot install
+	ptconfigure autopilot install
 
 La capture d'écran ci-dessous montre la fonctionnalité du pilote automatique.
 
 .. code-block:: bash
 
- kevell@corp:~# cleopatra autopilot help
+ kevell@corp:/# ptconfigure autopilot help
  ******************************
 
 
  This command is part of a default Module and provides you with a method by
- which you can perform user defined executions of any Cleopatra Modules, in
+ which you can perform user defined executions of any ptconfigure Modules, in
  any order, and with your own predefined settings.
 
  Autopilot, autopilot, auto
 
    - install, execute, x
    execute all of the defined modules in your Autopilot file
-   example: cleopatra autopilot x --autopilot-file=*path-to-file*
+   example: ptconfigure autopilot x --autopilot-file=*path-to-file*
 
    - test
    execute all of the steps defined as tests in your Autopilot file
-   example: cleopatra autopilot test --autopilot-file=*path-to-file*
+   example: ptconfigure autopilot test --autopilot-file=*path-to-file*
 
  ------------------------------
  End Help
@@ -57,7 +57,7 @@ Pilote automatique agir comme un module de défaut et fournit également des ex�
 
 .. code-block:: bash
 
-	cleopatra autopilot install
+	ptconfigure autopilot install
 
 après entrée comme ci-dessus ladite commande il commence l'installation. Les photos instantanées suivantes guide l'utilisateur sur 
 l'installation du pilote automatique.
@@ -80,7 +80,7 @@ Options
  | Paramètre 		      | Autre 				      | Option 	   | Commentaires				|
  +============================+=======================================+============+============================================+
  |Install autopilot?(Y/N)     | Au lieu d'utiliser le pilote          | Y	   | Pilote automatique peut être installé      |
- |			      | automatique, l'utilisateur peut       |            | sous Cleopatra.				|
+ |			      | automatique, l'utilisateur peut       |            | sous ptconfigure.				|
  |			      | utiliser Autopilot, autopilot,auto    | 	   |						|
  +----------------------------+---------------------------------------+------------+--------------------------------------------+
  |Install autopilot?(Y/N)     | Au lieu d'utiliser le pilote          | N          | Il arrête le processus d'installation      |

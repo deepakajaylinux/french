@@ -17,13 +17,13 @@ Le codage de faire usage de commande d'aide en vertu Behat, est donnée comme su
 
 .. code-block:: bash
 
-		cleopatra behat help
+		ptconfigure behat help
 
 La capture d'écran ci-dessous vous que donnée explique graphiquement sur l'utilisation de la commande d'aide.
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra behat help
+ kevell@corp:/# ptconfigure behat help
  ******************************
 
 
@@ -33,7 +33,7 @@ La capture d'écran ci-dessous vous que donnée explique graphiquement sur l'uti
 
         - install
         Installs the latest version of behat
-        example: cleopatra behat install
+        example: ptconfigure behat install
 
  ------------------------------
  End Help
@@ -45,7 +45,7 @@ installation
 Si l'utilisateur a besoin d'installer la dernière version de Behat, ils peuvent réaliser l'installation, en utilisant la commande suivante,
 .. code-block:: bash
 
-	cleopatra behat install
+	ptconfigure behat install
 
 Après avoir saisi la commande ci-dessus, le processus suivant sont impliqués dans l'installation comme indiqué dans le format tabulaire,
 
@@ -94,7 +94,7 @@ Vous donne une représentation picturale sur les étapes de l'installation La ca
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra behat install
+ kevell@corp:/# ptconfigure behat install
  Install Behat ? (Y/N) 
  Y
  *******************************
@@ -105,10 +105,10 @@ Vous donne une représentation picturale sur les étapes de l'installation La ca
  
  What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
 
- Creating /tmp/cleopatra-temp-script-69243074239.sh
- chmod 755 /tmp/cleopatra-temp-script-69243074239.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-69243074239.sh Permissions
- Executing /tmp/cleopatra-temp-script-69243074239.sh
+ Creating /tmp/ptconfigure-temp-script-69243074239.sh
+ chmod 755 /tmp/ptconfigure-temp-script-69243074239.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-69243074239.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-69243074239.sh
  --2015-01-27 15:31:39--  https://getcomposer.org/installer
  Resolving getcomposer.org (getcomposer.org)... 87.98.253.108
  Connecting to getcomposer.org (getcomposer.org)|87.98.253.108|:443... connected.
@@ -137,7 +137,7 @@ version
 
 Lors de l'installation du Behat, la version la plus récente sera-installé sur votre machine.
 
-Ce est un avantage supplémentaire d'un module Behat sous Cleopatra par rapport à d'autres.
+Ce est un avantage supplémentaire d'un module Behat sous ptconfigure par rapport à d'autres.
 
 
 Avantages pour les utilisateurs

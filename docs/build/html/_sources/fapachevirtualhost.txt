@@ -11,11 +11,11 @@ Commande Aide
 -----------------------
 La commande help conduit les utilisateurs concernant l'objet et ainsi que sur les options qui sont inclus dans les modules Apache virtualhost de l'éditeur. Les listes de commandes de l'aide sur les autres paramètres d'Apache éditeur de virtualhost
 
-le cadre du module de Cléopâtre. Il décrit également la syntaxe pour l'installation de la updation de l'utilisateur. La commande d'aide pour apache éditeur de virtualhost est illustré ci-dessous.
+le cadre du module de ptconfigure. Il décrit également la syntaxe pour l'installation de la updation de l'utilisateur. La commande d'aide pour apache éditeur de virtualhost est illustré ci-dessous.
 
 .. code-block:: bash
 
-        cleopatra Apache virtualhost editor help
+        ptconfigure Apache virtualhost editor help
 
 La capture d'écran ci-dessous montre l'effort complète d'Apache éditeur de virtualhost.
  
@@ -34,7 +34,7 @@ Cette commande permet de créer un hôte virtuel. Primordial est possible. La co
 
 .. code-block:: bash
 
-		sudo cleopatra vhe add
+		sudo ptconfigure vhe add
 
 après la saisie de la commande ci-dessus, il peut poser la question suivante,
 
@@ -48,7 +48,7 @@ Cette commande permet de créer un hôte virtuel. Primordial est possible. Il ya
 
 .. code-block:: bash
 
-	sudo cleopatra vhe add
+	sudo ptconfigure vhe add
 
 après la saisie de la commande ci-dessus , il peut poser la question suivante ,
 
@@ -64,7 +64,7 @@ Cette commande permet de supprimer un serveur virtuel particulier. Il ya deux fa
 
 .. code-block:: bash
 
-         cleopatra vhe rm
+         ptconfigure vhe rm
 
 La capture d'écran suivante montre la fonction de rm .
 
@@ -76,7 +76,7 @@ Cette commande permet de supprimer un serveur virtuel particulier. Il ya deux fa
 
 .. code-block:: bash
  
-	cleopatra vhe rm
+	ptconfigure vhe rm
 
 La capture d'écran suivante montre la fonction de rm.
 
@@ -87,7 +87,7 @@ Cette commande permet de lister les hôtes virtuels actuels. La commande suivant
 
 .. code-block:: bash
 
-	cleopatra vhe list
+	ptconfigure vhe list
 
 La capture d'écran montre la fonction de liste.
 
@@ -99,7 +99,7 @@ Boot sécurisé est une fonction conçue pour empêcher les logiciels malveillan
 
 .. code-block:: bash
    
-	cleopatra vhe enable
+	ptconfigure vhe enable
 
 Cette option est activée par défaut. Cette option permet au serveur d'hôte virtuel permet.
 
@@ -112,7 +112,7 @@ Cette désactivation utilisée pour désactiver le serveur. Les connexions inact
 
 .. code-block:: bash
    
-                cleopatra vhe disable
+                ptconfigure vhe disable
 
 Après avoir tapé cette commande, il peut demander à l'utilisateur de désactiver le serveur. Si les entrées de l'utilisateur que oui il désactiver le serveur est à dire qu'il ne permettra à aucun corps à travailler dans ce serveur.
 

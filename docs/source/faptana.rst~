@@ -21,7 +21,7 @@ La syntaxe pour déclarer la commande d'aide ne est pas sensible à la casse qui
 .. code-block:: bash
 
 
- kevell@corp:/# ptconfigure Aptana help
+ kevells@corp:/# ptconfigure Aptana help
 
  ******************************
 
@@ -87,7 +87,7 @@ Après avoir saisi la commande ci-dessus, le processus suivant se produit comme 
  | Paramètre                  | Option      | alternatifs                              | Commentaires                                |
  +============================+=============+==========================================+=============================================+
  |UnInstall Aptana?(Y/N)      | Yes         | Au lieu d'utiliser Aptana l'utilisateur  | Il permet de désinstaller le module dans    |
- |                            |             | peut utiliser aptana                     | Aptana ptconfigure                          | 
+ |                            |             | peut utiliser aptana                     | Aptana ptconfigure                            | 
  +----------------------------+-------------+------------------------------------------+---------------------------------------------+
  |UnInstall Aptana?(Y/N)      | No          | Au lieu d'utiliser Aptana l'utilisateur  | L'utilisateur doit quitter la               |
  |                            |             | peut utiliser aptana                     | désinstallation..|                          | 

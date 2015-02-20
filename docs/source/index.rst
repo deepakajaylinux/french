@@ -18,4 +18,4 @@ Commands
 .. toctree::
    :maxdepth: 2
    
- fcleopatra_main
+ fptconfigure_main

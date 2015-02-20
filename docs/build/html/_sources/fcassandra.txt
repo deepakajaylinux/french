@@ -17,13 +17,13 @@ Cette commande permet de déterminer l'utilisation d'un module Cassandra. L'util
 
 .. code-block:: bash
         
-	        cleopatra cassandra help
+	        ptconfigure cassandra help
 
 La représentation picturale de la commande ci-dessus est illustré ci-dessous,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra cassandra help
+ kevell@corp:/# ptconfigure cassandra help
 
  ******************************
 
@@ -34,7 +34,7 @@ La représentation picturale de la commande ci-dessus est illustré ci-dessous,
 
         - install
         Installs the latest version of Cassandra
-        example: cleopatra cassandra install
+        example: ptconfigure cassandra install
 
  ------------------------------
  End Help
@@ -47,13 +47,13 @@ Cette commande aide à l'installation de Cassandra dans le système. La commande
 
 .. code-block:: bash
 
-                cleopatra cassandra install
+                ptconfigure cassandra install
 
 La représentation picturale de la commande ci-dessus est illustré ci-dessous,
 
 .. code-block:: bash
 
- kevell@corp:/#  cleopatra cassandra install
+ kevell@corp:/#  ptconfigure cassandra install
 
  Install Cassandra? (Y/N) 
  Y
@@ -61,10 +61,10 @@ La représentation picturale de la commande ci-dessus est illustré ci-dessous,
  *        Pharaoh Tools        *
  *         Cassandra!        *
  *******************************
- Creating /tmp/cleopatra-temp-script-10553509319.sh
- chmod 755 /tmp/cleopatra-temp-script-10553509319.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-10553509319.sh Permissions
- Executing /tmp/cleopatra-temp-script-10553509319.sh
+ Creating /tmp/ptconfigure-temp-script-10553509319.sh
+ chmod 755 /tmp/ptconfigure-temp-script-10553509319.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-10553509319.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-10553509319.sh
  gpg: directory `/home/deepak/.gnupg' created
  gpg: new configuration file `/home/deepak/.gnupg/gpg.conf' created
  gpg: WARNING: options in `/home/deepak/.gnupg/gpg.conf' are not yet active during this run
@@ -268,7 +268,7 @@ La représentation picturale de la commande ci-dessus est illustré ci-dessous,
  Get:41 http://us.archive.ubuntu.com precise/main Translation-en [726 kB]
  Get:42 http://us.archive.ubuntu.com precise/universe Translation-en [3341 kB]
  Fetched 10.2 MB in 4min 2s (42.1 kB/s)
- Temp File /tmp/cleopatra-temp-script-10553509319.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-10553509319.sh Removed
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
@@ -328,17 +328,17 @@ options
  +---------------------------+-------------------------------------------+------------------+----------------------------------------------+
  | Paramètres		     | Alternative Paramètre			 | options	    | commentaires			           |
  +===========================+===========================================+==================+==============================================+
- |cleopatra cassandra        | Il ya deux autres paramètres qui peuvent  | Y 		    | Le système démarre processus d'installation  |
+ |ptconfigure cassandra      | Il ya deux autres paramètres qui peuvent  | Y 		    | Le système démarre processus d'installation  |
  |Install 		     | être utilisés dans la ligne de commande.  |		    |						   |
  | 			     | Cassandra , cassandra Par 		 |		    |						   |
- |			     | exemple: cleopatra cassandra install,     |		    |						   |
- | 			     |          cleopatra cassandra install      | 		    |						   |
+ |			     | exemple: ptconfigure cassandra install,   |		    |						   |
+ | 			     |          ptconfigure cassandra install    | 		    |						   |
  +---------------------------+-------------------------------------------+------------------+----------------------------------------------+
- |cleopatra cassandra        | Il ya deux autres paramètres qui peuvent  | N                | Système arrête processus d'installation      |
+ |ptconfigure cassandra      | Il ya deux autres paramètres qui peuvent  | N                | Système arrête processus d'installation      |
  |Install                    | être utilisés dans la ligne de commande.  |                  |                                              |
  |                           | Cassandra , cassandra Par                 |                  |                                              |
- |                           | exemple: cleopatra cassandra install,     |                  |                                              |
- |                           |          cleopatra cassandra install|     |                  |                                              |
+ |                           | exemple: ptconfigure cassandra install,   |                  |                                              |
+ |                           |          ptconfigure cassandra install|   |                  |                                              |
  +---------------------------+-------------------------------------------+------------------+----------------------------------------------+
 
 
@@ -349,10 +349,13 @@ avantages
   cluster (de sorte que chaque noeud contient des données différentes), mais il n'y a pas de maître que chaque nœud peut desservir toute 
   demande.
 * Prend en charge la réplication de centre de réplication et de données multi - stratégies de réplication sont configurables. Cassandra est 
-  conçu comme un système distribué, pour le déploiement d'un grand nombre de noeuds à travers de multiples centres de données. Les principales 
-  caractéristiques de l'architecture distribuée de Cassandra sont spécifiquement adaptés pour le centre de données multiples déploiement, pour 
+  conçu comme un système distribué, pour le déploiement d'un grand nombre de noeuds à travers de multiples centres de données. Les  
+  principales caractéristiques de l'architecture distribuée de Cassandra sont spécifiquement adaptés pour le centre de données multiples
+  déploiement, pour 
   la redondance, pour le basculement et la récupération en cas de catastrophe.
-* Évolutivité - Lire et écrire débit à la fois augmenter linéairement en nouvelles machines sont ajoutés, sans temps d'arrêt ou l'interruption d  'applications.
-* Tolérant aux pannes - Les données sont automatiquement répliquées sur plusieurs nœuds pour la tolérance aux pannes. Réplication sur plusieurs   centres de données est prise en charge. Nœuds défaillants peuvent être remplacés sans interruption.
+* Évolutivité - Lire et écrire débit à la fois augmenter linéairement en nouvelles machines sont ajoutés, sans temps d'arrêt 
+  ou l'interruption d  'applications.
+* Tolérant aux pannes - Les données sont automatiquement répliquées sur plusieurs nœuds pour la tolérance aux pannes. Réplication sur
+  plusieurs   centres de données est prise en charge. Nœuds défaillants peuvent être remplacés sans interruption.
 * La cohérence accordable - écrit et lit offrir un niveau de cohérence accordable, tout le chemin depuis », écrit ne manquent jamais" à "bloc 
   pour toutes les répliques soit lisible", avec le niveau de quorum au milieu.

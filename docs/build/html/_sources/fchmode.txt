@@ -48,13 +48,13 @@ Cette commande permet de déterminer l'utilisation de changement module de mode.
 
 .. code-block:: bash
         
-	        cleopatra Chmod help
+	        ptconfigure Chmod help
 
 La représentation picturale de la commande ci-dessus est listé ci-dessous,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra Chmod help
+ kevell@corp:/# ptconfigure Chmod help
  ******************************
 
 
@@ -64,7 +64,7 @@ La représentation picturale de la commande ci-dessus est listé ci-dessous,
 
         - path
         Will change the file permission mode of a path
-        example: cleopatra chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
+        example: ptconfigure chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
 
 
  ------------------------------
@@ -83,7 +83,7 @@ Lorsque l'utilisateur a besoin de changer le mode de fichier, la commande ci-des
 
 .. code-block:: bash
         
-	        cleopatra chmod path –yes –guess –recursive –path=/”File path” –mode=0777
+	        ptconfigure chmod path –yes –guess –recursive –path=/”File path” –mode=0777
 
 Alternative Paramètre
 --------------------------------
@@ -92,7 +92,7 @@ Il ya deux autres paramètres qui peuvent être utilisés dans la ligne de comma
 
 chmod, Chmod
 
-Par exemple: chemin de chmod cleopatra CHMODE chemin / cleopatra
+Par exemple: chemin de chmod ptconfigure CHMODE chemin / ptconfigure
 
 
 avantages

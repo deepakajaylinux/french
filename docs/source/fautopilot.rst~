@@ -23,7 +23,7 @@ La capture d'écran ci-dessous montre la fonctionnalité du pilote automatique.
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure autopilot help
+ kevell@corp:~# ptconfigure autopilot help
  ******************************
 
 

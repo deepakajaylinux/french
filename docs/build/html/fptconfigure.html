@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Chown &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>PTConfigure &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -31,9 +31,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
-    <link rel="next" title="Chrome" href="fchrome.html" />
-    <link rel="prev" title="Chmode" href="fchmode.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fptconfigure_main.html" />
+    <link rel="prev" title="Environment config" href="fenvironmentconfig.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -80,7 +79,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -88,10 +87,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Chown</a><ul>
+<li><a class="reference internal" href="#">PTConfigure</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#chemin">chemin</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
 <li><a class="reference internal" href="#option">option</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
@@ -104,10 +103,8 @@
             
               
                 
-  <li><a href="fchmode.html"
-         title="Previous Chapter: Chmode">&laquo; Chmode</a></li>
-  <li><a href="fchrome.html"
-         title="Next Chapter: Chrome">Chrome &raquo;</a></li>
+  <li><a href="fenvironmentconfig.html"
+         title="Previous Chapter: Environment config">&laquo; Environment conf...</a></li>
               
             
             
@@ -115,7 +112,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fchown.txt"
+  <a href="_sources/fptconfigure.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -143,7 +140,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -152,58 +149,78 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="chown">
-<h1>Chown<a class="headerlink" href="#chown" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ptconfigure">
+<h1>PTConfigure<a class="headerlink" href="#ptconfigure" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Ce module permet de changer la permission du propriétaire. Il peut changer la permission sur fichier ou répertoire individuel. Avant que vous devez être conscient de l&#8217;autorisation par défaut attribué à vos fichiers et répertoires au moment de sa création.</p>
+<p>Cette installation d&#8217;ascenseurs du module dans la version mise à jour. L&#8217;automatisation est possible. Situation pour le répertoire de données et le répertoire de l&#8217;exécuteur peut être spécifié lors de l&#8217;installation de ce module. Il spécifie la configuration de votre environnement. Il est amical avec Ubuntu et cent OS utilisateur.</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>Cette commande d&#8217;aide explique à propos de l&#8217;installation d&#8217;un module particulier. La commande d&#8217;aide est facile à utiliser par l&#8217;utilisateur final. Il indique également les paramètres de substitution qui sont utilisés dans la déclaration. La commande suivante guide l&#8217;utilisateur sur la manipulation de ce module.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure chown <span class="nb">help</span>
+<p>&nbsp; Cette commande d&#8217;aide de guider l&#8217;utilisateur à propos de ptconfigure. Convient à tous les types d&#8217;utilisateurs. Il dépeint les autres paramètres et commandes pour l&#8217;installation. La commande d&#8217;aide suivant la capture d&#8217;écran et aideront l&#8217;utilisateur concernant l&#8217;utilisation.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptconfigure <span class="nb">help</span>
 </pre></div>
 </div>
-<p>Après avoir donné la commande, la commande affiche la liste des options d&#8217;aide. Les captures d&#8217;écran suivantes donneront effet visuel pour l&#8217;utilisation de ce module.</p>
-<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure chown <span class="nb">help</span>
-******************************
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptconfigure <span class="nb">help</span>
+****************************************
 
- This <span class="nb">command </span>handles file user ownership changing functions.
 
-  Chown, chown
+This <span class="nb">command </span>allows you to update ptconfigure.
 
-- path
-Will change the user ownership of a path
-example: ptconfigure chown path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --owner<span class="o">=</span>golden
+ptconfigure, cleo, ptconfigure
+
+- install
+Installs the latest version of ptconfigure
+example: ptconfigure ptconfigure install
 
 ------------------------------
 End Help
-******************************
+*******************************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="chemin">
-<h2>chemin<a class="headerlink" href="#chemin" title="Permalink to this headline">¶</a></h2>
-<p>Ce est un excellent processus pour ce module sous ptconfigure légèrement en utilisant la commande ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure chown path –yes—guess—recursive—path<span class="o">=</span>/ptconfigure—owner<span class="o">=</span>Kevells
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Ce est un processus de plus simple à installer le module de ptconfigure en utilisant simplement la commande ci-dessous,</div></blockquote>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptconfigure install
 </pre></div>
 </div>
-<p>Ensuite, nous pouvons entrer dans l&#8217;entrée.
-Entrez propriété utilisateur
-Après avoir tapé le nom du propriétaire
-Il affichera Chown résultat succès.</p>
-<p>Ce est visuellement représentée par la capture d&#8217;écran suivante.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure chown path --yes --guess --recursive --path<span class="o">=</span>/phj.php --owner<span class="o">=</span>deepak
+<p>Après avoir donné la commande ptconfigure sera installé avec de nouvelles mises à jour.</p>
+<p>Après la saisie de l&#8217;utilisateur est passé il va vérifier si un fichier est manquant et à la main, il se installera automatiquement.</p>
+<p>La capture d&#8217;écran ci-dessous énumère il.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptconfigure install
 
-Enter ownership user:
-deepak
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>Chown<span class="o">]</span> Executing chown -R deepak /phj.php
+Install ptconfigure - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+ *******************************
+*        Pharaoh Tools        *
+*          ptconfigure!         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/ptconfigure&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;https://github.com/PharaohTools/ptconfigure.git&#39;</span>  /tmp/ptconfigure/ptconfigureCloning into <span class="s1">&#39;/tmp/ptconfigure/ptconfigure&#39;</span>...
+remote: Counting objects: 19656, <span class="k">done</span>.
+remote: Total <span class="m">19656</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>19656/19656<span class="o">)</span>, 6.15 MiB <span class="p">|</span> 66.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>11790/11790<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data Folder /opt/ptconfigure Deleted <span class="k">if</span> existed
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
 ******************************
 
 
-Chown Result: Success
+Single App Installer:
+--------------------------------------------
+ptconfigure: Success
 ------------------------------
-Chown Finished
+Installer Finished
 ******************************
 </pre></div>
 </div>
@@ -212,50 +229,47 @@ Chown Finished
 <h2>option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="41%" />
-<col width="10%" />
-<col width="24%" />
-<col width="25%" />
+<col width="27%" />
+<col width="34%" />
+<col width="9%" />
+<col width="30%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameters</th>
-<th class="head">Required</th>
-<th class="head">option</th>
-<th class="head">Comments</th>
+<tr class="row-odd"><th class="head">Paramètres</th>
+<th class="head">Alternative Paramètre</th>
+<th class="head">options</th>
+<th class="head">commentaires</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Chown</td>
-<td>Yes</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>Install ptconfigure ptconfigure
+Update to latest version? (Y/N)</td>
+<td>Il existe trois paramètres qui peuvent
+être utilisés . ptconfigure, Cleo ,
+ptconfigure</td>
+<td>Y(Yes)</td>
+<td>Il va installer ptconfigure sous
+ptconfigure</td>
 </tr>
-<tr class="row-odd"><td>Path</td>
-<td>Yes</td>
-<td>&nbsp;</td>
-<td>L&#8217;utilisateur doit donner le
-chemin</td>
-</tr>
-<tr class="row-even"><td>Owner</td>
-<td>Yes</td>
-<td>Chown</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Owner</td>
-<td>No</td>
-<td>Chown</td>
-<td>L&#8217;utilisateur donne entrée
-que non, il vous demandera
-le nom du propriétaire|</td>
+<tr class="row-odd"><td>Install ptconfigure ptconfigure
+Update to latest version? (Y/N)</td>
+<td>Il existe trois paramètres qui peuvent
+être utilisés . ptconfigure, Cleo ,
+ptconfigure|</td>
+<td>N(No)</td>
+<td>Il sortira de l&#8217;installation</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
-<p>&nbsp; * Le module peut changer le propriétaire à tout moment avec ptconfigure.
-&nbsp; * Tout en faisant processus récursif si vous changez un seul fichier l&#8217;ensemble du dossier peut également être modifié.
-&nbsp; * Nous pouvons vérifier l&#8217;état actuel du propriétaire.</p>
+<ul class="simple">
+<li>ptconfigure est utilisé pour installer le fichier de configuration. Lors de l&#8217;installation se il ya ne importe quel fichier existant est
+l&#8217;écrasement du contenu.</li>
+<li>Nouvelle version peut mettre à jour automatiquement.</li>
+<li>Updation peut être fait dans ce module sans recherche sur le web.</li>
+</ul>
 </div>
 </div>
 
@@ -315,8 +329,8 @@ le nom du propriétaire|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fchown.rst">
-          Chown
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fptconfigure.rst">
+          PTConfigure
         </a> on GitHub.
       </li>
 
