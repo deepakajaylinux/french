@@ -28,4 +28,19 @@ Jouer avec Modules ptconfigure
    fdnsify
    fdevelopertools
    fenvironmentconfig
+   fgem
+   fgimp
+   fhaproxy
+   fhhvm
+   fhostname
+   finstallpackage
+   fintellij
+   finvoke
+   fjava
+   fjenkins
+   fjenkinsplugins
+   fjenkinssudonopass
+   fjetty
+   fjmeter
+   flighttpdserver
    fptconfigure

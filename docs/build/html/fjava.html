@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PTConfigure &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>JAVA &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -31,9 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Jouer avec Modules ptconfigure" href="fcleopatra_main.html" />
-    <link rel="next" title="Dnsify" href="fdnsify.html" />
-    <link rel="prev" title="Cleofy" href="fcleofy.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="Jenkins" href="fjenkins.html" />
+    <link rel="prev" title="Invoke" href="finvoke.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -80,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -88,11 +88,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">PTConfigure</a><ul>
+<li><a class="reference internal" href="#">JAVA</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
-<li><a class="reference internal" href="#option">option</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -104,10 +103,10 @@
             
               
                 
-  <li><a href="fcleofy.html"
-         title="Previous Chapter: Cleofy">&laquo; Cleofy</a></li>
-  <li><a href="fdnsify.html"
-         title="Next Chapter: Dnsify">Dnsify &raquo;</a></li>
+  <li><a href="finvoke.html"
+         title="Previous Chapter: Invoke">&laquo; Invoke</a></li>
+  <li><a href="fjenkins.html"
+         title="Next Chapter: Jenkins">Jenkins &raquo;</a></li>
               
             
             
@@ -115,7 +114,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fcleopatra.txt"
+  <a href="_sources/fjava.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -143,7 +142,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="fcleopatra_main.html">Jouer avec Modules ptconfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">Jouer avec Modules ptconfigure</a></li>
 </ul>
 </ul>
 
@@ -152,115 +151,77 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="ptconfigure">
-<h1>PTConfigure<a class="headerlink" href="#ptconfigure" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="java">
+<h1>JAVA<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Cette installation d&#8217;ascenseurs du module dans la version mise à jour. L&#8217;automatisation est possible. Situation pour le répertoire de données et le répertoire de l&#8217;exécuteur peut être spécifié lors de l&#8217;installation de ce module. Il spécifie la configuration de votre environnement. Il est amical avec Ubuntu et cent OS utilisateur.</p>
+<p>Ce module aide à l&#8217;installation de la version d&#8217;Oracle Java JDK 1.7. Il facilite également la configuration java, javac, javaws avec la nouvelle version d&#8217;oracle.</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>&nbsp; Cette commande d&#8217;aide de guider l&#8217;utilisateur à propos de ptconfigure. Convient à tous les types d&#8217;utilisateurs. Il dépeint les autres paramètres et commandes pour l&#8217;installation. La commande d&#8217;aide suivant la capture d&#8217;écran et aideront l&#8217;utilisateur concernant l&#8217;utilisation.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptconfigure <span class="nb">help</span>
+<p>La commande help guide les utilisateurs au sujet de l&#8217;objet et ainsi que sur les options qui sont inclus dans le module de java. La commande help répertorie les alternatives aux paramètres du module Java. Il décrit également la syntaxe pour l&#8217;installation de Java JDK 1.7. La commande d&#8217;aide pour le module Java est représentée ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Java <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptconfigure <span class="nb">help</span>
-****************************************
+<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu module de java.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure java <span class="nb">help</span>
+******************************
 
 
-This <span class="nb">command </span>allows you to update ptconfigure.
+This <span class="nb">command </span>allows you to install Java JDK 1.7 .
 
-ptconfigure, cleo, ptconfigure
+Java, java, java17
 
-- install
-Installs the latest version of ptconfigure
-example: ptconfigure ptconfigure install
+       - install
+       Installs a version of Oracle Java JDK 1.7. It will also configure java,
+       javac and javaws to be provided by the new Oracle version.
+       example: ptconfigure java17 install
 
 ------------------------------
 End Help
-*******************************************
+******************************
 </pre></div>
 </div>
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>Ce est un processus de plus simple à installer le module de ptconfigure en utilisant simplement la commande ci-dessous,</div></blockquote>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptconfigure install
+<p>Installation de la version java oracle de JDK 1.7 à la machine de l&#8217;utilisateur peut être fait en utilisant simplement la commande comme indiqué ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Java install
 </pre></div>
 </div>
-<p>Après avoir donné la commande ptconfigure sera installé avec de nouvelles mises à jour.</p>
-<p>Après la saisie de l&#8217;utilisateur est passé il va vérifier si un fichier est manquant et à la main, il se installera automatiquement.</p>
-<p>La capture d&#8217;écran ci-dessous énumère il.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptconfigure install
-
-Install ptconfigure - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
-y
- *******************************
-*        Pharaoh Tools        *
-*          ptconfigure!         *
-*******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/ptconfigure&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
-
-What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
-
-git clone <span class="s1">&#39;https://github.com/PharaohTools/ptconfigure.git&#39;</span>  /tmp/ptconfigure/ptconfigureCloning into <span class="s1">&#39;/tmp/ptconfigure/ptconfigure&#39;</span>...
-remote: Counting objects: 19656, <span class="k">done</span>.
-remote: Total <span class="m">19656</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>19656/19656<span class="o">)</span>, 6.15 MiB <span class="p">|</span> 66.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: 100% <span class="o">(</span>11790/11790<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-Program Data Folder /opt/ptconfigure Deleted <span class="k">if</span> existed
-Program Data folder populated
-Program Executor Deleted <span class="k">if</span> existed
-... All <span class="k">done</span>!
-*******************************
-Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
-******************************
-
-
-Single App Installer:
---------------------------------------------
-ptconfigure: Success
-------------------------------
-Installer Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="option">
-<h2>option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
+<p>Après avoir saisi la commande ci-dessus, le processus suivant se produit comme indiqué dans le format tabulaire.</p>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="27%" />
-<col width="34%" />
+<col width="22%" />
+<col width="33%" />
 <col width="9%" />
-<col width="30%" />
+<col width="36%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Paramètres</th>
-<th class="head">Alternative Paramètre</th>
-<th class="head">options</th>
-<th class="head">commentaires</th>
+<th class="head">Alternative paramètres</th>
+<th class="head">Option</th>
+<th class="head">Commentaires</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Install ptconfigure ptconfigure
-Update to latest version? (Y/N)</td>
-<td>Il existe trois paramètres qui peuvent
-être utilisés . ptconfigure, Cleo ,
-ptconfigure</td>
+<tr class="row-even"><td>Install The Oracle Java
+JDK 1.7? (Y/N)</td>
+<td>au lieu de Oracle Java JDK 1.7 The
+alternatives can aussi Following be
+used:Java, java, java17</td>
 <td>Y(Yes)</td>
-<td>Il va installer ptconfigure sous
-ptconfigure</td>
+<td>If the user wish to proceed the installation
+process they can input as Y.</td>
 </tr>
-<tr class="row-odd"><td>Install ptconfigure ptconfigure
-Update to latest version? (Y/N)</td>
-<td>Il existe trois paramètres qui peuvent
-être utilisés . ptconfigure, Cleo ,
-ptconfigure|</td>
+<tr class="row-odd"><td>Install The Oracle Java
+JDK 1.7? (Y/N)</td>
+<td>au lieu de Oracle Java JDK 1.7 The
+alternatives can aussi Following be
+used:Java, java, java17|</td>
 <td>N(No)</td>
-<td>Il sortira de l&#8217;installation</td>
+<td>If the user wish to quit the installation
+process they can input as N.</td>
 </tr>
 </tbody>
 </table>
@@ -268,10 +229,10 @@ ptconfigure|</td>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>ptconfigure est utilisé pour installer le fichier de configuration. Lors de l&#8217;installation se il ya ne importe quel fichier existant est
-l&#8217;écrasement du contenu.</li>
-<li>Nouvelle version peut mettre à jour automatiquement.</li>
-<li>Updation peut être fait dans ce module sans recherche sur le web.</li>
+<li>Les paramètres utilisés dans les opérations d&#8217;aide et d&#8217;installation ne sont pas sensibles à la casse qui est un avantage supplémentaire en
+rapport aux autres.</li>
+<li>Il est bien de choses à faire dans les deux Ubuntu et ainsi que Cent OS.</li>
+<li>Configuration java, javac, javaws peut être fait avec l&#8217;aide de la nouvelle version d&#8217;oracle.</li>
 </ul>
 </div>
 </div>
@@ -332,8 +293,8 @@ l&#8217;écrasement du contenu.</li>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fcleopatra.rst">
-          PTConfigure
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fjava.rst">
+          JAVA
         </a> on GitHub.
       </li>
 
