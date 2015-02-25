@@ -142,20 +142,22 @@ options
 
 .. cssclass:: table-bordered
 
- +-----------------------------------------------+-----------+----------------------------------------------+
- | Paramaeters                                   | requis    | commentaires                                 |
- +===============================================+===========+==============================================+
- |ptconfigure lighttpd-server install            | Yes       | Cette commande va installer le module        |
- |                                               |           | lighttpd                                     |
- +-----------------------------------------------+-----------+----------------------------------------------+
- |Install lighttpd-server(Y/N)                   | Y         | Si l'utilisateur saisit Y, ce module vérifie |
- |                                               |           | version précédemment installée, se il a été  |
- |                                               |           | mis à jour sorties à la dernière version ou  |
- |                                               |           | bien il installe le nouveau package.         |
- +-----------------------------------------------+-----------+----------------------------------------------+
- |Install lighttpd-server(Y/N)                   | N         | Si l'utilisateur entre N, l'installation a   |
- |                                               |           | été interrompue.|                            |
- +-----------------------------------------------+-----------+----------------------------------------------+
+ +-------------------------------------+----------------------+-----------+----------------------------------------------+
+ | Paramaeters                         | paramètre alternatif | requis    | commentaires                                 |
+ +=====================================+======================+===========+==============================================+
+ |ptconfigure lighttpd-server install  | LigHTTPDServer,      | Yes       | Cette commande va installer le module        |
+ |                                     | lighttpd-server,     |           | lighttpd                                     |
+ |                                     | lighttpdserver       |           |                                              |
+ +-------------------------------------+----------------------+-----------+----------------------------------------------+
+ |Install lighttpd-server(Y/N)         | LigHTTPDServer,      | Y         | Si l'utilisateur saisit Y, ce module vérifie |
+ |                                     | lighttpd-server,     |           | version précédemment installée, se il a été  |
+ |                                     | lighttpdserver       |           | mis à jour sorties à la dernière version ou  |
+ |                                     |                      |           | bien il installe le nouveau package.         |
+ +-------------------------------------+----------------------+-----------+----------------------------------------------+
+ |Install lighttpd-server(Y/N)         | LigHTTPDServer,      | N         | Si l'utilisateur entre N, l'installation a   |
+ |                                     | lighttpd-server,     |           | été interrompue.                             |
+ |                                     | lighttpdserver|      |           |                                              |
+ +-------------------------------------+----------------------+-----------+----------------------------------------------+
 
 
 
