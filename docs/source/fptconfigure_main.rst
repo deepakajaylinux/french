@@ -10,6 +10,7 @@ Jouer avec Modules ptconfigure
    fapacheconf
    fapachemodules
    fapachereverseproxy
+   fapacheserver
    fapachevirtualhost
    fapt
    faptana
@@ -25,10 +26,19 @@ Jouer avec Modules ptconfigure
    fchromedriver
    fcitadel
    fcleofy
+   fdigitalocean
    fdnsify
    fdevelopertools
+   fencryption
    fenvironmentconfig
+   ffirefox
+   ffirefox14
+   ffirefox17
+   ffirefox24
+   ffirefox33
+   ffirewall
    fgem
+   fgenerator
    fgimp
    fhaproxy
    fhhvm

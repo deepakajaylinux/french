@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GIMP &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Firewall &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="Jouer avec Modules ptconfigure" href="fptconfigure_main.html" />
-    <link rel="next" title="HAProxy" href="fhaproxy.html" />
-    <link rel="prev" title="Generator" href="fgenerator.html" />
+    <link rel="next" title="Gem" href="fgem.html" />
+    <link rel="prev" title="firefox33" href="ffirefox33.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,10 +88,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">GIMP</a><ul>
-<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#">Firewall</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#options">options</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -103,10 +103,10 @@
             
               
                 
-  <li><a href="fgenerator.html"
-         title="Previous Chapter: Generator">&laquo; Generator</a></li>
-  <li><a href="fhaproxy.html"
-         title="Next Chapter: HAProxy">HAProxy &raquo;</a></li>
+  <li><a href="ffirefox33.html"
+         title="Previous Chapter: firefox33">&laquo; firefox33</a></li>
+  <li><a href="fgem.html"
+         title="Next Chapter: Gem">Gem &raquo;</a></li>
               
             
             
@@ -114,7 +114,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fgimp.txt"
+  <a href="_sources/ffirewall.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -151,87 +151,150 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="gimp">
-<h1>GIMP<a class="headerlink" href="#gimp" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="firewall">
+<h1>Firewall<a class="headerlink" href="#firewall" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Ce module permet aux utilisateurs d&#8217;installer GIMP qui est un éditeur d&#8217;image populaire.</p>
-<p>GIMP un acronyme pour Programme GNU Image Manipulation) est utilisé pour la retouche d&#8217;image et l&#8217;édition, de forme libre dessin, redimensionnement, recadrage, photo-montages, la conversion entre les différents formats d&#8217;image, et les tâches plus spécialisées.</p>
-<p>GIMP est distribué gratuitement (et par) ne importe qui, et ne importe qui peut regarder son contenu et son code source et peut ajouter des fonctionnalités ou corriger les problèmes. Il est distribué sous licence GPLv3 LGPLv3 et +. GIMP a commencé en 1995 comme le projet d&#8217;école de deux étudiants universitaires; maintenant GIMP est une application à part entière, disponible sur toutes les distributions de GNU / Linux et les versions récentes de Microsoft Windows et Mac OS X.</p>
-<p>Voyons comment ce module facilite l&#8217;installation de GIMP parmi les sujets à venir.</p>
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Un pare-feu est un système de sécurité réseau qui contrôle le trafic réseau entrant et sortant sur la base d&#8217;un ensemble de règles appliquées. Pare-feu existent à la fois en tant que solution de logiciel et un dispositif matériel.</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>La commande d&#8217;aide est un manuel d&#8217;utilisation brève qui représente les utilisateurs concernant l&#8217;objectif de ce module, ses listes aboutissants ses paramètres alternatifs qui peuvent être utilisés dans les déclarations, avec la syntaxe pour l&#8217;installation de GIMP grâce à apt-get. La syntaxe d&#8217;utilisation de l&#8217;aide option dans ce module est illustré ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure GIMP <span class="nb">help</span>
+<p>Cette commande d&#8217;aide aider l&#8217;utilisateur à propos de Ptconfigure. Il guide l&#8217;autorisation de l&#8217;utilisateur.
+L&#8217;utilisateur peut faire la modification selon souhait. Image Aide guidera l&#8217;utilisateur. Disons visualiser.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Firewall <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu de GIMP.</p>
+<p>Est listé ci-dessous la capture d&#8217;écran pour la commande ci-dessus,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Firewall <span class="nb">help</span>
+******************************
+This <span class="nb">command </span>allows you to modify create or modify firewalls
+
+ Firewall, firewall
+
+       - <span class="nb">enable</span>
+<span class="nb">       </span>Enable system firewall
+       example: ptconfigure firewall <span class="nb">enable</span>
+
+       - disable
+       Disable system firewall
+       example: ptconfigure firewall disable
+
+       - allow
+       Allow a Firewall rule
+       example: ptconfigure firewall allow --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - deny
+       Deny a Firewall rule. Allow connection attempts to be ignored and <span class="nb">time </span>out.
+       example: ptconfigure firewall deny --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - reject
+       Reject a Firewall rule. Terminate connections attempts with an error to the connector.
+       example: ptconfigure firewall reject --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - limit
+       Limit a Firewall rule. ufw will deny connections <span class="k">if</span> an IP address has attempted
+       to initiate <span class="m">6</span> or more connections in the last <span class="m">30</span> seconds.
+       example: ptconfigure firewall limit --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - delete
+       Delete a Firewall rule.
+       example: ptconfigure firewall delete --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - insert
+       Insert a Firewall rule.
+       example: ptconfigure firewall insert --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - reset
+       Reset a Firewall rule.
+       example: ptconfigure firewall reset --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - default
+       Set default policy, should be allow, deny, or reject
+       example: ptconfigure firewall default --policy<span class="o">=</span><span class="s2">&quot;deny&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
 </div>
-<div class="section" id="installation">
-<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>La commande utilisée pour l&#8217;installation de GIMP grâce à apt-get en utilisant ce module est simple en utilisant simplement la commande ci-dessous,
-.. code-block:: bash</p>
-<blockquote>
-<div>ptconfigure GIMP install</div></blockquote>
-<p>Après avoir saisi la commande ci-dessus, les étapes suivantes sont effectuées comme décrit dans le tableau,</p>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>Règles de pare-feu peuvent être personnalisés selon vos besoins, les exigences et les niveaux de menace de sécurité. L&#8217;utilisateur peut créer ou désactiver des règles de pare-feu basé sur des conditions telles que:</p>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="19%" />
-<col width="27%" />
-<col width="10%" />
-<col width="44%" />
+<col width="15%" />
+<col width="36%" />
+<col width="50%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Paramètres</th>
-<th class="head">Alternative paramètres</th>
-<th class="head">Option</th>
-<th class="head">Commentaires</th>
+<th class="head">Fonction</th>
+<th class="head">Commentaire</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>GIMP Install? (Y/N)</td>
-<td>Au lieu de GIMP nous pouvons
-utiliser gimp également.</td>
-<td>Y(Yes)</td>
-<td>Si l&#8217;utilisateur souhaite continuer l&#8217;installation,
-ils peuvent entrée comme Y.</td>
+<tr class="row-even"><td>IP address</td>
+<td>Bloquant une adresse IP ou d&#8217;une certaine
+plage d&#8217;adresses IP, ce qui vous pensez sont
+des prédateurs</td>
+<td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>GIMP Install? (Y/N)</td>
-<td>Au lieu de GIMP nous pouvons
-utiliser gimp également.</td>
-<td>N(No)</td>
-<td>Si l&#8217;utilisateur souhait de quitter l&#8217;installation,
-ils peuvent entrée comme N.|</td>
+<tr class="row-odd"><td>Enable</td>
+<td>Activer le pare-feu du système</td>
+<td>ptconfigure firewall enable</td>
+</tr>
+<tr class="row-even"><td>Disable</td>
+<td>Désactiver le pare-feu du système</td>
+<td>ptconfigure firewall disable</td>
+</tr>
+<tr class="row-odd"><td>Allow</td>
+<td>Autoriser règle de pare-feu</td>
+<td>ptconfigure firewall allow –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Deny</td>
+<td>Autoriser tentative de connexion à être
+ignoré et le temps</td>
+<td>ptconfigure firewall deny –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Reject</td>
+<td>Terminate tentatives de connexion avec une
+erreur au connecteur</td>
+<td>ptconfigure firewall reject –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Limit</td>
+<td>Ufw refusera les connexions si une adresse
+IP a initié six ou tenté plus de connexion
+dans les 30 dernières secondes.</td>
+<td>ptconfigure firewall limit –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Delete</td>
+<td>Supprimer une règle de pare-feu</td>
+<td>ptconfigure firewall delete –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Insert</td>
+<td>Insérez une règle de pare-feu</td>
+<td>ptconfigure firewall insert –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Reset</td>
+<td>Réinitialiser une règle de pare-feu</td>
+<td>ptconfigure firewall reset –firewall-rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>default</td>
+<td>La politique par défaut, devrait être allow,
+deny ou rejeter.|</td>
+<td>ptconfigure firewall default – policy=”deny”</td>
 </tr>
 </tbody>
 </table>
-<p>La capture d&#8217;écran ci-dessous illustre visuellement sur le processus d&#8217;installation.</p>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Les paramètres utilisés déclarant aide et d&#8217;autres caractéristiques différentes de apt ne sont pas sensibles à la casse.</li>
-<li>Il est bien de choses à faire dans les deux cents os et ainsi que dans Ubuntu.</li>
-</ul>
-<p>GIMP fournit également des outils «intelligents» qui utilisent un algorithme plus complexe de faire des choses qui seraient autrement de temps, voire impossible. Il se agit notamment d&#8217;un:</p>
-<ul class="simple">
-<li>Outil Clone, qui copie pixels en utilisant une brosse</li>
-<li>Healing Brush, qui copie les pixels d&#8217;une zone et corrige ton et la couleur</li>
-<li>Outil Perspective de clone, qui fonctionne comme l&#8217;outil clone, mais corrige des changements de distance</li>
-<li>Blur et aiguiser les flous d&#8217;outils et aiguise aide d&#8217;un pinceau</li>
-<li>Dodge et un outil de gravure est une brosse qui rend cibles pixels plus clairs (esquives) ou plus sombre (brûlures)</li>
-</ul>
-<p>GIMP transformer outils comprennent:</p>
-<ul class="simple">
-<li>Aligner</li>
-<li>Déplacer</li>
-<li>cultures</li>
-<li>Rotation</li>
-<li>échelle</li>
-<li>Shear</li>
-<li>perspective</li>
-<li>flip</li>
+<li>Le pare-feu empêche les accès non au système via une connexion réseau en identifiant et en empêchant la communication sur les ports risqués.</li>
+<li>Système de communiquer sur de nombreux ports reconnus, et le pare-feu aura tendance à permettre à ces sans demander ou alerter l&#8217;utilisateur.</li>
+<li>Les pare-feu peuvent également détecter l&#8217;activité «suspecte» de l&#8217;extérieur.</li>
+<li>L&#8217;utilisateur peut définir leur règle selon leur souhait.</li>
 </ul>
 </div>
 </div>
@@ -292,8 +355,8 @@ ils peuvent entrée comme N.|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fgimp.rst">
-          GIMP
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/ffirewall.rst">
+          Firewall
         </a> on GitHub.
       </li>
 

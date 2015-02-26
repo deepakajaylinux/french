@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GIMP &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Encryption &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="Jouer avec Modules ptconfigure" href="fptconfigure_main.html" />
-    <link rel="next" title="HAProxy" href="fhaproxy.html" />
-    <link rel="prev" title="Generator" href="fgenerator.html" />
+    <link rel="next" title="Environment config" href="fenvironmentconfig.html" />
+    <link rel="prev" title="DeveloperTools" href="fdevelopertools.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,10 +88,12 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">GIMP</a><ul>
+<li><a class="reference internal" href="#">Encryption</a><ul>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#installer">installer</a></li>
+<li><a class="reference internal" href="#desinstaller">Désinstaller</a></li>
+<li><a class="reference internal" href="#autres-parametres">Autres paramètres</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -103,10 +105,10 @@
             
               
                 
-  <li><a href="fgenerator.html"
-         title="Previous Chapter: Generator">&laquo; Generator</a></li>
-  <li><a href="fhaproxy.html"
-         title="Next Chapter: HAProxy">HAProxy &raquo;</a></li>
+  <li><a href="fdevelopertools.html"
+         title="Previous Chapter: DeveloperTools">&laquo; DeveloperTools</a></li>
+  <li><a href="fenvironmentconfig.html"
+         title="Next Chapter: Environment config">Environment conf... &raquo;</a></li>
               
             
             
@@ -114,7 +116,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fgimp.txt"
+  <a href="_sources/fencryption.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -151,87 +153,97 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="gimp">
-<h1>GIMP<a class="headerlink" href="#gimp" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="encryption">
+<h1>Encryption<a class="headerlink" href="#encryption" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Ce module permet aux utilisateurs d&#8217;installer GIMP qui est un éditeur d&#8217;image populaire.</p>
-<p>GIMP un acronyme pour Programme GNU Image Manipulation) est utilisé pour la retouche d&#8217;image et l&#8217;édition, de forme libre dessin, redimensionnement, recadrage, photo-montages, la conversion entre les différents formats d&#8217;image, et les tâches plus spécialisées.</p>
-<p>GIMP est distribué gratuitement (et par) ne importe qui, et ne importe qui peut regarder son contenu et son code source et peut ajouter des fonctionnalités ou corriger les problèmes. Il est distribué sous licence GPLv3 LGPLv3 et +. GIMP a commencé en 1995 comme le projet d&#8217;école de deux étudiants universitaires; maintenant GIMP est une application à part entière, disponible sur toutes les distributions de GNU / Linux et les versions récentes de Microsoft Windows et Mac OS X.</p>
-<p>Voyons comment ce module facilite l&#8217;installation de GIMP parmi les sujets à venir.</p>
+<p>Ce module permet aux utilisateurs de crypter ou décrypter un fichier.</p>
+<p>Le cryptage est le processus de codage des messages ou des informations d&#8217;une manière telle que seules les parties autorisées peuvent le lire. Le cryptage ne est pas en soi empêcher l&#8217;interception, mais nie le contenu du message à l&#8217;intercepteur. Dans un schéma de chiffrement, le message ou l&#8217;information, dénommé clair, cryptées en utilisant un algorithme de chiffrement, générant texte chiffré qui ne peut être lu si décrypté. Pour des raisons techniques, une méthode de cryptage utilise habituellement une clé pseudo-aléatoire générée par un algorithme. Il est en principe possible de décrypter le message sans posséder la clé, mais, pour un schéma de chiffrement bien conçu, de grandes ressources de calcul et de compétences sont nécessaires. Un destinataire autorisé peut facilement déchiffrer le message avec la clé fournie par l&#8217;expéditeur à des destinataires, mais ne pas intercepteurs non autorisées.</p>
+<p>Voyons comment utiliser ce module dans chiffrer et déchiffrer un fichier ou d&#8217;une chaîne.</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>La commande d&#8217;aide est un manuel d&#8217;utilisation brève qui représente les utilisateurs concernant l&#8217;objectif de ce module, ses listes aboutissants ses paramètres alternatifs qui peuvent être utilisés dans les déclarations, avec la syntaxe pour l&#8217;installation de GIMP grâce à apt-get. La syntaxe d&#8217;utilisation de l&#8217;aide option dans ce module est illustré ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure GIMP <span class="nb">help</span>
+<p>La commande d&#8217;aide est un manuel d&#8217;utilisation brève qui aide les utilisateurs à la manipulation de ce module. Elle spécifie les paramètres alternatifs qui peuvent être utilisés dans la déclaration. Il précise également les fonctions possibles en vertu du présent module de chiffrement, avec la syntaxe pour les utiliser. La commande utilisée pour déclarer option d&#8217;aide est indiqué ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure encryption <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu de GIMP.</p>
+<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu de chiffrement.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure encryption <span class="nb">help</span>
+
+******************************
+
+
+This <span class="nb">command </span>allows you to encrypt or decrypt a file.
+
+Encryption, encrypt
+
+- install
+       Encrypts a file or string
+       example: sudo ptconfigure encryption install --yes --unencrypted-data<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion
+        --encryption-target-file<span class="o">=</span>/tmp/encrypted --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span>
+        --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+- uninstall
+       Decrypts an encrypted file or string
+       example: sudo ptconfigure encryption uninstall --yes --encrypted-data<span class="o">=</span>/tmp/encrypted
+        --encryption-target-file<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key                        --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
 </div>
-<div class="section" id="installation">
-<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>La commande utilisée pour l&#8217;installation de GIMP grâce à apt-get en utilisant ce module est simple en utilisant simplement la commande ci-dessous,
-.. code-block:: bash</p>
-<blockquote>
-<div>ptconfigure GIMP install</div></blockquote>
-<p>Après avoir saisi la commande ci-dessus, les étapes suivantes sont effectuées comme décrit dans le tableau,</p>
-<table border="1" class="table-bordered docutils">
-<colgroup>
-<col width="19%" />
-<col width="27%" />
-<col width="10%" />
-<col width="44%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Paramètres</th>
-<th class="head">Alternative paramètres</th>
-<th class="head">Option</th>
-<th class="head">Commentaires</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>GIMP Install? (Y/N)</td>
-<td>Au lieu de GIMP nous pouvons
-utiliser gimp également.</td>
-<td>Y(Yes)</td>
-<td>Si l&#8217;utilisateur souhaite continuer l&#8217;installation,
-ils peuvent entrée comme Y.</td>
-</tr>
-<tr class="row-odd"><td>GIMP Install? (Y/N)</td>
-<td>Au lieu de GIMP nous pouvons
-utiliser gimp également.</td>
-<td>N(No)</td>
-<td>Si l&#8217;utilisateur souhait de quitter l&#8217;installation,
-ils peuvent entrée comme N.|</td>
-</tr>
-</tbody>
-</table>
-<p>La capture d&#8217;écran ci-dessous illustre visuellement sur le processus d&#8217;installation.</p>
+</div>
+<div class="section" id="installer">
+<h2>installer<a class="headerlink" href="#installer" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonction permet aux utilisateurs de crypter un fichier ou une chaîne en utilisant simplement la commande comme indiqué ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre> sudo ptconfigure encryption install --yes --unencrypted-data<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion
+--encryption-target-file<span class="o">=</span>/tmp/encrypted --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span>
+ --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Pour mettre en œuvre cette fonction, l&#8217;utilisateur doit indiquer les domaines suivants dans le format de la syntaxe mentionné ci-dessus,</p>
+<ul class="simple">
+<li>Fichier cible de cryptage</li>
+<li>Clé de chiffrement</li>
+<li>Clé SSH</li>
+<li>Autorisation de fichier de chiffrement</li>
+<li>Propriétaire du fichier de chiffrement</li>
+<li>Groupe de fichiers de cryptage</li>
+</ul>
+</div>
+<div class="section" id="desinstaller">
+<h2>Désinstaller<a class="headerlink" href="#desinstaller" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonction permet aux utilisateurs de déchiffrer un fichier ou d&#8217;une chaîne cryptée. Ceci peut être réalisé en utilisant la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure encryption uninstall --yes --encrypted-data<span class="o">=</span>/tmp/encrypted
+ --encryption-target-file<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key                        --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Pour mettre en œuvre cette fonction, l&#8217;utilisateur doit indiquer les domaines suivants dans le format de la syntaxe mentionné ci-dessus,</p>
+<ul class="simple">
+<li>Fichier cible de cryptage</li>
+<li>Clé de chiffrement</li>
+<li>Clé SSH</li>
+<li>Autorisation de fichier de chiffrement</li>
+<li>Propriétaire du fichier de chiffrement</li>
+<li>Groupe de fichiers de cryptage</li>
+</ul>
+</div>
+<div class="section" id="autres-parametres">
+<h2>Autres paramètres<a class="headerlink" href="#autres-parametres" title="Permalink to this headline">¶</a></h2>
+<p>Les autres paramètres de ce module, chacun pouvant être utilisés dans la déclaration est,</p>
+<ul class="simple">
+<li>Encryption</li>
+<li>encrypt</li>
+</ul>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Les paramètres utilisés déclarant aide et d&#8217;autres caractéristiques différentes de apt ne sont pas sensibles à la casse.</li>
-<li>Il est bien de choses à faire dans les deux cents os et ainsi que dans Ubuntu.</li>
-</ul>
-<p>GIMP fournit également des outils «intelligents» qui utilisent un algorithme plus complexe de faire des choses qui seraient autrement de temps, voire impossible. Il se agit notamment d&#8217;un:</p>
-<ul class="simple">
-<li>Outil Clone, qui copie pixels en utilisant une brosse</li>
-<li>Healing Brush, qui copie les pixels d&#8217;une zone et corrige ton et la couleur</li>
-<li>Outil Perspective de clone, qui fonctionne comme l&#8217;outil clone, mais corrige des changements de distance</li>
-<li>Blur et aiguiser les flous d&#8217;outils et aiguise aide d&#8217;un pinceau</li>
-<li>Dodge et un outil de gravure est une brosse qui rend cibles pixels plus clairs (esquives) ou plus sombre (brûlures)</li>
-</ul>
-<p>GIMP transformer outils comprennent:</p>
-<ul class="simple">
-<li>Aligner</li>
-<li>Déplacer</li>
-<li>cultures</li>
-<li>Rotation</li>
-<li>échelle</li>
-<li>Shear</li>
-<li>perspective</li>
-<li>flip</li>
+<li>Les paramètres utilisés dans les opérations d&#8217;aide et de cryptage et de décryptage de l&#8217;ONU ne sont pas sensibles à la casse qui est un
+avantage supplémentaire alors comparés à d&#8217;autres.</li>
+<li>Il est bien de choses à faire dans les deux Ubuntu et ainsi que Cent OS.</li>
+<li>Ce est un mode sécurisé, car seule personne autorisée peut les utiliser.</li>
 </ul>
 </div>
 </div>
@@ -292,8 +304,8 @@ ils peuvent entrée comme N.|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fgimp.rst">
-          GIMP
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fencryption.rst">
+          Encryption
         </a> on GitHub.
       </li>
 

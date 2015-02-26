@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GIMP &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>FireFox &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="Jouer avec Modules ptconfigure" href="fptconfigure_main.html" />
-    <link rel="next" title="HAProxy" href="fhaproxy.html" />
-    <link rel="prev" title="Generator" href="fgenerator.html" />
+    <link rel="next" title="Firefox14" href="ffirefox14.html" />
+    <link rel="prev" title="Environment config" href="fenvironmentconfig.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,10 +88,11 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">GIMP</a><ul>
-<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#">FireFox</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -103,10 +104,10 @@
             
               
                 
-  <li><a href="fgenerator.html"
-         title="Previous Chapter: Generator">&laquo; Generator</a></li>
-  <li><a href="fhaproxy.html"
-         title="Next Chapter: HAProxy">HAProxy &raquo;</a></li>
+  <li><a href="fenvironmentconfig.html"
+         title="Previous Chapter: Environment config">&laquo; Environment conf...</a></li>
+  <li><a href="ffirefox14.html"
+         title="Next Chapter: Firefox14">Firefox14 &raquo;</a></li>
               
             
             
@@ -114,7 +115,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fgimp.txt"
+  <a href="_sources/ffirefox.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -151,87 +152,126 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="gimp">
-<h1>GIMP<a class="headerlink" href="#gimp" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="firefox">
+<h1>FireFox<a class="headerlink" href="#firefox" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Ce module permet aux utilisateurs d&#8217;installer GIMP qui est un éditeur d&#8217;image populaire.</p>
-<p>GIMP un acronyme pour Programme GNU Image Manipulation) est utilisé pour la retouche d&#8217;image et l&#8217;édition, de forme libre dessin, redimensionnement, recadrage, photo-montages, la conversion entre les différents formats d&#8217;image, et les tâches plus spécialisées.</p>
-<p>GIMP est distribué gratuitement (et par) ne importe qui, et ne importe qui peut regarder son contenu et son code source et peut ajouter des fonctionnalités ou corriger les problèmes. Il est distribué sous licence GPLv3 LGPLv3 et +. GIMP a commencé en 1995 comme le projet d&#8217;école de deux étudiants universitaires; maintenant GIMP est une application à part entière, disponible sur toutes les distributions de GNU / Linux et les versions récentes de Microsoft Windows et Mac OS X.</p>
-<p>Voyons comment ce module facilite l&#8217;installation de GIMP parmi les sujets à venir.</p>
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module permet d&#8217;installer firefox. Ubuntu publie périodiquement des versions mises à jour. Il met en œuvre les normes Web actuelles et prévues. Soutien à long terme comprend les mises à jour pour le nouveau matériel, les correctifs de sécurité et mises à jour de l&#8217;infrastructure de cloud computing. Il est à l&#8217;aise avec Ubuntu et Cent OS.</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>La commande d&#8217;aide est un manuel d&#8217;utilisation brève qui représente les utilisateurs concernant l&#8217;objectif de ce module, ses listes aboutissants ses paramètres alternatifs qui peuvent être utilisés dans les déclarations, avec la syntaxe pour l&#8217;installation de GIMP grâce à apt-get. La syntaxe d&#8217;utilisation de l&#8217;aide option dans ce module est illustré ci-dessous,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure GIMP <span class="nb">help</span>
+<p>Cette commande peut fonctionner sur les objectifs et les commandes disponibles pour le module Firefox. Il explique également la commande pour installer firefox. Avant l&#8217;installation, l&#8217;utilisateur peut lire cette commande d&#8217;aide explique sa fonction.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure firefox <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu de GIMP.</p>
+<p>L&#8217;image suivante vous aide également à comprendre clairement ce module.</p>
+<div class="highlight-bash"><div class="highlight"><pre> kevells@corp:/# ptconfigure firefox <span class="nb">help</span>
+
+ ******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can install Firefox from your package
+ manager
+
+ Firefox, firefox
+
+- install
+Installs Firefox
+example: ptconfigure firefox install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>La commande utilisée pour l&#8217;installation de GIMP grâce à apt-get en utilisant ce module est simple en utilisant simplement la commande ci-dessous,
-.. code-block:: bash</p>
-<blockquote>
-<div>ptconfigure GIMP install</div></blockquote>
-<p>Après avoir saisi la commande ci-dessus, les étapes suivantes sont effectuées comme décrit dans le tableau,</p>
+<p>Ce est un processus flagrante à installer le module firefox sous ptconfigure en utilisant simplement la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure firefox install
+</pre></div>
+</div>
+<p>Après clé dans la commande, il peut demande</p>
+<p>Install Firefox? (Y/N)</p>
+<p>Dans le cas où l&#8217;entrée d&#8217;utilisateur en tant que Y, on peut installer firefox de l&#8217;emballage. Sinon, il peut quitter l&#8217;écran. Les captures d&#8217;écran suivantes peuvent l&#8217;expliquer.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firefox install
+
+Install Firefox? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          Firefox            *
+*******************************
+Creating /tmp/ptconfigure-temp-script-51942043520.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-51942043520.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-51942043520.sh Permissions
+Executing /tmp/ptconfigure-temp-script-51942043520.sh
+Cloning into <span class="s1">&#39;firefox&#39;</span>...
+remote: Counting objects: 78, <span class="k">done</span>.
+remote: Total <span class="m">78</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>78/78<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Temp File /tmp/ptconfigure-temp-script-51942043520.sh Removed
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Firefox: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
 <col width="19%" />
-<col width="27%" />
-<col width="10%" />
-<col width="44%" />
+<col width="39%" />
+<col width="11%" />
+<col width="31%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Paramètres</th>
-<th class="head">Alternative paramètres</th>
-<th class="head">Option</th>
-<th class="head">Commentaires</th>
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">paramètre alternatif</th>
+<th class="head">option</th>
+<th class="head">commentaires</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>GIMP Install? (Y/N)</td>
-<td>Au lieu de GIMP nous pouvons
-utiliser gimp également.</td>
+<tr class="row-even"><td>ptconfigure firefox
+Install</td>
+<td>Au lieu d&#8217;utiliser firefox nous pouvons
+utiliser Firefox, firefox</td>
 <td>Y(Yes)</td>
-<td>Si l&#8217;utilisateur souhaite continuer l&#8217;installation,
-ils peuvent entrée comme Y.</td>
+<td>Le système démarre processus
+d&#8217;installation qu&#8217;ils peuvent
+entrée comme Y</td>
 </tr>
-<tr class="row-odd"><td>GIMP Install? (Y/N)</td>
-<td>Au lieu de GIMP nous pouvons
-utiliser gimp également.</td>
+<tr class="row-odd"><td>ptconfigure Firefox
+Install</td>
+<td>Au lieu d&#8217;utiliser firefox nous pouvons
+utiliser Firefox, firefox</td>
 <td>N(No)</td>
-<td>Si l&#8217;utilisateur souhait de quitter l&#8217;installation,
-ils peuvent entrée comme N.|</td>
+<td>Système arrête processus
+d&#8217;installation|</td>
 </tr>
 </tbody>
 </table>
-<p>La capture d&#8217;écran ci-dessous illustre visuellement sur le processus d&#8217;installation.</p>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Les paramètres utilisés déclarant aide et d&#8217;autres caractéristiques différentes de apt ne sont pas sensibles à la casse.</li>
-<li>Il est bien de choses à faire dans les deux cents os et ainsi que dans Ubuntu.</li>
-</ul>
-<p>GIMP fournit également des outils «intelligents» qui utilisent un algorithme plus complexe de faire des choses qui seraient autrement de temps, voire impossible. Il se agit notamment d&#8217;un:</p>
-<ul class="simple">
-<li>Outil Clone, qui copie pixels en utilisant une brosse</li>
-<li>Healing Brush, qui copie les pixels d&#8217;une zone et corrige ton et la couleur</li>
-<li>Outil Perspective de clone, qui fonctionne comme l&#8217;outil clone, mais corrige des changements de distance</li>
-<li>Blur et aiguiser les flous d&#8217;outils et aiguise aide d&#8217;un pinceau</li>
-<li>Dodge et un outil de gravure est une brosse qui rend cibles pixels plus clairs (esquives) ou plus sombre (brûlures)</li>
-</ul>
-<p>GIMP transformer outils comprennent:</p>
-<ul class="simple">
-<li>Aligner</li>
-<li>Déplacer</li>
-<li>cultures</li>
-<li>Rotation</li>
-<li>échelle</li>
-<li>Shear</li>
-<li>perspective</li>
-<li>flip</li>
+<li>Firefox utilise support de nouveaux matériels et l&#8217;intégration de toutes les mises à jour publiées dans cette série à ce jour.</li>
+<li>Il est à l&#8217;aise avec Ubuntu et CentOS.</li>
+<li>Firefox ne est pas sensible à la casse.</li>
+<li>Confidentialité et sécurité mesures, la recherche intelligente</li>
 </ul>
 </div>
 </div>
@@ -292,8 +332,8 @@ ils peuvent entrée comme N.|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fgimp.rst">
-          GIMP
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/ffirefox.rst">
+          FireFox
         </a> on GitHub.
       </li>
 
