@@ -63,12 +63,12 @@ Options
  |ptconfigure jetty      | Il ya deux autres paramètres qui peuvent être      | Y(Yes)      | Le système démarre processus         |
  |Install                | utilisés en ligne de commande. Jetty , jetty       |             | d'installation                       |
  |                       | Eg: ptconfigure jetty install ptconfigure          |             |                                      |
- |                       |     Jetty install                                  |             |                                      |
+ |                       | Jetty install                                      |             |                                      |
  +-----------------------+----------------------------------------------------+-------------+--------------------------------------+
  |ptconfigure jetty      | Il ya deux autres paramètres qui peuvent être      | N(No)       | Système arrête processus             | 
  |Install                | utilisés en ligne de commande. Jetty , jetty       |             | d'installation                       |
  |                       | Eg: ptconfigure jetty install ptconfigure          |             |                                      |
- |                       |     Jetty install|                                 |             |                                      |
+ |                       | Jetty install|                                     |             |                                      |
  +-----------------------+----------------------------------------------------+-------------+--------------------------------------+
 
 

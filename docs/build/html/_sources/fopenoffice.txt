@@ -89,8 +89,7 @@ avantages
   autres.
 * Il est bien de choses à faire dans les deux Ubuntu et ainsi que Cent OS.
 * Ce module de volonté installe le apc php dans la version mise à jour.
-* Le principal avantage d'utiliser Apache OpenOffice comme suite de productivité provient du coût. Il comprend un traitement de texte, tableur,
-  présentation, vecteur édition graphique et de gestion de base de données des composants.
+* Le principal avantage d'utiliser Apache OpenOffice comme suite de productivité provient du coût. Il comprend un traitement de texte, tableur    , présentation, vecteur édition graphique et de gestion de base de données des composants.
 * Il est facile pour les débutants d'apprendre à utiliser, mais il est assez puissant pour effectuer les tâches avancées aux utilisateurs 
   expérimentés veulent. Il est conçu de telle sorte que les commandes et fonctions que vous effectuez dans une partie du travail du logiciel à 
   travers toute la suite.

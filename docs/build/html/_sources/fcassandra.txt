@@ -331,14 +331,14 @@ options
  |ptconfigure cassandra      | Il ya deux autres paramètres qui peuvent  | Y 		    | Le système démarre processus d'installation  |
  |Install 		     | être utilisés dans la ligne de commande.  |		    |						   |
  | 			     | Cassandra , cassandra Par 		 |		    |						   |
- |			     | exemple: ptconfigure cassandra install,   |		    |						   |
- | 			     |          ptconfigure cassandra install    | 		    |						   |
+ |			     | exemple: ptconfigure cassandra install    |		    |						   |
+ | 			     | ptconfigure cassandra install             | 		    |						   |
  +---------------------------+-------------------------------------------+------------------+----------------------------------------------+
  |ptconfigure cassandra      | Il ya deux autres paramètres qui peuvent  | N                | Système arrête processus d'installation      |
  |Install                    | être utilisés dans la ligne de commande.  |                  |                                              |
  |                           | Cassandra , cassandra Par                 |                  |                                              |
- |                           | exemple: ptconfigure cassandra install,   |                  |                                              |
- |                           |          ptconfigure cassandra install|   |                  |                                              |
+ |                           | exemple: ptconfigure cassandra install    |                  |                                              |
+ |                           | ptconfigure cassandra install|            |                  |                                              |
  +---------------------------+-------------------------------------------+------------------+----------------------------------------------+
 
 
