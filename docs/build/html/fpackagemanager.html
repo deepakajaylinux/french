@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PackageManager &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jouer avec Modules ptconfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="Parallax" href="fparallax.html" />
+    <link rel="prev" title="Oracle" href="foracle.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">Jouer avec Modules ptconfigure</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PackageManager</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#parametres-alternatifs">paramètres alternatifs</a></li>
+<li><a class="reference internal" href="#pkg-installer">Pkg-installer</a></li>
+<li><a class="reference internal" href="#pkg-assurer">Pkg-assurer</a></li>
+<li><a class="reference internal" href="#pkg-remove">Pkg-remove</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="foracle.html"
+         title="Previous Chapter: Oracle">&laquo; Oracle</a></li>
+  <li><a href="fparallax.html"
+         title="Next Chapter: Parallax">Parallax &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fpackagemanager.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">Jouer avec Modules ptconfigure</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="packagemanager">
+<h1>PackageManager<a class="headerlink" href="#packagemanager" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande utilisé pour envelopper la gestion des paquets. Ce est d&#8217;avoir trois options. Ils sont PKG-installer, pkg-assurer, pkg-remove. Cela permet à l&#8217;utilisateur d&#8217;installer dans ne importe quel système. Il gérer les fonctions package Manager. Il convient de travailler avec Ubuntu et CentOS.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande help guide l&#8217;utilisateur à installer, assurer, retirez gestion des paquets. Cela permet l&#8217;installation, assurez, retirez. La commande d&#8217;aide pour le gestionnaire de paquets est illustré ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure packagemanager <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Après les entrées de commande ci-dessus, il commence à fonctionner pour envelopper. Il catéchèse les fonctions dans les captures d&#8217;écran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure packagemanager <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to use a Package Management wrapper.
+
+ PackageManager, package-manager, packagemanager, package-mgr, pkgmgr
+
+       - pkg-install
+       Installs a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+       - pkg-ensure
+       Installs a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+       - pkg-remove
+       Removes a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+ A package manager wrapper that will allow you to install packages on any system
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametres-alternatifs">
+<h2>paramètres alternatifs<a class="headerlink" href="#parametres-alternatifs" title="Permalink to this headline">¶</a></h2>
+<p>Voici les autres paramètres qui peuvent être définis dans les déclarations:</p>
+<p>PackageManager, package-manager, packagemanager, pkgmgr, package-mgr.</p>
+</div>
+<div class="section" id="pkg-installer">
+<h2>Pkg-installer<a class="headerlink" href="#pkg-installer" title="Permalink to this headline">¶</a></h2>
+<p>L&#8217;installation comprend l&#8217;installation de PackageManager nécessaire pour faire l&#8217;installation dans une version mise à jour. Ce est un processus manifeste pour installer le module PackageManager sous ptconfigure. PackageManager en utilisant simplement la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager Install
+</pre></div>
+</div>
+<p>Après dynamiser la commande il catéchiser entrée.</p>
+<p>Lorsque l&#8217;entrée d&#8217;utilisateur comme il sera automatiquement oui installer PackageManager avec vérification du système. Si pas quitter l&#8217;installation. La capture d&#8217;écran suivante démontre PackageManager et ses fonctions.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pkg-assurer">
+<h2>Pkg-assurer<a class="headerlink" href="#pkg-assurer" title="Permalink to this headline">¶</a></h2>
+<p>Pkg assurer un système service se exécute. En cas de non exécution démarrer d&#8217;autre ne essayez pas. Grâce à cette commande, l&#8217;utilisateur peut déterminer si le système fonctionne ou ralenti. Des commandes simples sont faciles à manipuler. La commande suivante permet d&#8217;assurer, par le gestionnaire de paquets.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager ensure
+</pre></div>
+</div>
+</div>
+<div class="section" id="pkg-remove">
+<h2>Pkg-remove<a class="headerlink" href="#pkg-remove" title="Permalink to this headline">¶</a></h2>
+<p>Pkg retirer commande utilisée pour supprimer un paquet de gestionnaire de paquets. Le gestionnaire de paquets vérifie d&#8217;abord le paquet à supprimer du gestionnaire de paquets. Ensuite, il demande confirmation. Ensuite, utilisez l&#8217;option de suppression.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager remove
+</pre></div>
+</div>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sensibilité non de cas.</li>
+<li>Eh bien-to-do dans Ubuntu et CentOS.</li>
+<li>Supprimer le paquet est possible.</li>
+<li>Enroulez le gestionnaire de paquets.</li>
+<li>Les commandes sont simples à utilizer.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fpackagemanager.rst">
+          PackageManager
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

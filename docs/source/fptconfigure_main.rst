@@ -39,6 +39,10 @@ Jouer avec Modules ptconfigure
    ffirewall
    fgem
    fgenerator
+   fgitbucket
+   fgitkeysafe
+   fgitlab
+   fgittools
    fgimp
    fhaproxy
    fhhvm
@@ -47,10 +51,45 @@ Jouer avec Modules ptconfigure
    fintellij
    finvoke
    fjava
+   fminify
    fjenkins
    fjenkinsplugins
    fjenkinssudonopass
    fjetty
    fjmeter
    flighttpdserver
+   flogging_cleo
+   fmediatools
+   fmemcached
+   fmkdir
+   fmodulemanager
+   fnagiosserver
+   fmongodb
+   fmysqladmin 
+   fmysqlserver
+   fmysqltool
+   fnetbeans
+   fnetworktools
+   fnewrelic
+   fnodejs
+   fnginxserver
+   fopenoffice
+   foracle
+   fpackagemanager
+   fparallax
+   fpear
+   fpecl
+   fphake
+   fpharaohtools
+   fphpapc
+   fphpci
+   fphpcodebeautifier
+   fphpconf 
+   fphpcs
+   fphpdox
+   fphpeclipse
+   fphpedit
+   fphpmd
+   fphpmodule
    fptconfigure
+
