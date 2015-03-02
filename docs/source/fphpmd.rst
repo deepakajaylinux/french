@@ -117,35 +117,33 @@ Options
 avantages
 ------------------
 
-Excessive PublicCount
------------------------------
- 
+Excessive PublicCount:
+
 Un grand nombre de méthodes publiques et attributs déclarés dans une classe peut indiquer la classe peut avoir besoin d'être brisé comme un effort accru sera
 être nécessaire pour tester vivement.
 
-Excessive ParameterList
--------------------------------
+Excessive ParameterList:
 
 Listes de paramètres longs peuvent indiquer qu'un nouvel objet devrait être créé pour envelopper les nombreux paramètres. Fondamentalement, essayez de regrouper les paramètres ensemble.
 
-Cyclomatic Complexity
--------------------------------
+
+Cyclomatic Complexity:
 
 La complexité est déterminée par le nombre de points de décision dans un procédé plus un pour l'entrée de méthode.
 
-Superglobales
--------------------
+
+Superglobales:
 
 Accéder à une variable super-globale directement est considéré comme une mauvaise pratique. Ces variables doivent être encapsulées dans des objets qui sont fournis
 par un cadre, par exemple.
 
-Short Variable
--------------------
+
+Short Variable:
 
 Détecte quand un champ, local, ou le paramètre a une très courte nom.
 
-VariableLongue
----------------------
+
+VariableLongue:
 
 Détecte quand un champ, une variable formelle ou locale est déclarée avec un nom long.
 
