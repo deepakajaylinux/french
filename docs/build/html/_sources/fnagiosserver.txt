@@ -97,13 +97,13 @@ Options
  | paramètres          | paramètre alternatif                                           | option | commentaires                        |
  +=====================+================================================================+========+=====================================+
  |ptconfigure          | Il ya quatre autres paramètres qui peuvent être utilisés dans  | Y      | Le système démarre processus        |     
- |nagiosserver         | la ligne de commande.NagiosServer, nagios-server, nagiosserver |        | d'installation                      |
- |Install?(Y/N)        | , nagios Eg: ptconfigure nagios install/                       |        |                                     |
+ |nagiosserver         | la ligne de commande. NagiosServer, nagios-server,             |        | d'installation                      |
+ |Install?(Y/N)        | nagiosserver, nagios Eg: ptconfigure nagios install/           |        |                                     |
  |                     | ptconfigure nagiosserver install                               |        |                                     |
  +---------------------+----------------------------------------------------------------+--------+-------------------------------------+
  |ptconfigure          | Il ya quatre autres paramètres qui peuvent être utilisés dans  | N      | Système arrête processus            |
- |nagiosserver         | la ligne de commande.NagiosServer, nagios-server, nagiosserver |        | d'installation                      |
- |install?(Y/N)        | , nagios Eg: ptconfigure nagios install/                       |        |                                     |
+ |nagiosserver         | la ligne de commande.NagiosServer, nagios-server,              |        | d'installation                      |
+ |install?(Y/N)        | nagiosserver, nagios Eg: ptconfigure nagios install/           |        |                                     |
  |                     | ptconfigure nagiosserver install|                              |        |                                     |
  +---------------------+----------------------------------------------------------------+--------+-------------------------------------+
 
@@ -114,22 +114,34 @@ Avantages
 --------------
 
 * Suivi des services de réseau (SMTP, POP3, HTTP, NNTP, ICMP, SNMP, FTP, SSH)
+
 * Suivi des ressources d'accueil (charge processeur, l'utilisation du disque, les journaux système) sur la majorité des systèmes 
-  d'exploitation de réseau, y compris Microsoft
-  Fenêtres avec le plugin de l'NSClient ou Vérifiez MK.
+  d'exploitation de réseau, y compris Microsoft Fenêtres avec le plugin de l'NSClient ou Vérifiez MK
+
 * Suivi de quelque chose de semblable sondes (température, alarmes, etc.) Qui ont la capacité d'envoyer des données collectées via un réseau de
   plugins spécifiquement écrites
+
 * Suivi par exécuter des scripts à distance via Nagios distance Plugin Executor
+
 * Surveillance à distance soutenus par les tunnels SSH ou SSL crypté
+
 * Les données disponibles plugins graphiques
+
 * contrôles de service PARALLELISE
-* notifications de contact en cas de problèmes de service ou de l'hôte se produisent et se résoudre par e-mail, pager, SMS, ou toute autre 
-  méthode définie par l'utilisateur par le biais  System Plugin.
+
+* notifications de contact en cas de problèmes de service ou de l'hôte se produisent et se résoudre par e-mail, pager, SMS, ou toute autre
+  méthode définie par l'utilisateur par le biais System Plugin
+
 * La possibilité de définir des gestionnaires d'événements pour être exécuté lors d'une réparation ou d'accueil des événements pour la 
   résolution proactive des problèmes
+
 * Journal rotation automatique de fichier
+
 * Prise en charge de la mise en œuvre supervision redondante d'hôtes
+
 * Une interface web option pour visualiser état actuel du réseau, les notifications, l'histoire de problème, les fichiers journaux, etc.
+
 * Stockage de données via des fichiers texte plutôt que de base de données
+
 * Un design simple plugin qui permet aux utilisateurs de développer facilement leurs propres contrôles de service en fonction des besoins, en
   utilisant leurs outils de choix (scripts shell, C++, Perl, Ruby, Python, PHP, C#, etc) 
