@@ -39,17 +39,17 @@ La représentation picturale de la commande ci-dessus est listé ci-dessous,
 installation
 -----------------
 
-Installation d'un module de phlagrant est y compris les pilotes et plugins périphériques, acte de rendre le programme prêt à être exécuté. Lors de l'installation de ce module la commande suivante sera adoptée.
+Installation d'un module de redis est y compris les pilotes et plugins périphériques, acte de rendre le programme prêt à être exécuté. Lors de l'installation de ce module la commande suivante sera adoptée.
 
 .. code-block:: bash
 
- ptconfigure Phlagrant install
+ ptconfigure redis install
 
 Après entrées de la commande du système peut poser
 
-Installez Phlagrant? (Y / N)
+Installez redis? (Y / N)
 
-Si l'utilisateur donne Y puis Phlagrant sera installé. La capture d'écran suivante le démontrent.
+Si l'utilisateur donne Y puis redis sera installé. La capture d'écran suivante le démontrent.
 
 .. code-block:: bash
 

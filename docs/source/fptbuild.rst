@@ -1,45 +1,45 @@
 =================
-Phrankinsense
+PTBuild
 =================
 
 synopsis
 ------------------
 
-Cet outil permet à l'utilisateur d'installer et mettre à jour phrankinsense sous ptconfigure dans les outils de pharaon. Automatisation de la construction devrait inclure automatisant l'intégration, qui comprend souvent le déploiement dans un environnement de production comparables. Dans de nombreux cas, le script de compilation non seulement compile les binaires, mais génère aussi de la documentation, pages web, les statistiques et les médias de distribution tels que Red Hat. Il réconforte avec Ubuntu et Cent OS.
+Cet outil permet à l'utilisateur d'installer et mettre à jour ptbuild sous ptconfigure dans les outils de pharaon. Automatisation de la construction devrait inclure automatisant l'intégration, qui comprend souvent le déploiement dans un environnement de production comparables. Dans de nombreux cas, le script de compilation non seulement compile les binaires, mais génère aussi de la documentation, pages web, les statistiques et les médias de distribution tels que Red Hat. Il réconforte avec Ubuntu et Cent OS.
 
 Commande Aide
 -----------------------
 
-La commande help conduit les utilisateurs concernant l'objet et ainsi que sur les options qui sont inclus dans les modules de Phrankinsense. Les listes de commandes de l'aide sur les autres paramètres de Phrankinsense sous module de ptconfigure. Il décrit également la syntaxe pour l'installation de la updation de l'utilisateur. La commande d'aide pour Phrankinsense est illustré ci-dessous.
+La commande help conduit les utilisateurs concernant l'objet et ainsi que sur les options qui sont inclus dans les modules de ptbuild. Les listes de commandes de l'aide sur les autres paramètres de ptbuild sous module de ptconfigure. Il décrit également la syntaxe pour l'installation de la updation de l'utilisateur. La commande d'aide pour ptbuild est illustré ci-dessous.
 
 .. code-block:: bash
 
- 		ptconfigure Phrankinsense help
+ 		ptconfigure ptbuild help
 
-La capture d'écran ci-dessous montre l'effort plein de Phrankinsense
+La capture d'écran ci-dessous montre l'effort plein de ptbuild
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure Phrankinsense help
+ kevell@corp:/# ptconfigure ptbuild help
 
  ******************************
 
 
-  This command allows you to install or update Phrankinsense.
+  This command allows you to install or update ptbuild.
 
-  Phrankinsense, phrankinsense
+  ptbuild, ptbuild
 
         - install
-        Installs the latest version of phrankinsense
-        example: ptconfigure phrankinsense install
+        Installs the latest version of ptbuild
+        example: ptconfigure ptbuild install
 
         - ensure
-        Ensures phrankinsense is installed
-        example: ptconfigure phrankinsense ensure
+        Ensures ptbuild is installed
+        example: ptconfigure ptbuild ensure
 
         - uninstall
-        Uninstalls the latest version of phrankinsense
-        example: ptconfigure phrankinsense uninstall
+        Uninstalls the latest version of ptbuild
+        example: ptconfigure ptbuild uninstall
  ------------------------------
  End Help
  ******************************
@@ -48,18 +48,18 @@ La capture d'écran ci-dessous montre l'effort plein de Phrankinsense
 installation
 --------------------
 
-Ce est un outil qui se trouve sous ptconfigure et tire vers le bas des copies propres de l'utilisateur base de code et ne se appuie pleinement, à partir de zéro, tout le temps. Cette commande est utilisée pour installer la dernière version de Phrankinsense. La commande utilisée pour l'installation est le suivant.
+Ce est un outil qui se trouve sous ptconfigure et tire vers le bas des copies propres de l'utilisateur base de code et ne se appuie pleinement, à partir de zéro, tout le temps. Cette commande est utilisée pour installer la dernière version de ptbuild. La commande utilisée pour l'installation est le suivant.
 
 .. code-block:: bash
 
-	ptconfigure Phrankinsense install
+	ptconfigure ptbuild install
 
 
 Après entrées de la commande du système peut poser
 
-installer Phrankinsense? (Y / N)
+installer ptbuild? (Y / N)
 
-Si l'utilisateur donne Y puis Phrankinsense sera installé. La capture d'écran suivante le démontrent.
+Si l'utilisateur donne Y puis ptbuild sera installé. La capture d'écran suivante le démontrent.
 
 .. code-block:: bash
 
@@ -69,7 +69,7 @@ Si l'utilisateur donne Y puis Phrankinsense sera installé. La capture d'écran 
  +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
  | Paramètres                 | option  | Annuaire (par défaut)       | commentaires                                                 |
  +============================+=========+=============================+==============================================================+
- |Data directory (Par défaut) | Yes     | “/opt/Phrankinsense”        | Il va installer Phrankinsense sous ptconfigure               |
+ |Data directory (Par défaut) | Yes     | “/opt/ptbuild”              | Il va installer ptbuild sous ptconfigure                     |
  +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
  |Data directory              | No      | Slash Fin                   | L'utilisateur doit spécifier le chemin d'un                  |
  +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
@@ -83,17 +83,17 @@ Si l'utilisateur donne Y puis Phrankinsense sera installé. La capture d'écran 
 Désinstaller
 --------------
 
-Cette commande est utilisée pour désinstaller la dernière version de Phrankinsense. La commande utilisée pour la désinstallation est la suivante.
+Cette commande est utilisée pour désinstaller la dernière version de ptbuild. La commande utilisée pour la désinstallation est la suivante.
 
 .. code-block:: bash
 
-		ptconfigure Phrankinsense Uninstall
+		ptconfigure ptbuild Uninstall
 
 Après entrées de la commande du système peut poser
 
-Désinstaller Phrankinsense? (Y / N)
+Désinstaller ptbuild? (Y / N)
 
-Si l'utilisateur donne Y puis Phrankinsense sera désinstallé. La capture d'écran suivante le démontrent.
+Si l'utilisateur donne Y puis ptbuild sera désinstallé. La capture d'écran suivante le démontrent.
 
 
 .. cssclass:: table-bordered
@@ -102,7 +102,7 @@ Si l'utilisateur donne Y puis Phrankinsense sera désinstallé. La capture d'éc
  +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
  | Paramètres                 | option  | Annuaire (par défaut)       | commentaires                                                 |
  +============================+=========+=============================+==============================================================+
- |Data directory (Par défaut) | Yes     | “/opt/Phrankinsense”        | Il permet de désinstaller Phrankinsense sous ptconfigure     |
+ |Data directory (Par défaut) | Yes     | “/opt/ptbuild”              | Il permet de désinstaller ptbuild sous ptconfigure           |
  +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
  |Data directory              | No      | Slash Fin                   | L'utilisateur doit spécifier le chemin d'un                  |
  +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
@@ -116,11 +116,11 @@ Si l'utilisateur donne Y puis Phrankinsense sera désinstallé. La capture d'éc
 assurer
 ----------
 
-Processus utilisé pour vérifier l'Phrankinsense installé dans le système ou non de l'utilisateur Vérifiez. La commande suivante permet à l'utilisateur de se assurer.
+Processus utilisé pour vérifier l'ptbuild installé dans le système ou non de l'utilisateur Vérifiez. La commande suivante permet à l'utilisateur de se assurer.
 
 .. code-block:: bash
 
-		ptconfigure Phrankinsense ensure
+		ptconfigure ptbuild ensure
 
 La capture d'écran ci-dessous montre ses fonctions.
 
@@ -129,13 +129,13 @@ paramètre alternatifs
 
 Ce sont les paramètres de substitution,
 
-Phrankinsense, phrankinsense
+ptbuild, ptbuild
 
 
 avantages
 ----------------
 
-* Utilisé pour installer Phrankinsenses possible.
+* Utilisé pour installer ptbuilds possible.
 * Convient pour travailler avec Ubuntu et CentOS.
 * Sensibilité non de cas.
 * Automatisation dans la version mise à jour.

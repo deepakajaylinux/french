@@ -630,11 +630,11 @@ Jouer avec Modules ptconfigure
    fphpstorm
    fphpunit
    fphpvm
-   fphrakinsense
    fping
    fport
    fpostgressserver
    fprocess
+   fptbuild
    fptconfigure
    fpttest_configure
    fptvirtualize_configure
