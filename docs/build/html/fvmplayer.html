@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>SFTP &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Vmplayer &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
-    <link rel="next" title="Skipfish" href="fskipfish.html" />
-    <link rel="prev" title="Service" href="fservice.html" />
+    <link rel="next" title="VMwareWorkstation" href="fvmwareworkstation.html" />
+    <link rel="prev" title="Virtual box" href="fvirtualbox.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,11 +88,11 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">SFTP</a><ul>
+<li><a class="reference internal" href="#">Vmplayer</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
-<li><a class="reference internal" href="#commande-aide">commande Aide</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
-<li><a class="reference internal" href="#options">Options</a></li>
+<li><a class="reference internal" href="#option">option</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -104,10 +104,10 @@
             
               
                 
-  <li><a href="fservice.html"
-         title="Previous Chapter: Service">&laquo; Service</a></li>
-  <li><a href="fskipfish.html"
-         title="Next Chapter: Skipfish">Skipfish &raquo;</a></li>
+  <li><a href="fvirtualbox.html"
+         title="Previous Chapter: Virtual box">&laquo; Virtual box</a></li>
+  <li><a href="fvmwareworkstation.html"
+         title="Next Chapter: VMwareWorkstation">VMwareWorkstatio... &raquo;</a></li>
               
             
             
@@ -115,7 +115,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fsftp_configure.txt"
+  <a href="_sources/fvmplayer.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -152,109 +152,61 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="sftp">
-<h1>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vmplayer">
+<h1>Vmplayer<a class="headerlink" href="#vmplayer" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisModule aider à dossiers d&#8217;anneau de transfert d&#8217;un système à l&#8217;autre. Il peut télécharger ou de télécharger les fichiers sur le système. L&#8217;automatisation est possible. PUT et GET options sont disponibles dans ce module. Il spécifie la configuration de votre environnement. Il est amical avec Ubuntu et OS cent utilisateur.</p>
+<p>VMPlayer peut fonctionner appliances virtuelles existantes et de créer ses propres machines virtuelles (qui nécessitent un système d&#8217;exploitation doit être installé pour être fonctionnel). Il utilise le même noyau de virtualisation comme VMware Workstation, un programme similaire avec plus de fonctionnalités, mais pas gratuitement. VMware Player est disponible en ptconfigure. Il est adapté avec Ubuntu et CentOS.</p>
 </div>
 <div class="section" id="commande-aide">
-<h2>commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>Aide commande utilisée pour trouver des informations sur une commande spécifique. Pour plus d&#8217;informations sur les changements de fonctions sur cette page de SFTP nous pouvons utiliser cette commande d&#8217;aide.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure sftp <span class="nb">help</span>
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande help guide l&#8217;utilisateur pour créer joueur de machine virtuelle. Spécialisée dans ptconfigure. Fournit également des fonctionnalités pour la machine virtuelle
+joueur.</p>
+<p>La commande d&#8217;aide pour VMplayer est illustré ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure vmplayer help.
 </pre></div>
 </div>
-<p>La capture d&#8217;écran suivante vous guidera.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp <span class="nb">help</span>
-******************************
-
-
- This <span class="nb">command </span>handles SFTP Transfer Functions.
-
- SFTP, sftp
-
-       - put
-       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
-       example: ptconfigure sftp put
-       example: ptconfigure sftp put --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
-       example: ptconfigure sftp put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
-
-       - get
-       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from remote to <span class="nb">local</span>
-<span class="nb">       </span>example: ptconfigure sftp get
-       example: ptconfigure sftp get --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
-       example: ptconfigure sftp get --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
-
-------------------------------
-End Help
-******************************
-</pre></div>
-</div>
+<p>Après les entrées de commande ci-dessus, il commence à fonctionner pour créer le cadre de joueur. Il catéchèse les fonctions de vmplayer dans les captures d&#8217;écran.</p>
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>En tant que société, et en tant que particuliers fortunés, SFTP a été consacrée à répondre aux défis technologiques de chaque Partnera € ™, se acquitter de leurs exigences techniques, et de satisfaire leurs objectifs d&#8217;affaires. Ce est un processus évident pour installer le module de SFTP sous ptconfigure en utilisant simplement la commande ci-dessous givenName,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure SFTP put
+<blockquote>
+<div>L&#8217;installation de vmplayer nécessaire pour rendre l&#8217;installation dans une version mise à jour. Ce est un processus manifeste pour installer le module de vmplayer sous ptconfigure en utilisant simplement la commande ci-dessous,</div></blockquote>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure vmplayer Install
 </pre></div>
 </div>
-<p>Après avoir donné la commande alors le système se poser la question,</p>
-<p>Installez groupe de serveurs SFTP? Y / N</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur en tant que Y, puis</p>
-<p>Section de temporisation SSh?</p>
-<p>L&#8217;utilisateur doit entrer la valeur</p>
-<p>Se il vous plaît entrer dans le port de ssh à distance</p>
-<p>La valeur par défaut est 22. L&#8217;utilisateur peut entrer ne importe quelle valeur</p>
-<p>Entrez IP du serveur hôte?</p>
-<p>L&#8217;utilisateur doit entrer un nom d&#8217;utilisateur, mot de passe, et le chemin clé.</p>
-<p>Ajouter un autre serveur?</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur comme Y il doit entrer un nouveau nom de serveur</p>
-<p>Alors tout sera connecté.</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur comme N nom de serveur précédente peut être consultée.</p>
-<p>Vous guidera La capture d&#8217;écran suivante.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
-
-SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
-Please Enter SSH Timeout in seconds
-90
-Please Enter remote SSH Port
-22
-Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
-N
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
-Enter <span class="nb">local source </span>file path
-/root/vv
-Enter remote target file path
-/root/gg/vv
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
-******************************
-</pre></div>
+<p>Après dynamiser la commande il catéchiser entrée.</p>
+<p>Lorsque l&#8217;entrée de l&#8217;utilisateur que oui il va installer automatiquement vmplayer avec la vérification du système. Si pas quitter l&#8217;installation. La capture d&#8217;écran suivante démontre vmplayer et ses fonctions.</p>
 </div>
-</div>
-<div class="section" id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="option">
+<h2>option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="19%" />
-<col width="22%" />
-<col width="59%" />
+<col width="21%" />
+<col width="34%" />
+<col width="10%" />
+<col width="35%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">paramètre</th>
-<th class="head">paramètres alternatifs</th>
-<th class="head">commentaires</th>
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">Autres  Paramètres</th>
+<th class="head">options</th>
+<th class="head">Commentaires</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>put</td>
-<td>SFTP, sftp</td>
-<td>Source et la cible- Peut transférer le fichier</td>
+<tr class="row-even"><td>Install vmplayer?(Y/N)</td>
+<td>Au lieu d&#8217;utiliser vmplayer nous pouvons
+utiliser VMPlayer, VM-player</td>
+<td>Y</td>
+<td>Il va installer vmplayer sous ptconfigure
+dans Pharaoh tools</td>
 </tr>
-<tr class="row-odd"><td>get</td>
-<td>SFTP, sftp</td>
-<td>Chemin d&#8217;accès à la source -Le fichier peut être téléchargé à
-Partir du système distant|</td>
+<tr class="row-odd"><td>Install vmplayer?(Y/N)</td>
+<td>Au lieu d&#8217;utiliser vmplayer nous pouvons
+utiliser VMPlayer, VM-player|</td>
+<td>N</td>
+<td>La sortie du système d&#8217;installation</td>
 </tr>
 </tbody>
 </table>
@@ -262,14 +214,11 @@ Partir du système distant|</td>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Multi Server de région éloignée.</li>
-<li>Le fichier spécifié ne est pas message d&#8217;erreur disponibles viendra.</li>
-<li>Accès Capacité est difficile sans autorisation.</li>
-<li>Écraser automatiquement en cas de déjà en cas de fichier exister.</li>
-<li>Non sensible à la casse.</li>
-<li>Le secret et la sécurité est possible.</li>
+<li>Exécutez les appliences virtuels existants et de créer la machine virtuelle</li>
+<li>Non sensible à la casse</li>
+<li>Convient pour Ubuntu et Cent OS</li>
+<li>Utilisé pour tous les types de professionnels</li>
 </ul>
-<p>Résolution clients problèmes technologiques les plus difficiles et permettant Leur succès est la mission de SFTP et la passion.</p>
 </div>
 </div>
 
@@ -329,8 +278,8 @@ Partir du système distant|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fsftp_configure.rst">
-          SFTP
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fvmplayer.rst">
+          Vmplayer
         </a> on GitHub.
       </li>
 

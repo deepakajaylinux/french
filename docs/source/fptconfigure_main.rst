@@ -658,3 +658,13 @@ Jouer avec Modules ptconfigure
    fstandardtools 
    fsudonopass
    fsvn
+   fsystemdetection
+   fteamcity
+   ftomcat
+   fubuntucompiler
+   fvarnish
+   fvirtualbox
+   fvmplayer
+   fvmwareworkstation
+   fvncpassword
+   fwireframesketcher

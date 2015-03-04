@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>SFTP &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Varnish &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
-    <link rel="next" title="Skipfish" href="fskipfish.html" />
-    <link rel="prev" title="Service" href="fservice.html" />
+    <link rel="next" title="Virtual box" href="fvirtualbox.html" />
+    <link rel="prev" title="Ubuntu Compiler" href="fubuntucompiler.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,11 +88,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">SFTP</a><ul>
+<li><a class="reference internal" href="#">Varnish</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
-<li><a class="reference internal" href="#commande-aide">commande Aide</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
-<li><a class="reference internal" href="#options">Options</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -104,10 +103,10 @@
             
               
                 
-  <li><a href="fservice.html"
-         title="Previous Chapter: Service">&laquo; Service</a></li>
-  <li><a href="fskipfish.html"
-         title="Next Chapter: Skipfish">Skipfish &raquo;</a></li>
+  <li><a href="fubuntucompiler.html"
+         title="Previous Chapter: Ubuntu Compiler">&laquo; Ubuntu Compiler</a></li>
+  <li><a href="fvirtualbox.html"
+         title="Next Chapter: Virtual box">Virtual box &raquo;</a></li>
               
             
             
@@ -115,7 +114,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fsftp_configure.txt"
+  <a href="_sources/fvarnish.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -152,38 +151,30 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="sftp">
-<h1>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="varnish">
+<h1>Varnish<a class="headerlink" href="#varnish" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisModule aider à dossiers d&#8217;anneau de transfert d&#8217;un système à l&#8217;autre. Il peut télécharger ou de télécharger les fichiers sur le système. L&#8217;automatisation est possible. PUT et GET options sont disponibles dans ce module. Il spécifie la configuration de votre environnement. Il est amical avec Ubuntu et OS cent utilisateur.</p>
+<p>Ce module aide à l&#8217;installation du vernis à la machine de l&#8217;utilisateur. Vernis est un programme qui peut grandement accélérer un site Web tout en réduisant la charge sur le serveur Web. Selon le site officiel de vernis, vernis est un «accélérateur d&#8217;applications Web aussi connu comme un proxy inverse mise en cache HTTP&#8221;. Voyons ici, à propos de comment ce module effectue l&#8217;installation de vernis de apt-get.</p>
 </div>
 <div class="section" id="commande-aide">
-<h2>commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>Aide commande utilisée pour trouver des informations sur une commande spécifique. Pour plus d&#8217;informations sur les changements de fonctions sur cette page de SFTP nous pouvons utiliser cette commande d&#8217;aide.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure sftp <span class="nb">help</span>
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>La commande help guide les utilisateurs au sujet de l&#8217;objet et ainsi que sur les options qui sont inclus dans le module de vernis. La commande help répertorie les autres paramètres de vernis. Il décrit également la syntaxe pour l&#8217;installation de vernis. La commande d&#8217;aide dans le cadre du module de vernis est donnée ci-dessous:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure varnish <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La capture d&#8217;écran suivante vous guidera.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp <span class="nb">help</span>
+<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous montre sur la commande d&#8217;aide en vertu module de vernis.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Varnish <span class="nb">help</span>
 ******************************
 
 
- This <span class="nb">command </span>handles SFTP Transfer Functions.
+This <span class="nb">command </span>allows you to install Varnish, the popular HTTP Cache
 
- SFTP, sftp
+Varnish, varnish
 
-       - put
-       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
-       example: ptconfigure sftp put
-       example: ptconfigure sftp put --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
-       example: ptconfigure sftp put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
-
-       - get
-       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from remote to <span class="nb">local</span>
-<span class="nb">       </span>example: ptconfigure sftp get
-       example: ptconfigure sftp get --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
-       example: ptconfigure sftp get --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
+- install
+Installs Varnish through apt-get
+example: ptconfigure varnish install
 
 ------------------------------
 End Help
@@ -193,83 +184,126 @@ End Help
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>En tant que société, et en tant que particuliers fortunés, SFTP a été consacrée à répondre aux défis technologiques de chaque Partnera € ™, se acquitter de leurs exigences techniques, et de satisfaire leurs objectifs d&#8217;affaires. Ce est un processus évident pour installer le module de SFTP sous ptconfigure en utilisant simplement la commande ci-dessous givenName,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure SFTP put
+<p>La commande utilisée pour installer le vernis à la machine des utilisateurs est illustré ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure varnish install
 </pre></div>
 </div>
-<p>Après avoir donné la commande alors le système se poser la question,</p>
-<p>Installez groupe de serveurs SFTP? Y / N</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur en tant que Y, puis</p>
-<p>Section de temporisation SSh?</p>
-<p>L&#8217;utilisateur doit entrer la valeur</p>
-<p>Se il vous plaît entrer dans le port de ssh à distance</p>
-<p>La valeur par défaut est 22. L&#8217;utilisateur peut entrer ne importe quelle valeur</p>
-<p>Entrez IP du serveur hôte?</p>
-<p>L&#8217;utilisateur doit entrer un nom d&#8217;utilisateur, mot de passe, et le chemin clé.</p>
-<p>Ajouter un autre serveur?</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur comme Y il doit entrer un nouveau nom de serveur</p>
-<p>Alors tout sera connecté.</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur comme N nom de serveur précédente peut être consultée.</p>
-<p>Vous guidera La capture d&#8217;écran suivante.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
+<p>Après avoir saisi la commande ci-dessus, les opérations suivantes se produit comme indiqué dans le format tabulaire.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="38%" />
+<col width="11%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">Autres paramètres</th>
+<th class="head">Options</th>
+<th class="head">commentaire</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Varnish? (Y/N)</td>
+<td>au lieu deVarnish, varnish peuvent également
+être utilisés.</td>
+<td>Y(Yes)</td>
+<td>Si l&#8217;utilisateur souhaite procéder le
+d&#8217;installation qu&#8217;ils peuvent entrée
+comme Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Varnish? (Y/N)</td>
+<td>au lieu deVarnish, varnish peuvent également
+être utilisés.</td>
+<td>N(No)</td>
+<td>Si l&#8217;utilisateur souhaite quitter le
+processus d&#8217;installation qu&#8217;ils peuvent
+entrée comme N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si l&#8217;utilisateur procède le processus d&#8217;installation, pendant l&#8217;exécution de l&#8217;installation, le processus suivant se produit:</p>
+<ul class="simple">
+<li>Lit listes de paquets.</li>
+<li>Construit l&#8217;arbre des dépendances.</li>
+<li>Lit les informations d&#8217;état.</li>
+<li>Liste des paquets installés.</li>
+<li>Liste des packages supplémentaires installés.</li>
+<li>Liste des nouveaux paquets installés.</li>
+<li>Nombre de fichiers mis à niveau, nouvellement installés, retirés, pas mis à niveau.</li>
+<li>Enfin, à partir accélérateur HTTP verni.</li>
+<li>La capture d&#8217;écran ci-dessous illustre le processus mentionné ci-dessus:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure varnish install
+Install Varnish? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! Varnish !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-95745650915.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-95745650915.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-95745650915.sh Permissions
+Executing /tmp/ptconfigure-temp-script-95745650915.sh
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+libjemalloc1 libvarnishapi1
+Suggested packages:
+varnish-doc
+The following NEW packages will be installed:
+libjemalloc1 libvarnishapi1 varnish
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">6</span> not upgraded.
+Need to get <span class="m">518</span> kB of archives.
+After this operation, 1,653 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libvarnishapi1 amd64 3.0.5-2 <span class="o">[</span>29.9 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 <span class="o">[</span>76.8 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe varnish amd64 3.0.5-2 <span class="o">[</span><span class="m">411</span> kB<span class="o">]</span>
+Fetched <span class="m">518</span> kB in 3s <span class="o">(</span><span class="m">152</span> kB/s<span class="o">)</span>
+Selecting previously unselected package libvarnishapi1.
+<span class="o">(</span>Reading database ... <span class="m">201582</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libvarnishapi1_3.0.5-2_amd64.deb ...
+Unpacking libvarnishapi1 <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+Selecting previously unselected package libjemalloc1.
+Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...
+Unpacking libjemalloc1 <span class="o">(</span>3.5.1-2<span class="o">)</span> ...
+Selecting previously unselected package varnish.
+Preparing to unpack .../varnish_3.0.5-2_amd64.deb ...
+Unpacking varnish <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up libvarnishapi1 <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+Setting up libjemalloc1 <span class="o">(</span>3.5.1-2<span class="o">)</span> ...
+Setting up varnish <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+ * Starting HTTP accelerator varnishd
+   ...done.
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Temp File /tmp/ptconfigure-temp-script-95745650915.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
 
-SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
-Please Enter SSH Timeout in seconds
-90
-Please Enter remote SSH Port
-22
-Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
-N
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
-Enter <span class="nb">local source </span>file path
-/root/vv
-Enter remote target file path
-/root/gg/vv
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
+
+Single App Installer:
+--------------------------------------------
+Varnish: Success
+------------------------------
+Installer Finished
 ******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="table-bordered docutils">
-<colgroup>
-<col width="19%" />
-<col width="22%" />
-<col width="59%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">paramètre</th>
-<th class="head">paramètres alternatifs</th>
-<th class="head">commentaires</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>put</td>
-<td>SFTP, sftp</td>
-<td>Source et la cible- Peut transférer le fichier</td>
-</tr>
-<tr class="row-odd"><td>get</td>
-<td>SFTP, sftp</td>
-<td>Chemin d&#8217;accès à la source -Le fichier peut être téléchargé à
-Partir du système distant|</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Multi Server de région éloignée.</li>
-<li>Le fichier spécifié ne est pas message d&#8217;erreur disponibles viendra.</li>
-<li>Accès Capacité est difficile sans autorisation.</li>
-<li>Écraser automatiquement en cas de déjà en cas de fichier exister.</li>
-<li>Non sensible à la casse.</li>
-<li>Le secret et la sécurité est possible.</li>
+<li>Vernis est un moderne et performante, la mise en œuvre open source mise en cache proxy inverse HTTP.</li>
+<li>Les paramètres utilisés pour déclarer commande d&#8217;aide, l&#8217;installation ne sont pas sensibles à la casse qui est un avantage supplémentaire en
+rapport aux autres.</li>
+<li>Il est bien de choses à faire à la fois Cent OS et ainsi que dans Ubuntu.</li>
 </ul>
-<p>Résolution clients problèmes technologiques les plus difficiles et permettant Leur succès est la mission de SFTP et la passion.</p>
 </div>
 </div>
 
@@ -329,8 +363,8 @@ Partir du système distant|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fsftp_configure.rst">
-          SFTP
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fvarnish.rst">
+          Varnish
         </a> on GitHub.
       </li>
 
