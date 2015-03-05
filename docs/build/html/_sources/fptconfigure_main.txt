@@ -668,3 +668,5 @@ Jouer avec Modules ptconfigure
    fvmwareworkstation
    fvncpassword
    fwireframesketcher
+   fxvfb
+   fzendserver
