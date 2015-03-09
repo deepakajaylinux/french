@@ -99,7 +99,7 @@ Et puis, il sera demande entrée par les utilisateurs, comme représenté sous f
  | Paramètre          | Chemin                   | Option          | Commentaire                                                      |
  +====================+==========================+=================+==================================================================+
  |Program data        | “/opt/phpunit”(module    | Yes             | Si l'utilisateur de procéder installation avec le répertoire     |
- | directory          | correspondant)           |                 | de données par défaut du programme qu'ils peuvent entrée         |
+ |directory           | correspondant)           |                 | de données par défaut du programme qu'ils peuvent entrée         |
  |(Par défaut)        |                          |                 | comme Oui                                                        |
  +--------------------+--------------------------+-----------------+------------------------------------------------------------------+
  |Program data        | spécifiques à un         | No(Slash Fin)   | Si l'utilisateur souhaite procéder à leur propre répertoire      |

@@ -16,11 +16,11 @@ Cette commande permet de déterminer l'utilisation de module de compositeur. L'u
 
 .. code-block:: bash
               
-		 cleopatra composer help
+		 ptconfigure composer help
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra composer help
+ kevell@corp:/# ptconfigure composer help
  ******************************
 
 
@@ -30,7 +30,7 @@ Cette commande permet de déterminer l'utilisation de module de compositeur. L'u
 
         - install
         Installs the latest version of composer
-        example: cleopatra composer install
+        example: ptconfigure composer install
 
  ------------------------------
  End Help
@@ -42,9 +42,10 @@ installation
 ----------------
 
 Lorsque l'utilisateur doit installer le module de compositeur dans la machine, la commande ci-dessous donnée exécuter le processus d'installation.
+
 .. code-block:: bash
                
-		 cleopatra composer install
+	 ptconfigure composer install
 
 Lors de l'installation, le système demande le nom du répertoire, si vous veut mettre en place votre PATH, vous pouvez définir votre chemin. Définissez votre chemin doit être suivie par le symbole «/». Appuyez sur Entrée pour utiliser le chemin par défaut.
 
@@ -54,16 +55,20 @@ Lors de l'installation, le système demande pour exécuter nom de répertoire, s
 
 "Quel est le répertoire programme de exécuteur Trouvé?" / Usr / bin "- Utilisez ce?"
 
-
 .. cssclass:: table-bordered
 
-        +---------------------------+------------------------+-----------------------+-----------------------------------------------+
-        |       paramètres          | Alternative Paramètre  |  option               |          commentaires                         |
-        +===========================+========================+=======================+===============================================+
-        |cleopatra composer Install |Composer , composer     |Y                      |Le système démarre processus d'installation    |
-        +---------------------------+------------------------+-----------------------+-----------------------------------------------+
-        |cleopatra composer Install |Composer , composer     |N                      |Système arrête processus d'installation|       |
-        +---------------------------+------------------------+-----------------------+-----------------------------------------------+
+
+
+ +-------------------------+-------------------------------------------+---------------+--------------------------------------------+
+ | paramètres	           | Autres paramètres                         | requis        | commentaire	                            |
+ +=========================+===========================================+===============+============================================+
+ |Install composer? (Y/N)  | à la place du composor, nous pouvons      | Yes           | système démarre processus d'installation   |
+ |                         | utiliser également Composor               |               |                                            |
+ +-------------------------+-------------------------------------------+---------------+--------------------------------------------+
+ |Install composer? (Y/N)  | à la place du composor, nous pouvons      | No            | système se arrête processus d'installation |
+ |                         | utiliser également Composor|              |               |                                            |
+ +-------------------------+-------------------------------------------+---------------+--------------------------------------------+
+
 
 
 
@@ -71,7 +76,7 @@ Est listé ci-dessous la capture d'écran pour la commande d'installation,
 
 .. code-block:: bash
 
- kevell@corp:/$ cleopatra composer install
+ kevell@corp:/$ ptconfigure composer install
  Install Composer - Update to latest version ? (Y/N)
  y
  *******************************
@@ -87,17 +92,17 @@ Est listé ci-dessous la capture d'écran pour la commande d'installation,
  remote: Total 6 (delta 0), reused 0 (delta 0)
  Unpacking objects: 100% (6/6), done.
  Checking connectivity... done.
- PHP Warning:  mkdir(): Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+ PHP Warning:  mkdir(): Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 192
  cp: cannot create directory ‘/opt/composer’: Permission denied
  Program Data folder populated
  Program Executor Deleted if existed
- PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  Invalid argument supplied for foreach() in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
- PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  Invalid argument supplied for foreach() in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
- PHP Warning:  file_put_contents(/usr/bin/composer): failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+ PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  Invalid argument supplied for foreach() in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 174
+ PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  Invalid argument supplied for foreach() in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 174
+ PHP Warning:  file_put_contents(/usr/bin/composer): failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 214
  chmod: cannot access ‘/opt/composer’: No such file or directory
  chmod: cannot access ‘/usr/bin/composer’: No such file or directory
  ... All done!
@@ -121,8 +126,7 @@ avantages
 * Il installe les dépendances (bibliothèques) pour une application.
 * Il permet également aux utilisateurs d'installer des applications PHP qui sont disponibles sur "Packagist" qui est son principal référentiel 
   contenant les packages disponibles.
-* Il fournit également des capacités de charge de l'automobile pour les bibliothèques qui spécifient des informations de chargement 
-  automatique pour faciliter l'utilisation de code tiers.
+* Il fournit également des capacités de charge de l'automobile pour les bibliothèques qui spécifient des informations de chargement automatique   pour faciliter l'utilisation de code tiers.
 
 
 

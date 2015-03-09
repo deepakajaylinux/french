@@ -72,15 +72,15 @@ option
 .. cssclass:: table-bordered
 
 
- +--------------------------------+----------------------------------+--------------+-------------------------------------+
- | Paramètres                     | alternative Paramètres           | option       | Commentaire                         |
- +================================+==================================+==============+=====================================+
- |Install Ubuntu compiler? Y/N    | UbuntuCompiler, ubuntu-compiler, | Yes          | Installed successfully              | 
- |                                | ubuntucompiler                   |              |                                     |
- +--------------------------------+----------------------------------+--------------+-------------------------------------+
- |Install Ubuntu compiler? Y/N    | UbuntuCompiler, ubuntu-compiler, | No           | Exit the screen                     |
- |                                | ubuntucompiler|                  |              |                                     |
- +--------------------------------+----------------------------------+--------------+-------------------------------------+
+ +--------------------------------+----------------------------------+--------------+---------------------------------------------+
+ | Paramètres                     | alternative Paramètres           | option       | Commentaire                                 |
+ +================================+==================================+==============+=============================================+
+ |Install Ubuntu compiler? Y/N    | UbuntuCompiler, ubuntu-compiler, | Yes          | System starts installation procesLe         |
+ |                                | ubuntucompiler                   |              | système démarre processus d'installations   | 
+ +--------------------------------+----------------------------------+--------------+---------------------------------------------+
+ |Install Ubuntu compiler? Y/N    | UbuntuCompiler, ubuntu-compiler, | No           | Il arrête le processus d'installation       |
+ |                                | ubuntucompiler|                  |              |                                             |
+ +--------------------------------+----------------------------------+--------------+---------------------------------------------+
 
 avantages
 -----------

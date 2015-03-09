@@ -31,6 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="Copy" href="fcopy.html" />
+    <link rel="prev" title="Cleofy" href="fcleofy.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -76,8 +79,8 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
-<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 </ul>
 </ul>
 </li>
@@ -100,6 +103,10 @@
             
               
                 
+  <li><a href="fcleofy.html"
+         title="Previous Chapter: Cleofy">&laquo; Cleofy</a></li>
+  <li><a href="fcopy.html"
+         title="Next Chapter: Copy">Copy &raquo;</a></li>
               
             
             
@@ -134,8 +141,8 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 </ul>
 </ul>
 
@@ -154,10 +161,10 @@
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>Cette commande permet de déterminer l&#8217;utilisation de module de compositeur. L&#8217;utilisateur viendra à connaître les différentes façons / format à exécuter ce module. Cette commande guide l&#8217;utilisateur final concernant les paramètres alternatifs et commande pour l&#8217;installation. Ci-dessous sont donnés la commande et la capture d&#8217;écran de la même.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra composer <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure composer <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra composer <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure composer <span class="nb">help</span>
 ******************************
 
 
@@ -167,7 +174,7 @@
 
        - install
        Installs the latest version of composer
-       example: cleopatra composer install
+       example: ptconfigure composer install
 
 ------------------------------
 End Help
@@ -177,43 +184,45 @@ End Help
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur doit installer le module de compositeur dans la machine, la commande ci-dessous donnée exécuter le processus d&#8217;installation.
-.. code-block:: bash</p>
-<blockquote>
-<div>cleopatra composer install</div></blockquote>
+<p>Lorsque l&#8217;utilisateur doit installer le module de compositeur dans la machine, la commande ci-dessous donnée exécuter le processus d&#8217;installation.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure composer install
+</pre></div>
+</div>
 <p>Lors de l&#8217;installation, le système demande le nom du répertoire, si vous veut mettre en place votre PATH, vous pouvez définir votre chemin. Définissez votre chemin doit être suivie par le symbole «/». Appuyez sur Entrée pour utiliser le chemin par défaut.</p>
 <p>&#8220;Quel est le répertoire des données du programme?&#8221; / Opt / compositeur &#8220;- utiliser cette fonction?</p>
 <p>Lors de l&#8217;installation, le système demande pour exécuter nom de répertoire, si vous veut mettre en place votre PATH, vous pouvez définir votre chemin. Définissez votre chemin doit être suivie par le symbole «/». Appuyez sur Entrée pour utiliser le chemin par défaut.</p>
 <p>&#8220;Quel est le répertoire programme de exécuteur Trouvé?&#8221; / Usr / bin &#8220;- Utilisez ce?&#8221;</p>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="22%" />
 <col width="20%" />
-<col width="19%" />
-<col width="39%" />
+<col width="34%" />
+<col width="12%" />
+<col width="35%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">paramètres</th>
-<th class="head">Alternative Paramètre</th>
-<th class="head">option</th>
-<th class="head">commentaires</th>
+<th class="head">Autres paramètres</th>
+<th class="head">requis</th>
+<th class="head">commentaire</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra composer Install</td>
-<td>Composer , composer</td>
-<td>Y</td>
-<td>Le système démarre processus d&#8217;installation</td>
+<tr class="row-even"><td>Install composer? (Y/N)</td>
+<td>à la place du composor, nous pouvons
+utiliser également Composor</td>
+<td>Yes</td>
+<td>système démarre processus d&#8217;installation</td>
 </tr>
-<tr class="row-odd"><td>cleopatra composer Install</td>
-<td>Composer , composer</td>
-<td>N</td>
-<td>Système arrête processus d&#8217;installation|</td>
+<tr class="row-odd"><td>Install composer? (Y/N)</td>
+<td>à la place du composor, nous pouvons
+utiliser également Composor|</td>
+<td>No</td>
+<td>système se arrête processus d&#8217;installation</td>
 </tr>
 </tbody>
 </table>
 <p>Est listé ci-dessous la capture d&#8217;écran pour la commande d&#8217;installation,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>cleopatra composer install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>ptconfigure composer install
 Install Composer - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -229,17 +238,17 @@ remote: Counting objects: 6, <span class="k">done</span>.
 remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
 Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
 Checking connectivity... <span class="k">done</span>.
-PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 192
 cp: cannot create directory ‘/opt/composer’: Permission denied
 Program Data folder populated
 Program Executor Deleted <span class="k">if</span> existed
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BasePHPApp.php on line 214
 chmod: cannot access ‘/opt/composer’: No such file or directory
 chmod: cannot access ‘/usr/bin/composer’: No such file or directory
 ... All <span class="k">done</span>!
@@ -264,8 +273,7 @@ Installer Finished
 <li>Il installe les dépendances (bibliothèques) pour une application.</li>
 <li>Il permet également aux utilisateurs d&#8217;installer des applications PHP qui sont disponibles sur &#8220;Packagist&#8221; qui est son principal référentiel
 contenant les packages disponibles.</li>
-<li>Il fournit également des capacités de charge de l&#8217;automobile pour les bibliothèques qui spécifient des informations de chargement
-automatique pour faciliter l&#8217;utilisation de code tiers.</li>
+<li>Il fournit également des capacités de charge de l&#8217;automobile pour les bibliothèques qui spécifient des informations de chargement automatique   pour faciliter l&#8217;utilisation de code tiers.</li>
 </ul>
 </div>
 </div>

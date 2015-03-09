@@ -561,11 +561,14 @@ Jouer avec Modules ptconfigure
    fchromedriver
    fcitadel
    fcleofy
+   fcomposer
+   fcopy
    fdigitalocean
    fdnsify
    fdevelopertools
    fencryption
    fenvironmentconfig
+   ffile
    ffirefox
    ffirefox14
    ffirefox17
@@ -586,16 +589,17 @@ Jouer avec Modules ptconfigure
    fintellij
    finvoke
    fjava
-   fminify
    fjenkins
    fjenkinsplugins
    fjenkinssudonopass
    fjetty
    fjmeter
+   fjrush
    flighttpdserver
    flogging_cleo
    fmediatools
    fmemcached
+   fminify
    fmkdir
    fmodulemanager
    fnagiosserver
@@ -636,12 +640,12 @@ Jouer avec Modules ptconfigure
    fprocess
    fptbuild
    fptconfigure
+   fptdeploy_configure
    fpttest_configure
    fptvirtualize_configure
    fpython
    fra
    fredis
-   fresume
    frubybdd
    frubysystem
    frubyvm
@@ -660,12 +664,15 @@ Jouer avec Modules ptconfigure
    fsvn
    fsystemdetection
    fteamcity
+   ftemplating
    ftomcat
    fubuntucompiler
+   fuser
    fvarnish
    fvirtualbox
    fvmplayer
    fvmwareworkstation
+   fvnc
    fvncpassword
    fwireframesketcher
    fxvfb

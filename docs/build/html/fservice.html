@@ -208,42 +208,56 @@ End Help
 <table border="1" class="table-bordered docutils">
 <colgroup>
 <col width="14%" />
-<col width="36%" />
-<col width="50%" />
+<col width="14%" />
+<col width="22%" />
+<col width="49%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">Autres paramètres</th>
 <th class="head">fonctions</th>
 <th class="head">commentaire</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>start</td>
+<td>Service, service</td>
 <td>Lancer un service de système</td>
-<td>ptconfigure service start –service-name=”apache2”</td>
+<td>ptconfigure service start –service-name=”apache2”
+–service-name=”apache2”</td>
 </tr>
 <tr class="row-odd"><td>stop</td>
+<td>Service, service</td>
 <td>Arrêtez le service Asystem</td>
 <td>ptconfigure service stop –service-name=”apache2”</td>
 </tr>
 <tr class="row-even"><td>Restart</td>
+<td>Service, service</td>
 <td>Lancer un service de système</td>
 <td>ptconfigure service restart –service-name=”apache2”</td>
 </tr>
 <tr class="row-odd"><td>Ensure-running</td>
-<td>Fournir un service système running.In Lorsqu&#8217;il
-ne est pas en cours d&#8217;exécution, il ne serait
-pas commencer à essayer autrement</td>
+<td>Service, service</td>
+<td>Fournir un service système
+running.In Lorsqu&#8217;il  ne est
+pas en cours d&#8217;exécution, il
+ne serait pas commencer à
+essayer autrement</td>
 <td>ptconfigure service ensure-running –service- name=”apache2”</td>
 </tr>
 <tr class="row-even"><td>Is-running</td>
-<td>Vérifier si un service de système est en
-fonctionnement ou pas, il ne serait pas
-commencer à essayer autrement</td>
+<td>Service, service</td>
+<td>Vérifier si un service de
+système est en
+fonctionnement ou pas, il ne
+serait pas commencer à
+essayer autrement</td>
 <td>ptconfigure service is-running –service-name=”apache2”</td>
 </tr>
 <tr class="row-odd"><td>Run-at-reboots</td>
-<td>Assurer une autostart de service du système au
+<td>Service, service</td>
+<td>Assurer une autostart de
+service du système au
 redémarrage|</td>
 <td>ptconfigure service run-at-reboots –service- name=”apache2</td>
 </tr>

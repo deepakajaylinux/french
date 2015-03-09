@@ -64,26 +64,34 @@ Options
 
 .. cssclass:: table-bordered
 
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
- | paramètres        | fonctions                                       | commentaire                                                       |
- +===================+=================================================+===================================================================+
- |start              | Lancer un service de système                    | ptconfigure service start –service-name=”apache2”                 |
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
- |stop               | Arrêtez le service Asystem                      | ptconfigure service stop –service-name=”apache2”                  |
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
- |Restart            | Lancer un service de système                    | ptconfigure service restart –service-name=”apache2”               |
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
- |Ensure-running     | Fournir un service système running.In Lorsqu'il | ptconfigure service ensure-running –service- name=”apache2”       |
- |                   | ne est pas en cours d'exécution, il ne serait   |                                                                   |
- |                   | pas commencer à essayer autrement               |                                                                   |
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
- |Is-running         | Vérifier si un service de système est en        | ptconfigure service is-running –service-name=”apache2”            |
- |                   | fonctionnement ou pas, il ne serait pas         |                                                                   |
- |                   | commencer à essayer autrement                   |                                                                   |
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
- |Run-at-reboots     | Assurer une autostart de service du système au  | ptconfigure service run-at-reboots –service- name=”apache2        |
- |                   | redémarrage|                                    |                                                                   |
- +-------------------+-------------------------------------------------+-------------------------------------------------------------------+
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
+ | paramètres        | Autres paramètres | fonctions                    | commentaire                                                      |
+ +===================+===================+==============================+==================================================================+
+ |start              | Service, service  | Lancer un service de système | ptconfigure service start –service-name=”apache2”                |
+ |                   |                   |                              | –service-name=”apache2”                                          | 
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
+ |stop               | Service, service  | Arrêtez le service Asystem   | ptconfigure service stop –service-name=”apache2”                 |
+ |                   |                   |                              |                                                                  |
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
+ |Restart            | Service, service  | Lancer un service de système | ptconfigure service restart –service-name=”apache2”              |
+ |                   |                   |                              |                                                                  |
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
+ |Ensure-running     | Service, service  | Fournir un service système   | ptconfigure service ensure-running –service- name=”apache2”      |
+ |                   |                   | running.In Lorsqu'il  ne est |                                                                  |
+ |                   |                   | pas en cours d'exécution, il |                                                                  |
+ |                   |                   | ne serait pas commencer à    |                                                                  |
+ |                   |                   | essayer autrement            |                                                                  |
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
+ |Is-running         | Service, service  | Vérifier si un service de    | ptconfigure service is-running –service-name=”apache2”           |
+ |                   |                   | système est en               |                                                                  |
+ |                   |                   | fonctionnement ou pas, il ne |                                                                  |
+ |                   |                   | serait pas commencer à       |                                                                  |
+ |                   |                   | essayer autrement            |                                                                  |
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
+ |Run-at-reboots     | Service, service  | Assurer une autostart de     | ptconfigure service run-at-reboots –service- name=”apache2       |
+ |                   |                   | service du système au        |                                                                  | 
+ |                   |                   | redémarrage|                 |                                                                  |
+ +-------------------+-------------------+------------------------------+------------------------------------------------------------------+
 
 
 avantages

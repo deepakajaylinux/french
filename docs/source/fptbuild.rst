@@ -66,18 +66,26 @@ Si l'utilisateur donne Y puis ptbuild sera installé. La capture d'écran suivan
 
 .. cssclass:: table-bordered
 
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- | Paramètres                 | option  | Annuaire (par défaut)       | commentaires                                                 |
- +============================+=========+=============================+==============================================================+
- |Data directory (Par défaut) | Yes     | “/opt/ptbuild”              | Il va installer ptbuild sous ptconfigure                     |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- |Data directory              | No      | Slash Fin                   | L'utilisateur doit spécifier le chemin d'un                  |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- |Executor directory(Par      | Yes     | “/usr/bin”                  | Il répertoire d'installation de l'exécuteur                  |
- |défaut)                     |         |                             |                                                              |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- |Executor directory          | No      | Aucune slash                | L'utilisateur donne entrée comme nom de répertoire.|         |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
+
+ +--------------------------+-------------------------------------------+-----------+-------------------------------------------------------+
+ | Paramètres               | Directory_Default                         | Options   | commentaires                                          |
+ +==========================+===========================================+===========+=======================================================+
+ |Program data directory    | “/opt/ptbuild(módulo correspondiente)”    | Y(Yes)    | Si l'utilisateur souhaite procéder installation avec  | 
+ |(par défaut)              |                                           |           | le même répertoire par défaut spécifié qu'ils peuvent |
+ |                          |                                           |           | entrée comme Y.                                       |
+ +--------------------------+-------------------------------------------+-----------+-------------------------------------------------------+
+ |Program data directory    | spécifiques à un utilisateur              | No(Slash  | Si l'utilisateur a besoin de spécifier leur           |
+ |                          |                                           | Fin)      | propre emplacement, ils peuvent entrée comme N. et à  |
+ |                          |                                           |           | la main préciser leur propre emplacement              |
+ +--------------------------+-------------------------------------------+-----------+-------------------------------------------------------+
+ |Program executor          | “/usr/bin”                                | Yes       | Si l'utilisateur souhaite procéder installation avec  |
+ |directory (par défaut)    |                                           |           | le même répertoire par défaut spécifié qu'ils peuvent |
+ |                          |                                           |           | entrée comme Y.                                       |
+ +--------------------------+-------------------------------------------+-----------+-------------------------------------------------------+
+ |Program executor          | spécifiques à un utilisateur              | No(Slash  | Si l'utilisateur a besoin de spécifier leur propre    |
+ |directory                 |                                           | Fin)      | emplacement, ils peuvent entrée comme N. et à la main |
+ |                          |                                           |           | préciser leur propre emplacement|                     |
+ +--------------------------+-------------------------------------------+-----------+-------------------------------------------------------+
 
 
 Désinstaller
@@ -99,18 +107,25 @@ Si l'utilisateur donne Y puis ptbuild sera désinstallé. La capture d'écran su
 .. cssclass:: table-bordered
 
 
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- | Paramètres                 | option  | Annuaire (par défaut)       | commentaires                                                 |
- +============================+=========+=============================+==============================================================+
- |Data directory (Par défaut) | Yes     | “/opt/ptbuild”              | Il permet de désinstaller ptbuild sous ptconfigure           |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- |Data directory              | No      | Slash Fin                   | L'utilisateur doit spécifier le chemin d'un                  |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- |Executor directory(Par      | Yes     | “/usr/bin”                  | Il permet de désinstaller répertoire de l'exécuteur          |
- |défaut)                     |         |                             |                                                              |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
- |Executor directory          | No      | Aucune slash                | L'utilisateur donne entrée comme nom de répertoire.|         |
- +----------------------------+---------+-----------------------------+--------------------------------------------------------------+
+ +---------------------------+------------------------------------+-------------+--------------------------------------------------------+
+ | Parameters                | Directory_Default                  | Options     | commentaires                                           |
+ +===========================+====================================+=============+========================================================+
+ |Program data directory     | “/opt/ptbuild(módulo               | Y(Yes)      | Si l'utilisateur souhaite procéder désinstallation     |  
+ |(par défaut)               | correspondiente)”                  |             | avec le même répertoire par défaut spécifié qu'ils     |
+ |                           |                                    |             | peuvent entrée comme Y.                                |
+ +---------------------------+------------------------------------+-------------+--------------------------------------------------------+
+ |Program data directory     | spécifiques à un utilisateur       | No(Slash    | Si l'utilisateur a besoin de spécifier leur propre     |
+ |                           |                                    | Fin)        | emplacement, ils peuvent entrée comme N. et à la       |
+ |                           |                                    |             | main préciser leur propre emplacement                  |
+ +---------------------------+------------------------------------+-------------+--------------------------------------------------------+
+ |Program executor           | “/usr/bin”                         | Yes         | Si l'utilisateur souhaite procéder désinstallation     |
+ |directory (par défaut)     |                                    |             | avec le même répertoire par défaut spécifié qu'ils     |
+ |                           |                                    |             | peuvent entrée comme Y.                                |
+ +---------------------------+------------------------------------+-------------+--------------------------------------------------------+
+ |Program executor directory | spécifiques à un utilisateur       | No(Slash    | Si l'utilisateur a besoin de spécifier leur propre     |
+ |                           |                                    | Fin)        | emplacement, ils peuvent entrée comme N. et à la       |
+ |                           |                                    |             | main préciser leur propre emplacement|                 |
+ +---------------------------+------------------------------------+-------------+--------------------------------------------------------+
 
 
 assurer
