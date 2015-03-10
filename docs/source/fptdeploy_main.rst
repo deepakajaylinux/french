@@ -208,13 +208,14 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
  fapachecontrol_deploy
  fapachevhosteditor_deploy
  fdapperfy_deploy
- fdbinstall_deploy
  fdbconfigure_deploy
+ fdbinstall_deploy
  fdrupal_deploy
  fenvironmentconfig_deploy
  fgitclone_deploy
  fgrafana_deploy
- fjoomla_ptdeploy
+ fhosteditor_deploy
+ fjoomla_deploy 
  flighttpdcontrol_deploy
  flogging_deploy
  fnginxcontrol_deploy
@@ -222,5 +223,6 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
  fproject_deploy
  fruncommand_deploy
  fsftp_deploy
+ fsvn_deploy
  fsystemdetection_deploy
  fwordpress_deploy 
