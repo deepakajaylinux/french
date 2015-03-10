@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cassandra &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="chgrp" href="fchgrp.html" />
+    <link rel="prev" title="Boxify" href="fboxify.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Cassandra</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#options">options</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fboxify.html"
+         title="Previous Chapter: Boxify">&laquo; Boxify</a></li>
+  <li><a href="fchgrp.html"
+         title="Next Chapter: chgrp">chgrp &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fcassandra.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="cassandra">
+<h1>Cassandra<a class="headerlink" href="#cassandra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Cassandra est un système distribué de gestion de base de données open source conçu pour gérer de grandes quantités de données sur plusieurs serveurs des produits de base, offrant une haute disponibilité sans point de défaillance unique. Cassandra offre un support robuste pour les clusters couvrant plusieurs datacenters, avec le maître asynchrone moins de réplication permettant des opérations à faible latence pour tous les
+clients.</p>
+<p>Le modèle de données de Cassandra est un magasin de ligne partitionné avec une cohérence accordable. Les lignes sont organisées en tables; le premier composant de la clé primaire d&#8217;une table est la clé de la partition; au sein d&#8217;une partition, les rangées sont groupées par les autres colonnes de la clé. D&#8217;autres colonnes peuvent être indexés séparément de la clé primaire.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de déterminer l&#8217;utilisation d&#8217;un module Cassandra. L&#8217;utilisateur viendra à savoir sur la manière différente / format à exécuter ce module. Cette commande guide l&#8217;utilisateur final de connaître le but de cette commande. Ci-dessous sont donnés la commande et la capture d&#8217;écran de la même.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cassandra <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La représentation picturale de la commande ci-dessus est illustré ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure cassandra <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to update Cassandra.
+
+ Cassandra, cassandra
+
+       - install
+       Installs the latest version of Cassandra
+       example: ptconfigure cassandra install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande aide à l&#8217;installation de Cassandra dans le système. La commande ci-dessous donnée exécuter le processus d&#8217;installation.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cassandra install
+</pre></div>
+</div>
+<p>La représentation picturale de la commande ci-dessus est illustré ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure cassandra install
+
+Install Cassandra? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Cassandra!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-10553509319.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-10553509319.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-10553509319.sh Permissions
+Executing /tmp/ptconfigure-temp-script-10553509319.sh
+gpg: directory <span class="sb">`</span>/home/deepak/.gnupg<span class="s1">&#39; created</span>
+<span class="s1">gpg: new configuration file `/home/deepak/.gnupg/gpg.conf&#39;</span> created
+gpg: WARNING: options in <span class="sb">`</span>/home/deepak/.gnupg/gpg.conf<span class="s1">&#39; are not yet active during this run</span>
+<span class="s1">gpg: keyring `/home/deepak/.gnupg/secring.gpg&#39;</span> created
+gpg: keyring <span class="sb">`</span>/home/deepak/.gnupg/pubring.gpg<span class="s1">&#39; created</span>
+<span class="s1">gpg: requesting key 8D77295D from hkp server pgp.mit.edu</span>
+<span class="s1">gpg: /home/deepak/.gnupg/trustdb.gpg: trustdb created</span>
+<span class="s1">gpg: key 8D77295D: public key &quot;Eric Evans &lt;eevans@sym-link.com&gt;&quot; imported</span>
+<span class="s1">gpg: no ultimately trusted keys found</span>
+<span class="s1">gpg: Total number processed: 1</span>
+<span class="s1">gpg:               imported: 1  (RSA: 1)</span>
+<span class="s1">gpg: requesting key 2B5C1B00 from hkp server pgp.mit.edu</span>
+<span class="s1">gpg: key 2B5C1B00: public key &quot;Sylvain Lebresne (pcmanus) &lt;sylvain@datastax.com&gt;&quot; imported</span>
+<span class="s1">gpg: Total number processed: 1</span>
+<span class="s1">gpg:               imported: 1  (RSA: 1)</span>
+<span class="s1">gpg: requesting key 0353B12C from hkp server pgp.mit.edu</span>
+<span class="s1">gpg: key 0353B12C: public key &quot;T Jake Luciani &lt;jake@apache.org&gt;&quot; imported</span>
+<span class="s1">gpg: Total number processed: 1</span>
+<span class="s1">gpg:               imported: 1  (RSA: 1)</span>
+<span class="s1">W: GPG error: http://packages.elasticsearch.org stable Release: The following signatures couldn&#39;</span>t be verified because the public key is not available: NO_PUBKEY D27D666CD88E42B4
+W: GPG error: http://packages.elasticsearch.org stable Release: The following signatures couldn<span class="s1">&#39;t be verified because the public key is not available: NO_PUBKEY D27D666CD88E42B4</span>
+<span class="s1">W: GPG error: http://packages.elasticsearch.org stable Release: The following signatures couldn&#39;</span>t be verified because the public key is not available: NO_PUBKEY D27D666CD88E42B4
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+deb-src http://www.apache.org/dist/cassandra/debian 21x main
+OK
+OK
+OK
+Get:1 http://www.apache.org 21x InRelease <span class="o">[</span><span class="m">3167</span> B<span class="o">]</span>
+Get:2 http://www.apache.org 21x/main amd64 Packages <span class="o">[</span><span class="m">696</span> B<span class="o">]</span>
+Ign http://extras.ubuntu.com trusty InRelease
+Get:3 http://www.apache.org 21x/main i386 Packages <span class="o">[</span><span class="m">696</span> B<span class="o">]</span>
+Hit http://extras.ubuntu.com trusty Release.gpg
+Hit http://extras.ubuntu.com trusty Release
+Hit http://extras.ubuntu.com trusty/main Sources
+Ign http://www.apache.org 21x/main Translation-en
+Hit http://extras.ubuntu.com trusty/main amd64 Packages
+Hit http://extras.ubuntu.com trusty/main i386 Packages
+Ign http://extras.ubuntu.com trusty/main Translation-en
+Ign http://packages.elasticsearch.org stable InRelease
+Ign http://us.archive.ubuntu.com precise InRelease
+Hit http://dl.hhvm.com trusty InRelease
+Ign http://packages.elasticsearch.org stable InRelease
+Hit http://us.archive.ubuntu.com precise Release.gpg
+Hit http://dl.hhvm.com trusty/main amd64 Packages
+Hit http://us.archive.ubuntu.com precise Release
+Ign http://packages.elasticsearch.org stable InRelease
+Hit http://dl.hhvm.com trusty/main i386 Packages
+Hit http://us.archive.ubuntu.com precise/main amd64 Packages
+Get:4 http://packages.elasticsearch.org stable Release.gpg <span class="o">[</span><span class="m">490</span> B<span class="o">]</span>
+Hit http://us.archive.ubuntu.com precise/universe amd64 Packages
+Get:5 http://packages.elasticsearch.org stable Release.gpg <span class="o">[</span><span class="m">490</span> B<span class="o">]</span>
+Hit http://us.archive.ubuntu.com precise/main i386 Packages
+Get:6 http://packages.elasticsearch.org stable Release.gpg <span class="o">[</span><span class="m">490</span> B<span class="o">]</span>
+Get:7 http://us.archive.ubuntu.com precise/universe i386 Packages <span class="o">[</span><span class="m">4796</span> kB<span class="o">]</span>
+Hit http://packages.elasticsearch.org stable Release
+Ign http://packages.elasticsearch.org stable Release
+Ign http://dl.hhvm.com trusty/main Translation-en
+Hit http://packages.elasticsearch.org stable Release
+Ign http://packages.elasticsearch.org stable Release
+Hit http://packages.elasticsearch.org stable Release
+Ign http://packages.elasticsearch.org stable Release
+Ign http://packages.elasticsearch.org stable/main amd64 Packages/DiffIndex
+Ign http://archive.canonical.com trusty InRelease
+Ign http://packages.elasticsearch.org stable/main i386 Packages/DiffIndex
+Hit http://archive.canonical.com trusty Release.gpg
+Ign http://security.ubuntu.com trusty-security InRelease
+Hit http://archive.canonical.com trusty Release
+Get:8 http://security.ubuntu.com trusty-security Release.gpg <span class="o">[</span><span class="m">933</span> B<span class="o">]</span>
+Ign http://packages.elasticsearch.org stable/main amd64 Packages/DiffIndex
+Hit http://archive.canonical.com trusty/partner Sources
+Get:9 http://security.ubuntu.com trusty-security Release <span class="o">[</span>62.0 kB<span class="o">]</span>
+Ign http://packages.elasticsearch.org stable/main i386 Packages/DiffIndex
+Hit http://archive.canonical.com trusty/partner amd64 Packages
+Ign http://packages.elasticsearch.org stable/main amd64 Packages/DiffIndex
+Ign http://packages.elasticsearch.org stable/main i386 Packages/DiffIndex
+Get:10 http://security.ubuntu.com trusty-security/main Sources <span class="o">[</span>64.8 kB<span class="o">]</span>
+Ign http://pkg.jenkins-ci.org binary/ InRelease
+Ign http://in.archive.ubuntu.com trusty InRelease
+Ign http://in.archive.ubuntu.com trusty-updates InRelease
+Ign http://repos.zend.com server InRelease
+Hit http://repos.zend.com server Release.gpg
+Ign http://in.archive.ubuntu.com trusty-backports InRelease
+Hit http://repos.zend.com server Release
+Hit http://repos.zend.com server/non-free amd64 Packages
+Hit http://repos.zend.com server/non-free i386 Packages
+Ign http://apt.newrelic.com newrelic InRelease
+Hit http://in.archive.ubuntu.com trusty Release.gpg
+Get:11 http://in.archive.ubuntu.com trusty-updates Release.gpg <span class="o">[</span><span class="m">933</span> B<span class="o">]</span>
+Hit http://archive.canonical.com trusty/partner i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports Release.gpg
+Hit http://archive.canonical.com trusty/partner Translation-en
+Ign http://ppa.launchpad.net trusty InRelease
+Hit http://in.archive.ubuntu.com trusty Release
+Get:12 http://in.archive.ubuntu.com trusty-updates Release <span class="o">[</span>62.0 kB<span class="o">]</span>
+Ign http://wireframesketcher.com  InRelease
+Ign http://repos.zend.com server/non-free Translation-en
+Hit http://pkg.jenkins-ci.org binary/ Release.gpg
+Get:13 http://security.ubuntu.com trusty-security/restricted Sources <span class="o">[</span><span class="m">2061</span> B<span class="o">]</span>
+Get:14 http://security.ubuntu.com trusty-security/universe Sources <span class="o">[</span>17.4 kB<span class="o">]</span>
+Hit http://apt.newrelic.com newrelic Release.gpg
+Ign https://repo.varnish-cache.org precise InRelease
+Get:15 http://security.ubuntu.com trusty-security/multiverse Sources <span class="o">[</span><span class="m">723</span> B<span class="o">]</span>
+Hit http://ppa.launchpad.net trusty Release.gpg
+Ign http://packages.dotdeb.org squeeze InRelease
+Get:16 http://security.ubuntu.com trusty-security/main amd64 Packages <span class="o">[</span><span class="m">200</span> kB<span class="o">]</span>
+Hit http://in.archive.ubuntu.com trusty-backports Release
+Hit http://packages.dotdeb.org squeeze Release.gpg
+Hit http://in.archive.ubuntu.com trusty/main Sources
+Hit http://wireframesketcher.com  Release.gpg
+Hit http://in.archive.ubuntu.com trusty/restricted Sources
+Hit http://packages.dotdeb.org squeeze Release
+Hit http://in.archive.ubuntu.com trusty/universe Sources
+Hit http://packages.dotdeb.org squeeze/all amd64 Packages
+Hit http://pkg.jenkins-ci.org binary/ Release
+Hit http://in.archive.ubuntu.com trusty/multiverse Sources
+Hit http://packages.dotdeb.org squeeze/all i386 Packages
+Hit http://in.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://apt.newrelic.com newrelic Release
+Hit http://in.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ppa.launchpad.net trusty Release
+Get:17 https://repo.varnish-cache.org precise Release.gpg
+Hit http://wireframesketcher.com  Release
+Hit http://in.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://packages.elasticsearch.org stable/main amd64 Packages
+Ign http://packages.dotdeb.org squeeze/all Translation-en
+Hit http://pkg.jenkins-ci.org binary/ Packages
+Hit http://in.archive.ubuntu.com trusty/main i386 Packages
+Hit http://packages.elasticsearch.org stable/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted i386 Packages
+Get:18 https://repo.varnish-cache.org precise Release
+Ign http://packages.elasticsearch.org stable/main Translation-en
+Get:19 https://repo.varnish-cache.org precise/varnish-4.0 amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/universe i386 Packages
+Hit http://packages.elasticsearch.org stable/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/multiverse i386 Packages
+Hit http://apt.newrelic.com newrelic/non-free amd64 Packages
+Hit http://packages.elasticsearch.org stable/main i386 Packages
+Get:20 https://repo.varnish-cache.org precise/varnish-4.0 i386 Packages
+Hit http://in.archive.ubuntu.com trusty/main Translation-en
+Hit http://apt.newrelic.com newrelic/non-free i386 Packages
+Ign http://packages.elasticsearch.org stable/main Translation-en
+Hit http://in.archive.ubuntu.com trusty/multiverse Translation-en
+Get:21 https://repo.varnish-cache.org precise/varnish-4.0 Translation-en
+Hit http://packages.elasticsearch.org stable/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://packages.elasticsearch.org stable/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty/universe Translation-en
+Get:22 http://in.archive.ubuntu.com trusty-updates/main Sources <span class="o">[</span><span class="m">160</span> kB<span class="o">]</span>
+Ign http://packages.elasticsearch.org stable/main Translation-en
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Get:23 http://security.ubuntu.com trusty-security/restricted amd64 Packages <span class="o">[</span><span class="m">8875</span> B<span class="o">]</span>
+Get:24 http://security.ubuntu.com trusty-security/universe amd64 Packages <span class="o">[</span>85.3 kB<span class="o">]</span>
+Hit http://ppa.launchpad.net trusty/main i386 Packages
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Ign https://repo.varnish-cache.org precise/varnish-4.0 Translation-en
+Get:25 http://security.ubuntu.com trusty-security/multiverse amd64 Packages <span class="o">[</span><span class="m">1161</span> B<span class="o">]</span>
+Hit http://wireframesketcher.com  Packages
+Get:26 http://security.ubuntu.com trusty-security/main i386 Packages <span class="o">[</span><span class="m">190</span> kB<span class="o">]</span>
+Get:27 http://in.archive.ubuntu.com trusty-updates/restricted Sources <span class="o">[</span><span class="m">2061</span> B<span class="o">]</span>
+Get:28 http://in.archive.ubuntu.com trusty-updates/universe Sources <span class="o">[</span>99.4 kB<span class="o">]</span>
+Get:29 http://security.ubuntu.com trusty-security/restricted i386 Packages <span class="o">[</span><span class="m">8846</span> B<span class="o">]</span>
+Get:30 http://security.ubuntu.com trusty-security/universe i386 Packages <span class="o">[</span>85.3 kB<span class="o">]</span>
+Get:31 http://in.archive.ubuntu.com trusty-updates/multiverse Sources <span class="o">[</span><span class="m">4502</span> B<span class="o">]</span>
+Get:32 http://in.archive.ubuntu.com trusty-updates/main amd64 Packages <span class="o">[</span><span class="m">407</span> kB<span class="o">]</span>
+Ign http://pkg.jenkins-ci.org binary/ Translation-en
+Ign http://apt.newrelic.com newrelic/non-free Translation-en
+Get:33 http://security.ubuntu.com trusty-security/multiverse i386 Packages <span class="o">[</span><span class="m">1412</span> B<span class="o">]</span>
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Ign http://wireframesketcher.com  Translation-en
+Hit http://security.ubuntu.com trusty-security/multiverse Translation-en
+Hit http://security.ubuntu.com trusty-security/restricted Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:34 http://in.archive.ubuntu.com trusty-updates/restricted amd64 Packages <span class="o">[</span><span class="m">8875</span> B<span class="o">]</span>
+Get:35 http://in.archive.ubuntu.com trusty-updates/universe amd64 Packages <span class="o">[</span><span class="m">243</span> kB<span class="o">]</span>
+Get:36 http://in.archive.ubuntu.com trusty-updates/multiverse amd64 Packages <span class="o">[</span>11.2 kB<span class="o">]</span>
+Get:37 http://in.archive.ubuntu.com trusty-updates/main i386 Packages <span class="o">[</span><span class="m">399</span> kB<span class="o">]</span>
+Get:38 http://in.archive.ubuntu.com trusty-updates/restricted i386 Packages <span class="o">[</span><span class="m">8846</span> B<span class="o">]</span>
+Get:39 http://in.archive.ubuntu.com trusty-updates/universe i386 Packages <span class="o">[</span><span class="m">243</span> kB<span class="o">]</span>
+Get:40 http://in.archive.ubuntu.com trusty-updates/multiverse i386 Packages <span class="o">[</span>11.4 kB<span class="o">]</span>
+Hit http://in.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/main Sources
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://in.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://in.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/universe Translation-en
+Get:41 http://us.archive.ubuntu.com precise/main Translation-en <span class="o">[</span><span class="m">726</span> kB<span class="o">]</span>
+Get:42 http://us.archive.ubuntu.com precise/universe Translation-en <span class="o">[</span><span class="m">3341</span> kB<span class="o">]</span>
+Fetched 10.2 MB in 4min 2s <span class="o">(</span>42.1 kB/s<span class="o">)</span>
+Temp File /tmp/ptconfigure-temp-script-10553509319.sh Removed
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://us.archive.ubuntu.com/ubuntu/ precise/main amd64 Packages <span class="o">(</span>/var/lib/apt/lists/us.archive.ubuntu.com_ubuntu_dists_precise_main_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://us.archive.ubuntu.com/ubuntu/ precise/universe amd64 Packages <span class="o">(</span>/var/lib/apt/lists/us.archive.ubuntu.com_ubuntu_dists_precise_universe_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://us.archive.ubuntu.com/ubuntu/ precise/main i386 Packages <span class="o">(</span>/var/lib/apt/lists/us.archive.ubuntu.com_ubuntu_dists_precise_main_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://us.archive.ubuntu.com/ubuntu/ precise/universe i386 Packages <span class="o">(</span>/var/lib/apt/lists/us.archive.ubuntu.com_ubuntu_dists_precise_universe_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 i386 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 i386 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 i386 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 i386 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 i386 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry https://repo.varnish-cache.org/ubuntu/ precise/varnish-4.0 i386 Packages <span class="o">(</span>/var/lib/apt/lists/repo.varnish-cache.org_ubuntu_dists_precise_varnish-4.0_binary-i386_Packages<span class="o">)</span>
+W: You may want to run apt-get update to correct these problems
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package cassandra from the Packager Apt did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Cassandra: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="32%" />
+<col width="13%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Paramètres</th>
+<th class="head">Alternative Paramètre</th>
+<th class="head">options</th>
+<th class="head">commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure cassandra
+Install</td>
+<td>Il ya deux autres paramètres qui peuvent
+être utilisés dans la ligne de commande.
+Cassandra , cassandra Par
+exemple: ptconfigure cassandra install
+ptconfigure cassandra install</td>
+<td>Y</td>
+<td>Le système démarre processus d&#8217;installation</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure cassandra
+Install</td>
+<td>Il ya deux autres paramètres qui peuvent
+être utilisés dans la ligne de commande.
+Cassandra , cassandra Par
+exemple: ptconfigure cassandra install
+ptconfigure cassandra install|</td>
+<td>N</td>
+<td>Système arrête processus d&#8217;installation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Décentralisée - Chaque noeud du cluster a le même rôle. Il n&#8217;y a pas de point de défaillance unique. Les données sont distribuées sur le
+cluster (de sorte que chaque noeud contient des données différentes), mais il n&#8217;y a pas de maître que chaque nœud peut desservir toute
+demande.</li>
+<li>Prend en charge la réplication de centre de réplication et de données multi - stratégies de réplication sont configurables. Cassandra est
+conçu comme un système distribué, pour le déploiement d&#8217;un grand nombre de noeuds à travers de multiples centres de données. Les
+principales caractéristiques de l&#8217;architecture distribuée de Cassandra sont spécifiquement adaptés pour le centre de données multiples
+déploiement, pour
+la redondance, pour le basculement et la récupération en cas de catastrophe.</li>
+<li>Évolutivité - Lire et écrire débit à la fois augmenter linéairement en nouvelles machines sont ajoutés, sans temps d&#8217;arrêt
+ou l&#8217;interruption d  &#8216;applications.</li>
+<li>Tolérant aux pannes - Les données sont automatiquement répliquées sur plusieurs nœuds pour la tolérance aux pannes. Réplication sur
+plusieurs   centres de données est prise en charge. Nœuds défaillants peuvent être remplacés sans interruption.</li>
+<li>La cohérence accordable - écrit et lit offrir un niveau de cohérence accordable, tout le chemin depuis », écrit ne manquent jamais&#8221; à &#8220;bloc
+pour toutes les répliques soit lisible&#8221;, avec le niveau de quorum au milieu.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fcassandra.rst">
+          Cassandra
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

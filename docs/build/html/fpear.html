@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pear &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="PECL" href="fpecl.html" />
+    <link rel="prev" title="Parallax" href="fparallax.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Pear</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#creer">créer</a></li>
+<li><a class="reference internal" href="#supprimer">supprimer</a></li>
+<li><a class="reference internal" href="#definir-mot-de-passe">Définir mot de passe</a></li>
+<li><a class="reference internal" href="#existe">existe</a></li>
+<li><a class="reference internal" href="#afficher-les-groupes">Afficher les groupes</a></li>
+<li><a class="reference internal" href="#ajouter-au-groupe">Ajouter au groupe</a></li>
+<li><a class="reference internal" href="#retirer-du-groupe">Retirer du groupe</a></li>
+<li><a class="reference internal" href="#alternative-parametre">Alternative Paramètre</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fparallax.html"
+         title="Previous Chapter: Parallax">&laquo; Parallax</a></li>
+  <li><a href="fpecl.html"
+         title="Next Chapter: PECL">PECL &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fpear.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="pear">
+<h1>Pear<a class="headerlink" href="#pear" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>PEAR est l&#8217;abréviation de &#8220;Extension de PHP et Application Repository&#8221; et se prononce comme le fruit. Le but de PEAR est de fournir:</p>
+<ul class="simple">
+<li>Une bibliothèque structuré de code open-source pour les utilisateurs PHP</li>
+<li>Un système de distribution de code et l&#8217;entretien de l&#8217;emballage</li>
+<li>Un style standard pour le code écrit en PHP, spécifié ici</li>
+<li>Le PHP Extension Bibliothèque communautaire (PECL)</li>
+</ul>
+<p>La mission de PEAR est de fournir des composants réutilisables, l&#8217;innovation plomb en PHP, fournir les meilleures pratiques pour le développement PHP et d&#8217;éduquer les développeurs.</p>
+<p>Le code de PEAR est divisé en &#8220;paquets&#8221;. Chaque paquet est un projet distinct avec sa propre équipe de développement, numéro de version, cycle de publication, la documentation et une relation définie à d&#8217;autres paquets (incluant les dépendances). Paquets sont distribués sous forme de fichiers tar compressé avec un fichier de description à l&#8217;intérieur, et installés sur votre système local en utilisant l&#8217;installeur PEAR.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de déterminer l&#8217;utilisation de module de PEAR. L&#8217;utilisateur viendra à savoir sur la manière différente / format à exécuter ce module. Cette commande guide l&#8217;utilisateur final de connaître le but de cette commande. Ci-dessous sont donnés la commande et la capture d&#8217;écran de la même.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La représentation picturale de la commande ci-dessus est listé ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify pears
+
+ Pear, pear
+
+       - create
+       Create a new system pear, overwriting <span class="k">if</span> it exists
+       example: ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system pear
+       example: ptconfigure pear remove --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system pear
+       example: ptconfigure pear <span class="nb">set</span>-password --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a pear
+       example: ptconfigure pear exists --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a pear belongs
+       example: ptconfigure pear show-groups --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add pear to a group
+       example: ptconfigure pear add-to-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+       - remove-from-group
+       Remove pear from a group
+       example: ptconfigure pear remove-from-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="creer">
+<h2>créer<a class="headerlink" href="#creer" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur a besoin de créer un nouveau système de poire ou doit remplacer l&#8217;existant, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear create - -pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="supprimer">
+<h2>supprimer<a class="headerlink" href="#supprimer" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit supprimer une poire du système, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove - -pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="definir-mot-de-passe">
+<h2>Définir mot de passe<a class="headerlink" href="#definir-mot-de-passe" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit définir un mot de passe d&#8217;une poire du système, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear setpassword - -pearname<span class="o">=</span>”somename”- - new-password<span class="o">=</span>”somepassword”
+</pre></div>
+</div>
+</div>
+<div class="section" id="existe">
+<h2>existe<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur a besoin de connaître l&#8217;existence de la poire, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear exists - -pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="afficher-les-groupes">
+<h2>Afficher les groupes<a class="headerlink" href="#afficher-les-groupes" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit connaître le groupe auquel appartient une poire, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear show-groups - -pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="ajouter-au-groupe">
+<h2>Ajouter au groupe<a class="headerlink" href="#ajouter-au-groupe" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit allouer poire à un groupe particulier, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear add-to-group - -pearname<span class="o">=</span>”somename” - - <span class="nv">groupname</span><span class="o">=</span>”somegroupname”
+</pre></div>
+</div>
+</div>
+<div class="section" id="retirer-du-groupe">
+<h2>Retirer du groupe<a class="headerlink" href="#retirer-du-groupe" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit supprimer la poire d&#8217;un groupe, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove-from-group - -pearname<span class="o">=</span>”name” - -groupname<span class="o">=</span>”groupname”
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-parametre">
+<h2>Alternative Paramètre<a class="headerlink" href="#alternative-parametre" title="Permalink to this headline">¶</a></h2>
+<p>Il ya deux autres paramètres qui peuvent être utilisés dans la ligne de commande.</p>
+<p>Pear, pear</p>
+<div class="highlight-bash"><div class="highlight"><pre>Eg: ptconfigure pear create - -pearname<span class="o">=</span>”somename”/ ptconfigure Pear create - -pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<p>Pear.php.net fournit à la fois un homme de l&#8217;environnement (HTML) et facile à la machine (actuellement REST) interface pour les forfaits disponibles à partir pear.php.net. Toute communication se produit via le protocole HTTP. Autres fonctions du site pear.php.net offre sont:</p>
+<ul class="simple">
+<li>La gestion de compte d&#8217;utilisateur (indépendant du serveur SVN)</li>
+<li>Gestion des paquets</li>
+<li>Gestion des versions</li>
+<li>Well-to-do dans Ubuntu et Cent OS</li>
+<li>Sensibilité non de cas</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fpear.rst">
+          Pear
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

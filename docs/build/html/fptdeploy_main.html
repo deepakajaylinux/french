@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTDeploy &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="next" title="ApacheControl" href="fapachecontrol_deploy.html" />
+    <link rel="prev" title="ZendServer" href="fzendserver.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PTDeploy</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#pourquoi-construire-ce-ptdeploy">Pourquoi construire ce ptdeploy</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#installation-ptdeploy-via-ptconfigure">Installation ptdeploy via ptconfigure</a></li>
+<li><a class="reference internal" href="#installation-du-ptdeploy-sans-dependre-ptconfigure">Installation du ptdeploy sans dépendre ptconfigure</a></li>
+<li><a class="reference internal" href="#les-fonctionnalites-avancees">Les fonctionnalités avancées</a></li>
+<li><a class="reference internal" href="#la-facon-dont-l-ptdeploy-la-promotion-de-votre-projet-en-utilisant-dapperfy">La façon dont l&#8217;ptdeploy la promotion de votre projet en utilisant dapperfy</a></li>
+<li><a class="reference internal" href="#capify-vs-dapperfy">Capify Vs Dapperfy</a></li>
+<li><a class="reference internal" href="#comment-utiliser-et-modules-disponibles">Comment utiliser et modules disponibles</a></li>
+<li><a class="reference internal" href="#id1">La façon dont l&#8217;ptdeploy la promotion de votre projet en utilisant dapperfy</a></li>
+<li><a class="reference internal" href="#id2">Capify Vs Dapperfy</a></li>
+<li><a class="reference internal" href="#id3">Comment utiliser et modules disponibles</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fzendserver.html"
+         title="Previous Chapter: ZendServer">&laquo; ZendServer</a></li>
+  <li><a href="fapachecontrol_deploy.html"
+         title="Next Chapter: ApacheControl">ApacheControl &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fptdeploy_main.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="ptdeploy">
+<h1>PTDeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Le ptdeploy enveloppe les applications des utilisateurs avec déploiement automatisé, construire et libérer fonctions, Web App versionnage et l&#8217;infrastructure par code en PHP.</p>
+<p>Il soulager les utilisateurs et fournit des modèles de déploiement automatisés et installe une version complètement continue pour votre projet.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Si vous voulez connaître le but d&#8217;un module particulier, il suffit de taper la commande comme suit:
+.. code-block:: bash</p>
+<blockquote>
+<div>ptdeploy ModuleName help</div></blockquote>
+<p>cette commande permettra l&#8217;utilisation de ce module particulier et aussi les options disponibles dans les actions que vous pouvez effectuer. Explique l&#8217;utilisation du module de contrôle d&#8217;Apache sous ptdeploy aide de la commande d&#8217;aide de la capture d&#8217;écran ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy ApacheControl <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Apache Server Control Functions.
+
+ ApacheControl, apachecontrol, apachectl
+
+         - start
+         Start the Apache server
+         example: ptdeploy apachecontrol start
+         example: ptdeploy apachecontrol start --yes --guess
+         example: ptdeploy apachecontrol start --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - stop
+         Stop the Apache server
+         example: ptdeploy apachecontrol stop
+         example: ptdeploy apachecontrol stop --yes --guess
+         example: ptdeploy apachecontrol stop --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - restart
+         Restart the Apache server
+         example: ptdeploy apachecontrol restart
+         example: ptdeploy apachecontrol restart --yes --guess
+         example: ptdeploy apachecontrol restart --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - reload
+         Reloads the Apache server configuration without restarting
+         example: ptdeploy apachecontrol reload
+         example: ptdeploy apachecontrol reload --yes --guess
+         example: ptdeploy apachecontrol reload --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+<p>La commande help répertorie également les autres paramètres qui peuvent être utilisés dans la déclaration.</p>
+</div>
+<div class="section" id="pourquoi-construire-ce-ptdeploy">
+<h2>Pourquoi construire ce ptdeploy<a class="headerlink" href="#pourquoi-construire-ce-ptdeploy" title="Permalink to this headline">¶</a></h2>
+<p>Afin de construire pour le bien-déploiement, de nombreux fichiers sont nécessaires pour être copié à partir de FTP ou d&#8217;autres solutions ad hoc. Et aussi beaucoup d&#8217;outils Enterprise Automation manquait. Afin de surmonter ces pénuries ptdeploy sous l&#8217;outil de pharaon étaient construire.
+PHP a ptdeploy tout comme Ruby fiils l&#8217;écart à Capistrano.</p>
+<p>Cet outil est destiné aux applications de provisionnement et construit à vos boîtes. L&#8217;utilisateur peut mettre en place même modèle simple ou complexe le déploiement d&#8217;applications à leur système avec un ou deux fichiers PHP ou, rapidement modèles de déploiement amicales configuration de nuages.</p>
+<p>ptdeploy est modulaire. orienté objet et extensible. Donc, si l&#8217;utilisateur nécessite des modules supplémentaires ils peuvent créer et ajouter les nouveaux modules en fonction de leurs exigences.</p>
+<p>Ce ptdeploy agit comme une enveloppe où toutes les étapes de déploiement utilisateurs se couvre en un seul fichier. Cela permet d&#8217;utiliser une seule commande pour tirer une instance de vos applications.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Installation du ptdeploy peut se faire de deux manières possibles en fonction de la disponibilité et des besoins des utilisateurs. Ils ont deux façons d&#8217;installer ptdeploy sont:</p>
+<ul class="simple">
+<li>Installation ptdeploy via ptconfigure</li>
+<li>Installation du ptdeploy sans dépendre ptconfigure.</li>
+</ul>
+</div>
+<div class="section" id="installation-ptdeploy-via-ptconfigure">
+<h2>Installation ptdeploy via ptconfigure<a class="headerlink" href="#installation-ptdeploy-via-ptconfigure" title="Permalink to this headline">¶</a></h2>
+<p>Si l&#8217;utilisateur a le ptconfigure dans leur machine, puis ce est le plus simple à installer ptdeploy en utilisant la commande suivante:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure ptdeploy install --yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-du-ptdeploy-sans-dependre-ptconfigure">
+<h2>Installation du ptdeploy sans dépendre ptconfigure<a class="headerlink" href="#installation-du-ptdeploy-sans-dependre-ptconfigure" title="Permalink to this headline">¶</a></h2>
+<p>Si l&#8217;utilisateur souhaite installer le ptdeploy sans fonction et en utilisant le ptconfigure ils peuvent utiliser la commande suivante:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install-silent
+</pre></div>
+</div>
+<p>or</p>
+<p>La commande ci-dessous est prévisible pour les utilisateurs qui souhaitent pour spécifier l&#8217;emplacement lors de l&#8217;installation.</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install
+</pre></div>
+</div>
+</div>
+<div class="section" id="les-fonctionnalites-avancees">
+<h2>Les fonctionnalités avancées<a class="headerlink" href="#les-fonctionnalites-avancees" title="Permalink to this headline">¶</a></h2>
+<p>Édition des fichiers hôtes, des fichiers de l&#8217;hôte virtuel, fichiers de configuration, des mises à jour de bases de données et plus peuvent tous être automatisés à l&#8217;aide de cette.</p>
+<p>En utilisant la capacité de gestion du serveur distant, les utilisateurs peuvent automatiser les déploiements à travers l&#8217;infrastructure de toute taille.</p>
+</div>
+<div class="section" id="la-facon-dont-l-ptdeploy-la-promotion-de-votre-projet-en-utilisant-dapperfy">
+<h2>La façon dont l&#8217;ptdeploy la promotion de votre projet en utilisant dapperfy<a class="headerlink" href="#la-facon-dont-l-ptdeploy-la-promotion-de-votre-projet-en-utilisant-dapperfy" title="Permalink to this headline">¶</a></h2>
+<p>Le mot dapperfy est une commande de ptdeploy qui crée certains pilotes automatiques pour votre projet.</p>
+<p>Utilisation de la dapperfy est très rapide, et ce est probablement le meilleur point de départ.</p>
+</div>
+<div class="section" id="capify-vs-dapperfy">
+<h2>Capify Vs Dapperfy<a class="headerlink" href="#capify-vs-dapperfy" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;on compare l&#8217;capify avec dapperfy, il est évident de dire que le dapperfy est le meilleur comme il est écrit en PHP.</p>
+<p>Le point fort est que la commande ptdeploy dapperfy fournit l&#8217;ensemble standard de pilotes automatiques pour les projets des utilisateurs. où le capify offre une fonction similaire au projet Ruby.</p>
+</div>
+<div class="section" id="comment-utiliser-et-modules-disponibles">
+<h2>Comment utiliser et modules disponibles<a class="headerlink" href="#comment-utiliser-et-modules-disponibles" title="Permalink to this headline">¶</a></h2>
+<p>Voyons, comment utiliser l&#8217;outil de ptdeploy, d&#8217;abord, tapez simplement</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy
+</pre></div>
+</div>
+<p>Édition des fichiers hôtes, des fichiers de l&#8217;hôte virtuel, fichiers de configuration, des mises à jour de bases de données et plus peuvent tous être automatisés à l&#8217;aide de cette.</p>
+<p>En utilisant la capacité de gestion du serveur distant, les utilisateurs peuvent automatiser les déploiements à travers l&#8217;infrastructure de toute taille.</p>
+</div>
+<div class="section" id="id1">
+<h2>La façon dont l&#8217;ptdeploy la promotion de votre projet en utilisant dapperfy<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Le mot dapperfy est une commande de ptdeploy qui crée certains pilotes automatiques pour votre projet.</p>
+<p>Utilisation de la dapperfy est très rapide, et ce est probablement le meilleur point de départ.</p>
+</div>
+<div class="section" id="id2">
+<h2>Capify Vs Dapperfy<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;on compare l&#8217;capify avec dapperfy, il est évident de dire que le dapperfy est le meilleur comme il est écrit en PHP.</p>
+<p>Le point fort est que la commande ptdeploy dapperfy fournit l&#8217;ensemble standard de pilotes automatiques pour les projets des utilisateurs. où le capify offre une fonction similaire au projet Ruby.</p>
+</div>
+<div class="section" id="id3">
+<h2>Comment utiliser et modules disponibles<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Voyons, comment utiliser l&#8217;outil de ptdeploy, d&#8217;abord, tapez simplement</p>
+<div class="highlight-bash"><div class="highlight"><pre>Available Commands:
+---------------------------------------
+
+ApacheControl - Apache Server Control
+ApacheVHostEditor - Apache Virtual Host Functions
+AppSettings - PTDeploy Application Settings
+Autopilot - PTConfigure Autopilot - User Defined Installations
+Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for</span> your project
+CukeConf - Cucumber Configuration
+DBConfigure - Database Connection Configuration Functions
+DBInstall - Database Installation Management Functions
+Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for</span> your project
+Drupal - Drupal - Integration and Templates <span class="k">for</span> Drupal
+EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for</span> a project
+GitClone - GitClone Source Control Clone Functions
+HostEditor - Host File Management Functions
+Invoke - SSH Invocation Functions
+Joomla - Joomla - Integration and Templates <span class="k">for</span> Joomla
+LighttpdControl - Lighttpd Server Control
+Logging - Logging - Output errors to the logging
+NginxControl - Nginx Server Control
+NginxSBEditor - Nginx Server Block Functions
+ParallelSshChild - Command Execution Functions
+Project - PTDeploy Project Management Functions
+RunCommand - Execute a Command
+SFTP - SFTP Functionality
+SVN - SVN Source Control Project Checkout/Download Functions
+SystemDetection - System Detection - Detect the Running Operating System
+Templating - Templating
+Version - Versioning Functions
+Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wordpress
+
+******************************
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fapachecontrol_deploy.html">ApacheControl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#parametres-alternatifs">paramètres alternatifs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#fonction-de-demarrage">fonction de démarrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#fonction-d-arret">Fonction d&#8217;arrêt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#redemarrez-une-fonction">Redémarrez une fonction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#rechargement-une-fonction">Rechargement une fonction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachecontrol_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fapachevhosteditor_deploy.html">ApacheVHostEditor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#parametres-alternatifs">paramètres alternatifs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#ajouter">ajouter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#add-balancer">Add Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#supprimer">supprimer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#liste">liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#permettre">permettre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#desactiver">désactiver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fapachevhosteditor_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fdapperfy_deploy.html">Dapperfy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fdapperfy_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdapperfy_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdapperfy_deploy.html#comment-utiliser-dapper-standard">Comment utiliser Dapper standard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdapperfy_deploy.html#comment-utiliser-la-liste-dapperfy">Comment utiliser la liste Dapperfy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdapperfy_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fdbconfigure_deploy.html">DBConfigure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fdbconfigure_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbconfigure_deploy.html#parametre-alternatif">paramètre alternatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbconfigure_deploy.html#configurer-conf">Configurer, conf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbconfigure_deploy.html#remettre">remettre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbconfigure_deploy.html#option">Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbconfigure_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fdbinstall_deploy.html">DBInstall</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fdbinstall_deploy.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbinstall_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbinstall_deploy.html#installation">installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbinstall_deploy.html#derouler">Dérouler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbinstall_deploy.html#alternative-parametre">Alternative Paramètre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdbinstall_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fdrupal_deploy.html">Drupal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fdrupal_deploy.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdrupal_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdrupal_deploy.html#comment-dapperfy-drupal">Comment Dapperfy Drupal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fdrupal_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fenvironmentconfig_deploy.html">EnvironmentConfig</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#comment-configurer-l-environnement">Comment configurer l&#8217;environnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#comment-faire-pour-supprimer-la-configuration-de-l-environnement">Comment faire pour supprimer la configuration de l&#8217;environnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#comment-lister-la-configuration-de-l-environnement">Comment lister la configuration de l&#8217;environnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#autres-parametres">Autres paramètres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenvironmentconfig_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgitclone_deploy.html">GitClone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgitclone_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgitclone_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgitclone_deploy.html#comment-faire-pour-utiliser-les-fonctions-de-caisse">Comment faire pour utiliser les fonctions de caisse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgitclone_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgrafana_deploy.html">Grafana</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#aide-command">Aide Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#avantages">Avantages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#graphite-cible-editor">Graphite cible Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#graphing">Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgrafana_deploy.html#dashboards">Dashboards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fhosteditor_deploy.html">Host Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#aide-command">Aide command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#d-autres-parametres">d&#8217;autres paramètres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#ajouter">Ajouter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#supprimer">supprimer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#liste">liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#permettre">permettre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#desactiver">désactiver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fhosteditor_deploy.html#avantages">Avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fjoomla_deploy.html">Joomla</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#installation">installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#dapperfy">Dapperfy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#builderfy">Builderfy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#executer">exécuter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#option">Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fjoomla_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flighttpdcontrol_deploy.html">LighttpdControl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#alternative-parametre">Alternative Paramètre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#debut">début</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#arretez">Arrêtez</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#redemarrage">redémarrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#reload">Reload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#recharger">recharger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flighttpdcontrol_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flogging_deploy.html">Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flogging_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flogging_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flogging_deploy.html#installation">installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flogging_deploy.html#comment-definir-php-journal-des-erreurs">Comment définir php journal des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flogging_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fnginxcontrol_deploy.html">Nginx Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#debut">début</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#arretez">Arrêtez</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#redemarrage">redémarrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#recharger">recharger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#option">Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fnginxsbeditor_deploy.html">NginxSBEditor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#comment-utiliser">Comment utiliser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#ajouter">ajouter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#supprimer">supprimer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#liste">liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxsbeditor_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fproject_deploy.html">Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#container">Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#initialisation">initialisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#build-installez">Build-Installez</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#alternatifs-parametre">alternatifs Paramètre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fproject_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fruncommand_deploy.html">Run Command</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fruncommand_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fruncommand_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fruncommand_deploy.html#comment-utiliser-la-commande-executer">Comment utiliser la commande Exécuter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fruncommand_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fsftp_deploy.html">SFTP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fsftp_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsftp_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsftp_deploy.html#installation">installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsftp_deploy.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsftp_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fsvn_deploy.html">SVN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fsvn_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsvn_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsvn_deploy.html#comment-faire-pour-utiliser-les-fonctions-de-caisse">Comment faire pour utiliser les fonctions de caisse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsvn_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fsystemdetection_deploy.html">System Detection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fsystemdetection_deploy.html#synopsis">synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsystemdetection_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsystemdetection_deploy.html#detecter">détecter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsystemdetection_deploy.html#autres-parametres">Autres paramètres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsystemdetection_deploy.html#avantages">Avantages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fwordpress_deploy.html">Wordpress</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fwordpress_deploy.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fwordpress_deploy.html#commande-aide">Commande Aide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fwordpress_deploy.html#comment-utiliser-dapperfy-wordpress">Comment utiliser dapperfy wordpress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fwordpress_deploy.html#travailler-de-wordpress-auto-deployer-les-fichiers">Travailler de WordPress Auto déployer les fichiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fwordpress_deploy.html#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fptdeploy_main.rst">
+          PTDeploy
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

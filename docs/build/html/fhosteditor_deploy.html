@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Host Editor &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="fptdeploy_main.html" />
+    <link rel="next" title="Joomla" href="fjoomla_deploy.html" />
+    <link rel="prev" title="Grafana" href="fgrafana_deploy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Host Editor</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#aide-command">Aide command</a></li>
+<li><a class="reference internal" href="#d-autres-parametres">d&#8217;autres paramètres</a></li>
+<li><a class="reference internal" href="#ajouter">Ajouter</a></li>
+<li><a class="reference internal" href="#supprimer">supprimer</a></li>
+<li><a class="reference internal" href="#liste">liste</a></li>
+<li><a class="reference internal" href="#permettre">permettre</a></li>
+<li><a class="reference internal" href="#desactiver">désactiver</a></li>
+<li><a class="reference internal" href="#avantages">Avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fgrafana_deploy.html"
+         title="Previous Chapter: Grafana">&laquo; Grafana</a></li>
+  <li><a href="fjoomla_deploy.html"
+         title="Next Chapter: Joomla">Joomla &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fhosteditor_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="host-editor">
+<h1>Host Editor<a class="headerlink" href="#host-editor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module prend en charge de gérer Apache éditeur Virtual Host sous ptdeploy. Il peut fonctionner de deux manières. Ils sont ajouter et de supprimer. Vhost Editor est un outil PHP écrite pour faire ajouter des hôtes virtuels à apache une brise. Vhost Editor permettra à l&#8217;utilisateur d&#8217;ajouter, modifier ou supprimer des informations d&#8217;hôte virtuel sur le serveur Web de l&#8217;utilisateur. Il est commode de travailler avec Ubuntu et cent OS. Voyons comment l&#8217;apache Vhost Editor peut fonctionner sous dapperstarano.</p>
+</div>
+<div class="section" id="aide-command">
+<h2>Aide command<a class="headerlink" href="#aide-command" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande help guide l&#8217;utilisateur pour créer un hôte virtuel. Cette affiche également d&#8217;ajouter un hôte virtuel, supprimer un hôte virtuel, Activer un hôte virtuel, et désactiver un hôte virtuel.</p>
+<p>La commande d&#8217;aide pour Apachevhosteditor est illustré ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Apachevhosteditor <span class="nb">help</span>
+</pre></div>
+</div>
+<p>After inputs the above command, it starts functioning to add a virtual host editor. It catechesis the functions in the screenshots.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Apachevhosteditor help
+******************************
+
+
+ptdeploy by Golden Contact Computing
+-------------------
+
+About:
+-----------------
+
+This tool helps with setting up projects. It&#39;s really cool for
+cloning/installing/spinning up webs apps easily and quickly.
+
+Very cool for CI, you can install your web app in one line like:
+
+ptdeploy install autopilot *autopilot-file*
+
+With code configured settings for (at least the core parts, and
+more if want to extend) Project Checkout / Download, Cucumber
+Configuration, Database Management Functions, Host File
+Management Functions, Installation Functions, SSH Invocation
+Functions, ptdeploy Project Management Functions, Apache
+Virtual Host Functions and Versioning - On 1 or 100 servers, so
+you now have a fully code controlled deploy system, from
+Personal or Development machine to Large Enterprise.
+
+-------------------------------------------------------------
+
+Available Commands:
+---------------------------------------
+
+ApacheControl - Apache Server Control
+ApacheVHostEditor - Apache Virtual Host Functions
+AppSettings - ptdeploy Application Settings
+Autopilot - ptconfigure Autopilot - User Defined Installations
+Builderfy - ptdeploy Builderfyer - Create some standard autopilots for your project
+CukeConf - Cucumber Configuration
+DBConfigure - Database Connection Configuration Functions
+DBInstall - Database Installation Management Functions
+Dapperfy - ptdeploy Dapperfyer - Automated Application Deployment autopilots for your project
+Drupal - Drupal - Integration and Templates for Drupal
+EnvironmentConfig - Environment Configuration - Configure Environments for a project
+GitClone - GitClone Source Control Clone Functions
+HostEditor - Host File Management Functions
+Invoke - SSH Invocation Functions
+Joomla - Joomla - Integration and Templates for Joomla
+LighttpdControl - Lighttpd Server Control
+Logging - Logging - Output errors to the logging
+NginxControl - Nginx Server Control
+NginxSBEditor - Nginx Server Block Functions
+ParallelSshChild - Command Execution Functions
+Project - ptdeploy Project Management Functions
+RunCommand - Execute a Command
+SFTP - SFTP Functionality
+SVN - SVN Source Control Project Checkout/Download Functions
+SystemDetection - System Detection - Detect the Running Operating System
+Templating - Templating
+Version - Versioning Functions
+Wordpress - Wordpress - Integration and Templates for Wordpress
+
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="d-autres-parametres">
+<h2>d&#8217;autres paramètres<a class="headerlink" href="#d-autres-parametres" title="Permalink to this headline">¶</a></h2>
+<p>Voici les autres paramètres qui peuvent être définis dans les déclarations:</p>
+<p>ApacheVHostEditor, apachevhosteditor, vhosteditor, vhe, vhosted.</p>
+</div>
+<div class="section" id="ajouter">
+<h2>Ajouter<a class="headerlink" href="#ajouter" title="Permalink to this headline">¶</a></h2>
+<p>Cela facilite à l&#8217;utilisateur de créer un hôte virtuel. Tout en ajoutant hôte virtuel il peut demande vhe-docroot, vhe-file-ext, vhe-apache-command, vhe-ip port,vhe-host-dir, vhe-templates,vhe-default-template-name. L&#8217;utilisateur peut entrer dans le selon leur souhait.</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptdeploy vhe add
+</pre></div>
+</div>
+<p>Après l&#8217;entrée que la commande ci-dessus, l&#8217;utilisateur peut remplir le processus suivant</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">annuaire</th>
+<th class="head">option</th>
+<th class="head">commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptdeploy vhe add (Default)</td>
+<td>Yes</td>
+<td>Il peut demander à
+l&#8217;utilisateur root du document</td>
+<td>Hôte virtuel ajouté dans le document racine spécifié
+dans ptdeploy</td>
+</tr>
+<tr class="row-odd"><td>What’s the server name</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Il peut demander à
+l&#8217;utilisateur le nom du serveur</td>
+<td>Nom du serveur ajouté sous ptdeploy</td>
+</tr>
+<tr class="row-even"><td>What IP:Port (default)</td>
+<td>127.0.0.1:80</td>
+<td>Il peut demander à
+l&#8217;utilisateur IP port</td>
+<td>Lorsque l&#8217;entrée de l&#8217;utilisateur comme entrer la
+valeur par défaut ajoutée pour IP : Port</td>
+</tr>
+<tr class="row-odd"><td>What file extension should be
+used? (Default)</td>
+<td>None</td>
+<td>Il peut demander à
+l&#8217;utilisateur d&#8217;extension</td>
+<td>L&#8217;utilisateur donne entrée comme extension de
+fichier</td>
+</tr>
+<tr class="row-even"><td>ptdeploy vhe add</td>
+<td>No</td>
+<td>Il peut demander à
+l&#8217;utilisateur pour l&#8217;entrée|</td>
+<td>Il peut se termine le processus</td>
+</tr>
+</tbody>
+</table>
+<p>Enfin, le système peut demande pour le répertoire des modèles de vhost. Il ya cinq options sont disponibles dans les modèles. Ils sont comme suit.</p>
+<p>0 pour doc root-no-suffixe</p>
+<p>1 pour suffixe de doc utilisé pour le document suffixe écran</p>
+<p>2 pour doc -web suffixe utilisé pour suffixe web de documents</p>
+<p>3 pour suffixe de doc utilisé pour suffixe world wide web</p>
+<p>4 pour docroot-suffixe utilisé pour le document suffixe racine</p>
+<p>L&#8217;utilisateur souhaite sélectionner les valeurs en fonction de leurs besoins. Ensuite, le système peut demander le nom de serveur virtuel, l&#8217;adresse et l&#8217;utilisateur root IP etc est juste ou fausse. Si l&#8217;utilisateur dit oui, alors il affiche le répertoire de serveur virtuel et activer cette vhost?</p>
+<p>L&#8217;utilisateur répond oui il peut permettre à l&#8217;hôte virtuel bien il peut sortir.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe add
+Do you want to add a VHost? (Y/N)
+Y
+What&#39;s the document root? Enter nothing for /
+root
+What URL do you want to add as server name?
+www.vh.com
+What IP:Port should be set? Enter nothing for 127.0.0.1:80
+
+What File Extension should be used? Enter nothing for None (probably .conf on this system)
+
+What is your VHost Template directory? Enter nothing for default templates
+
+Please Choose VHost Template:
+--- Default Virtual Host Templates: ---
+(0) docroot-no-suffix
+(1) docroot-src-suffix
+(2) docroot-web-suffix
+(3) docroot-www-suffix
+(4) docroot-docroot-suffix
+
+0
+Please check VHost: NameVirtualHost 127.0.0.1:80
+&lt;VirtualHost 127.0.0.1:80&gt;
+      ServerAdmin webmaster@localhost
+      ServerName www.vh.com
+      DocumentRoot root
+      &lt;Directory root&gt;
+              Options Indexes FollowSymLinks MultiViews
+              AllowOverride All
+              Order allow,deny
+              allow from all
+      &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+
+Is this Okay? (Y/N)
+
+******************************
+
+
+Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="supprimer">
+<h2>supprimer<a class="headerlink" href="#supprimer" title="Permalink to this headline">¶</a></h2>
+<p>La commande de terminal pour la suppression hôte (s) virtuelle est rm. Le format général de cette commande est rm. rm supprime un hôte virtuel si vous spécifiez un chemin d&#8217;accès correct pour elle et si vous ne le faites pas, il affiche un message d&#8217;erreur et de passer à l&#8217;hôte suivant. Parfois, vous ne pouvez pas avoir les permissions d&#8217;écriture pour un hôte virtuel, dans ce cas il vous demande confirmation. Tapez oui si vous souhaitez supprimer.</p>
+<p>Si le nom supprimé était le dernier lien à un hôte virtuel et aucun processus n&#8217;a ouvert l&#8217;hôte virtuel, l&#8217;hôte virtuel est supprimé et l&#8217;espace qu&#8217;il utilisait est rendu disponible pour une réutilisation.</p>
+<p>Si le nom était le dernier lien à un hôte virtuel, mais qu&#8217;un processus conserve encore l&#8217;hôte virtuel ouvert, l&#8217;hôte virtuel restera en existence jusqu&#8217;à ce que le dernier descripteur d&#8217;hôte virtuel se référant à elle est fermée.</p>
+<p>Si le nom correspond à un lien symbolique, le lien est supprimé. La commande suivante permet de supprimer l&#8217;hôte virtuel.</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptdeploy vhe rm –yes –guess –vhe-deletion-vhost<span class="o">=</span>www.kevell.com
+</pre></div>
+</div>
+<p>La capture d&#8217;écran suivante peut expliquer ses fonctions.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- rm
+        example: ptdeploy vhe rm
+        example: ptdeploy vhe rm --yes --
+        example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
+        example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
+</pre></div>
+</div>
+</div>
+<div class="section" id="liste">
+<h2>liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
+<p>Liste des informations sur l&#8217;hôte virtuel (le répertoire courant par défaut). Trier les entrées par ordre alphabétique. Les arguments obligatoires a des options longues ainsi que les options courtes. Une liste appelée avec une URL spécifiant à la fois le nom de la liste et également le point de vue sous-jacente qui fournira et organiser les données. La commande suivante permet de lister l&#8217;hôte virtuel.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy vhe list
+</pre></div>
+</div>
+<p>Notez que si une liste peut être utilisé avec une variété de points de vue, ou pourrait être adaptée pour produire une page élaborée à partir d&#8217;un point de vue spécifiquement conçu pour organiser les données pour cela. Listes stockées dans le champ d&#8217;un document de conception des listes. Il peut être visualisé par les captures d&#8217;écran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- list
+        List current Virtual Hosts
+        example: ptdeploy vhe list
+</pre></div>
+</div>
+</div>
+<div class="section" id="permettre">
+<h2>permettre<a class="headerlink" href="#permettre" title="Permalink to this headline">¶</a></h2>
+<p>Boot sécurisé est une fonction conçue pour empêcher les logiciels malveillants et les médias non autorisée de chargement pendant le processus de démarrage. Cette option permettra activé le bloc de serveur. Dans hôte virtuel lorsque l&#8217;occasion tapé la commande suivante,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy vhe <span class="nb">enable</span>
+</pre></div>
+</div>
+<p>Cette option est activée par défaut. Cette option permet au serveur d&#8217;hôte virtuel permet.</p>
+<p>Module Aider à développer un grand nombre de capacités habilitantes nécessaires à l&#8217;entretien des environnements haute performance grâce à notre compréhension des interdépendances entre les personnes, les processus et la technologie. La capture d&#8217;écran ci-dessous explique la même chose..</p>
+<div class="highlight-bash"><div class="highlight"><pre>- <span class="nb">enable</span>
+
+<span class="nb">        enable </span>a Server Block
+        example: ptdeploy vhe <span class="nb">enable</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="desactiver">
+<h2>désactiver<a class="headerlink" href="#desactiver" title="Permalink to this headline">¶</a></h2>
+<p>Cette désactivation utilisée pour désactiver le serveur. Les connexions inactives ou ralenti éditeur hôte virtuel sont normalement déconnectés par le serveur après une certaine période de temps. La commande suivante permet de désactiver l&#8217;éditeur d&#8217;hôte virtuel</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy vhe disable
+</pre></div>
+</div>
+<p>Après avoir tapé cette commande, il peut demander à l&#8217;utilisateur de désactiver le serveur. Si les entrées de l&#8217;utilisateur que oui il désactiver le serveur est à dire qu&#8217;il ne permettra à aucun corps à travailler dans ce serveur.</p>
+<p>La capture d&#8217;écran suivante visualiser évidemment.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- disable
+
+       disable a Server Block
+        example: ptdeploy vhe disable
+</pre></div>
+</div>
+</div>
+<div class="section" id="avantages">
+<h2>Avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>multi utilisateur peut accéder à la fois.</li>
+<li>L&#8217;utilisateur peut ajouter ou supprimer des hôtes virtuels.</li>
+<li>L&#8217;éditeur d&#8217;hôte virtuel peut activer ou désactiver l&#8217;hôte virtuel selon le souhait de l&#8217;utilisateur.</li>
+<li>Sensibilité non de cas.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fhosteditor_deploy.rst">
+          Host Editor
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

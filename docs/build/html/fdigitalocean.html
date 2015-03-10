@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DigitalOcean &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="Dnsify" href="fdnsify.html" />
+    <link rel="prev" title="Copy" href="fcopy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">DigitalOcean</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#caracteristiques-de-digital-ocean">Caractéristiques de Digital Ocean</a></li>
+<li><a class="reference internal" href="#box-add">Box_Add</a></li>
+<li><a class="reference internal" href="#box-destroy">Box_Destroy</a></li>
+<li><a class="reference internal" href="#id1">Box_Destroy</a></li>
+<li><a class="reference internal" href="#save-ssh-key">Save_Ssh_key</a></li>
+<li><a class="reference internal" href="#liste">liste</a></li>
+<li><a class="reference internal" href="#autres-parametres">Autres paramètres</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fcopy.html"
+         title="Previous Chapter: Copy">&laquo; Copy</a></li>
+  <li><a href="fdnsify.html"
+         title="Next Chapter: Dnsify">Dnsify &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fdigitalocean.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="digitalocean">
+<h1>DigitalOcean<a class="headerlink" href="#digitalocean" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module aide les utilisateurs à la manipulation serveurs sur l&#8217;océan numérique. Il enveloppe tous les besoins de base des utilisateurs dans le traitement des boîtes sur l&#8217;océan numérique.</p>
+<p>Les thèmes à venir discute sur la façon d&#8217;utiliser ce module, les diverses caractéristiques de l&#8217;océan numérique cadre de ce module.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Les actes de commandement de l&#8217;aide que un manuel d&#8217;utilisation brève. Il décrit à propos de l&#8217;objectif majeur de ce module. Il énumère les aboutissants des paramètres alternatifs qui peuvent être utilisés dans les déclarations. En outre, il a souligne également les différentes caractéristiques de l&#8217;utilisation de l&#8217;océan numérique cadre de ce module avec la syntaxe pour les utiliser. La commande utilisée pour déclarer option d&#8217;aide est indiqué ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure DigitalOcean <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu de Digital Ocean.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure DigitalOcean <span class="nb">help</span>
+******************************
+
+
+   This is an extension provided <span class="k">for</span> Handling Servers on Digital Ocean.
+
+   DigitalOcean, digitaloceanv1, digital-ocean-v1
+
+       - box-add
+       Lets you add boxes to Digital Ocean, and adds them to your papyrusfile
+       example: ptconfigure digital-ocean box-add
+                   --yes
+                   --digital-ocean-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+                   --digital-ocean-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - box-destroy
+       Will destroy box/es in an environment <span class="k">for</span> you, and remove them from the papyrus file
+       example: ptconfigure digital-ocean box-destroy --yes --guess --digital-ocean-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --digital-ocean-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - box-destroy-all
+       Will destroy all boxes in your digital ocean account - Careful - its irreversible
+       example: ptconfigure digital-ocean box-destroy-all --yes --guess
+
+       - save-ssh-key
+       Will <span class="nb">let </span>you save a <span class="nb">local </span>ssh key to your Digital Ocean account, so you can ssh in to your nodes
+       securely and without a password
+       example: ptconfigure digital-ocean save-ssh-key
+                   --yes
+                   --digital-ocean-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+                   --digital-ocean-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - list
+       Will display data about your digital ocean account
+       example: ptconfigure digital-ocean list
+       example: ptconfigure digital-ocean list --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+                   --type<span class="o">=</span>sizes <span class="c"># droplets, sizes, images, domains, regions, ssh_keys</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="caracteristiques-de-digital-ocean">
+<h2>Caractéristiques de Digital Ocean<a class="headerlink" href="#caracteristiques-de-digital-ocean" title="Permalink to this headline">¶</a></h2>
+<p>Comme représenté dans la commande d&#8217;aide ci-dessus, ce module a des caractéristiques différentes en utilisant l&#8217;océan numérique comme indiqué ci-dessous</p>
+<ul class="simple">
+<li>Box_Add</li>
+<li>Box_Destroy</li>
+<li>Box_Destroy_All</li>
+<li>Save_ssh_Key</li>
+<li>Liste</li>
+</ul>
+</div>
+<div class="section" id="box-add">
+<h2>Box_Add<a class="headerlink" href="#box-add" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonction vise à ajouter des boîtes à l&#8217;océan numérique et à la main les ajouter au fichier de papyrus. Ceci peut être réalisé simplement en utilisant la syntaxe comme indiqué ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure digital-ocean box-add
+            --yes
+            --digital-ocean-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+            --digital-ocean-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+<p>Pour mettre en œuvre la commande ci-dessus, l&#8217;utilisateur à spécifier les champs suivants dans le format de la syntaxe mentionné ci-dessus.</p>
+<ul class="simple">
+<li>Chemin océan numérique ssh-clé</li>
+<li>Nom numérique océan clé ssh_key</li>
+</ul>
+</div>
+<div class="section" id="box-destroy">
+<h2>Box_Destroy<a class="headerlink" href="#box-destroy" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonction vise à détruire les boîtes dans un environnement spécifié et à la main les supprimer à partir du fichier de papyrus. Ceci peut être réalisé simplement en utilisant la syntaxe comme indiqué ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure digital-ocean box-destroy --yes --guess --digital-ocean-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+--digital-ocean-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+<p>Pour mettre en œuvre la commande ci-dessus, l&#8217;utilisateur à spécifier les champs suivants dans le format de la syntaxe mentionné ci-dessus.</p>
+<ul class="simple">
+<li>Chemin océan numérique ssh-clé</li>
+<li>Nom numérique océan clé ssh_key</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Box_Destroy<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonction vise à détruire les boîtes dans un environnement spécifié et à la main les supprimer à partir du fichier de papyrus. Ceci peut être réalisé simplement en utilisant la syntaxe comme indiqué ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure digital-ocean box-destroy-all --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-ssh-key">
+<h2>Save_Ssh_key<a class="headerlink" href="#save-ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonctionnalité permet aux utilisateurs d&#8217;enregistrer un ssh local à votre océan numérique afin que les utilisateurs peuvent ssh dans leurs noeuds en toute sécurité sans mot de passe. Ceci peut être réalisé en utilisant la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure digital-ocean save-ssh-key
+            --yes
+            --digital-ocean-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+            --digital-ocean-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+<p>Pour mettre en œuvre la commande ci-dessus, l&#8217;utilisateur à spécifier les champs suivants dans le format de la syntaxe mentionné ci-dessus.</p>
+<ul class="simple">
+<li>Chemin océan numérique ssh-clé</li>
+<li>Nom numérique océan clé ssh_key</li>
+</ul>
+</div>
+<div class="section" id="liste">
+<h2>liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonctionnalité permet aux utilisateurs de lister toutes les données sur leur compte de l&#8217;océan numérique. Ceci peut être réalisé simplement en utilisant la commande ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure digital-ocean list
+</pre></div>
+</div>
+<p>Or</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure digital-ocean list --yes
+            --guess <span class="c"># use project saved connection details if possible</span>
+            --type<span class="o">=</span>sizes <span class="c"># droplets, sizes, images, domains, regions, ssh_keys</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="autres-parametres">
+<h2>Autres paramètres<a class="headerlink" href="#autres-parametres" title="Permalink to this headline">¶</a></h2>
+<p>Les autres paramètres de ce module, chacun pouvant être utilisés dans la déclaration est,</p>
+<blockquote>
+<div>DigitalOcean,   digitaloceanv1,   digital-ocean-v1</div></blockquote>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Les paramètres utilisés déclarant aide et d&#8217;autres caractéristiques différentes de apt ne sont pas sensibles à la casse.</li>
+<li>Il est bien de choses à faire dans les deux cents os et ainsi que dans Ubuntu.</li>
+<li>Ce module enveloppe tous les besoins des utilisateurs dans le traitement de l&#8217;océan numérique.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fdigitalocean.rst">
+          DigitalOcean
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

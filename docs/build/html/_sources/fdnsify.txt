@@ -1,0 +1,189 @@
+========
+Dnsify
+========
+
+synopsis
+-----------
+
+Cette modules enveloppes tous les grands besoins des utilisateurs gestion DNS. Ce sujet est de discuter sur la façon d'utiliser ce module et sur diverses fonctions dans l'utilisation dnsify.
+
+Commande Aide
+-------------------
+
+La commande help guide les utilisateurs dans la manipulation de ce module, afin de gérer et d'effectuer diverses fonctions d'une boîte. Il énumère les aboutissants d'autres paramètres, et met en évidence la syntaxe pour diverses fonctions d'utilisation et de modification d'une boîte. La syntaxe de l'aide option dans le module dnsify est illustré ci-dessous,
+
+.. code-block:: bash
+
+	ptconfigure DNSify help
+
+La syntaxe pour déclarer la commande d'aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d'écran ci-dessous vous visualiser sur la commande d'aide en vertu dnsify.
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure Dnsify help 
+ ************************************ 
+
+
+  This command provides a generic Box Management wrapper around all of the Box Providers (Cloud and Otherwise) so that we have a   generic way to create and destroy boxes. 
+
+  DNSify, dnsify 
+
+        - install-generic-autopilots 
+        Install the generic Dnsify autopilot templates for a Tiny or Medium (Current Default) set of Environments 
+        example: ptconfigure dnsify install-generic-autopilots 
+        example: ptconfigure dnsify install-generic-autopilots 
+                    --yes 
+                    --guess # will set --destination-dir=*this dir +*build/config/ptconfigure/dnsify/autopilots/ 
+                    --template-group=tiny 
+                    --destination-dir=*path-to-destination* 
+
+        - box-add 
+        Installs a Box through a cloud provider 
+        example: ptconfigure dnsify box-add --environment-name="*environment*" 
+            --server-prefix="my-app" 
+            --provider="DigitalOcean" // DigitalOcean, Rackspace, VSphere 
+            --image-id="3101045" // DO=3101045 , RAX=ffd597d6-2cc4-4b43-b8f4-b1006715b84e 
+            --size-id="66" // DO = 66, RAX = 2 
+            --region-id="2" // DO = 2, RAX = LON 
+            --box-amount=1 // An Integer number of boxes to create 
+            --force-name="a-box-name" // optional, will override other options for name creation. may cause a conflict if creating more than 1 box. 
+            --parallax // optional, when adding more than one box, if the provider supports it we can execute all requests in parallel 
+
+        - box-remove 
+        Removes a Box from the papyrus 
+        example: ptconfigure dnsify box-remove --environment-name="staging" --environment-version="5.0" --provider="apt-get" 
+
+        - box-destroy 
+        Removes a Box from both papyrus and the cloud provider 
+        example: ptconfigure dnsify box-destroy --environment-name="staging" 
+            --destroy-all-boxes 
+            --destroy 
+
+        - list-papyrus 
+        List all servers in papyrus, or those of a particular environment 
+        example: ptconfigure dnsify list-papyrus --yes 
+        example: ptconfigure dnsify list-papyrus --yes --environment-name="staging" 
+
+
+ ------------------------------------------------------------------------------------------------
+ End Help 
+ *********************************************************************
+
+Diverses fonctions de dnsify
+----------------------------------
+
+
+Les rubriques décrit les diverses fonctions de dnsify cadre de ce module, comme indiqué ci-dessous
+
+
+* Installez les pilotes automatiques génériques
+* Ajout de la boîte
+* Case Retrait
+* Détruire une boîte
+* liste
+
+
+Installez les pilotes automatiques génériques
+-----------------------------------------------------------
+
+Cette fonction vise à l'installation de pilotes automatiques applicables à un ensemble petit ou moyen d'environnements. Ceci peut être mis en œuvre en appliquant la commande comme indiqué ci-dessous,
+
+.. code-block:: bash
+	
+	ptconfigure dnsify install-generic-autopilots 
+                    --yes 
+                    --guess # will set --destination-dir=*this dir +*build/config/ptconfigure/dnsify/autopilots/ 
+                    --template-group=tiny 
+                    --destination-dir=*path-to-destination* 
+
+Comme représenté dans la syntaxe mentionnés ci-dessus l'utilisateur doit indiquer les domaines suivants afin d'installer les pilotes automatiques génériques.
+
+* Répertoire de destination
+* Gabarit groupe
+
+
+Ajout de la boîte
+--------------------------
+
+Cette fonction vise à ajouter une boîte par un fournisseur de cloud, simplement en utilisant la commande suivante,
+
+.. code-block:: bash
+
+ example: ptconfigure dnsify box-add --environment-name="*environment*" 
+            --server-prefix="my-app" 
+            --provider="DigitalOcean" // DigitalOcean, Rackspace, VSphere 
+            --image-id="3101045" // DO=3101045 , RAX=ffd597d6-2cc4-4b43-b8f4-b1006715b84e 
+            --size-id="66" // DO = 66, RAX = 2 
+            --region-id="2" // DO = 2, RAX = LON 
+            --box-amount=1 // An Integer number of boxes to create 
+            --force-name="a-box-name" // optional, will override other options for name creation. may cause a conflict if creating more than 1 box. 
+            --parallax // optional, when adding more than one box, if the provider supports it we can execute all requests in parallel 
+
+L'utilisateur doit indiquer les domaines suivants comme décrit dans la commande ci-dessus,
+
+* Nom de l'environnement
+* Préfixe du serveur
+* fournisseur
+* Image ID
+* Montant de boîte (Doit être une valeur entière pour désigner le nombre de boîtes à ajouter)
+* Nom de la Force (nom de la boîte)
+* Parallaxe (Il est facultatif, il peut être utilisé lors de l'ajout plus d'une case.)
+
+
+case Retrait
+------------------
+
+Cette fonction vise à supprimer une boîte du papyrus. Ceci peut être réalisé en utilisant la commande ci-dessous,
+
+.. code-block:: bash
+
+	ptconfigure dnsify box-remove --environment-name="staging" --environment-version="5.0" --provider="apt-get" 
+
+L'utilisateur doit indiquer les domaines suivants comme décrit dans la commande ci-dessus,
+
+* Nom de l'environnement
+* La version de l'environnement
+* fournisseur
+
+Détruire une boîte
+---------------------
+
+Cette fonction vise à supprimer une boîte du papyrus. Cette fonction peut être implémentée en utilisant simplement la commande suivante,
+
+.. code-block:: bash
+
+	ptconfigure dnsify box-destroy --environment-name="staging" 
+            --destroy-all-boxes 
+            --destroy
+
+La commande mentionné ci-dessus est utilisé pour détruire toutes les cases d'un environnement particulier.
+
+liste
+-----
+
+Le principal objectif de cette fonction est de lister tous les serveurs d'un papyrus en particulier ou dans un environnement. La syntaxe de la liste tous les serveurs est représentée ci-dessous,
+
+.. code-block:: bash
+
+	ptconfigure dnsify list-papyrus --yes --environment-name="staging"
+
+La commande ci-dessus mentionnée donnera la liste de papyrus d'un environnement spécifié.
+
+
+Autres paramètres
+-----------------------------
+
+Les autres paramètres de ce module, chacun pouvant être utilisés dans la déclaration est,
+
+* DNSify
+* dnsify
+
+
+avantages
+-----------
+
+* La syntaxe utilisée dans l'aide et d'autres opérations de la boîte ne sont pas sensibles à la casse.
+* Il est bien de choses à faire à la fois Cent OS et ainsi que dans Ubuntu.
+* Toutes les grandes fonctions de la gestion d'une case dans la gestion des DNS obtient enveloppés dans ce module unique.
+

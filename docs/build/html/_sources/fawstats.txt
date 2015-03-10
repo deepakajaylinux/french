@@ -1,0 +1,158 @@
+========
+Awstats
+========
+
+synopsis
+------------
+
+Ce module favorise l'installation de awstats, avec la dernière version. AWStats est un open source Web analytics outil de reporting, appropriés pour analyser les données provenant des services Internet tels que le Web, le streaming serveurs médias, la messagerie et FTP. AWStats analyse et analyse les fichiers journaux du serveur, la production de rapports HTML.
+
+AWStats (Advanced Web de Statistique) est un puissant, web fichier journal du serveur analyseur complet qui vous montre toutes vos statistiques Web y compris: visiteurs, pages, frappe, heure, moteurs de recherche, mots clés utilisés pour trouver votre site, liens brisés, robots et beaucoup plus.
+
+Voyons, les détails de la façon d'installer ce awstats, les caractéristiques et les exigences AWStats sujets à venir.
+
+Commande Aide
+---------------------
+
+La commande help guide les utilisateurs au sujet de l'objet et ainsi que sur les options qui sont inclus dans le module AWStats. Il énumère les alternatives aux paramètres du module AWStats. Il décrit également la syntaxe pour l'installation du module AWStats. La commande d'aide pour le module AWStats est représentée ci-dessous.
+
+.. code-block:: bash
+	
+		ptconfigure AWStats help
+
+La syntaxe pour déclarer la commande d'aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d'écran ci-dessous vous visualiser sur la commande d'aide en vertu AWStats.
+
+
+installation
+----------------
+
+La commande utilisée pour installer les AWStats à la machine des utilisateurs est illustré ci-dessous.
+
+.. code-block:: bash
+
+		ptconfigure AWStats install
+
+Après avoir saisi la commande ci-dessus, le processus suivant se produit comme indiqué dans le format tabulaire.
+
+.. cssclass:: table-bordered
+
+ +-----------------------+-----------------------------------+-------------+----------------------------------------+
+ | paramètres		 | Autres paramètres                 | requis      | commentaire	                    |
+ +=======================+===================================+=============+========================================+
+ |Install AWStats? (Y/N) | au lieu de AWStats, nous pouvons  | Y(Yes)      | Si l'utilisateur souhaite procéder le  |
+ |                       | utiliser Awstats, awstats aussi.  |             | processus d'installation qu'ils        |
+ |                       |                                   |             | peuvent entrée comme Y.                |
+ +-----------------------+-----------------------------------+-------------+----------------------------------------+
+ |Install AWStats? (Y/N) | au lieu de AWStats, nous pouvons  | N(No)       | Si l'utilisateur souhaite quitter le   |
+ |                       | utiliser Awstats, awstats aussi.  |             | processus d'installation qu'ils        |
+ |                       |                                   |             | peuvent entrée comme N.|               |
+ +-----------------------+-----------------------------------+-------------+----------------------------------------+
+
+
+Si l'utilisateur procède à l'installation, le processus suivant sont impliqués lors de l'installation:
+
+* Lit les listes de paquets.
+* Construit l'arbre des dépendances.
+* Installe les paquets supplémentaires nécessaires
+* Installe les paquets suggérés.
+* Installe les nouveaux paquets.
+
+Enfin, l'installation de Awstats se rempli avec succès comme représenté dans les captures d'écran suivantes:
+
+
+
+Caractéristiques de Awstats
+--------------------------------------
+
+Une analyse complète de journal permet AWStats pour vous montrer les informations suivantes:
+
+
+* Nombre de visites et de visiteurs uniques
+* Durée des visites et dernières visites
+* Les utilisateurs authentifiés et dernières visites authentifiés
+* Jours de la semaine et les heures de pointe (pages, frappe, KB pour chaque jour et heure)
+* Domaines / Pays d'hôtes visiteurs (pages, hits, KB)
+* Liste des hôtes, dernières visites et les adresses IP non résolues liste
+* Les pages les plus consultées, entrée et de sortie
+* Les types de fichiers
+* Statistiques de compression Web (pour mod_gzip ou mod_deflate)
+* Navigateurs utilisés (pages, visites, ko pour chaque navigateur)
+* OS utilisé (pages, frappe, KB pour chaque OS)
+* Visites de Robots
+* Attaques de Ver
+* Télécharger et la poursuite de détection
+* Moteurs de recherche, phrases clés et les mots clés utilisés pour trouver votre site
+* Erreurs HTTP (Page introuvables avec la dernière referer, etc,)
+* Rapport de la taille de l'écran
+* Nombre de fois que votre site est "ajouté aux favoris Favoris"
+* Ratio des navigateurs qui supportent: Java, Flash, RealG2 lecteur,
+  Quicktime lecteur, WMA lecteur, lecteur de PDF
+* Rapport de cluster pour charge équilibrée ratio serveurs
+* Autres rapports personnalisés ...
+
+
+
+Il prend en charge les fonctionnalités suivantes ainsi:
+
+
+
+* Peut analyser tous les formats de journaux
+* Fonctionne en ligne de commande et d'un navigateur en tant que CGI (avec dynamique
+  filtres capacités pour certaines cartes)
+* Mise à jour des statistiques peut être faite à la demande de l'interface Web et
+  non seulement de votre planificateur
+* Illimité taille de fichier journal, les fichiers journaux soutien fendus (système d'équilibrage de charge)
+* Support «presque triés« fichiers journaux, même pour les pages d'entrée et de sortie
+* Reverse DNS avant ou pendant l'analyse, supporte les fichiers de cache DNS
+* Détection de Pays de l'emplacement IP ou le nom de domaine
+* Liens Whois
+* Un grand nombre de filtres et options / plugins peut être utilisé Sites Web 
+* Multi-nommés en charge (serveurs virtuels)
+* Cross Site Scripting Attacks protection
+* Plusieurs langues
+* Pas besoin de bibliothèques de perl rares
+* Rapports dynamiques en sortie de CGI Rapports 
+* statique dans un ou encadrée pages HTML ou XHTML
+* Expérimentale export PDF
+* Offre couleurs peuvent correspondre à la conception de votre site (CSS)
+* Aide et info-bulles sur les pages HTML signalés
+* Facile à utiliser (Juste un fichier de configuration à éditer)
+* Analyse de base de données peut être stockée au format XML (pour traitement XSLT, ...)
+* Un module Webmin
+* Gratuit (GNU GPL) avec des sources (scripts perl)
+* Disponible sur toutes les plateformes
+
+
+Exigences de Awstats
+--------------------------------
+
+Pour utiliser AWStats script CGI, vous devez les exigences suivantes:
+
+* Votre serveur doit se connecter l'accès Web dans un fichier journal que vous pouvez lire.
+* Pour exécuter awstats, en ligne de commande, votre système d'exploitation doit être en mesure Pour exécuter des scripts (fichiers .pl) perl.
+* Module Perl "Encode" doit être disponible.
+
+Pour exécuter awstats comme CGI (pour les statistiques en temps réel), votre serveur web doit également être en mesure d'exécuter ces scripts.
+
+   Si non, vous pouvez résoudre ce problème en téléchargeant dernière version Perl à:
+  
+        http://www.activestate.com/ActivePerl/ (Windows)
+
+  	http://www.perl.com/pub/language/info/software.html (All OS)
+
+
+avantages
+--------------
+
+* Les paramètres utilisés dans les opérations d'aide et d'installation et d'installation de l'ONU ne sont pas sensibles à la casse qui est un 
+  avantage supplémentaire en rapport aux autres.
+* Il est bien de choses à faire dans les deux Ubuntu et ainsi que Cent OS.
+* Ce module de volonté installe les Awstats en version mise à jour.
+* Si le module existe déjà dans la machine de l'utilisateur, il affiche un message comme il est déjà existant.
+* AWStats supporte la plupart des principaux formats de fichiers de log du serveur Web, y compris (XLF / ELF le format NCSA combiné / log ou 
+  Common Log Format (CLF)) Apache, WebStar, IIS (format de journal W3C), et de nombreux autres formats de journaux de serveur web commun.
+* Les développeurs peuvent contribuer au projet AWStats par SourceForge.net.
+* Écrit en Perl, AWStats peuvent être déployés sur presque ne importe quel système d'exploitation
+* Ce est un outil d'administration du serveur, avec des forfaits disponibles pour la plupart des distributions Linux.
+* AWStats peuvent être installés sur un poste de travail, tels que MS Windows, pour une utilisation locale dans des situations où les
+  fichiers journaux peuvent être téléchargés à partir d'une télécommande serveur.

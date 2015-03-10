@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Run Command &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="Selenium Server" href="fseleniumserver.html" />
+    <link rel="prev" title="RubyRVM" href="frubyvm.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Run Command</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#helpcommand">HelpCommand</a></li>
+<li><a class="reference internal" href="#parametres-alternatifs">paramètres alternatifs</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="frubyvm.html"
+         title="Previous Chapter: RubyRVM">&laquo; RubyRVM</a></li>
+  <li><a href="fseleniumserver.html"
+         title="Next Chapter: Selenium Server">Selenium Server &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fruncommand.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="run-command">
+<h1>Run Command<a class="headerlink" href="#run-command" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Les modules de commande RUN permet aux utilisateurs d&#8217;exécuter des commandes du système d&#8217;exploitation. Ce est principalement être utilisé dans sur le pilote automatique. Grâce à cette commande, l&#8217;utilisateur peut spécifier exécuter la ligne de commande, le nom de l&#8217;utilisateur et donc d&#8217;exécuter le soit en arrière-plan ou front-end. Voyons les utilisations de commande de marche.</p>
+</div>
+<div class="section" id="helpcommand">
+<h2>HelpCommand<a class="headerlink" href="#helpcommand" title="Permalink to this headline">¶</a></h2>
+<p>La commande d&#8217;aide décrit les utilisations de commande de marche, ses principales fonctions à ce sujet, ses autres paramètres, les commandes utilisées pour exécuter une commande, et donc sur la syntaxe pour la spécification de la commande, le nom de l&#8217;utilisateur et donc d&#8217;exécuter l&#8217;une ou l&#8217;autre en arrière-plan ou l&#8217;avant -fin. La syntaxe utilisée pour déclarer la commande d&#8217;aide est indiqué ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure RunCommand <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La capture d&#8217;écran ci-dessous illustre imagée sur le fonctionnement de la commande d&#8217;aide.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure RunCommand <span class="nb">help</span>
+******************************
+
+
+ This allows you to execute an Operating System command. This would primarily be used in an Autopilot.
+
+ RunCommand, runcommand, run-command
+
+       - execute
+       Execute a Command
+       example: ptconfigure run-command --yes --command<span class="o">=</span><span class="s2">&quot;ls -lah /tmp&quot;</span> --run-as-user<span class="o">=</span><span class="s2">&quot;ubuntu&quot;</span> --background
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+<p>La capture d&#8217;écran ci-dessous illustre imagée sur le fonctionnement de la commande d&#8217;aide.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure run-command --yes --command<span class="o">=</span><span class="s2">&quot;ls -lah /tmp&quot;</span> --run-as-user<span class="o">=</span><span class="s2">&quot;ubuntu&quot;</span> --background
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="40%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètre</th>
+<th class="head">fonction</th>
+<th class="head">utilisation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>command=”ls -lah /tmp”</td>
+<td>Il permet à l&#8217;utilisateur de spécifier la
+commande et de son but.</td>
+<td>En utilisant ce, l&#8217;utilisateur peut spécifier
+leur propre instruction en fonction de leurs
+exigences.</td>
+</tr>
+<tr class="row-odd"><td>run-as-user=”ubuntu”</td>
+<td>En utilisant ce, l&#8217;utilisateur peut spécifier le
+nom de l&#8217;utilisateur.</td>
+<td>En utilisant ce, l&#8217;utilisateur peut spécifier
+l&#8217;enregistrement de l&#8217;utilisateur requis selon
+leurs besoins.</td>
+</tr>
+<tr class="row-even"><td>En utilisant ce,
+l&#8217;utilisateur peut
+spécifier la plate-
+forme de leur
+utilisation en
+fonction de leurs
+besoins, &#8220;-background|</td>
+<td>Il permet à l&#8217;utilisateur de spécifier l&#8217;endroit
+où la commande spécifique soit dans le fond ou
+dans le front-end terme.</td>
+<td>En utilisant ce, l&#8217;utilisateur peut spécifier la
+plate-forme de leur utilisation en fonction de
+leurs exigences.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parametres-alternatifs">
+<h2>paramètres alternatifs<a class="headerlink" href="#parametres-alternatifs" title="Permalink to this headline">¶</a></h2>
+<p>nous pouvons utiliser les paramètres suivants,</p>
+<p>RunCommand, runcommand, run-command</p>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Les paramètres utilisés pour déclarer commande d&#8217;aide, l&#8217;installation ne sont pas sensibles à la casse qui est un avantage supplémentaire en
+rapport aux autres.</li>
+<li>Il est bien de choses à faire dans les deux Cent OS et ainsi que dans Ubuntu.</li>
+<li>Les utilisateurs peuvent spécifier la commande, le nom de l&#8217;utilisateur et donc d&#8217;exécuter l&#8217;une ou l&#8217;autre en arrière-plan ou front-end.</li>
+<li>La commande help guide les utilisateurs à la façon d&#8217;exécuter la commande de marche sur de sorte que son effet.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fruncommand.rst">
+          Run Command
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
