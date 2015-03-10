@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DBInstall &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptdeploy" href="fptdeploy_main.html" />
+    <link rel="next" title="DBConfigure" href="fdbconfigure_deploy.html" />
+    <link rel="prev" title="Dapperfy" href="fdapperfy_deploy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">Ptdeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">DBInstall</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#derouler">Dérouler</a></li>
+<li><a class="reference internal" href="#alternative-parametre">Alternative Paramètre</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fdapperfy_deploy.html"
+         title="Previous Chapter: Dapperfy">&laquo; Dapperfy</a></li>
+  <li><a href="fdbconfigure_deploy.html"
+         title="Next Chapter: DBConfigure">DBConfigure &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fdbinstall_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">Ptdeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="dbinstall">
+<h1>DBInstall<a class="headerlink" href="#dbinstall" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Dbinstall module aide dans le traitement des fonctions d&#8217;installation de base de données. Cette commande permet d&#8217;installer une nouvelle base de données. L&#8217;installation requiert un accès de sudo, ou il doit être exécuté en tant que root. Cela comprend l&#8217;exécution de la commande rpm ou la commande miminstall du paquet de goudron, et aussi lors de l&#8217;utilisation de la commande dbinstall qui crée une base de données initiale.</p>
+<p>Tout en créant une base de données initiale, vous avez installé le logiciel, vous pouvez construire une base de données SQL Mimer en utilisant la commande de dbinstall.</p>
+<p>Nous venons d&#8217;installer une nouvelle base de données sur un serveur Linux (CentOS) et quand je essaie de se connecter à la base de données (à partir du serveur), il requiert le nom de base de données dans la chaîne de connexion. Comme mentionné précédemment, la commande dbinstall nécessite un accès à sudo, ou doit être exécutée par l&#8217;utilisateur root. Si pas commencé à partir d&#8217;un shell de passe privilégiée sudo sera demandé.</p>
+<p>Au cours de la session de dbinstall, le nom de base de données, l&#8217;emplacement de base de données, et mot de passe de l&#8217;administrateur (c.-à-SYSADM) de base de données doit être précisé. Il y aura aussi des options pour l&#8217;installation exemple environnements, etc. Lorsque la session est terminée, une base de données pleinement opérationnelle est disponible - pour un accès client / serveur sur TCP et démarrage automatique lors de la réinitialisation.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de déterminer l&#8217;utilisation d&#8217;un module DBinstall. L&#8217;utilisateur viendra à connaître les différentes façons / format à exécuter ce module. Cette commande guide l&#8217;utilisateur final de connaître le but de cette commande. Ci-dessous sont donnés la commande et la capture d&#8217;écran de la même.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeployDBInstall <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La représentation picturale de la commande ci-dessus est illustré ci-dessous,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployDBInstall help
+******************************
+
+
+ This command is part of Default Modules and handles Database Installation Functions.
+
+ DBInstall, db-install, dbinstall
+
+         - install
+         install the database for a project. run DBConfigure first to set up users unless you already have them.
+         example: ptdeploydb-install install
+
+         - save
+         save the database for a project. run DBConfigure first to set up users unless you already have them.
+         example: ptdeploydb-install save
+
+         - drop
+         drop the database for a project.
+         example: ptdeploydb-install drop
+
+
+--------------
+ Wordpress Module:
+
+ The Wordpress module extends DBInstall by adding wordpress-install
+
+ Wordpress module adds the actions wordpress-install and wp-install to DBInstall, requiresd to allow the Post DB
+ Install hooks for Wordpress, the DB restore won&#39;t work correctly without at least the url.
+
+ ptdeploydbinstall wordpress-install --yes --guess --hook-url=www.site.env
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit installer, l&#8217;utilisateur peut émettre les commandes suivantes pour DBIstall. Le système exécute le processus d&#8217;installation.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploydbinstall install
+</pre></div>
+</div>
+<p>Le système demande pour l&#8217;hôte Mysql, Appuyez sur Entrée pour utiliser l&#8217;hôte par défaut</p>
+<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+</pre></div>
+</div>
+<p>Ensuite, le système demandera utilisateur MySQL Admin, le nom d&#8217;utilisateur sera racine et le mot de passe d&#8217;administration MySQL.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
+<span class="s1">root</span>
+<span class="s1">What&#39;</span>s the MySQL Admin Password?
+123456
+</pre></div>
+</div>
+<p>Ensuite, le système demande à l&#8217;utilisateur de l&#8217;application DB, vous pouvez continuer avec les utilisateurs existants ou de créer un nouvel utilisateur. Une fois que vous fournissez avec l&#8217;option «0» pour les nouveaux utilisateurs du système demander le nom d&#8217;utilisateur Nouvelle, l&#8217;application passe DB et l&#8217;application nom de DB.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>Une fois les détails ci-dessus fournis, le système demande confirmation. Après confirmation, le système exécute le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>Une fois les détails ci-dessus fournis, le système demande confirmation. Après confirmation, le système exécute le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploydbinstall save
+</pre></div>
+</div>
+<p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>Le système demande pour l&#8217;hôte Mysql, Appuyez sur Entrée pour utiliser l&#8217;hôte par défaut.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+</pre></div>
+</div>
+<p>Ensuite, le système demander utilisateur MySQL Admin, le nom d&#8217;utilisateur sera racine ?? et le mot de passe d&#8217;administration MySQL.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
+<span class="s1">root</span>
+<span class="s1">What&#39;</span>s the MySQL Admin Password?
+123456
+</pre></div>
+</div>
+<p>Ensuite, le système demande à l&#8217;utilisateur de l&#8217;application DB.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="derouler">
+<h2>Dérouler<a class="headerlink" href="#derouler" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur a besoin de supprimer la base d&#8217;un projet, la commande ci-dessous donnée exécuter le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploydbinstall drop
+</pre></div>
+</div>
+<p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>Le système demande pour l&#8217;hôte Mysql, Appuyez sur Entrée pour utiliser l&#8217;hôte par défaut.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+</pre></div>
+</div>
+<p>Ensuite, le système demandera utilisateur MySQL Admin, le nom d&#8217;utilisateur sera racine et le mot de passe d&#8217;administration MySQL.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
+<span class="s1">root</span>
+<span class="s1">What&#39;</span>s the MySQL Admin Password?
+123456
+</pre></div>
+</div>
+<p>Ensuite, le système demande à l&#8217;utilisateur de l&#8217;application DB.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-parametre">
+<h2>Alternative Paramètre<a class="headerlink" href="#alternative-parametre" title="Permalink to this headline">¶</a></h2>
+<p>Soit des trois paramètre alternatif peut être utilisé dans commandement  dbinstall, DBInstall and db-install</p>
+<p>eg: ptdeployDBInstall help/  ptdeploydb-install help</p>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Il se contrôler et de vérifier toutes les dépendances pour le paquet qu&#8217;il installe</li>
+<li>Ce sera exécuté dbconfigure premier à mettre en place les utilisateurs moins que le système possède déjà</li>
+<li>Dbinstall crée toutes les banques de données du système dans le répertoire d&#8217;accueil du serveur de base de données donnée</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fdbinstall_deploy.rst">
+          DBInstall
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

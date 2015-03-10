@@ -20,4 +20,4 @@ Commands
    
  
  fptconfigure_main
-
+ fptdeploy_main
