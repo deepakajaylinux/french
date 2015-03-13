@@ -645,6 +645,7 @@ Jouer avec Modules ptconfigure
    fptvirtualize_configure
    fpython
    fra
+   frackspace
    fredis
    frubybdd
    frubysystem
