@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>System Detection &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Templating &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="PTDeploy" href="fptdeploy_main.html" />
-    <link rel="next" title="Templating" href="ftemplating_deploy.html" />
-    <link rel="prev" title="SVN" href="fsvn_deploy.html" />
+    <link rel="next" title="Wordpress" href="fwordpress_deploy.html" />
+    <link rel="prev" title="System Detection" href="fsystemdetection_deploy.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -89,12 +89,12 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">System Detection</a><ul>
+<li><a class="reference internal" href="#">Templating</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#detecter">détecter</a></li>
-<li><a class="reference internal" href="#autres-parametres">Autres paramètres</a></li>
-<li><a class="reference internal" href="#avantages">Avantages</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#option">option</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
 </ul>
@@ -105,10 +105,10 @@
             
               
                 
-  <li><a href="fsvn_deploy.html"
-         title="Previous Chapter: SVN">&laquo; SVN</a></li>
-  <li><a href="ftemplating_deploy.html"
-         title="Next Chapter: Templating">Templating &raquo;</a></li>
+  <li><a href="fsystemdetection_deploy.html"
+         title="Previous Chapter: System Detection">&laquo; System Detection</a></li>
+  <li><a href="fwordpress_deploy.html"
+         title="Next Chapter: Wordpress">Wordpress &raquo;</a></li>
               
             
             
@@ -116,7 +116,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fsystemdetection_deploy.txt"
+  <a href="_sources/ftemplating_deploy.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -154,31 +154,32 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="system-detection">
-<h1>System Detection<a class="headerlink" href="#system-detection" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="templating">
+<h1>Templating<a class="headerlink" href="#templating" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Ce module vise à détecter la machine de l&#8217;utilisateur et dans la main leur fournit les informations nécessaires à leur sujet le système des utilisateurs. Il fournit également une installation pour les utilisateurs de configurer leurs paramètres d&#8217;applications. Les quelques exemples de paramètres d&#8217;applications comprend mon utilisateur sql admin, Architecture, utilisateur admin, hôte, la version, le type de linux, Distro. Il est à l&#8217;aise avec Ubuntu et cent OS.</p>
+<p>Le gabarit terme lorsqu&#8217;il est utilisé dans le contexte de format de fichier ptdeploy se réfère à une caractéristique commune de nombreuses applications logicielles qui définissent un format de fichier non exécutable unique, conçu spécifiquement pour cette application particulière .</p>
+<p>Formats de Templating sont ceux dont le dossier indique que le type de fichier est conçu comme un point de départ très élevé à partir duquel créer autre fichiers .</p>
+<p>Ces types de fichiers sont généralement installés fichier de template avec de nouvelles valeurs . Il convient de travailler avec Ubuntu et CentOS .</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>La commande help conduit les utilisateurs concernant l&#8217;objet et ainsi que sur les options qui sont inclus dans les modules de détection du système. Les listes de commandes de l&#8217;aide sur les autres paramètres de détection du système sous module de ptdeploy. Il décrit également la syntaxe pour détecter la machine de l&#8217;utilisateur. La commande d&#8217;aide pour la détection du système est illustré ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy systemdetection <span class="nb">help</span>
+<p>La commande help conduit les utilisateurs concernant l&#8217;objet et ainsi que sur les options qui sont inclus dans les modules de modèle. La commande help répertorie les autres paramètres de templates sous module de ptdeploy . Il décrit également la syntaxe pour détecter la machine de l&#8217; utilisateur. La commande d&#8217;aide de templates est illustré ci-dessous .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy templating <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La syntaxe de la non cas de commande d&#8217;aide sensible qui ajoute un avantage pour ce module. Visualiser l&#8217;utilisateur sur la commande d&#8217;aide en vertu du système de détection de la capture d&#8217;écran suivante.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy systemdetection <span class="nb">help</span>
+<p>La capture d&#8217;écran ci-dessous explique la création de template .</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy templating <span class="nb">help</span>
 ******************************
 
 
- This is a default Module and provides you with a method by which you can configure Application Settings.
- You can configure default application settings, ie: mysql admin user, host, pass
+ This <span class="nb">command </span>allows you to install a templated file with new values.
 
- SystemDetection, system-detection, systemdetection
+ Templating, templating, template
 
-       - detect
-       Detects the Operating System
-       example: ptconfigure system-detection detect
+       - install
+       Installs a template
+       example: ptconfigure template install
 
 ------------------------------
 End Help
@@ -186,74 +187,79 @@ End Help
 </pre></div>
 </div>
 </div>
-<div class="section" id="detecter">
-<h2>détecter<a class="headerlink" href="#detecter" title="Permalink to this headline">¶</a></h2>
-<p>Détecter utilisé pour détecter les paramètres du système. En utilisant une seule commande, l&#8217;utilisateur peut obtenir toutes les informations sur l&#8217;application du système.
-La commande utilisée pour la détection du système est donnée ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure systemdetection detect
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Dans un contexte de ptdeploy , les templates se réfère à la création d&#8217;une image virtuelle unique de la machine en tant que système d&#8217;exploitation invité , puis en l&#8217;enregistrant comme un outil pour de multiples machines virtuelles en cours d&#8217;exécution . La technique est utilisée pour installer à la fois dans la gestion de la virtualisation et le cloud computing , et est commun dans de grands entrepôts de serveur . La commande suivante permet à l&#8217;utilisateur d&#8217;installer gabarits .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy templating install
 </pre></div>
 </div>
-<p>Après avoir entré la commande ci-dessus, le processus de détection du système commence. Pendant la détection du système de l&#8217;information suivante au sujet de la machine correspondante sont signalés:</p>
-<ul class="simple">
-<li>Système d&#8217;exploitation</li>
-<li>Type Linux</li>
-<li>Distro</li>
-<li>Version</li>
-<li>architecture</li>
-<li>Nom d&#8217;hôte</li>
-<li>Adresse IP 0.</li>
-<li>Adresse IP 1.</li>
-</ul>
-<p>Enfin, après la détection des informations concernant les caractéristiques mentionnées ci-dessus sont clairement signalé. La capture d&#8217;écran suivante vous montre sur le processus de détection du système.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure system-detection detect
+<p>La capture d&#8217;écran suivante guide l&#8217;utilisateur à installer.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy templating install
+
+Install Templating Functionality? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*         Templating !        *
+*******************************
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.gcsoftshop.co.uk <span class="k">for</span> more
 ******************************
 
 
-Systems Detection:
+Single App Installer:
 --------------------------------------------
 
-Operating System: Linux
-Linux Type: Debian
-Distro: Ubuntu
-Version: 14.04
-Architecture: 64
-Host Name: Kevells
-IP Address 0: 127.0.0.1
-IP Address 1: 192.168.1.18
+
+Templating: Success
 
 ------------------------------
-Detection Finished
+Installer Finished
 ******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="autres-parametres">
-<h2>Autres paramètres<a class="headerlink" href="#autres-parametres" title="Permalink to this headline">¶</a></h2>
-<p>Au lieu de détection du système, les paramètres suivants peuvent être utilisés:
-* System Detection
-* system-detection
-* system detection</p>
+<div class="section" id="option">
+<h2>option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="29%" />
+<col width="21%" />
+<col width="8%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">Autres paramètres</th>
+<th class="head">options</th>
+<th class="head">commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install templating functionality?</td>
+<td>Templating, templating,
+template</td>
+<td>Yes</td>
+<td>Templating peut être installé sous ptdeploy .</td>
+</tr>
+<tr class="row-odd"><td>Install templating functionality?</td>
+<td>Templating, templating,
+template|</td>
+<td>No</td>
+<td>Il peut quitter l&#8217;écran</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="avantages">
-<h2>Avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Les utilisateurs peuvent configurer les paramètres de l&#8217;application en utilisant ce système détections.</li>
-<li>Les paramètres utilisés pour déclarer commande d&#8217;aide, la détection du système ne sont pas sensibles à la casse, dont un avantage
-supplémentaire par rapport à tout&nbsp;autres est.</li>
-<li>Il est bien de choses à faire à la fois Cent OS et ainsi que dans Ubuntu.</li>
-<li>Non sensible à la casse.</li>
-<li>Protection et sécurité est possible. Prévention des dommages au système et aux ressources, grâce à des processus internes ou de tiers
-malveillants.</li>
-<li>Authentification, la propriété et l&#8217;accès restreint sont parties évidentes de ce système.</li>
-<li>Les administrateurs système déterminent généralement l&#8217;interface utilisateur démarre avec lors de leur première connexion.</li>
-<li>Généralement écrit en PHP, même si certains sont écrits en assembleur pour des performances optimales.</li>
-</ul>
-<p>Le module de détection de système fournit le support:</p>
-<ul class="simple">
-<li>Identifier un processus à distance et / ou de l&#8217;hôte avec lequel communiquer.</li>
-<li>Établir un lien entre les deux processus.</li>
-<li>Ouvrez et fermez la connexion si nécessaire.</li>
-<li>Transmettre les messages le long de la connexion.</li>
+<li>Modèle de traitement est utilisé dans différents contextes pour différents buts.</li>
+<li>L&#8217;objectif spécifique est habituellement subordonnée à l&#8217;application logicielle ou le modèle en cours d&#8217;utilisation .</li>
+<li>non sensible</li>
+<li>Costumes de travailler avec Ubuntu et CentOS .</li>
+<li>Version mise à jour avec de nouvelles valeurs est possible .</li>
 </ul>
 </div>
 </div>
@@ -314,8 +320,8 @@ malveillants.</li>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fsystemdetection_deploy.rst">
-          System Detection
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/ftemplating_deploy.rst">
+          Templating
         </a> on GitHub.
       </li>
 

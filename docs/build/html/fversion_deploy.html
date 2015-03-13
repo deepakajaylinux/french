@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>System Detection &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Version &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -31,9 +31,6 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="PTDeploy" href="fptdeploy_main.html" />
-    <link rel="next" title="Templating" href="ftemplating_deploy.html" />
-    <link rel="prev" title="SVN" href="fsvn_deploy.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -79,9 +76,9 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul class="current">
+    ><ul>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 </li>
@@ -89,12 +86,13 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">System Detection</a><ul>
+<li><a class="reference internal" href="#">Version</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#detecter">détecter</a></li>
-<li><a class="reference internal" href="#autres-parametres">Autres paramètres</a></li>
-<li><a class="reference internal" href="#avantages">Avantages</a></li>
+<li><a class="reference internal" href="#parametre-alternatif">paramètre alternatif</a></li>
+<li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#option">Option</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
 </ul>
@@ -105,10 +103,6 @@
             
               
                 
-  <li><a href="fsvn_deploy.html"
-         title="Previous Chapter: SVN">&laquo; SVN</a></li>
-  <li><a href="ftemplating_deploy.html"
-         title="Next Chapter: Templating">Templating &raquo;</a></li>
               
             
             
@@ -116,7 +110,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fsystemdetection_deploy.txt"
+  <a href="_sources/fversion_deploy.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -143,9 +137,9 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 
@@ -154,31 +148,44 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="system-detection">
-<h1>System Detection<a class="headerlink" href="#system-detection" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="version">
+<h1>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Ce module vise à détecter la machine de l&#8217;utilisateur et dans la main leur fournit les informations nécessaires à leur sujet le système des utilisateurs. Il fournit également une installation pour les utilisateurs de configurer leurs paramètres d&#8217;applications. Les quelques exemples de paramètres d&#8217;applications comprend mon utilisateur sql admin, Architecture, utilisateur admin, hôte, la version, le type de linux, Distro. Il est à l&#8217;aise avec Ubuntu et cent OS.</p>
+<p>Ce module permet d&#8217; installer la version mise à jour sous ptdeploy . Le contrôle de version plus couramment exécutent comme des applications autonomes , mais le contrôle de révision est également intégré dans divers types de système d&#8217;exploitation comme Ubuntu et Cent OS . Version la plus permet à plusieurs développeurs de modifier le même fichier en même temps . Le premier développeur de &#8220;archiver &#8221; changements dans le référentiel central réussit toujours . Le système peut fournir des installations de fusionner d&#8217;autres changements dans le référentiel central, et de préserver les changements de la première développeur quand d&#8217;autres développeurs vérifier in.It soutient Ubuntu et CentOS .</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>La commande help conduit les utilisateurs concernant l&#8217;objet et ainsi que sur les options qui sont inclus dans les modules de détection du système. Les listes de commandes de l&#8217;aide sur les autres paramètres de détection du système sous module de ptdeploy. Il décrit également la syntaxe pour détecter la machine de l&#8217;utilisateur. La commande d&#8217;aide pour la détection du système est illustré ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy systemdetection <span class="nb">help</span>
+<p>La commande help conduit les utilisateurs concernant la version du ptdeploy . Les options qui sont inclus dans les modules de version. La commande help répertorie les autres paramètres de la version sous module de ptdeploy . Il décrit également la syntaxe pour la version . La commande d&#8217;aide pour la version est indiquée ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy  version <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La syntaxe de la non cas de commande d&#8217;aide sensible qui ajoute un avantage pour ce module. Visualiser l&#8217;utilisateur sur la commande d&#8217;aide en vertu du système de détection de la capture d&#8217;écran suivante.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy systemdetection <span class="nb">help</span>
+<p>La capture d&#8217;écran ci-dessous montre l&#8217;effort plein de ptdeploy .</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Version <span class="nb">help</span>
 ******************************
 
 
- This is a default Module and provides you with a method by which you can configure Application Settings.
- You can configure default application settings, ie: mysql admin user, host, pass
+ This <span class="nb">command </span>is part of Default Modules and handles Application Versioning, allowing <span class="k">for</span> rollbacks and the like.
 
- SystemDetection, system-detection, systemdetection
+ Version, version, vrs
 
-       - detect
-       Detects the Operating System
-       example: ptconfigure system-detection detect
+         - specific
+         Will change back the *current* symlink to whichever available version you pick
+         example: ptdeploy version specific --limit<span class="o">=</span><span class="m">4</span> --container<span class="o">=</span>/var/www/applications/the-app --version<span class="o">=</span>2
+
+         - latest
+         Will change back the *current* symlink to the latest created version
+         example: ptdeploy version latest
+         example: ptdeploy version latest --limit<span class="o">=</span><span class="m">3</span> --container<span class="o">=</span>/var/www/applications/the-app
+
+         - rollback
+         Will change back the *current* symlink to the latest created version but one
+         example: ptdeploy version rollback
+         example: ptdeploy version rollback --limit<span class="o">=</span><span class="m">3</span> --container<span class="o">=</span>/var/www/applications/the-app
+
+
+     You can also apply a limit to the number of Versions to keep by using the --limit parameter
+         example: ptdeploy version latest --limit<span class="o">=</span>3
 
 ------------------------------
 End Help
@@ -186,74 +193,61 @@ End Help
 </pre></div>
 </div>
 </div>
-<div class="section" id="detecter">
-<h2>détecter<a class="headerlink" href="#detecter" title="Permalink to this headline">¶</a></h2>
-<p>Détecter utilisé pour détecter les paramètres du système. En utilisant une seule commande, l&#8217;utilisateur peut obtenir toutes les informations sur l&#8217;application du système.
-La commande utilisée pour la détection du système est donnée ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure systemdetection detect
+<div class="section" id="parametre-alternatif">
+<h2>paramètre alternatif<a class="headerlink" href="#parametre-alternatif" title="Permalink to this headline">¶</a></h2>
+<p>Il existe deux solutions de rechange disponibles en version . ils sont</p>
+<p>Version, version, VERSION</p>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>L&#8217;installation comprend l&#8217;installation de la version requise pour rendre l&#8217;installation dans une version mise à jour . Ce est un processus manifeste pour installer le module de version sous ptdeploy . Version en utilisant simplement la commande ci-dessous ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy version Install
 </pre></div>
 </div>
-<p>Après avoir entré la commande ci-dessus, le processus de détection du système commence. Pendant la détection du système de l&#8217;information suivante au sujet de la machine correspondante sont signalés:</p>
-<ul class="simple">
-<li>Système d&#8217;exploitation</li>
-<li>Type Linux</li>
-<li>Distro</li>
-<li>Version</li>
-<li>architecture</li>
-<li>Nom d&#8217;hôte</li>
-<li>Adresse IP 0.</li>
-<li>Adresse IP 1.</li>
-</ul>
-<p>Enfin, après la détection des informations concernant les caractéristiques mentionnées ci-dessus sont clairement signalé. La capture d&#8217;écran suivante vous montre sur le processus de détection du système.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure system-detection detect
-******************************
-
-
-Systems Detection:
---------------------------------------------
-
-Operating System: Linux
-Linux Type: Debian
-Distro: Ubuntu
-Version: 14.04
-Architecture: 64
-Host Name: Kevells
-IP Address 0: 127.0.0.1
-IP Address 1: 192.168.1.18
-
-------------------------------
-Detection Finished
-******************************
-</pre></div>
+<p>Après dynamiser la commande il catéchiser entrée .</p>
+<p>Lorsque l&#8217;entrée d&#8217;utilisateur comme il sera automatiquement oui installer la version avec la vérification du système. Si pas quitter l&#8217;installation . La capture d&#8217;écran ci-dessous montrent la version et ses fonctions.</p>
 </div>
-</div>
-<div class="section" id="autres-parametres">
-<h2>Autres paramètres<a class="headerlink" href="#autres-parametres" title="Permalink to this headline">¶</a></h2>
-<p>Au lieu de détection du système, les paramètres suivants peuvent être utilisés:
-* System Detection
-* system-detection
-* system detection</p>
+<div class="section" id="option">
+<h2>Option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="13%" />
+<col width="36%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">option</th>
+<th class="head">Alternative Paramètre</th>
+<th class="head">commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install version?(Y/N)</td>
+<td>Yes</td>
+<td>Au lieu d&#8217;utiliser la version
+l&#8217;utilisateur peut utiliser Version,VERSION</td>
+<td>installé avec succès
+le cadre du module de ptdeploy</td>
+</tr>
+<tr class="row-odd"><td>Install version?(Y/N)</td>
+<td>No</td>
+<td>Au lieu d&#8217;utiliser la version
+l&#8217;utilisateur peut utiliser Version,VERSION|</td>
+<td>Quittez l&#8217;écran</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="avantages">
-<h2>Avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Les utilisateurs peuvent configurer les paramètres de l&#8217;application en utilisant ce système détections.</li>
-<li>Les paramètres utilisés pour déclarer commande d&#8217;aide, la détection du système ne sont pas sensibles à la casse, dont un avantage
-supplémentaire par rapport à tout&nbsp;autres est.</li>
-<li>Il est bien de choses à faire à la fois Cent OS et ainsi que dans Ubuntu.</li>
-<li>Non sensible à la casse.</li>
-<li>Protection et sécurité est possible. Prévention des dommages au système et aux ressources, grâce à des processus internes ou de tiers
-malveillants.</li>
-<li>Authentification, la propriété et l&#8217;accès restreint sont parties évidentes de ce système.</li>
-<li>Les administrateurs système déterminent généralement l&#8217;interface utilisateur démarre avec lors de leur première connexion.</li>
-<li>Généralement écrit en PHP, même si certains sont écrits en assembleur pour des performances optimales.</li>
-</ul>
-<p>Le module de détection de système fournit le support:</p>
-<ul class="simple">
-<li>Identifier un processus à distance et / ou de l&#8217;hôte avec lequel communiquer.</li>
-<li>Établir un lien entre les deux processus.</li>
-<li>Ouvrez et fermez la connexion si nécessaire.</li>
-<li>Transmettre les messages le long de la connexion.</li>
+<li>Nouvelle version peut être mis à jour.</li>
+<li>Il est adapté avec Ubuntu et CentOS.</li>
+<li>Sensibilité non de cas</li>
+<li>L&#8217;automatisation est possible</li>
+<li>Simple à tapez les commandes</li>
 </ul>
 </div>
 </div>
@@ -314,8 +308,8 @@ malveillants.</li>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fsystemdetection_deploy.rst">
-          System Detection
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fversion_deploy.rst">
+          Version
         </a> on GitHub.
       </li>
 

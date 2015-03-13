@@ -13,9 +13,10 @@ Commande Aide
 ---------------------
 
 Si vous voulez connaître le but d'un module particulier, il suffit de taper la commande comme suit:
+
 .. code-block:: bash
 	
-		ptdeploy ModuleName help
+	ptdeploy ModuleName help
 
 cette commande permettra l'utilisation de ce module particulier et aussi les options disponibles dans les actions que vous pouvez effectuer. Explique l'utilisation du module de contrôle d'Apache sous ptdeploy aide de la commande d'aide de la capture d'écran ci-dessous.
 
@@ -56,6 +57,7 @@ cette commande permettra l'utilisation de ce module particulier et aussi les opt
  ------------------------------
  End Help
  ******************************
+
 La commande help répertorie également les autres paramètres qui peuvent être utilisés dans la déclaration.
 
 
@@ -207,6 +209,7 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
    
  fapachecontrol_deploy
  fapachevhosteditor_deploy
+ fautopilot_deploy
  fdapperfy_deploy
  fdbconfigure_deploy
  fdbinstall_deploy
@@ -225,4 +228,5 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
  fsftp_deploy
  fsvn_deploy
  fsystemdetection_deploy
+ ftemplating_deploy
  fwordpress_deploy 
