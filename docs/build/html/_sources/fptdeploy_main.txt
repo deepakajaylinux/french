@@ -229,4 +229,5 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
  fsvn_deploy
  fsystemdetection_deploy
  ftemplating_deploy
+ fversion_deploy
  fwordpress_deploy 
