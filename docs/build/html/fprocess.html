@@ -170,6 +170,29 @@
 </pre></div>
 </div>
 <p>La capture d&#8217;écran ci-dessous, comme indiqué ci-dessous, montre comment tuer un processus, et comment définir tuer un processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure process <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles process functions, <span class="nb">kill </span>a process <span class="k">for</span> now
+
+ Process, process
+
+       - <span class="nb">kill</span>
+<span class="nb">       </span>Will ask you <span class="k">for</span> process name, aa file or directory from <span class="nb">local </span>to remote
+       example: ptconfigure process <span class="nb">kill</span>
+<span class="nb">       </span>example: ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-psax <span class="c"># default, will look for string in result of</span>
+       example: ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-pkill <span class="c"># will allow pkill to find  by string to kill</span>
+       example: ptconfigure process <span class="nb">kill</span> --yes
+                                       --guess
+                                       --id<span class="o">=</span><span class="s2">&quot;1234 # will kill a process by id</span>
+<span class="s2">                                       --level # will guess a 9</span>
+
+<span class="s2">------------------------------</span>
+<span class="s2">End Help</span>
+<span class="s2">******************************</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="comment-definir-et-d-utiliser-le-processus">
 <h2>Comment définir et d&#8217;utiliser le processus<a class="headerlink" href="#comment-definir-et-d-utiliser-le-processus" title="Permalink to this headline">¶</a></h2>

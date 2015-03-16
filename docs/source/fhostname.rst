@@ -54,6 +54,25 @@ Les noms d'hôtes sont généralement utilisés dans une capacité administrativ
 
 De la commande ci-dessus le nouveau nom d'hôte peut entrer.
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure hostname change –hostname=”kevellcorp”
+ Enter Hostname:
+ kevellcorp
+ ******************************
+
+
+ Hostname Modifications:
+ --------------------------------------------
+
+ Hostname: Success
+
+ ------------------------------
+ Hostname Mods Finished
+ ******************************
+
+
+
 spectacle
 -------------------
 

@@ -131,7 +131,6 @@ Après avoir saisi la commande ci-dessus, les opérations suivantes se produit c
  +----------------------+--------------------------------------------------+-------------+-------------------------------------------+
 
 
-La capture d'écran suivante peut donner une représentation picturale sur le processus d'installation.
 
 avantages
 -----------

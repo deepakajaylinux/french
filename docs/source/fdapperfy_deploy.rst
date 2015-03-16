@@ -124,16 +124,6 @@ Après être entré dans l'ordre donné ci-dessus, le processus suivant comme d�
 
 Les deux types de captures d'écran différents peuvent être utiles pour les utilisateurs dans la définition d'une représentation picturale du processus de dapperfying. La seconde capture d'écran illustre méthode de spécification volonté en utilisant les paramètres d'environnement existants.
 
-Comment utiliser la liste Dapperfy
-------------------------------------
-
-L'objectif principal de la fonction de liste est de lister tous les fichiers du pilote automatique des projets des utilisateurs qui sont disponibles dans un emplacement particulier. La syntaxe pour utiliser la liste sous dapperfy est illustré ci-dessous,
-
-.. code-block:: bash
-
-		ptdeploy dapperfy list
-
-La capture d'écran ci-dessous illustre le fonctionnement de l'option de liste sous dapperfy.
 
 .. code-block:: bash
 
@@ -189,6 +179,20 @@ La capture d'écran ci-dessous illustre le fonctionnement de l'option de liste s
  Success
  In Dapperfy
  ******************************
+
+
+Comment utiliser la liste Dapperfy
+------------------------------------
+
+L'objectif principal de la fonction de liste est de lister tous les fichiers du pilote automatique des projets des utilisateurs qui sont disponibles dans un emplacement particulier. La syntaxe pour utiliser la liste sous dapperfy est illustré ci-dessous,
+
+.. code-block:: bash
+
+                ptdeploy dapperfy list
+
+La capture d'écran ci-dessous illustre le fonctionnement de l'option de liste sous dapperfy.
+
+
 
 
 avantages

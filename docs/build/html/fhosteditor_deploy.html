@@ -172,66 +172,62 @@
 </pre></div>
 </div>
 <p>After inputs the above command, it starts functioning to add a virtual host editor. It catechesis the functions in the screenshots.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Apachevhosteditor help
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy ApacheVHostEditor <span class="nb">help</span>
 ******************************
 
 
-ptdeploy by Golden Contact Computing
--------------------
+ This <span class="nb">command </span>is part of Default Modules and handles Apache VHosts Functions.
 
-About:
------------------
+ ApacheVHostEditor, apachevhosteditor, vhosteditor, vhe, vhosted
 
-This tool helps with setting up projects. It&#39;s really cool for
-cloning/installing/spinning up webs apps easily and quickly.
+         - add
+         create a Virtual Host
+         example: sudo ptdeploy vhe add
+         example: sudo ptdeploy vhe add --yes --vhe-docroot<span class="o">=</span>/var/www/the-app --vhe-url<span class="o">=</span>www.dave.com --vhe-file-ext<span class="o">=</span><span class="s2">&quot;&quot;</span> --vhe-apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span> --vhe-ip-port<span class="o">=</span><span class="s2">&quot;127.0.0.1:80&quot;</span> --vhe-vhost-dir<span class="o">=</span><span class="s2">&quot;/etc/apache2/sites-available&quot;</span> --vhe-template<span class="o">=</span><span class="s2">&quot;*template data*&quot;</span>
+         example: sudo ptdeploy vhe add --yes --guess --vhe-url<span class="o">=</span>www.dave.com
+             <span class="c"># will attempt to guess the following but you can override any</span>
+             <span class="c"># --vhe-docroot=*current working dir*</span>
+             <span class="c"># --vhe-file-ext=&quot;ubuntu none, others .conf&quot;</span>
+             <span class="c"># --vhe-apache-command=&quot;apache2 or httpd depends on system&quot;</span>
+             <span class="c"># --vhe-ip-port=&quot;127.0.0.1:80&quot;</span>
+             <span class="c"># --vhe-vhost-dir=&quot;/etc/apache2/sites-available or /etc/httpd/vhosts.d&quot;</span>
+             <span class="c"># --vhe-template=&quot;*template data*&quot;</span>
+             <span class="c"># --vhe-default-template-name=&quot;docroot-src-suffix&quot; // from default templates</span>
 
-Very cool for CI, you can install your web app in one line like:
+         - add-balancer
+         create a Virtual Host
+         example: sudo ptdeploy vhe add
+         example: sudo ptdeploy vhe add --yes --vhe-docroot<span class="o">=</span>/var/www/the-app --vhe-url<span class="o">=</span>www.dave.com --vhe-file-ext<span class="o">=</span><span class="s2">&quot;&quot;</span> --vhe-apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span> --vhe-ip-port<span class="o">=</span><span class="s2">&quot;127.0.0.1:80&quot;</span> --vhe-vhost-dir<span class="o">=</span><span class="s2">&quot;/etc/apache2/sites-available&quot;</span> --vhe-template<span class="o">=</span><span class="s2">&quot;*template data*&quot;</span>
+         example: sudo ptdeploy vhe add --yes --guess --vhe-url<span class="o">=</span>www.dave.com
+             <span class="c"># will attempt to guess the following but you can override any</span>
+             <span class="c"># --vhe-docroot=*current working dir*</span>
+             <span class="c"># --vhe-file-ext=&quot;ubuntu none, others .conf&quot;</span>
+             <span class="c"># --vhe-apache-command=&quot;apache2 or httpd depends on system&quot;</span>
+             <span class="c"># --vhe-ip-port=&quot;127.0.0.1:80&quot;</span>
+             <span class="c"># --vhe-vhost-dir=&quot;/etc/apache2/sites-available or /etc/httpd/vhosts.d&quot;</span>
+             <span class="c"># --vhe-template=&quot;*template data*&quot;</span>
+             <span class="c"># --vhe-default-template-name=&quot;docroot-src-suffix&quot; // from default templates</span>
 
-ptdeploy install autopilot *autopilot-file*
+         - rm
+         example: ptdeploy vhe rm
+         example: ptdeploy vhe rm --yes --
+         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
+         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
 
-With code configured settings for (at least the core parts, and
-more if want to extend) Project Checkout / Download, Cucumber
-Configuration, Database Management Functions, Host File
-Management Functions, Installation Functions, SSH Invocation
-Functions, ptdeploy Project Management Functions, Apache
-Virtual Host Functions and Versioning - On 1 or 100 servers, so
-you now have a fully code controlled deploy system, from
-Personal or Development machine to Large Enterprise.
+         - list
+         List current Virtual Hosts
+         example: ptdeploy vhe list
 
--------------------------------------------------------------
+         - <span class="nb">enable</span>
+<span class="nb">         enable </span>a Server Block
+         example: ptdeploy vhe <span class="nb">enable</span>
 
-Available Commands:
----------------------------------------
+         - disable
+         disable a Server Block
+         example: ptdeploy vhe disable
 
-ApacheControl - Apache Server Control
-ApacheVHostEditor - Apache Virtual Host Functions
-AppSettings - ptdeploy Application Settings
-Autopilot - ptconfigure Autopilot - User Defined Installations
-Builderfy - ptdeploy Builderfyer - Create some standard autopilots for your project
-CukeConf - Cucumber Configuration
-DBConfigure - Database Connection Configuration Functions
-DBInstall - Database Installation Management Functions
-Dapperfy - ptdeploy Dapperfyer - Automated Application Deployment autopilots for your project
-Drupal - Drupal - Integration and Templates for Drupal
-EnvironmentConfig - Environment Configuration - Configure Environments for a project
-GitClone - GitClone Source Control Clone Functions
-HostEditor - Host File Management Functions
-Invoke - SSH Invocation Functions
-Joomla - Joomla - Integration and Templates for Joomla
-LighttpdControl - Lighttpd Server Control
-Logging - Logging - Output errors to the logging
-NginxControl - Nginx Server Control
-NginxSBEditor - Nginx Server Block Functions
-ParallelSshChild - Command Execution Functions
-Project - ptdeploy Project Management Functions
-RunCommand - Execute a Command
-SFTP - SFTP Functionality
-SVN - SVN Source Control Project Checkout/Download Functions
-SystemDetection - System Detection - Detect the Running Operating System
-Templating - Templating
-Version - Versioning Functions
-Wordpress - Wordpress - Integration and Templates for Wordpress
-
+------------------------------
+End Help
 ******************************
 </pre></div>
 </div>
@@ -372,6 +368,32 @@ Apache VHost Editor Finished
         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe rm
+Do you want to delete VHost/s? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Deleting vhost
+What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
+
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> default-ssl.conf
+
+0
+Do you want to disable this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
+yes
+Site 000-default disabled.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2dissite 000-default.conf <span class="k">done</span>
+VHost 000-default.conf Deleted  <span class="k">if</span> existed
+******************************
+
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="liste">
 <h2>liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
@@ -383,6 +405,24 @@ Apache VHost Editor Finished
 <div class="highlight-bash"><div class="highlight"><pre>- list
         List current Virtual Hosts
         example: ptdeploy vhe list
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe list
+What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
+
+You have a sites available dir, so also listing available sites.
+Current Installed VHosts:
+--- Enabled Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> default-ssl.conf
+--- All Available Virtual Hosts: ---
+<span class="o">(</span>2<span class="o">)</span> 000-default.conf
+<span class="o">(</span>3<span class="o">)</span> default-ssl.conf
+******************************
+
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -400,6 +440,23 @@ Apache VHost Editor Finished
         example: ptdeploy vhe <span class="nb">enable</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe <span class="nb">enable</span>
+Do you want to <span class="nb">enable </span>this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> default-ssl.conf
+
+0
+ERROR: Site default-ssl.conf does not exist!
+a2ensite default-ssl.conf.conf <span class="k">done</span>
+******************************
+
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="desactiver">
 <h2>désactiver<a class="headerlink" href="#desactiver" title="Permalink to this headline">¶</a></h2>
@@ -413,6 +470,23 @@ Apache VHost Editor Finished
 
        disable a Server Block
         example: ptdeploy vhe disable
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe disable
+Do you want to disable this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> default-ssl.conf
+
+0
+Site default-ssl already disabled
+a2dissite default-ssl.conf <span class="k">done</span>
+******************************
+
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>
