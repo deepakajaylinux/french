@@ -27,7 +27,7 @@ Il est extensible, comme si l'un des modules supplémentaires est nécessaire, l
 Et il est aussi plus facile à réécrire le code selon les besoins des utilisateurs. Sa documentation inclut la version actuelle de l'publié ptconfigure que 1.1.1.
 
 Installation
-**************
+--------------
 
 Avant d'installer le ptconfigure à votre machine, se assurer que git et php5 existe dans votre machine ou non.
 sinon suivre comme ci-dessous
@@ -82,7 +82,7 @@ Ce est simple, obtenir la borne ouverte via l'option "Exécuter en tant qu'admin
 
 
 Modules disponibles
-***********************
+-------------------------
 
  DummyLinuxModule - Dummy Module Linux
 
@@ -324,7 +324,7 @@ Modules disponibles
 
 
 Comment utiliser
-************************
+-------------------
 
 Voyons, comment utiliser l'outil de ptconfigure,
 premier, tapez simplement
@@ -488,7 +488,7 @@ ici, la capture d'écran représente l'affichage de tous les modules disponibles
 
 
 Vidéo Moulage Instruction
-*******************************
+-------------------------------
 
 .. raw:: html
 
@@ -504,7 +504,7 @@ Vidéo Moulage Instruction
 
 
 La commande Aide
-******************
+-------------------
 
 Si vous voulez connaître le but d'un module particulier, il suffit de taper la commande comme suit:
 
