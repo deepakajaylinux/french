@@ -4,7 +4,7 @@ PTConfigure
 
 
 Synopsis
-**********
+-------------
 
 Le ptconfigure est un lecteur d'automatisation qui permet DevOps ingénieurs, administrateurs système, les gestionnaires d'infrastructures dans l'exécution du Configuration Management, Systèmes d'automatisation et de l'Infrastructure à l'aide de php. Il dispositions l'ensemble des projets des utilisateurs automatiquement.
 
