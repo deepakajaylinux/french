@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Extension &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="fjrush_main.html" />
+    <link rel="next" title="JArticle" href="fjarticle_jrush.html" />
+    <link rel="prev" title="Cache" href="fcache_jrush.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Extension</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#alternative-parametre">Alternative Paramètre</a></li>
+<li><a class="reference internal" href="#options">options</a></li>
+<li><a class="reference internal" href="#disable">Disable</a></li>
+<li><a class="reference internal" href="#enable">Enable</a></li>
+<li><a class="reference internal" href="#info">Info</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fcache_jrush.html"
+         title="Previous Chapter: Cache">&laquo; Cache</a></li>
+  <li><a href="fjarticle_jrush.html"
+         title="Next Chapter: JArticle">JArticle &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fextension_jrush.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="extension">
+<h1>Extension<a class="headerlink" href="#extension" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Extension doivent être identifiés pour le système d&#8217;exploitation peut y remédier. Ces noms de fichiers ont une réglementation spécifique. La première partie du nom à gauche de la période est appelée le nom de racine. Le nom de racine ne peut pas être identique à un nom de périphérique. La deuxième partie à droite de la période est l&#8217;extension. Elle est facultative et est souvent, mais pas nécessairement, trois caractères de long. Extension peut être ajoutée par le biais de codage. Elle a renforcé pour escroquer avec Ubuntu et cent OS.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>La commande help guide les utilisateurs concernant l&#8217;objectif et ainsi que sur les options qui sont incluses dans l&#8217;extension. Il énumère les paramètres alternatifs de l&#8217;extension. Il décrit également la syntaxe pour le fonctionnement du module Jrush. La commande help pour extension s&#8217;affiche comme ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Après avoir tapé la commande, il répertorie les options comme action. L&#8217;image suivante le visualiser évidemment.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>allows you to manage Joomla Extensions <span class="o">(</span>Component, Module or Plugin<span class="o">)</span>.
+
+ Extension, extension
+
+       - disable
+       Deletes a extension
+       example: jrush extension disable
+
+       - <span class="nb">enable</span>
+<span class="nb">       </span>Enables a extension
+       example: jrush extension <span class="nb">enable</span>
+
+       - info
+       Display the details of a extension
+       example: jrush extension info
+
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-parametre">
+<h2>Alternative Paramètre<a class="headerlink" href="#alternative-parametre" title="Permalink to this headline">¶</a></h2>
+<p>Comme une question de choix à l&#8217;aide d&#8217;extension, l&#8217;utilisateur peut faire utiliser des options suivantes.</p>
+<p>Extension, extension</p>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>Il y a trois options sont disponibles. Nous verrons sur l&#8217;option de prolongation.</p>
+<ul class="simple">
+<li>Enable</li>
+<li>Disable</li>
+<li>Info</li>
+</ul>
+</div>
+<div class="section" id="disable">
+<h2>Disable<a class="headerlink" href="#disable" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur d&#8217;entrée que lui permettre automatiquement supprime l&#8217;extension. La commande suivante permet d&#8217;activer.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension Disable
+</pre></div>
+</div>
+<p>Le coup du manteau suivant permet de visualiser sa fonction.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension disable --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a Extension ID. To enter element/extension name use --extension-element or --extension-name parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Extension:
+-------------------------
+
+The following extension was modified:
+
+Extension ID: 1
+Name: com_mailto
+Element: com_mailto
+Enabled: 0
+------------------------------
+Extension Manage Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable">
+<h2>Enable<a class="headerlink" href="#enable" title="Permalink to this headline">¶</a></h2>
+<p>Enable utilise pour activer l&#8217;extension. La commande suivante aider l&#8217;utilisateur à activer.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension <span class="nb">enable</span>
+</pre></div>
+</div>
+<p>Les captures d&#8217;écran suivantes guide l&#8217;utilisateur pour activer sa fonction.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension <span class="nb">enable</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a Extension ID. To enter element/extension name use --extension-element or --extension-name parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Extension:
+-------------------------
+
+The following extension was modified:
+
+Extension ID: 1
+Name: com_mailto
+Element: com_mailto
+Enabled: 1
+------------------------------
+Extension Manage Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="info">
+<h2>Info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h2>
+<p>Info est une aide pour aider l&#8217;utilisateur à afficher les détails de l&#8217;expansion. Il demande pour l&#8217;id de l&#8217;extension. Après entre la valeur il affiche les détails de l&#8217;extension. La commande suivante permet d&#8217;afficher les informations.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension info
+</pre></div>
+</div>
+<p>On visualise par la capture d&#8217;écran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension info --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a Extension ID. To enter element/extension name use --extension-element or --extension-name parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Extension:
+-------------------------
+
+The following extension was modified:
+
+Extension ID: 1
+Name: com_mailto
+Element: com_mailto
+Enabled: 0
+------------------------------
+Extension Manage Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Extensions peuvent être considéré comme un type de métadonnées.</li>
+<li>Plusieurs applications d&#8217;être associé à une extension donnée.</li>
+<li>La casse non * confortable avec Ubuntu et cent OS.</li>
+<li>Utilise pour supprimer l&#8217;extension</li>
+<li>Info utilise pour afficher des informations sur l&#8217;extension.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fextension_jrush.rst">
+          Extension
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

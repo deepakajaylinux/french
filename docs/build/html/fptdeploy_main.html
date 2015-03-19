@@ -81,6 +81,9 @@
     ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 </li>
@@ -153,6 +156,9 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 
@@ -243,12 +249,12 @@ PHP a ptdeploy tout comme Ruby fiils l&#8217;écart à Capistrano.</p>
 <div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install-silent
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy &amp;&amp; sudo php ptdeploy/install-silent
 </pre></div>
 </div>
 <p>or</p>
 <p>La commande ci-dessous est prévisible pour les utilisateurs qui souhaitent pour spécifier l&#8217;emplacement lors de l&#8217;installation.</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy &amp;&amp; sudo php ptdeploy/install
 </pre></div>
 </div>
 </div>
@@ -296,17 +302,17 @@ ApacheControl - Apache Server Control
 ApacheVHostEditor - Apache Virtual Host Functions
 AppSettings - PTDeploy Application Settings
 Autopilot - PTConfigure Autopilot - User Defined Installations
-Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for</span> your project
+Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for </span>your project
 CukeConf - Cucumber Configuration
 DBConfigure - Database Connection Configuration Functions
 DBInstall - Database Installation Management Functions
-Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for</span> your project
-Drupal - Drupal - Integration and Templates <span class="k">for</span> Drupal
-EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for</span> a project
+Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for </span>your project
+Drupal - Drupal - Integration and Templates <span class="k">for </span>Drupal
+EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for </span>a project
 GitClone - GitClone Source Control Clone Functions
 HostEditor - Host File Management Functions
 Invoke - SSH Invocation Functions
-Joomla - Joomla - Integration and Templates <span class="k">for</span> Joomla
+Joomla - Joomla - Integration and Templates <span class="k">for </span>Joomla
 LighttpdControl - Lighttpd Server Control
 Logging - Logging - Output errors to the logging
 NginxControl - Nginx Server Control
@@ -319,7 +325,7 @@ SVN - SVN Source Control Project Checkout/Download Functions
 SystemDetection - System Detection - Detect the Running Operating System
 Templating - Templating
 Version - Versioning Functions
-Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wordpress
+Wordpress - Wordpress - Integration and Templates <span class="k">for </span>Wordpress
 
 ******************************
 </pre></div>
@@ -468,7 +474,7 @@ Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wor
 <li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#arretez">Arrêtez</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#redemarrage">redémarrage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#recharger">recharger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#option">Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#alternative-parametre">Alternative Paramètre</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fnginxcontrol_deploy.html#avantages">avantages</a></li>
 </ul>
 </li>
@@ -587,7 +593,7 @@ Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wor
     </p>
     <p>
         &copy; Copyright 2015, kevells.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

@@ -542,6 +542,15 @@ Jouer avec Modules ptconfigure
     
 
 
+
+
+
+   
+   famazoncloudfront
+   famazoncloudwatch
+   famazondynamodb
+   famazonelasticache
+   fawscloudformation
    fapacheconf
    fapachemodules
    fapachereverseproxy

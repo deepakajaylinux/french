@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Virtualbox &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTVirtualize" href="fptvirtualize_main.html" />
+    <link rel="prev" title="Up" href="fup_virtualize.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Virtualbox</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#options">options</a></li>
+<li><a class="reference internal" href="#avantages">Avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fup_virtualize.html"
+         title="Previous Chapter: Up">&laquo; Up</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fvirtualbox_virtualize.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="virtualbox">
+<h1>Virtualbox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Ce module d&#8217;encourager l&#8217;installation de la voix. En cas de ptvirtualize module entièrement géré par virtual box.  Il est facile à utiliser avec Ubuntu et cent OS.  Le package de Virtual Box installe sur un système d&#8217;exploitation hôte existant sous forme d&#8217;application. Les utilisateurs de Virtual Box peuvent charger plusieurs OS invités sous un système de d&#8217;exploitation hôte unique. Virtual Box a pris en charge Open Virtualization Format (OVF).C&#8217;est à l&#8217;aise avec Ubuntu et Cent OS.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Le guide de commande aide l&#8217;utilisateur à installer virtual box dans ptvirtualize. Cette commande help guide l&#8217;utilisateur pour créer un hôte virtuel. Cela affiche aussi pour ajouter un hôte virtuel, supprimer un hôte virtuel, permettent à un hôte virtuel et désactiver un hôte virtuel.</p>
+<p>La commande help pour la machine virtuelle est illustrée ci-dessous.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize virtualbox <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Après les entrées la commande ci-dessus, il commence de fonctionnement pour ajouter un éditeur de l&#8217;hôte virtuel. Il catéchèse les fonctions dans les captures d&#8217;écran.</p>
+<p>La capture d&#8217;écran suivante montre sur l&#8217;installation de la machine virtuelle.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Ce module d&#8217;initiation de l&#8217;utilisateur à installer. Pour activer la machine virtuelle suivez la commande comme suit,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize virtual box install
+</pre></div>
+</div>
+<p>Ensuite, le système peut vous renseigner</p>
+<p>ptvirtualize virtual box install? (Y/N)</p>
+<p>Si l&#8217;utilisateur entre Y, puis il sera installé, sinon il va quitter l&#8217;écran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Virtualbox install
+Install Virtualbox? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! Virtualbox !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-27415379023.sh
+chmod 755 /tmp/ptconfigure-temp-script-27415379023.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-27415379023.sh Permissions
+Executing /tmp/ptconfigure-temp-script-27415379023.sh
+invoke-rc.d: initscript virtualbox, action <span class="s2">&quot;restart&quot;</span> failed.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ dkms libgsoap4 virtualbox-dkms virtualbox-qt
+Suggested packages:
+ debhelper virtualbox-guest-additions-iso vde2
+The following NEW packages will be installed:
+  dkms libgsoap4 virtualbox virtualbox-dkms virtualbox-qt
+0 upgraded, 5 newly installed, 0 to remove and 6 not upgraded.
+Need to get 21.2 MB of archives.
+After this operation, 85.7 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libgsoap4 amd64 2.8.16-2 <span class="o">[</span>525 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/multiverse virtualbox amd64 4.3.10-dfsg-1 <span class="o">[</span>15.5 MB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main dkms all 2.2.0.3-1.1ubuntu5.14.04 <span class="o">[</span>64.6 kB<span class="o">]</span>
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/multiverse virtualbox-dkms all 4.3.10-dfsg-1 <span class="o">[</span>538 kB<span class="o">]</span>
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty/multiverse virtualbox-qt amd64 4.3.10-dfsg-1 <span class="o">[</span>4,592 kB<span class="o">]</span>
+Fetched 21.2 MB in 54s <span class="o">(</span>389 kB/s<span class="o">)</span>
+Selecting previously unselected package libgsoap4:amd64.
+<span class="o">(</span>Reading database ... 203014 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libgsoap4_2.8.16-2_amd64.deb ...
+Unpacking libgsoap4:amd64 <span class="o">(</span>2.8.16-2<span class="o">)</span> ...
+Selecting previously unselected package virtualbox.
+Preparing to unpack .../virtualbox_4.3.10-dfsg-1_amd64.deb ...
+Unpacking virtualbox <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Selecting previously unselected package dkms.
+Preparing to unpack .../dkms_2.2.0.3-1.1ubuntu5.14.04_all.deb ...
+Unpacking dkms <span class="o">(</span>2.2.0.3-1.1ubuntu5.14.04<span class="o">)</span> ...
+Selecting previously unselected package virtualbox-dkms.
+Preparing to unpack .../virtualbox-dkms_4.3.10-dfsg-1_all.deb ...
+Unpacking virtualbox-dkms <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Selecting previously unselected package virtualbox-qt.
+Preparing to unpack .../virtualbox-qt_4.3.10-dfsg-1_amd64.deb ...
+Unpacking virtualbox-qt <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>shared-mime-info <span class="o">(</span>1.2-0ubuntu3<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Setting up libgsoap4:amd64 <span class="o">(</span>2.8.16-2<span class="o">)</span> ...
+Setting up virtualbox <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+* Stopping VirtualBox kernel modules
+  ...done.
+* Starting VirtualBox kernel modules
+* No suitable module <span class="k">for </span>running kernel found
+  ...fail!
+Setting up dkms <span class="o">(</span>2.2.0.3-1.1ubuntu5.14.04<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up virtualbox-dkms <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Loading new virtualbox-4.3.10 DKMS files...
+First Installation: checking all kernels...
+Building <span class="k">for </span>3.13.0-32-generic and 3.13.0-43-generic
+Building initial module <span class="k">for </span>3.13.0-32-generic
+Done.
+
+vboxdrv:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+vboxnetadp.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+vboxnetflt.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+vboxpci.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+depmod.......
+
+DKMS: install completed.
+Building initial module <span class="k">for </span>3.13.0-43-generic
+Done.
+vboxdrv:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+vboxnetadp.ko:
+ Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+vboxnetflt.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+vboxpci.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+depmod.........
+
+DKMS: install completed.
+* Stopping VirtualBox kernel modules
+  ...done.
+* Starting VirtualBox kernel modules
+  ...done.
+Setting up virtualbox-qt <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+Temp File /tmp/ptconfigure-temp-script-27415379023.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Virtualbox: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="26%" />
+<col width="13%" />
+<col width="33%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">paramètres</th>
+<th class="head">options</th>
+<th class="head">paramètres alternatifs</th>
+<th class="head">commentaires</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install virtual box?(Y/N)</td>
+<td>Yes</td>
+<td>Au lieu d&#8217;utiliser VirtualBox ,
+l&#8217;utilisateur peut utiliser la boîte
+virtuelle</td>
+<td>Installé avec succès sous
+module de ptvirtualize</td>
+</tr>
+<tr class="row-odd"><td>Install virtual box?(Y/N)</td>
+<td>No</td>
+<td>Au lieu d&#8217;utiliser VirtualBox ,
+l&#8217;utilisateur peut utiliser la boîte
+virtuelle|</td>
+<td>Quittez l&#8217;écran</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="avantages">
+<h2>Avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Voix peut être installé via ce module.</li>
+<li>Les images ISO et les périphériques physiques connectés hôte peuvent
+être montés en tant que lecteurs de CD/DVD.</li>
+<li>L&#8217;image du DVD d&#8217;une distribution Linux peut être téléchargé et utilize
+directement par VirtualBox.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fvirtualbox_virtualize.rst">
+          Virtualbox
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

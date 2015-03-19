@@ -82,6 +82,9 @@
     ><ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 </li>
@@ -146,6 +149,9 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 
@@ -174,7 +180,7 @@ CentOS.</p>
 
  This <span class="nb">command </span>allows you to add an entry to the system sudo file that will
  allow your Jenkins user to have passwordless sudo. This is required <span class="k">for</span>
- quite a few of the Jenkins builds provided by Golden Contact, as Jenkins
+<span class="k"> </span>quite a few of the Jenkins builds provided by Golden Contact, as Jenkins
  will perform <span class="nb">test </span>execution, software installs and more, silently.
 
  JenkinsSudoNoPass, jenkinssudonopass, jenkins-sudo-nopass, jenkins-sudo-passwordless
@@ -197,24 +203,24 @@ End Help
 </div>
 <p>Après avoir tapé cette commande, le système demande à l&#8217;utilisateur le souhaite. L&#8217;autre processus explique l&#8217;installation grâce à la capture d&#8217;écran.</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure jenkinssudonopass install
-Install Sudo w/o Pass <span class="k">for</span> Jenkins User? <span class="o">(</span>Y/N<span class="o">)</span>
+Install Sudo w/o Pass <span class="k">for </span>Jenkins User? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 *******************************
 *        Pharaoh Tools        *
 *         Jenk Sudo Ps        *
 *******************************
 Creating /tmp/ptconfigure-temp-script-2682022801.sh
-chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-2682022801.sh 2&gt;/dev/null
+chmod 755 /tmp/ptconfigure-temp-script-2682022801.sh 2&gt;/dev/null
 Changing /tmp/ptconfigure-temp-script-2682022801.sh Permissions
 Executing /tmp/ptconfigure-temp-script-2682022801.sh
 The following will be written to /etc/sudoers
-Please check <span class="k">if</span> it looks wrong
-It may <span class="nb">break </span>your system <span class="k">if</span> wrong !!!
+Please check <span class="k">if </span>it looks wrong
+It may <span class="nb">break </span>your system <span class="k">if </span>wrong !!!
 jenkins <span class="nv">ALL</span><span class="o">=</span>NOPASSWD: ALL
 Temp File /tmp/ptconfigure-temp-script-2682022801.sh Removed
 ... All <span class="k">done</span>!
 *******************************
-Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
 
 
@@ -317,7 +323,7 @@ répétitives.</li>
     </p>
     <p>
         &copy; Copyright 2015, kevells.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

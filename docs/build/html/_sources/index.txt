@@ -21,3 +21,6 @@ Commands
  
  fptconfigure_main
  fptdeploy_main
+ fjrush_main
+ fpttest_main
+ fptvirtualize_main

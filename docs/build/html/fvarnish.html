@@ -82,6 +82,9 @@
     ><ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 </li>
@@ -145,6 +148,9 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 
@@ -244,7 +250,7 @@ y
 *          ! Varnish !        *
 *******************************
 Creating /tmp/ptconfigure-temp-script-95745650915.sh
-chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-95745650915.sh 2&gt;/dev/null
+chmod 755 /tmp/ptconfigure-temp-script-95745650915.sh 2&gt;/dev/null
 Changing /tmp/ptconfigure-temp-script-95745650915.sh Permissions
 Executing /tmp/ptconfigure-temp-script-95745650915.sh
 Reading package lists...
@@ -256,15 +262,15 @@ Suggested packages:
 varnish-doc
 The following NEW packages will be installed:
 libjemalloc1 libvarnishapi1 varnish
-<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">6</span> not upgraded.
-Need to get <span class="m">518</span> kB of archives.
+0 upgraded, 3 newly installed, 0 to remove and 6 not upgraded.
+Need to get 518 kB of archives.
 After this operation, 1,653 kB of additional disk space will be used.
 Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libvarnishapi1 amd64 3.0.5-2 <span class="o">[</span>29.9 kB<span class="o">]</span>
 Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 <span class="o">[</span>76.8 kB<span class="o">]</span>
-Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe varnish amd64 3.0.5-2 <span class="o">[</span><span class="m">411</span> kB<span class="o">]</span>
-Fetched <span class="m">518</span> kB in 3s <span class="o">(</span><span class="m">152</span> kB/s<span class="o">)</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe varnish amd64 3.0.5-2 <span class="o">[</span>411 kB<span class="o">]</span>
+Fetched 518 kB in 3s <span class="o">(</span>152 kB/s<span class="o">)</span>
 Selecting previously unselected package libvarnishapi1.
-<span class="o">(</span>Reading database ... <span class="m">201582</span> files and directories currently installed.<span class="o">)</span>
+<span class="o">(</span>Reading database ... 201582 files and directories currently installed.<span class="o">)</span>
 Preparing to unpack .../libvarnishapi1_3.0.5-2_amd64.deb ...
 Unpacking libvarnishapi1 <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
 Selecting previously unselected package libjemalloc1.
@@ -273,19 +279,19 @@ Unpacking libjemalloc1 <span class="o">(</span>3.5.1-2<span class="o">)</span> .
 Selecting previously unselected package varnish.
 Preparing to unpack .../varnish_3.0.5-2_amd64.deb ...
 Unpacking varnish <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
 Setting up libvarnishapi1 <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
 Setting up libjemalloc1 <span class="o">(</span>3.5.1-2<span class="o">)</span> ...
 Setting up varnish <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
  * Starting HTTP accelerator varnishd
    ...done.
-Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
 Temp File /tmp/ptconfigure-temp-script-95745650915.sh Removed
 ... All <span class="k">done</span>!
 *******************************
-Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
 
 
@@ -344,7 +350,7 @@ rapport aux autres.</li>
     </p>
     <p>
         &copy; Copyright 2015, kevells.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

@@ -100,19 +100,12 @@ Avant l'exécution, le système demander la confirmation de procéder, si vous v
 
 
 
-Option
----------------
-                               
-.. cssclass:: table-bordered
+Alternative Paramètre
+--------------------------------------
 
- +------------------------------+----------------------------------------------------------------+----------------------------------------+
- | Paramètres                   | alternatifs  Paramètres                                        | Commentaires                           |
- +==============================+================================================================+========================================+
- |ptdeploy ngnixcontrolhelp     | Soit des trois paramètre alternatif peut être utilisé dans la  | Une fois que l'utilisateur fournit     |
- |                              | commande - ngnixcontrol , NgnixControl and nginxcil            | l'option, le système commence le       |
- |                              | eg: ptdeploy ngnixcontrol help/ ptdeploy ngnixControl help     | traitement|                            |
- +------------------------------+----------------------------------------------------------------+----------------------------------------+
+Soit des trois paramètre alternatif peut être utilisé dans ngnixcontrol commandement , NgnixControl et nginxcil
 
+par exemple : ptdeploy ngnixcontrol aide / ptdeploy ngnixControl aide
 
 avantages
 --------------
