@@ -198,6 +198,7 @@ Jouer avec ptvirtualize Modules
  fdestroy_virtualize
  fflirtify_virtualize
  fhalt_virtualize
+ finvoke_virtualize
  fpharaohtools_virtualize
  fresume_virtualize
  fsftp_virtualize

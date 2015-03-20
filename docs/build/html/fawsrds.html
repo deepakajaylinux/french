@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AWS RDS &mdash; kevellfrench 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
+    <link rel="next" title="ApacheConf" href="fapacheconf.html" />
+    <link rel="prev" title="AWSCloudFormation" href="fawscloudformation.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">kevellfrench</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">AWS RDS</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
+<li><a class="reference internal" href="#describe-instance">Describe-instance</a></li>
+<li><a class="reference internal" href="#delete-instance">Delete-instance</a></li>
+<li><a class="reference internal" href="#create-db-snapshot">Create-db-snapshot</a></li>
+<li><a class="reference internal" href="#delete-db-snapshot">Delete-db-snapshot</a></li>
+<li><a class="reference internal" href="#copy-db-snapshot">Copy-db-snapshot</a></li>
+<li><a class="reference internal" href="#create-instance">Create-instance</a></li>
+<li><a class="reference internal" href="#reboot-instance">Reboot-instance</a></li>
+<li><a class="reference internal" href="#create-instance-read-replica">Create-instance-read replica</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#alternative-parameter">Alternative Parameter</a></li>
+<li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="fawscloudformation.html"
+         title="Previous Chapter: AWSCloudFormation">&laquo; AWSCloudFormatio...</a></li>
+  <li><a href="fapacheconf.html"
+         title="Next Chapter: ApacheConf">ApacheConf &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/fawsrds.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+    <li><a href="http://testpage.readthedocs.org">English</a></li>
+    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="aws-rds">
+<h1>AWS RDS<a class="headerlink" href="#aws-rds" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Amazon Relational Database Service (Amazon RDS) est un service web qui le rend facile à installer, exploiter et adapte à une base de données relationnelle dans le nuage. Il offre une capacité redimensionnable et rentable tout en gérant les tâches de gestion de temps de base de données, libérant ainsi de vous consacrer à vos applications et vos affaires.</p>
+<p>Amazon RDS vous donne accès en ligne aux fonctionnalités d&#8217;un système de gestion de base de données relationnelle MySQL, Oracle, Microsoft SQL Server, PostgreSQL ou Amazon Aurora. Cela signifie que le code, les applications et outils que vous utilisez déjà aujourd&#8217;hui avec vos bases de données existantes peuvent être utilisés avec Amazon RDS. Amazon RDS automatiquement les correctifs du logiciel de base de données et de sauvegarde de votre base de données, stocker les sauvegardes pendant une période de rétention définie par l&#8217;utilisateur et permettant la récupération point-à-temps. Vous bénéficiez de la flexibilité de pouvoir faire évoluer les ressources de calcul ou de la capacité de stockage associé à votre Instance de base de données (Instance DB) via un seul appel d&#8217;API.</p>
+<p>Instances de base de données à l&#8217;aide de MySQL, Oracle, SQL Server et PostgreSQL moteurs de Amazon RDS peuvent être configurées avec le but général (SSD) stockage, stockage provisionné Ops ES/s (SSD) ou de stockage magnétique. Instances de base de données en utilisant le moteur de Amazon Aurora emploient une tolérance de pannes, couche de stockage virtualisé adossés à des SSD spécialement conçu pour des charges de base de données d&#8217;auto-guérison.</p>
+<p>De plus, Amazon RDS facilite la réplication facile à utiliser pour améliorer la disponibilité et la fiabilité pour des charges de production. À l&#8217;aide de l&#8217;option de déploiement Multi-AZ vous pouvez exécuter la mission de charges de travail stratégiques avec haute disponibilité et intégré automatisé basculement de votre base de données primaire pour une base de données secondaire répliquée de manière synchrone en cas de panne. À l&#8217;aide de réplicas de lecture, Amazon RDS pour MySQL, PostgreSQL et Amazon Aurora vous permettent également d&#8217;évoluer au-delà de la capacité d&#8217;un déploiement de base de données unique pour des charges de lecture importante base de données. Comme avec tous les Services Web Amazon, il n&#8217;y a aucun investissement initial requis, et vous ne payez que pour les ressources que vous utilisez.</p>
+</div>
+<div class="section" id="commande-aide">
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de déterminer l&#8217;utilisation d&#8217;Amazon RDS. L&#8217;utilisateur viendra à connaître la façon/format différent d&#8217;exécuter ce module. Cette commande guide l&#8217;utilisateur pour connaître le but de cette commande. Voici donnés sont le commandement et la capture d&#8217;écran de la même chose.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevel@corp:/# ptconfigure Amazon RDS <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWS ElastiCache.
+
+   Amazon RDS, Amazon RDS, aws-elasticache
+
+       - create-cache-cluster
+       Lets you add cache Cluster to AWS ElastiCache
+       example: ptconfigure Amazon RDS create-cache-cluster
+                   --yes
+                   --guess
+       - create-health-check
+       Lets you add Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 create-health-check
+                   --yes
+                   --guess
+
+         - reboot-cache-cluster
+       Lets you reboot cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSRoute53 delete-hosted-zone
+                   --yes
+                   --guess
+
+        - delete-cache-cluster
+       Lets you delete cache Cluster to AWS ElastiCache
+       example: ptconfigure Amazon RDS delete-cache-cluster
+                   --yes
+                   --guess
+
+        - delete-replication-group
+       Lets you delete replication group to AWS ElastiCache
+       example: ptconfigure Amazon RDS delete-replication-group
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS ElastiCache
+       example: ptconfigure Amazon RDS list
+                   --yes
+                   --guess
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="describe-instance">
+<h2>Describe-instance<a class="headerlink" href="#describe-instance" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de décrire l&#8217;instance de AWS RDS. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS describe-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-instance">
+<h2>Delete-instance<a class="headerlink" href="#delete-instance" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de supprimer l&#8217;instance. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS delete-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-db-snapshot">
+<h2>Create-db-snapshot<a class="headerlink" href="#create-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Cette aide de la commande pour redémarrer crée db instantané. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-db-snapshot --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-db-snapshot">
+<h2>Delete-db-snapshot<a class="headerlink" href="#delete-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande est utile pour enlever la copie instantanée db. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS delete-db-snapshot –yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-db-snapshot">
+<h2>Copy-db-snapshot<a class="headerlink" href="#copy-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de copier la copie instantanée db. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS copy-db-snapshot --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-instance">
+<h2>Create-instance<a class="headerlink" href="#create-instance" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de créer l&#8217;instance. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-instance --yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="reboot-instance">
+<h2>Reboot-instance<a class="headerlink" href="#reboot-instance" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de redémarrer l&#8217;instance. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS reboot-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-instance-read-replica">
+<h2>Create-instance-read replica<a class="headerlink" href="#create-instance-read-replica" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet de créer instance db lu réplique. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-instance-readreplica --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande permet d&#8217;afficher des données sur votre RDS de AWS. Le sous compte tenu de la commande s&#8217;exécutera le processus.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-parameter">
+<h2>Alternative Parameter<a class="headerlink" href="#alternative-parameter" title="Permalink to this headline">¶</a></h2>
+<p>Il y a trois paramètres de substitution qui peuvent être utilisés en ligne de commande.</p>
+<p>AWSRDS, awsrds, aws-rds</p>
+</div>
+<div class="section" id="avantages">
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
+<p>Simple à déployer le Service Web de base de données : Amazon RDS, il est facile aller de la conception de projet de déploiement. Utiliser l&#8217;AWS Management Console ou les appels d&#8217;API simples pour accéder les fonctionnalités d&#8217;une base de données relationnelle prêts pour la production en quelques minutes sans se soucier de la fourniture d&#8217;infrastructures ou de l&#8217;installation et maintenance logiciels de base de données.</p>
+<p>Réussi : Amazon RDS gère des tâches de gestion des temps de base de données, telles que les sauvegardes, gestion des correctifs et la réplication, vous permettant de poursuivre le développement d&#8217;application valeur supérieur ou les raffinements de la base de données.</p>
+<p>Compatible : Avec Amazon RDS, vous obtenez un accès natif à un système de gestion de base de données relationnelle. Ceci facilite la compatibilité avec vos outils existants et des applications. De plus, Amazon RDS vous donne contrôle facultatif qui appuie les pouvoirs version moteur votre Instance DB via la gestion de Version pour le moteur DB.</p>
+<p>Rapide, des performances prévisibles : Instances de base de données en utilisant MySQL de Amazon RDS, Oracle, SQL Server et Oracle moteurs peuvent être fournis avec le but général (SSD) stockage, stockage provisionné Ops ES/s (SSD) ou de stockage magnétique.</p>
+<p>Stockage Amazon RDS générales but (SSD) offre une base cohérente de 3 entrées/sorties par GB provisionné et offre la possibilité d&#8217;éclater jusqu&#8217;à 3 000 IOPS.</p>
+<p>Stockage Amazon RDS provisionné Ops ES/s (SSD) est une option de stockage de haute performance conçue pour offrir des performances rapide, prévisible et cohérente pour des charges de base de données transactionnelle intensif de I/O. Vous pouvez approvisionner des Ops ES/s de 1 000 à 30 000 entrées/sorties par Instance DB. (Maximum réalisé QU&#8217;IOPS variera selon le type de moteur.)</p>
+<p>Stockage magnétique (anciennement stockage Amazon RDS Standard) est utile pour des charges de la petite base de données où les données sont moins fréquemment accédées.</p>
+<p>Instances de base de données en utilisant le moteur de Amazon Aurora emploient une tolérance de pannes, couche de stockage virtualisé adossés à des SSD spécialement conçu pour des charges de base de données d&#8217;auto-guérison.</p>
+<p>Base de données évolutive dans le Cloud : vous pouvez faire évoluer le calcul et des ressources de stockage disponibles à votre base de données pour répondre à votre application a besoin à l&#8217;aide de l&#8217;API d&#8217;Amazon RDS ou l&#8217;AWS Management Console. Si vous utilisez le stockage Amazon RDS provisionné IOPS avec Amazon RDS pour MySQL, Oracle ou PostgreSQL, vous pouvez provisionner et adapte le stockage jusqu&#8217;à 3 to et le IOPS à jusqu&#8217;à 30 000. Notez ce maximum réalisé QU&#8217;IOPS variera selon le type de moteur. En outre, pour les moteurs de base de données MySQL, PostgreSQL et Aurora Amazon, vous pouvez également associer un ou plusieurs réplicas de lecture avec votre déploiement d&#8217;instance de base de données, vous permettant d&#8217;évoluer au-delà de la capacité d&#8217;une instance de base de données unique pour des charges de lecture importante.</p>
+<p>Le moteur de base de données Amazon Aurora vous permet de faire évoluer votre espace de stockage jusqu&#8217;à 64 to. Vous pouvez associer jusqu&#8217;à 15 Amazon Aurora répliques à votre déploiement d&#8217;instance de base de données. Amazon Aurora répliques partagent le même stockage sous-jacent que l&#8217;instance de source, réduisant les coûts et en évitant de copier des données sur les nœuds de la réplique.</p>
+<p>Fiable : Amazon RDS a plusieurs fonctions qui améliorent la fiabilité des bases de données de production critiques, y compris les sauvegardes automatiques, copies instantanées DB, remplacement automatique hôte et déploiements Multi-AZ. Amazon RDS s&#8217;exécute sur la même infrastructure hautement fiable utilisée par d&#8217;autres Services de Web d&#8217;Amazone.</p>
+<p>Pour le moteur Aurora Amazon, Amazon RDS utilise la technologie RDS Multi-AZ pour automatiser le basculement vers un des 15 répliques Aurora vous avez créé dans l&#8217;une des trois Zones de disponibilité.</p>
+<p>Conçu pour être utilisé avec d&#8217;autres Services de Web d&#8217;Amazon : Amazon RDS est étroitement intégré aux autres Amazon Web Services. Par exemple, une application s&#8217;exécutant dans Amazon EC2 connaîtra un accès faible latence de base de données à une Instance de DB Amazon RDS dans la même région.</p>
+<p>Sécurisé : Amazon RDS fournit un certain nombre de mécanismes pour garantir votre DB Instances.Amazon RDS permet de crypter vos bases de données MySQL ou PostgreSQL à l&#8217;aide de touches que vous gérez par AWS Key Management Service (KMS). Sur une instance de base de données en cours d&#8217;exécution avec cryptage Amazon RDS, données stockées au repos dans le stockage sous-jacent sont cryptées, comme le sont ses sauvegardes automatisées, lire des répliques et des instantanés.
+Amazon RDS prend en charge le chiffrement Transparent de données dans SQL Server et Oracle. Chiffrement transparent de données dans Oracle est intégré avec AWS CloudHSM, qui permet de générer en toute sécurité, stocker et gérer vos clés de cryptage dans les appareils Hardware Security Module (HSM) locataire unique dans le nuage AWS.
+Amazon RDS inclut des interfaces de services web pour configurer les paramètres de pare-feu qui contrôlent l&#8217;accès réseau à votre base de données.</p>
+<p>Amazon RDS vous permet d&#8217;exécuter vos Instances DB dans Amazon Virtual Private Cloud (Amazon VPC). Amazon VPC vous permet d&#8217;isoler vos Instances DB en spécifiant la plage d&#8217;adresses IP que vous souhaitez utiliser et vous connecter à votre informatique existante infrastructure par le biais de standards cryptées IPsec VPN. Pour en savoir plus sur Amazon RDS en VPC, reportez-vous au Guide d&#8217;utilisation Amazon RDS.
+Peu coûteux : Vous payez des taux très bas et uniquement pour les ressources que vous consommez réellement. En outre, vous bénéficiez de l&#8217;option de demande de prix avec aucun engagement initial ou à long terme, ou encore plus bas horaires tarifs via notre option de tarification réservée.</p>
+<p>Instances DB sur demande – Instances DB à la demande vous permettent de payer pour la capacité de calcul à l&#8217;heure avec aucun engagement à long terme. Cela vous évite les coûts et la complexité de la planification, d&#8217;achat et entretien matériel et transforme ce qui sont communément gros coûts fixes en coûts de variables beaucoup plus petites.
+Les Instances réservées DB – Instances DB réservées vous donner la possibilité d&#8217;effectuer un paiement de faible, unique pour chaque Instance de DB vous voulez réserver et recevoir à son tour une réduction significative sur les frais d&#8217;utilisation horaire pour cette Instance de DB. Selon votre utilisation, vous pouvez choisir entre trois types d&#8217;Instance DB réservée (léger, moyen et utilisation lourde) et de recevoir n&#8217;importe où entre 30 % et 55 % de remise sur les prix à la demande.</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevells.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fawsrds.rst">
+          AWS RDS
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

@@ -544,13 +544,15 @@ Jouer avec Modules ptconfigure
 
 
 
-
-   
+  
    famazoncloudfront
    famazoncloudwatch
    famazondynamodb
    famazonelasticache
+   famazonroute53
+   famazons3
    fawscloudformation
+   fawsrds
    fapacheconf
    fapachemodules
    fapachereverseproxy

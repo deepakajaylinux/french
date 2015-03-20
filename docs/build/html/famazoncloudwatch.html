@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>synopsis &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>Amazon CloudWatch &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -92,10 +92,13 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">synopsis</a></li>
+<li><a class="reference internal" href="#">Amazon CloudWatch</a><ul>
+<li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -156,12 +159,14 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="synopsis">
-<h1>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="amazon-cloudwatch">
+<h1>Amazon CloudWatch<a class="headerlink" href="#amazon-cloudwatch" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <p>Amazon CloudWatch est un service de surveillance des ressources cloud AWS et les applications que vous exécutez sur AWS. Vous pouvez utiliser Amazon CloudWatch de collecter et de suivre les mesures, de recueillir et de surveiller les fichiers journaux et régler des alarmes. Amazon CloudWatch peut surveiller les ressources AWS tels que les instances Amazon EC2, Amazon DynamoDB tables et instances Amazon RDS DB, ainsi que des paramètres personnalisés générés par vos applications et services et les fichiers journaux que génèrent vos applications. Vous pouvez utiliser Amazon CloudWatch pour approfondir la visibilité de la systémique dans l&#8217;utilisation des ressources et les performances des applications Santé opérationnelle. Vous pouvez utiliser ces idées pour réagir et garder votre application fonctionne correctement.</p>
 </div>
 <div class="section" id="commande-aide">
-<h1>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h1>
+<h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
 <p>Cette commande permet de déterminer l&#8217;utilisation d&#8217;Amazon CloudWatch. L&#8217;utilisateur viendra à connaître la façon/format différent d&#8217;exécuter ce module. Cette commande guide l&#8217;utilisateur pour connaître le but de cette commande. Voici donnés sont le commandement et la capture d&#8217;écran de la même chose.</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSCloudWatch help
 
@@ -187,7 +192,7 @@ End Help
 </div>
 </div>
 <div class="section" id="installation">
-<h1>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Si l&#8217;utilisateur a besoin d&#8217;installer le module Amazon CloudWatch dans la machine, le dessous étant donné de commande exécutera le processus d&#8217;installation.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure aws-cloudwatch install
 </pre></div>
@@ -197,13 +202,14 @@ End Help
 </div>
 </div>
 <div class="section" id="avantages">
-<h1>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h1>
+<h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <p>Moniteur Amazon EC2 : Découvre les métriques pour CPU utilization, transfert de données et activité de l&#8217;utilisation du disque à partir d&#8217;instances Amazon EC2 (surveillance de base) sans frais supplémentaires. Moyennant des frais supplémentaires, CloudWatch fournit un suivi détaillé pour les instances EC2 avec une résolution supérieure et l&#8217;agrégation métrique. Aucun logiciel supplémentaire ne doit être installé.</p>
 <p>Moniteur autres ressources AWS : Surveiller les métriques sur Amazon DynamoDB tableaux, volumes Amazon EBS, instances Amazon RDS DB, les flux de travail Amazon Elastic MapReduce, Elastic Load Balancers, files d&#8217;attente de Amazon SQS, Amazon SNS sujets et plus sans frais supplémentaires. Aucun logiciel supplémentaire ne doit être installé.</p>
 <p>Moniteur Custom Metrics : Soumettre Custom Metrics générés par vos propres applications via une simple demande d&#8217;API et ont surveillé par Amazon CloudWatch. Vous pouvez envoyer et stocker les paramètres qui sont importants pour le rendement opérationnel de votre application pour vous aider à dépanner et à repérer les tendances.</p>
 <p>Moniteur et magasin de journaux : vous pouvez utiliser les journaux CloudWatch pour surveiller et dépanner vos systèmes et applications à l&#8217;aide de votre système existant, application et les fichiers de journal des événements personnalisé. Vous pouvez envoyer votre système existant, application et les fichiers journaux personnalisés aux journaux CloudWatch et surveiller ces journaux en temps quasi réel. Cela peut vous aider à mieux comprendre et exploiter vos systèmes et applications, et vous pouvez stocker vos journaux à l&#8217;aide de stockage très résistant et peu coûteux pour un accès ultérieur.</p>
 <p>Programmer des alarmes : Régler des alarmes sur n&#8217;importe lequel de vos paramètres pour vous envoyer des notifications ou de prendre d&#8217;autres actions automatisées. Par exemple, lorsqu&#8217;une mesure spécifique de Amazon EC2 traverse votre seuil d&#8217;alarme, vous pouvez utiliser Auto Scaling pour dynamiquement ajouter ou supprimer des instances EC2 ou vous envoyer une notification.</p>
 <p>Afficher des graphiques et statistiques : Découvre les graphiques et statistiques pour l&#8217;un de vos paramètres du panneau de commandes Amazon CloudWatch et obtenez un aperçu rapide de toutes vos alarmes et surveillé les ressources AWS en un seul endroit.</p>
+</div>
 </div>
 
 
@@ -263,7 +269,7 @@ End Help
         <li>
           Go to
         <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/famazoncloudwatch.rst">
-          synopsis
+          Amazon CloudWatch
         </a> on GitHub.
       </li>
 
