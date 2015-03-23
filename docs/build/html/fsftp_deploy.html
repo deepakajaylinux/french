@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -127,6 +127,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -147,9 +148,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -218,27 +219,215 @@ End Help
 <p>Si l&#8217;entrée de l&#8217;utilisateur comme Y il doit entrer un nouveau nom de serveur</p>
 <p>Alors tout sera connecté.</p>
 <p>Si l&#8217;entrée de l&#8217;utilisateur comme N nom de serveur précédente peut être consultée.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
-SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy sftp put
+
+SFTP on Server group? (Y/N)
+y
 Please Enter SSH Timeout in seconds
-90
+20
 Please Enter remote SSH Port
 22
-Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
-N
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
-Enter <span class="nb">local source </span>file path
-/root/vv
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+Enter local source file path
+/home/karunakaran/Desktop/server.odt
 Enter remote target file path
-/root/gg/vv
+/home/karthik/Desktop/server.odt
+[Pharaoh Logging] Opening SFTP Connections...
+[Pharaoh Logging] [192.168.1.14] Executing SFTP Put...
+[Pharaoh Logging] 1
+[Pharaoh Logging] [192.168.1.14] SFTP Put Completed...
+[Pharaoh Logging] All SFTP Puts Completed
+******************************
+
+SFTP Put: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy sftp put --yes --environment-name<span class="o">=</span>karthik --source<span class="o">=</span><span class="s2">&quot;/tmp/kk.txt&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/tmp/kk.txt&quot;</span>
+
+Please Enter SSH Timeout in seconds
+20
+Please Enter remote SSH Port
+22
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Connection to Server 192.168.1.14 successful.
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>192.168.1.14<span class="o">]</span> Executing SFTP Put...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> 1
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>192.168.1.14<span class="o">]</span> SFTP Put Completed...
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
 ******************************
 
+SFTP Put: Success
 
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy sftp put --yes --source=&quot;/home/karunakaran/Desktop/readme.txt&quot; --target=&quot;/home/karthik/Desktop/readme.txt&quot;
+
+Please Enter SSH Timeout in seconds
+20
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+[Pharaoh Logging] Opening SFTP Connections...
+[Pharaoh Logging] [192.168.1.14] Executing SFTP Put...
+[Pharaoh Logging] 1
+[Pharaoh Logging] [192.168.1.14] SFTP Put Completed...
+[Pharaoh Logging] All SFTP Puts Completed
+******************************
 
 SFTP Put: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy sftp get
+
+SFTP on Server group? (Y/N)
+y
+Please Enter SSH Timeout in seconds
+200
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+Enter remote source file path
+/tmp/testing
+Enter local target file path
+/opt/testr
+[Pharaoh Logging] Opening SFTP Connections...
+[Pharaoh Logging] [192.168.1.14] Executing SFTP Get...
+[Pharaoh Logging] 1
+[Pharaoh Logging] [192.168.1.14] SFTP Get Completed...
+[Pharaoh Logging] All SFTP Gets Completed
+******************************
+
+Shell Result: Success
+SFTP Get
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy sftp get --yes --environment-name<span class="o">=</span>karthik --source<span class="o">=</span><span class="s2">&quot;/tmp/testing&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/opt/testr&quot;</span>
+
+Please Enter SSH Timeout in seconds
+200
+Please Enter remote SSH Port
+22
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Connection to Server 192.168.1.14 successful.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>192.168.1.14<span class="o">]</span> Executing SFTP Get...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> 1
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>192.168.1.14<span class="o">]</span> SFTP Get Completed...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Gets Completed
+******************************
+
+Shell Result: Success
+SFTP Get
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy sftp get --yes --source=&quot;/tmp/testing&quot; --target=&quot;/opt/testr&quot;
+
+Please Enter SSH Timeout in seconds
+200
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+[Pharaoh Logging] Opening SFTP Connections...
+[Pharaoh Logging] [192.168.1.14] Executing SFTP Get...
+[Pharaoh Logging] 1
+[Pharaoh Logging] [192.168.1.14] SFTP Get Completed...
+[Pharaoh Logging] All SFTP Gets Completed
+******************************
+
+Shell Result: Success
+SFTP Get
 
 ------------------------------
 Installer Finished

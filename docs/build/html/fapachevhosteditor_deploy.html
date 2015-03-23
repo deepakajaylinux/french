@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -132,6 +132,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -152,9 +153,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -253,19 +254,108 @@ End Help
 <p>après la saisie de la commande ci-dessus, il peut poser la question suivante,</p>
 <p>Le document Vhe racine, extension de fichier Vhe, commande apache Vhe, Port IP Vhe, Vhe Annuaire Vhost, Vhe modèle, Vhe défaut nom du modèle.</p>
 <p>L&#8217;utilisateur doit saisir tous les détails, un par un ENTRER contraire dans la ligne de commande lui-même. La capture d&#8217;écran ci-dessous explique à ce sujet</p>
-<div class="highlight-bash"><div class="highlight"><pre>- add
-         create a Virtual Host
-         example: sudo ptdeploy vhe add
-         example: sudo ptdeploy vhe add --yes --vhe-docroot<span class="o">=</span>/var/www/the-app --vhe-url<span class="o">=</span>www.dave.com --vhe-file-ext<span class="o">=</span><span class="s2">&quot;&quot;</span> --vhe-apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span> --vhe-ip-port<span class="o">=</span><span class="s2">&quot;127.0.0.1:80&quot;</span> --vhe-vhost-dir<span class="o">=</span><span class="s2">&quot;/etc/apache2/sites-available&quot;</span> --vhe-template<span class="o">=</span><span class="s2">&quot;*template data*&quot;</span>
-         example: sudo ptdeploy vhe add --yes --guess --vhe-url<span class="o">=</span>www.dave.com
-             <span class="c"># will attempt to guess the following but you can override any</span>
-             <span class="c"># --vhe-docroot=*current working dir*</span>
-             <span class="c"># --vhe-file-ext=&quot;ubuntu none, others .conf&quot;</span>
-             <span class="c"># --vhe-apache-command=&quot;apache2 or httpd depends on system&quot;</span>
-             <span class="c"># --vhe-ip-port=&quot;127.0.0.1:80&quot;</span>
-             <span class="c"># --vhe-vhost-dir=&quot;/etc/apache2/sites-available or /etc/httpd/vhosts.d&quot;</span>
-             <span class="c"># --vhe-template=&quot;*template data*&quot;</span>
-             <span class="c"># --vhe-default-template-name=&quot;docroot-src-suffix&quot; // from default templates</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe add
+
+Do you want to add a VHost? (Y/N)
+y
+What&#39;s the document root? Enter nothing for /home/karunakaran
+
+What URL do you want to add as server name?
+kumar
+What IP:Port should be set? Enter nothing for 127.0.0.1:80
+
+What File Extension should be used? Enter nothing for None (probably .conf on this system)
+
+What is your VHost Template directory? Enter nothing for default templates
+
+Please Choose VHost Template:
+--- Default Virtual Host Templates: ---
+(0) docroot-no-suffix
+(1) docroot-src-suffix
+(2) docroot-web-suffix
+(3) docroot-www-suffix
+(4) docroot-docroot-suffix
+
+0
+Please check VHost: NameVirtualHost 127.0.0.1:80
+&lt;VirtualHost 127.0.0.1:80&gt;
+       ServerAdmin webmaster@localhost
+       ServerName kumar
+       DocumentRoot /home/karunakaran
+       &lt;Directory /home/karunakaran&gt;
+               Options Indexes FollowSymLinks MultiViews
+               AllowOverride All
+               Order allow,deny
+               allow from all
+       &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+
+Is this Okay? (Y/N)
+y
+What is your VHost directory? Found &quot;/etc/apache2/sites-available&quot; - Enter nothing to use this
+
+Do you want to enable this VHost? (hint - ubuntu probably yes, centos probably no) (Y/N)
+y
+Enabling site kumar.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2ensite kumar.conf done
+******************************
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe add --yes --vhe-docroot<span class="o">=</span>/var/www/the-app --vhe-url<span class="o">=</span>www.murali.com --vhe-file-ext<span class="o">=</span><span class="s2">&quot;.conf&quot;</span> --vhe-apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span> --vhe-ip-port<span class="o">=</span><span class="s2">&quot;127.0.0.1:80&quot;</span> --vhe-vhost-dir<span class="o">=</span><span class="s2">&quot;/etc/apache2/sites-available&quot;</span> --vhe-template<span class="o">=</span><span class="s2">&quot;*template data*&quot;</span>
+
+*template data*
+
+Assuming Okay due to yes parameter
+Enabling site www.murali.com.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2ensite www.murali.com.conf <span class="k">done</span>
+******************************
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe add --yes --guess --vhe-url<span class="o">=</span>www.kkkkkkkkk.com
+
+What is your VHost Template directory? Enter nothing <span class="k">for </span>default templates
+
+Please Choose VHost Template:
+--- Default Virtual Host Templates: ---
+<span class="o">(</span>0<span class="o">)</span> docroot-no-suffix
+<span class="o">(</span>1<span class="o">)</span> docroot-src-suffix
+<span class="o">(</span>2<span class="o">)</span> docroot-web-suffix
+<span class="o">(</span>3<span class="o">)</span> docroot-www-suffix
+<span class="o">(</span>4<span class="o">)</span> docroot-docroot-suffix
+
+0
+NameVirtualHost 127.0.0.1:80
+&lt;VirtualHost 127.0.0.1:80&gt;
+       ServerAdmin webmaster@localhost
+       ServerName www.kkkkkkkkk.com
+       DocumentRoot /home/karunakaran
+       &lt;Directory /home/karunakaran&gt;
+               Options Indexes FollowSymLinks MultiViews
+               AllowOverride All
+               Order allow,deny
+               allow from all
+       &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+
+Assuming Okay due to yes parameter
+Enabling site www.kkkkkkkkk.com.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2ensite www.kkkkkkkkk.com <span class="k">done</span>
+******************************
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -302,11 +392,107 @@ explique à ce sujet</p>
 </pre></div>
 </div>
 <p>La capture d&#8217;écran suivante montre la fonction de rm.</p>
-<div class="highlight-bash"><div class="highlight"><pre>- rm
-         example: ptdeploy vhe rm
-         example: ptdeploy vhe rm --yes --
-         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
-         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe rm
+
+Do you want to delete VHost/s? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Deleting vhost
+What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
+
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> ddddddd.conf
+<span class="o">(</span>2<span class="o">)</span> default-ssl.conf
+<span class="o">(</span>3<span class="o">)</span> default-ssl.dpkg-remove
+<span class="o">(</span>4<span class="o">)</span> default.dpkg-remove
+<span class="o">(</span>5<span class="o">)</span> karuna
+<span class="o">(</span>6<span class="o">)</span> kumar.conf
+<span class="o">(</span>7<span class="o">)</span> llllllllllllll.conf
+<span class="o">(</span>8<span class="o">)</span> mmmmmm.conf
+<span class="o">(</span>9<span class="o">)</span> ptbuild.conf
+<span class="o">(</span>10<span class="o">)</span> www.dave.com
+<span class="o">(</span>11<span class="o">)</span> www.google.com
+<span class="o">(</span>12<span class="o">)</span> www.kkkkkkkkk.com.conf
+<span class="o">(</span>13<span class="o">)</span> www.murali.com.conf
+<span class="o">(</span>14<span class="o">)</span> www.siva.com.conf
+<span class="o">(</span>15<span class="o">)</span> www.siva1.com
+
+14
+Do you want to disable this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Site www.siva.com disabled.
+To activate the new configuration, you need to run:
+  service apache2 reload
+a2dissite www.siva.com.conf <span class="k">done</span>
+VHost www.siva.com.conf Deleted  <span class="k">if </span>existed
+******************************
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe rm --yes --
+
+Deleting vhost
+What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
+
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> ddddddd.conf
+<span class="o">(</span>2<span class="o">)</span> default-ssl.conf
+<span class="o">(</span>3<span class="o">)</span> default-ssl.dpkg-remove
+<span class="o">(</span>4<span class="o">)</span> default.dpkg-remove
+<span class="o">(</span>5<span class="o">)</span> karuna
+<span class="o">(</span>6<span class="o">)</span> kumar.conf
+<span class="o">(</span>7<span class="o">)</span> llllllllllllll.conf
+<span class="o">(</span>8<span class="o">)</span> mmmmmm.conf
+<span class="o">(</span>9<span class="o">)</span> ptbuild.conf
+<span class="o">(</span>10<span class="o">)</span> testrepo.conf
+<span class="o">(</span>11<span class="o">)</span> www.dae.com.conf
+<span class="o">(</span>12<span class="o">)</span> www.dave.com
+<span class="o">(</span>13<span class="o">)</span> www.google.com
+<span class="o">(</span>14<span class="o">)</span> www.kkkkkkkkk.com.conf
+<span class="o">(</span>15<span class="o">)</span> www.murali.com.conf
+
+14
+Site www.kkkkkkkkk.com already disabled
+a2dissite www.kkkkkkkkk.com.conf <span class="k">done</span>
+VHost www.kkkkkkkkk.com.conf Deleted  <span class="k">if </span>existed
+******************************
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.da.com.conf
+
+Deleting vhost
+Site www.da.com disabled.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2dissite www.da.com.conf <span class="k">done</span>
+VHost www.da.com.conf Deleted  <span class="k">if </span>existed
+******************************
+
+
+1Apache VHost Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.dae.com.conf
+
+Deleting vhost
+Site www.dae.com disabled.
+To activate the new configuration, you need to run:
+  service apache2 reload
+a2dissite www.dae.com.conf <span class="k">done</span>
+VHost www.dae.com.conf Deleted  <span class="k">if </span>existed
+******************************
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -317,9 +503,50 @@ explique à ce sujet</p>
 </pre></div>
 </div>
 <p>La capture d&#8217;écran montre la fonction de liste.</p>
-<div class="highlight-bash"><div class="highlight"><pre>- list
-         List current Virtual Hosts
-         example: ptdeploy vhe list
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe list
+
+What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
+
+You have a sites available dir, so also listing available sites.
+Current Installed VHosts:
+--- Enabled Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> ddddddd.conf
+<span class="o">(</span>2<span class="o">)</span> default-ssl.conf
+<span class="o">(</span>3<span class="o">)</span> default-ssl.dpkg-remove
+<span class="o">(</span>4<span class="o">)</span> default.dpkg-remove
+<span class="o">(</span>5<span class="o">)</span> karuna
+<span class="o">(</span>6<span class="o">)</span> kumar.conf
+<span class="o">(</span>7<span class="o">)</span> llllllllllllll.conf
+<span class="o">(</span>8<span class="o">)</span> mmmmmm.conf
+<span class="o">(</span>9<span class="o">)</span> ptbuild.conf
+<span class="o">(</span>10<span class="o">)</span> www.dave.com
+<span class="o">(</span>11<span class="o">)</span> www.google.com
+<span class="o">(</span>12<span class="o">)</span> www.kkkkkkkkk.com.conf
+<span class="o">(</span>13<span class="o">)</span> www.murali.com.conf
+<span class="o">(</span>14<span class="o">)</span> www.siva.com.conf
+<span class="o">(</span>15<span class="o">)</span> www.siva1.com
+--- All Available Virtual Hosts: ---
+<span class="o">(</span>16<span class="o">)</span> 000-default.conf
+<span class="o">(</span>17<span class="o">)</span> ddddddd.conf
+<span class="o">(</span>18<span class="o">)</span> default-ssl.conf
+<span class="o">(</span>19<span class="o">)</span> default-ssl.dpkg-remove
+<span class="o">(</span>20<span class="o">)</span> default.dpkg-remove
+<span class="o">(</span>21<span class="o">)</span> karuna
+<span class="o">(</span>22<span class="o">)</span> kumar.conf
+<span class="o">(</span>23<span class="o">)</span> llllllllllllll.conf
+<span class="o">(</span>24<span class="o">)</span> mmmmmm.conf
+<span class="o">(</span>25<span class="o">)</span> ptbuild.conf
+<span class="o">(</span>26<span class="o">)</span> www.dave.com
+<span class="o">(</span>27<span class="o">)</span> www.google.com
+<span class="o">(</span>28<span class="o">)</span> www.kkkkkkkkk.com.conf
+<span class="o">(</span>29<span class="o">)</span> www.murali.com.conf
+<span class="o">(</span>30<span class="o">)</span> www.siva.com.conf
+<span class="o">(</span>31<span class="o">)</span> www.siva1.com
+******************************
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -331,9 +558,38 @@ explique à ce sujet</p>
 </div>
 <p>Cette option est activée par défaut. Cette option permet au serveur d&#8217;hôte virtuel permet.</p>
 <p>Module Aider à développer un grand nombre de capacités habilitantes nécessaires à l&#8217;entretien des environnements haute performance grâce à notre compréhension des interdépendances entre les personnes, les processus et la technologie. La capture d&#8217;écran ci-dessous explique la même chose.</p>
-<div class="highlight-bash"><div class="highlight"><pre>- <span class="nb">enable</span>
-<span class="nb">         enable </span>a Server Block
-         example: ptdeploy vhe <span class="nb">enable</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe <span class="nb">enable</span>
+
+Do you want to <span class="nb">enable </span>this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> ddddddd.conf
+<span class="o">(</span>2<span class="o">)</span> default-ssl.conf
+<span class="o">(</span>3<span class="o">)</span> default-ssl.dpkg-remove
+<span class="o">(</span>4<span class="o">)</span> default.dpkg-remove
+<span class="o">(</span>5<span class="o">)</span> karuna
+<span class="o">(</span>6<span class="o">)</span> kumar.conf
+<span class="o">(</span>7<span class="o">)</span> llllllllllllll.conf
+<span class="o">(</span>8<span class="o">)</span> mmmmmm.conf
+<span class="o">(</span>9<span class="o">)</span> ptbuild.conf
+<span class="o">(</span>10<span class="o">)</span> www.dave.com
+<span class="o">(</span>11<span class="o">)</span> www.google.com
+<span class="o">(</span>12<span class="o">)</span> www.kkkkkkkkk.com.conf
+<span class="o">(</span>13<span class="o">)</span> www.murali.com.conf
+<span class="o">(</span>14<span class="o">)</span> www.siva.com.conf
+<span class="o">(</span>15<span class="o">)</span> www.siva1.com
+
+7
+Enabling site llllllllllllll.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2ensite llllllllllllll.conf <span class="k">done</span>
+******************************
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -345,9 +601,35 @@ explique à ce sujet</p>
 </div>
 <p>Après avoir tapé cette commande, il peut demander à l&#8217;utilisateur de désactiver le serveur. Si les entrées de l&#8217;utilisateur que oui il désactiver le serveur est à dire qu&#8217;il Wona € ™ t permettent tout organisme de travailler dans ce serveur.</p>
 <p>La capture d&#8217;écran suivante visualiser évidemment.</p>
-<div class="highlight-bash"><div class="highlight"><pre>- disable
-         disable a Server Block
-         example: ptdeploy vhe disable
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe disable
+
+Do you want to disable this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Please Choose VHost:
+--- All Virtual Hosts: ---
+<span class="o">(</span>0<span class="o">)</span> 000-default.conf
+<span class="o">(</span>1<span class="o">)</span> default-ssl.conf
+<span class="o">(</span>2<span class="o">)</span> default-ssl.dpkg-remove
+<span class="o">(</span>3<span class="o">)</span> default.dpkg-remove
+<span class="o">(</span>4<span class="o">)</span> karuna
+<span class="o">(</span>5<span class="o">)</span> kumar.conf
+<span class="o">(</span>6<span class="o">)</span> ptbuild.conf
+<span class="o">(</span>7<span class="o">)</span> www.dave.com
+<span class="o">(</span>8<span class="o">)</span> www.google.com
+<span class="o">(</span>9<span class="o">)</span> www.kkkkkkkkk.com.conf
+<span class="o">(</span>10<span class="o">)</span> www.murali.com.conf
+<span class="o">(</span>11<span class="o">)</span> www.siva.com.conf
+<span class="o">(</span>12<span class="o">)</span> www.siva1.com
+
+9
+Site www.kkkkkkkkk.com disabled.
+To activate the new configuration, you need to run:
+ service apache2 reload
+a2dissite www.kkkkkkkkk.com.conf <span class="k">done</span>
+******************************
+
+1Apache VHost Editor Finished
+******************************
 </pre></div>
 </div>
 </div>

@@ -87,31 +87,235 @@ Si l'entrée de l'utilisateur comme N nom de serveur précédente peut être con
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure sftp put
+
+ kevell@corp:/# ptdeploy sftp put 
+
  SFTP on Server group? (Y/N) 
- Y
- Please Enter SSH Timeout in seconds
- 90
- Please Enter remote SSH Port
- 22
- Use Environments Configured in Project? (Y/N) 
- N
- [Pharaoh Logging] Attempting to load SFTP connections...
- Enter local source file path
- /root/vv
- Enter remote target file path
- /root/gg/vv
- [Pharaoh Logging] Opening SFTP Connections...
- [Pharaoh Logging] All SFTP Puts Completed
- ******************************
+ y 
+ Please Enter SSH Timeout in seconds 
+ 20 
+ Please Enter remote SSH Port 
+ 22 
+ *********************************** 
+ *   Due to a software limitation, * 
+ *    The user that you use here   * 
+ *  will have their command prompt * 
+ *    changed to PHARAOHPROMPT     * 
+ *  ... I'm working on that one... * 
+ *  Exit program to stop (CTRL+C)  * 
+ *********************************** 
+ Enter Server Info: 
+ Please Enter SSH Server Target Host Name/IP 
+ 192.168.1.14 
+ Please Enter SSH User 
+ karthik 
+ Please Enter Server Password or Key Path 
+ 123456 
+ Add Another Server? (Y/N) 
+ n 
+ [Pharaoh Logging] Attempting to load SFTP connections... 
+ [Pharaoh Logging] Connection to Server 192.168.1.14 successful. 
+ Enter local source file path 
+ /home/karunakaran/Desktop/server.odt 
+ Enter remote target file path 
+ /home/karthik/Desktop/server.odt 
+ [Pharaoh Logging] Opening SFTP Connections... 
+ [Pharaoh Logging] [192.168.1.14] Executing SFTP Put... 
+ [Pharaoh Logging] 1 
+ [Pharaoh Logging] [192.168.1.14] SFTP Put Completed... 
+ [Pharaoh Logging] All SFTP Puts Completed 
+ ****************************** 
+
+ SFTP Put: Success 
+ 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy sftp put --yes --environment-name=karthik --source="/tmp/kk.txt" --target="/tmp/kk.txt" 
+
+ Please Enter SSH Timeout in seconds 
+ 20 
+ Please Enter remote SSH Port 
+ 22 
+ [Pharaoh Logging] Attempting to load SFTP connections... 
+ [Pharaoh Logging] Connection to Server 192.168.1.14 successful. 
+ [Pharaoh Logging] Opening SFTP Connections... 
+ [Pharaoh Logging] [192.168.1.14] Executing SFTP Put... 
+ [Pharaoh Logging] 1 
+ [Pharaoh Logging] [192.168.1.14] SFTP Put Completed... 
+ [Pharaoh Logging] All SFTP Puts Completed 
+ ****************************** 
+ 
+ SFTP Put: Success 
+ 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+.. code-block:: bash
 
 
 
- SFTP Put: Success
+ kevell@corp:/# ptdeploy sftp put --yes --source="/home/karunakaran/Desktop/readme.txt" --target="/home/karthik/Desktop/readme.txt" 
 
- ------------------------------
- Installer Finished
- ******************************
+ Please Enter SSH Timeout in seconds 
+ 20 
+ Please Enter remote SSH Port 
+ 22 
+ *********************************** 
+ *   Due to a software limitation, * 
+ *    The user that you use here   * 
+ *  will have their command prompt * 
+ *    changed to PHARAOHPROMPT     * 
+ *  ... I'm working on that one... * 
+ *  Exit program to stop (CTRL+C)  * 
+ *********************************** 
+ Enter Server Info: 
+ Please Enter SSH Server Target Host Name/IP 
+ 192.168.1.14 
+ Please Enter SSH User 
+ karthik 
+ Please Enter Server Password or Key Path 
+ 123456 
+ Add Another Server? (Y/N) 
+ n 
+ [Pharaoh Logging] Attempting to load SFTP connections... 
+ [Pharaoh Logging] Connection to Server 192.168.1.14 successful. 
+ [Pharaoh Logging] Opening SFTP Connections... 
+ [Pharaoh Logging] [192.168.1.14] Executing SFTP Put... 
+ [Pharaoh Logging] 1 
+ [Pharaoh Logging] [192.168.1.14] SFTP Put Completed... 
+ [Pharaoh Logging] All SFTP Puts Completed 
+ ****************************** 
+
+ SFTP Put: Success 
+
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy sftp get 
+
+ SFTP on Server group? (Y/N) 
+ y 
+ Please Enter SSH Timeout in seconds 
+ 200 
+ Please Enter remote SSH Port 
+ 22 
+ *********************************** 
+ *   Due to a software limitation, * 
+ *    The user that you use here   * 
+ *  will have their command prompt * 
+ *    changed to PHARAOHPROMPT     * 
+ *  ... I'm working on that one... * 
+ *  Exit program to stop (CTRL+C)  * 
+ *********************************** 
+ Enter Server Info: 
+ Please Enter SSH Server Target Host Name/IP 
+ 192.168.1.14 
+ Please Enter SSH User 
+ karthik 
+ Please Enter Server Password or Key Path 
+ 123456 
+ Add Another Server? (Y/N) 
+ n 
+ [Pharaoh Logging] Attempting to load SFTP connections... 
+ [Pharaoh Logging] Connection to Server 192.168.1.14 successful. 
+ Enter remote source file path 
+ /tmp/testing 
+ Enter local target file path 
+ /opt/testr 
+ [Pharaoh Logging] Opening SFTP Connections... 
+ [Pharaoh Logging] [192.168.1.14] Executing SFTP Get... 
+ [Pharaoh Logging] 1 
+ [Pharaoh Logging] [192.168.1.14] SFTP Get Completed... 
+ [Pharaoh Logging] All SFTP Gets Completed 
+ ****************************** 
+
+ Shell Result: Success 
+ SFTP Get 
+ 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy sftp get --yes --environment-name=karthik --source="/tmp/testing" --target="/opt/testr" 
+
+ Please Enter SSH Timeout in seconds 
+ 200 
+ Please Enter remote SSH Port 
+ 22 
+ [Pharaoh Logging] Attempting to load SFTP connections... 
+ [Pharaoh Logging] Connection to Server 192.168.1.14 successful. 
+ [Pharaoh Logging] Opening SFTP Connections... 
+ [Pharaoh Logging] [192.168.1.14] Executing SFTP Get... 
+ [Pharaoh Logging] 1 
+ [Pharaoh Logging] [192.168.1.14] SFTP Get Completed... 
+ [Pharaoh Logging] All SFTP Gets Completed 
+ ****************************** 
+ 
+ Shell Result: Success 
+ SFTP Get 
+
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy sftp get --yes --source="/tmp/testing" --target="/opt/testr" 
+
+ Please Enter SSH Timeout in seconds 
+ 200 
+ Please Enter remote SSH Port 
+ 22 
+ *********************************** 
+ *   Due to a software limitation, * 
+ *    The user that you use here   * 
+ *  will have their command prompt * 
+ *    changed to PHARAOHPROMPT     * 
+ *  ... I'm working on that one... * 
+ *  Exit program to stop (CTRL+C)  * 
+ *********************************** 
+ Enter Server Info: 
+ Please Enter SSH Server Target Host Name/IP 
+ 192.168.1.14 
+ Please Enter SSH User 
+ karthik 
+ Please Enter Server Password or Key Path 
+ 123456 
+ Add Another Server? (Y/N) 
+ n 
+ [Pharaoh Logging] Attempting to load SFTP connections... 
+ [Pharaoh Logging] Connection to Server 192.168.1.14 successful. 
+ [Pharaoh Logging] Opening SFTP Connections... 
+ [Pharaoh Logging] [192.168.1.14] Executing SFTP Get... 
+ [Pharaoh Logging] 1 
+ [Pharaoh Logging] [192.168.1.14] SFTP Get Completed... 
+ [Pharaoh Logging] All SFTP Gets Completed 
+ ****************************** 
+ 
+ Shell Result: Success 
+ SFTP Get 
+ 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+
+
+
 
 
 Options

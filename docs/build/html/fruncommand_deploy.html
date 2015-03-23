@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -126,6 +126,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -146,9 +147,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -231,6 +232,65 @@ plateforme de leur utilisation selon leurs besoins.</td>
 </tbody>
 </table>
 <p>La syntaxe et la table comme décrit ci-dessus peut aide à l&#8217;utilisateur comment utiliser la commande de marche.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy run-command install --yes --command<span class="o">=</span><span class="s2">&quot;ls -lah /tmp&quot;</span> --run-as-user<span class="o">=</span><span class="s2">&quot;ubuntu&quot;</span> --background
+
+*******************************
+*   Golden Contact Computing  *
+*         Run Command        *
+*******************************
+Use NoHup?: <span class="o">(</span>Y/N<span class="o">)</span>
+y
+<span class="nb">cd</span> /home/karunakaran
+su  ubuntu
+nohup ls -lah /tmp &amp;
+<span class="nb">exit</span>
+Creating /tmp/ptconfigure-temp-script-56005480696.sh
+chmod 755 /tmp/ptconfigure-temp-script-56005480696.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-56005480696.sh Permissions
+Executing /tmp/ptconfigure-temp-script-56005480696.sh
+No passwd entry <span class="k">for </span>user <span class="s1">&#39;ubuntu&#39;</span>
+nohup: redirecting stderr to stdout
+total 92K
+drwxrwxrwt 10 root        root        4.0K Mar 20 17:06 .
+drwxr-xr-x 29 root        root        4.0K Mar 20 16:18 ..
+-rw-------  1 karunakaran karunakaran 4.1K Mar 20 11:27 .bamficonKEKGVX
+-rw-------  1 karunakaran karunakaran 4.1K Mar 20 11:27 .bamficonMKENVX
+-rw-------  1 karunakaran karunakaran 4.1K Mar 20 10:07 .bamficonN2NXVX
+-rw-------  1 karunakaran karunakaran 4.1K Mar 20 11:27 .bamficonSM8KVX
+-rwxr-xr-x  1 root        root          58 Mar 20 17:06 ptconfigure-temp-script-56005480696.sh
+-rw-------  1 karunakaran karunakaran    0 Mar 20 09:50 config-err-UrGst6
+-rw-------  1 root        root        1000 Mar 20 09:49 .configtest.KiQIacNN
+-rw-r--r--  1 root        root          33 Mar 20 09:50 cxtracker.start.log
+drwxr-xr-x  2 root        root        4.0K Mar 20 09:50 hsperfdata_root
+drwxrwxrwt  2 root        root        4.0K Mar 20 09:50 .ICE-unix
+-rw-r--r--  1 root        root           3 Mar 20 15:40 kk.txt
+drwx------  2 karunakaran karunakaran 4.0K Mar 20 16:58 luh3hawd.tmp
+srwxrwxrwx  1 mongodb     nogroup        0 Mar 20 09:49 mongodb-27017.sock
+drwx------  2 karunakaran karunakaran 4.0K Mar 20 10:07 .org.chromium.Chromium.VRBmwX
+srwxrwxr-x  1 karunakaran karunakaran    0 Mar 20 10:06 OSL_PIPE_1000_SingleOfficeIPC_8a32f718ac801a6e525d3030e0878e45
+-rw-r--r--  1 root        root           0 Mar 20 15:42 papyrusfile
+drwx------  2 karunakaran karunakaran 4.0K Mar 20 14:33 plugtmp
+drwxr-xr-x  2 root        root        4.0K Mar 20 14:42 ServerBlocktemp
+-rw-rw-r--  1 karunakaran karunakaran    0 Mar 20 09:50 unity_support_test.0
+drwxr-xr-x  2 root        root        4.0K Mar 20 13:02 vhosttemp
+-r--r--r--  1 root        root          11 Mar 20 09:49 .X0-lock
+drwxrwxrwt  2 root        root        4.0K Mar 20 09:49 .X11-unix
+Temp File /tmp/ptconfigure-temp-script-56005480696.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+Single App Installer:
+--------------------------------------------
+
+RunCommand: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>

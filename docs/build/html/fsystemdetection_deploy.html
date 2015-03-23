@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -127,6 +127,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -147,9 +148,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -184,7 +185,7 @@
 
        - detect
        Detects the Operating System
-       example: ptconfigure system-detection detect
+       example: ptdeploy system-detection detect
 
 ------------------------------
 End Help
@@ -196,7 +197,7 @@ End Help
 <h2>détecter<a class="headerlink" href="#detecter" title="Permalink to this headline">¶</a></h2>
 <p>Détecter utilisé pour détecter les paramètres du système. En utilisant une seule commande, l&#8217;utilisateur peut obtenir toutes les informations sur l&#8217;application du système.
 La commande utilisée pour la détection du système est donnée ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure systemdetection detect
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy systemdetection detect
 </pre></div>
 </div>
 <p>Après avoir entré la commande ci-dessus, le processus de détection du système commence. Pendant la détection du système de l&#8217;information suivante au sujet de la machine correspondante sont signalés:</p>
@@ -211,7 +212,7 @@ La commande utilisée pour la détection du système est donnée ci-dessous.</p>
 <li>Adresse IP 1.</li>
 </ul>
 <p>Enfin, après la détection des informations concernant les caractéristiques mentionnées ci-dessus sont clairement signalé. La capture d&#8217;écran suivante vous montre sur le processus de détection du système.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure system-detection detect
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy system-detection detect
 ******************************
 
 

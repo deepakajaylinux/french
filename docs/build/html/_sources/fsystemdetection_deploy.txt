@@ -32,7 +32,7 @@ La syntaxe de la non cas de commande d'aide sensible qui ajoute un avantage pour
 
         - detect
         Detects the Operating System
-        example: ptconfigure system-detection detect
+        example: ptdeploy system-detection detect
 
  ------------------------------
  End Help
@@ -47,7 +47,7 @@ La commande utilisée pour la détection du système est donnée ci-dessous.
 
 .. code-block:: bash
 
-		ptconfigure systemdetection detect
+		ptdeploy systemdetection detect
 
 Après avoir entré la commande ci-dessus, le processus de détection du système commence. Pendant la détection du système de l'information suivante au sujet de la machine correspondante sont signalés:
 
@@ -65,7 +65,7 @@ Enfin, après la détection des informations concernant les caractéristiques me
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure system-detection detect
+ kevell@corp:/# ptdeploy system-detection detect
  ******************************
 
 

@@ -60,6 +60,19 @@ Lorsque l'utilisateur a besoin pour démarrer le serveur Nginx, la commande ci-d
 Avant l'exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez 'N'.
 
 
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol start 
+
+ Do you want to Start Nginx? (Y/N) 
+ y 
+ Starting Nginx... 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
 Arrêtez
 ----------------
 
@@ -71,7 +84,17 @@ Lorsque l'utilisateur doit arrêter le serveur Nginx, la commande ci-dessous don
 
 Avant l'exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez 'N'.
 
+.. code-block:: bash
 
+ kevell@corp:/# ptdeploy nginxcontrol stop 
+
+ Do you want to Stop Nginx? (Y/N) 
+ y 
+ Stopping Nginx... 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
 
 redémarrage
 ----------------
@@ -84,6 +107,19 @@ Lorsque l'utilisateur a besoin de redémarrer le serveur Nginx (quand il ya des 
 
 Avant l'exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez 'N'.
 
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol restart 
+
+ Do you want to Restart Nginx? (Y/N) 
+ y 
+ Restarting Nginx... 
+ * Restarting nginx nginx 
+   ...fail! 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
 
 recharger
 ----------------
@@ -98,6 +134,19 @@ Lorsque l'utilisateur doit Recharger le serveur Nginx sans redémarrer, la comma
 
 Avant l'exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez 'N'.
 
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol reload
+
+ Do you want to Reload Nginx? (Y/N) 
+ y
+ Reloading Nginx...
+ * Reloading nginx configuration nginx
+   ...done.
+ ******************************
+
+ 1Nginx Controller Finished
+ ******************************
 
 
 Alternative Paramètre

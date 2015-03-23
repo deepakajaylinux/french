@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -130,6 +130,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -150,9 +151,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -276,6 +277,28 @@ Starting Apache...
 ******************************
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol start --yes  --guess
+
+Starting Apache...
+* Starting web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol start --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Starting Apache...
+* Starting web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="fonction-d-arret">
 <h2>Fonction d&#8217;arrêt<a class="headerlink" href="#fonction-d-arret" title="Permalink to this headline">¶</a></h2>
@@ -289,12 +312,40 @@ Starting Apache...
 <p>Pour l&#8217;ubuntu apche2 est la valeur par défaut.</p>
 <p>Pour Cent OS httpd est la valeur par défaut.</p>
 <p>La capture d&#8217;écran ci-dessous vous montre à propos de la fonction d&#8217;arrêt et le but d&#8217;options guess imagée.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptdeploy apachecontrol stop --yes --guess
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop
+
+Do you want to Stop Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
 Stopping Apache...
 * Stopping web server apache2
 *
 ******************************
 
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop --yes  --guess
+
+Stopping Apache...
+* Stopping web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Stopping Apache...
+* Stopping web server apache2
+*
+******************************
 
 1Apache Controller Finished
 ******************************
@@ -310,12 +361,39 @@ Stopping Apache...
 </pre></div>
 </div>
 <p>L&#8217;utilisateur peut utiliser ce troisième type de syntaxe pour spécifier la valeur de la commande apache nécessaire. La capture d&#8217;écran comme ci-dessous illustre ce troisième type de syntaxe et processus de redémarrage fonction imagée.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptdeploy apachecontrol restart --yes --apache-command=&quot;apache2&quot;
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol restart
+
+Do you want to Restart Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
 Restarting Apache...
-AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globa lly to suppress this message
 * Restarting web server apache2
-â€‚
- ....done.
+  ...done.
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployapachecontrol restart --yes  --guess
+
+Restarting Apache...
+* Restarting web server apache2
+  ...done.
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployapachecontrol restart --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Restarting Apache...
+* Restarting web server apache2
+  ...done.
 ******************************
 
 
@@ -339,6 +417,45 @@ AH00558: apache2: Could not reliably determine the server&#39;s fully qualified 
 </pre></div>
 </div>
 <p>La fonction de rechargement effectue le rechargement du serveur Apache sans redémarrer.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol reload
+
+Do you want to Reload Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
+Reloading Apache Configuration...
+* Reloading web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol reload --yes  --guess
+
+Reloading Apache Configuration...
+* Reloading web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol reload --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Reloading Apache Configuration...
+* Reloading web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>

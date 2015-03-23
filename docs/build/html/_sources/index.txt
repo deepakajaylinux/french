@@ -19,8 +19,9 @@ Commands
    :maxdepth: 2
    
  
+
+ fjrush_main
  fptconfigure_main
  fptdeploy_main
- fjrush_main
  fpttest_main
  fptvirtualize_main

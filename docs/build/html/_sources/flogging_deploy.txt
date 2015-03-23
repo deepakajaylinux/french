@@ -126,6 +126,36 @@ au lieu de
 
 l'utilisateur peut ajouter ne importe quel texte à la partie du message de journal en fonction de leurs exigences.
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy logging log --php-log --log-message="Here is something logging to the console and error log" 
+
+ Install Logging? (Y/N) 
+ y 
+ ******************************* 
+ *   Golden Contact Computing  * 
+ *           Logging!          * 
+ ******************************* 
+ [Pharaoh Logging] Here is something logging to the console and error log 
+ [Pharaoh Logging] Here is something logging to the console and error log 
+
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.gcsoftshop.co.uk for more 
+ ****************************** 
+
+
+ Single App Installer: 
+ -------------------------------------------- 
+
+ No Data. 
+
+ ------------------------------ 
+ Installer Finished 
+ *********************** 
+
+
 avantages
 -----------
 

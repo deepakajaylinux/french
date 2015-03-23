@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -131,6 +131,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -151,9 +152,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -224,6 +225,30 @@ End Help
 </pre></div>
 </div>
 <p>après avoir tapé la commande, il permet à l&#8217;utilisateur de démarrer le fonctionnement du serveur lighttpd.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol start
+
+Do you want to Start Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Starting Lighttpd...
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol start --yes
+
+Starting Lighttpd...
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="arretez">
 <h2>Arrêtez<a class="headerlink" href="#arretez" title="Permalink to this headline">¶</a></h2>
@@ -232,6 +257,30 @@ End Help
 </pre></div>
 </div>
 <p>Après l&#8217;entrée que la commande ci-dessus, le service se arrête la fonction.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol stop
+
+Do you want to Stop Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Stopping Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol stop --yes
+
+Stopping Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="redemarrage">
 <h2>redémarrage<a class="headerlink" href="#redemarrage" title="Permalink to this headline">¶</a></h2>
@@ -240,11 +289,63 @@ End Help
 </pre></div>
 </div>
 <p>After input as the above command, the service restart the lighttpd service.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol restart
+
+Do you want to Restart Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Restarting Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol restart --yes
+
+Restarting Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="reload">
 <h2>Reload<a class="headerlink" href="#reload" title="Permalink to this headline">¶</a></h2>
 <p>Reload means things are changing. The lighttpd is undergoing an overhaul and a clean-up. It facilitates the reuse of lighttpd and services. Without kill the process it can reload lighttpd. The following command assis the user to reload. Along with the command if the user use yes.. options without asking any questions automatically it can function.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol reloadAprès l&#39;entrée que la commande ci-dessus, le service redémarrez le service lighttpd.
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol reload
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol reload
+
+Do you want to Reload Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Reloading Lighttpd...
+* Reloading web server configuration lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol reload --yes
+
+Reloading Lighttpd...
+* Reloading web server configuration lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
 </pre></div>
 </div>
 </div>

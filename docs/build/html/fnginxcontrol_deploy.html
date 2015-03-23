@@ -80,9 +80,9 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -130,6 +130,7 @@
     <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -150,9 +151,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="fptdeploy_main.html">PTDeploy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fpttest_main.html">PTTest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
@@ -212,6 +213,17 @@ End Help
 </pre></div>
 </div>
 <p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxcontrol start
+
+Do you want to Start Nginx? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Starting Nginx...
+******************************
+
+1Nginx Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="arretez">
 <h2>Arrêtez<a class="headerlink" href="#arretez" title="Permalink to this headline">¶</a></h2>
@@ -220,6 +232,17 @@ End Help
 </pre></div>
 </div>
 <p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxcontrol stop
+
+Do you want to Stop Nginx? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Stopping Nginx...
+******************************
+
+1Nginx Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="redemarrage">
 <h2>redémarrage<a class="headerlink" href="#redemarrage" title="Permalink to this headline">¶</a></h2>
@@ -228,6 +251,19 @@ End Help
 </pre></div>
 </div>
 <p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxcontrol restart
+
+Do you want to Restart Nginx? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Restarting Nginx...
+* Restarting nginx nginx
+  ...fail!
+******************************
+
+1Nginx Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="recharger">
 <h2>recharger<a class="headerlink" href="#recharger" title="Permalink to this headline">¶</a></h2>
@@ -236,6 +272,19 @@ End Help
 </pre></div>
 </div>
 <p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxcontrol reload
+
+Do you want to Reload Nginx? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Reloading Nginx...
+* Reloading nginx configuration nginx
+  ...done.
+******************************
+
+1Nginx Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="alternative-parametre">
 <h2>Alternative Paramètre<a class="headerlink" href="#alternative-parametre" title="Permalink to this headline">¶</a></h2>
