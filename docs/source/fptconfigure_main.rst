@@ -672,6 +672,7 @@ Jouer avec Modules ptconfigure
    fsshkeyinstall
    fsshkeystore
    fstandardtools 
+   fstoryplayer
    fsudonopass
    fsvn
    fsystemdetection
