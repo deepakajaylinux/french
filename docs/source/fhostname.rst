@@ -84,6 +84,25 @@ Ce module est un processus perceptible pour afficher le nom d'hôte sous ptconfi
 
 Après clé dans la commande, il montre le nom d'hôte.
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure hostname show
+
+ ******************************
+
+
+ Hostname Modifications:
+ --------------------------------------------
+
+ Hostname: Success
+ my-laptop
+
+
+ ------------------------------
+ Hostname Mods Finished
+ ******************************
+
+
 option
 ------------
 .. cssclass:: table-bordered
