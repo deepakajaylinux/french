@@ -218,6 +218,7 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
  fgitclone_deploy
  fgrafana_deploy
  fhosteditor_deploy
+ finvoke_deploy
  fjoomla_deploy 
  flighttpdcontrol_deploy
  flogging_deploy

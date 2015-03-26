@@ -576,6 +576,7 @@ Jouer avec Modules ptconfigure
    fcopy
    fdigitalocean
    fdnsify
+   fdocker
    fdevelopertools
    fencryption
    fenvironmentconfig
@@ -599,6 +600,7 @@ Jouer avec Modules ptconfigure
    finstallpackage
    fintellij
    finvoke
+   fjasmine
    fjava
    fjenkins
    fjenkinsplugins
@@ -665,6 +667,7 @@ Jouer avec Modules ptconfigure
    fseleniumserver
    fservice
    fsftp_configure
+   fsimpletest
    fskipfish
    fsshencrypt
    fsshharden
@@ -688,5 +691,6 @@ Jouer avec Modules ptconfigure
    fvnc
    fvncpassword
    fwireframesketcher
+   fxcache
    fxvfb
    fzendserver
