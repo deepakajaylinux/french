@@ -206,37 +206,96 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure SFTP put
 </pre></div>
 </div>
-<p>Après avoir donné la commande alors le système se poser la question,</p>
-<p>Installez groupe de serveurs SFTP? Y / N</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur en tant que Y, puis</p>
-<p>Section de temporisation SSh?</p>
-<p>L&#8217;utilisateur doit entrer la valeur</p>
-<p>Se il vous plaît entrer dans le port de ssh à distance</p>
-<p>La valeur par défaut est 22. L&#8217;utilisateur peut entrer ne importe quelle valeur</p>
-<p>Entrez IP du serveur hôte?</p>
-<p>L&#8217;utilisateur doit entrer un nom d&#8217;utilisateur, mot de passe, et le chemin clé.</p>
-<p>Ajouter un autre serveur?</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur comme Y il doit entrer un nouveau nom de serveur</p>
-<p>Alors tout sera connecté.</p>
-<p>Si l&#8217;entrée de l&#8217;utilisateur comme N nom de serveur précédente peut être consultée.</p>
-<p>Vous guidera La capture d&#8217;écran suivante.</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
 
-SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+SFTP on Server group? (Y/N)
+y
 Please Enter SSH Timeout in seconds
-90
+100
 Please Enter remote SSH Port
 22
-Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
-N
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
-Enter <span class="nb">local source </span>file path
-/root/vv
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.4
+Please Enter SSH User
+murali
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.4 failed.
+Enter local source file path
+/home/kevells/Desktop/graphs
 Enter remote target file path
-/root/gg/vv
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
+/home/murali/Desktop/graphs
+[Pharaoh Logging] Opening SFTP Connections...
+[192.168.1.4]Connection failure. Will not execute commands on this box..
+[Pharaoh Logging] All SFTP Puts Completed
+******************************
+
+
+
+SFTP Put: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp get
+
+SFTP on Server group? (Y/N)
+y
+Please Enter SSH Timeout in seconds
+100
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.4
+Please Enter SSH User
+murali
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.4 failed.
+Enter remote source file path
+/home/murali/Desktop/graphs
+Enter local target file path
+/hoem/kevells/Desktop/graphs1
+[Pharaoh Logging] Opening SFTP Connections...
+[Pharaoh Logging] [192.168.1.4] Executing SFTP Get...
+[Pharaoh Logging] No SFTP Object
+[Pharaoh Logging]
+[Pharaoh Logging] [192.168.1.4] SFTP Get Completed...
+[Pharaoh Logging] All SFTP Gets Completed
+******************************
+
+
+Shell Result: Success
+SFTP Get
+
+------------------------------
+Installer Finished
 ******************************
 </pre></div>
 </div>

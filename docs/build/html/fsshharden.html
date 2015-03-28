@@ -237,27 +237,22 @@ d&#8217;installation, vous pouvez entrer en N. Quitter</td>
 </tbody>
 </table>
 <p>Si l&#8217;utilisateur procède à l&#8217;installation de SSH qui permet securifying durcir le compte de ssh d&#8217;utilisateurs obtient lancé. Bien que le processus d&#8217;exécution se produit, la configuration de sshd se modifie qui interdit ssh root login et ainsi que sshd config est modifié qui interdit mot de passe basé connexion ssh. Enfin, il redémarre le service ssh et afficher les résultats de modifications accomplies Chut Harden. La capture d&#8217;écran ci-dessous explique le processus mentionné ci-dessus imagée.</p>
-<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure ssh-harden securify
-
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sshharden securify
 Install Ssh Hardening? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /etc/ssh/sshd_config
-PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 175
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /etc/ssh/sshd_config
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /etc/ssh/sshd_config
-PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 149
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Writing File /etc/ssh/sshd_config
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> /etc/ssh/sshd_config modified to disallow root ssh login
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /etc/ssh/sshd_config
-PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 175
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /etc/ssh/sshd_config
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /etc/ssh/sshd_config
-PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 149
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Writing File /etc/ssh/sshd_config
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> /etc/ssh/sshd_config modified to disallow password based ssh login
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting ssh service
 ssh stop/waiting
-ssh start/running, process 17375
+ssh start/running, process 12828
 ******************************
 
 

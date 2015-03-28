@@ -69,7 +69,8 @@ Après avoir saisi la commande ci-dessus, les opérations suivantes se produit c
  +--------------------------------+----------------------------------------------+---------------+------------------------------------------+
 
 
-Si l'utilisateur procède le processus d'installation les opérations suivantes se produit comme indiqué dans le format tabulaire.
+
+Si l'utilisateur exécute le processus d'installation et de désinstallation du suivant se produit comme le montre sous forme de tableau .
 
 .. cssclass:: table-bordered
 
@@ -131,6 +132,33 @@ Enfin, l'installation de Jrush est terminée. La capture d'écran ci-dessous ill
 
  Single App Installer:
  --------------------------------------------
+ JRush: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure jRush uninstall
+ Un Install JRush - Joomla Command Line ? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         JRush CLI !!        *
+ *******************************
+ What is the program data directory? Found "/opt/jrush" - use this? (Enter nothing for yes, no end slash)
+ 
+ What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
+ 
+ Program Executor Deleted if existed
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Uninstaller:
+ ------------------------------
  JRush: Success
  ------------------------------
  Installer Finished
