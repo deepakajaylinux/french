@@ -209,6 +209,7 @@ Voyons, comment utiliser l'outil de ptdeploy, d'abord, tapez simplement
    
  fapachecontrol_deploy
  fapachevhosteditor_deploy
+ fappsettings_deploy
  fautopilot_deploy
  fdapperfy_deploy
  fdbconfigure_deploy
