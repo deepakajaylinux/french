@@ -608,7 +608,9 @@ Jouer avec Modules ptconfigure
    fjetty
    fjmeter
    fjrush
+   fkvm
    flighttpdserver
+   floadrunner
    flogging_cleo
    fmediatools
    fmemcached
@@ -619,6 +621,7 @@ Jouer avec Modules ptconfigure
    fmongodb
    fmysqladmin 
    fmysqlserver
+   fmysqlservergalera
    fmysqltool
    fnetbeans
    fnetworktools
