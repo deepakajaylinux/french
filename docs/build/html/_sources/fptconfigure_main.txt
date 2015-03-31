@@ -595,6 +595,7 @@ Jouer avec Modules ptconfigure
    fgittools
    fgimp
    fhaproxy
+   fhardycssregression
    fhhvm
    fhostname
    finstallpackage
@@ -608,6 +609,7 @@ Jouer avec Modules ptconfigure
    fjetty
    fjmeter
    fjrush
+   fjsunit
    fkvm
    flighttpdserver
    floadrunner

@@ -176,7 +176,8 @@
 </pre></div>
 </div>
 <p>Après les entrées de commande ci-dessus, il commence à fonctionner pour envelopper. Il catéchèse les fonctions dans les captures d&#8217;écran.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure packagemanager <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PackageManager <span class="nb">help</span>
+
 ******************************
 
 
@@ -186,15 +187,15 @@
 
        - pkg-install
        Installs a Package through a Package Manager
-       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+       example: ptconfigure package-manager pkg-install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --packager-name<span class="o">=</span><span class="s2">&quot;apt&quot;</span>
 
        - pkg-ensure
        Installs a Package through a Package Manager
-       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+       example: ptconfigure package-manager pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --packager-name<span class="o">=</span><span class="s2">&quot;apt&quot;</span>
 
        - pkg-remove
        Removes a Package through a Package Manager
-       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+       example: ptconfigure package-manager pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --packager-name<span class="o">=</span><span class="s2">&quot;apt&quot;</span>
 
  A package manager wrapper that will allow you to install packages on any system
 
@@ -217,7 +218,33 @@ End Help
 </div>
 <p>Après dynamiser la commande il catéchiser entrée.</p>
 <p>Lorsque l&#8217;entrée d&#8217;utilisateur comme il sera automatiquement oui installer PackageManager avec vérification du système. Si pas quitter l&#8217;installation. La capture d&#8217;écran suivante démontre PackageManager et ses fonctions.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure package-manager pkg-install --package-name<span class="o">=</span><span class="s2">&quot;ssh&quot;</span> --packager-name<span class="o">=</span><span class="s2">&quot;apt&quot;</span>
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ssh
+0 upgraded, 1 newly installed, 0 to remove and 87 not upgraded.
+Need to get 0 B/1,106 B of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+Selecting previously unselected package ssh.
+<span class="o">(</span>Reading database ... 198126 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../ssh_1%3a6.6p1-2ubuntu2_all.deb ...
+Unpacking ssh <span class="o">(</span>1:6.6p1-2ubuntu2<span class="o">)</span> ...
+Setting up ssh <span class="o">(</span>1:6.6p1-2ubuntu2<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package ssh from the Packager Apt executed correctly
+******************************
+
+
+Apt Modifications:
+--------------------------------------------
+
+Package Manager: Success
+
+------------------------------
+Apt Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -225,6 +252,52 @@ End Help
 <h2>Pkg-assurer<a class="headerlink" href="#pkg-assurer" title="Permalink to this headline">¶</a></h2>
 <p>Pkg assurer un système service se exécute. En cas de non exécution démarrer d&#8217;autre ne essayez pas. Grâce à cette commande, l&#8217;utilisateur peut déterminer si le système fonctionne ou ralenti. Des commandes simples sont faciles à manipuler. La commande suivante permet d&#8217;assurer, par le gestionnaire de paquets.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager ensure
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure package-manager pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --packager-name<span class="o">=</span><span class="s2">&quot;apt&quot;</span>
+
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package mysql from the Packager apt is already installed, so not installing
+******************************
+
+
+Apt Modifications:
+--------------------------------------------
+
+Package Manager: Success
+
+------------------------------
+Apt Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure package-manager pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;ssh&quot;</span> --packager-name<span class="o">=</span><span class="s2">&quot;apt&quot;</span>
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ ssh
+0 upgraded, 1 newly installed, 0 to remove and 87 not upgraded.
+Need to get 0 B/1,106 B of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+Selecting previously unselected package ssh.
+<span class="o">(</span>Reading database ... 198126 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../ssh_1%3a6.6p1-2ubuntu2_all.deb ...
+Unpacking ssh <span class="o">(</span>1:6.6p1-2ubuntu2<span class="o">)</span> ...
+Setting up ssh <span class="o">(</span>1:6.6p1-2ubuntu2<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package ssh from the Packager Apt executed correctly
+******************************
+
+
+Apt Modifications:
+--------------------------------------------
+
+Package Manager: Success
+
+------------------------------
+Apt Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
