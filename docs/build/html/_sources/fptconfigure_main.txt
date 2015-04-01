@@ -594,6 +594,7 @@ Jouer avec Modules ptconfigure
    fgitlab
    fgittools
    fgimp
+   fgo
    fhaproxy
    fhardycssregression
    fhhvm
@@ -648,6 +649,7 @@ Jouer avec Modules ptconfigure
    fphpedit
    fphpmd
    fphpmodule
+   fphpspec
    fphpssh
    fphpstorm
    fphpunit
@@ -699,3 +701,4 @@ Jouer avec Modules ptconfigure
    fxcache
    fxvfb
    fzendserver
+   fzendstudio

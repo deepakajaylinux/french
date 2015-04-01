@@ -96,6 +96,7 @@
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
+<li><a class="reference internal" href="#desinstallation">désinstallation</a></li>
 <li><a class="reference internal" href="#options">Options</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
@@ -175,11 +176,118 @@
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure Netbeans <span class="nb">help</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure netbeans <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install and uninstall NetBeans - IDE.
+
+ NetBeans, Netbeans, netbeans
+
+       - install
+       Installs a version of NetBeans.
+       example: ptconfigure netbeans install
+
+       - uninstall
+       Uninstalls a version of NetBeans.
+       example: ptconfigure netbeans uninstall
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Cette commande aide à l&#8217;installation dans le système Netbeans. La commande ci-dessous donnée exécuter le processus d&#8217;installation.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure netbeans install
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure netbeans install
+Install NetBeans-8.0? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         !!NetBeans!!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+
+Enter <span class="o">(</span>1<span class="o">)</span> to Install NetBeans in Silent:
+Enter <span class="o">(</span>2<span class="o">)</span> to install NetBeans in UserFriendly:
+1
+Creating /tmp/ptconfigure-temp-script-53829501149.sh
+chmod 755 /tmp/ptconfigure-temp-script-53829501149.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-53829501149.sh Permissions
+Executing /tmp/ptconfigure-temp-script-53829501149.sh
+--2015-04-01 11:42:15--  http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-linux.sh
+Resolving download.netbeans.org <span class="o">(</span>download.netbeans.org<span class="o">)</span>... 137.254.120.26
+Connecting to download.netbeans.org <span class="o">(</span>download.netbeans.org<span class="o">)</span>|137.254.120.26|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://dlc-cdn.sun.com/netbeans/8.0/final/bundles/netbeans-8.0-linux.sh <span class="o">[</span>following<span class="o">]</span>
+--2015-04-01 11:42:16--  http://dlc-cdn.sun.com/netbeans/8.0/final/bundles/netbeans-8.0-linux.sh
+Resolving dlc-cdn.sun.com <span class="o">(</span>dlc-cdn.sun.com<span class="o">)</span>... 23.205.118.80, 23.205.118.73
+Connecting to dlc-cdn.sun.com <span class="o">(</span>dlc-cdn.sun.com<span class="o">)</span>|23.205.118.80|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 212403200 <span class="o">(</span>203M<span class="o">)</span> <span class="o">[</span>application/x-sh<span class="o">]</span>
+Saving to: â€˜netbeans-8.0-linux.shâ€™
+
+100%<span class="o">[===========================================================================================</span>&gt;<span class="o">]</span> 21,24,03,200 78.0KB/s   in 78m 40s
+
+2015-04-01 13:00:58 <span class="o">(</span>43.9 KB/s<span class="o">)</span> - â€˜netbeans-8.0-linux.shâ€™ saved <span class="o">[</span>212403200/212403200<span class="o">]</span>
+
+Temp File /tmp/ptconfigure-temp-script-53829501149.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+NetBeans: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="desinstallation">
+<h2>désinstallation<a class="headerlink" href="#desinstallation" title="Permalink to this headline">¶</a></h2>
+<p>Cette commande aide à la désinstallation Netbeans dans le système . La commande ci-dessous donnée exécuter le processus d&#8217;installation .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure netbeans uninstall
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure netbeans uninstall
+
+Uninstall NetBeans-8.0? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         !!NetBeans!!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-80402838784.sh
+chmod 755 /tmp/ptconfigure-temp-script-80402838784.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-80402838784.sh Permissions
+Executing /tmp/ptconfigure-temp-script-80402838784.sh
+Configuring the installer...
+Searching <span class="k">for </span>JVM on the system...
+Extracting installation data...
+Running the installer wizard...
+Temp File /tmp/ptconfigure-temp-script-80402838784.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+NetBeans: Success
+------------------------------
+Installer Finished
+******************************
 </pre></div>
 </div>
 </div>

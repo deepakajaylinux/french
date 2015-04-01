@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PHPEdit &mdash; kevellfrench 1.0.1 documentation</title>
+    <title>PHPSpec &mdash; kevellfrench 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="kevellfrench 1.0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="fptconfigure_main.html" />
-    <link rel="next" title="PHPMD" href="fphpmd.html" />
-    <link rel="prev" title="PHPEclipse" href="fphpeclipse.html" />
+    <link rel="next" title="Php SSH" href="fphpssh.html" />
+    <link rel="prev" title="PHPModules" href="fphpmodule.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -92,12 +92,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">PHPEdit</a><ul>
+<li><a class="reference internal" href="#">PHPSpec</a><ul>
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#installation">installation</a></li>
-<li><a class="reference internal" href="#desinstallation">désinstallation</a></li>
-<li><a class="reference internal" href="#option">Option</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -109,10 +107,10 @@
             
               
                 
-  <li><a href="fphpeclipse.html"
-         title="Previous Chapter: PHPEclipse">&laquo; PHPEclipse</a></li>
-  <li><a href="fphpmd.html"
-         title="Next Chapter: PHPMD">PHPMD &raquo;</a></li>
+  <li><a href="fphpmodule.html"
+         title="Previous Chapter: PHPModules">&laquo; PHPModules</a></li>
+  <li><a href="fphpssh.html"
+         title="Next Chapter: Php SSH">Php SSH &raquo;</a></li>
               
             
             
@@ -120,7 +118,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/fphpedit.txt"
+  <a href="_sources/fphpspec.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -162,31 +160,31 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="phpedit">
-<h1>PHPEdit<a class="headerlink" href="#phpedit" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="phpspec">
+<h1>PHPSpec<a class="headerlink" href="#phpspec" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p>Module de PHPEdit est un environnement complet de développement intégré pour PHP. Beaucoup plus qu&#8217;une simple édition de PHP, il permet à l&#8217;utilisateur de réaliser leurs projets de manière conviviale et efficace, avec un seul outil intégrant toutes les fonctionnalités que l&#8217;utilisateur aura besoin de la conception de leurs projets, leur documentation, leur déploiement. Il se approprier avec Ubuntu et CentOS.</p>
+<p>PHPSpec est un outil de conception qui peut vous aider à écrire du code PHP propre et de travail en utilisant le comportement ou le développement piloté par BDD . BDD est une technique dérivé de développement de test et unième . PHPSpec vous aide à décrire le comportement interne de votre application , par l&#8217;écriture de petits &#8220;specs &#8221; dans le langage PHP - donc SpecBDD . Ces spécifications sont des essais que votre code a le comportement désiré . PHPSpec répond au comportement dans le niveau inférieur , à partir de l&#8217; intérieur des classes .</p>
 </div>
 <div class="section" id="commande-aide">
 <h2>Commande Aide<a class="headerlink" href="#commande-aide" title="Permalink to this headline">¶</a></h2>
-<p>La commande help guide les utilisateurs au sujet de l&#8217;objet et ainsi que sur les options qui sont inclus dans le module de PHPEdit. Il énumère les alternatives aux paramètres du module PHPEdit. Il décrit également la syntaxe pour l&#8217;installation du module PHPEdit. La commande d&#8217;aide pour le module PHPEdit est représentée ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phpedit <span class="nb">help</span>
+<p>La commande help guide les utilisateurs au sujet de l&#8217;objet et ainsi que sur les options qui sont inclus dans le module PHPSpec . il a également décrit la syntaxe pour l&#8217;installation du module phpspec . La commande d&#8217;aide pour le module phpspec est représentée ci-dessous .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure phpspec <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La syntaxe pour déclarer la commande d&#8217;aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d&#8217;écran ci-dessous vous visualiser sur la commande d&#8217;aide en vertu de PHPEdit.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPEdit <span class="nb">help</span>
+<p>La représentation picturale de la commande ci-dessus est listé ci-dessous ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpspec <span class="nb">help</span>
 
 ******************************
 
 
- This <span class="nb">command </span>allows you to update PHPEdit.
+ This <span class="nb">command </span>allows you to install PHPSpec from a GC Repo.
 
- PHP-Edit, phpedit, PHPEdit
+ PHPSpec
 
        - install
-       Installs the latest version of PHPEdit
-       example: ptconfigure phpedit install
+       Installs Phpspec
+       example: ptconfigure phpspec install
 
 ------------------------------
 End Help
@@ -196,40 +194,155 @@ End Help
 </div>
 <div class="section" id="installation">
 <h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>PHPEdit est livré avec beaucoup d&#8217;extensions, les cadres, les fichiers d&#8217;aide et des outils, il est livré dans un programme d&#8217;installation qui peut être personnalisé à l&#8217;utilisateur needs.However costumes, parce PHPEdit est en constante évolution, avec de nouvelles fonctionnalités et correctifs de maintenance, une mise à jour automatique système est également disponible, pour aider à garder au courant des derniers communiqués de PHPEdit effort. la commande utilisée pour l&#8217;installation de ce module comme suit,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phpedit install
+<p>La commande utilisée pour l&#8217;installation du module de phpspec sur le terminal est listé ci-dessous ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure phpspec install
 </pre></div>
 </div>
-<p>La capture d&#8217;écran fait clair sur ce module.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpedit install
-Install PHPEdit? <span class="o">(</span>Y/N<span class="o">)</span>
+<p>La représentation picturale de la commande ci-dessus est listé ci-dessous ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpspec install
+
+Install PHPSpec? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
 *        Pharaoh Tools        *
-*         PHPEdit!        *
+*         PHPSpec!        *
 *******************************
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Suggested packages:
- bluefish-dbg libxml2-utils tidy weblint-perl weblint
-The following NEW packages will be installed:
- bluefish
-0 upgraded, 1 newly installed, 0 to remove and 187 not upgraded.
-Need to get 0 B/243 kB of archives.
-After this operation, 762 kB of additional disk space will be used.
-Selecting previously unselected package bluefish.
-<span class="o">(</span>Reading database ... 196191 files and directories currently installed.<span class="o">)</span>
-Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
-Unpacking bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
-Rebuilding /usr/share/applications/bamf-2.index...
-Setting up bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bluefish from the Packager Apt executed correctly
+Creating /tmp/ptconfigure-temp-script-55050674265.sh
+chmod 755 /tmp/ptconfigure-temp-script-55050674265.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-55050674265.sh Permissions
+Executing /tmp/ptconfigure-temp-script-55050674265.sh
+Cloning into <span class="s1">&#39;phpspec&#39;</span>...
+remote: Counting objects: 13282, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>177/177<span class="o">)</span>, <span class="k">done</span>.
+remote: Total 13282 <span class="o">(</span>delta 105<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 13084
+Receiving objects: 100% <span class="o">(</span>13282/13282<span class="o">)</span>, 3.01 MiB | 61.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>6944/6944<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+--2015-03-31 17:39:51--  http://getcomposer.org/composer.phar
+Resolving getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>... 87.98.253.108
+Connecting to getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>|87.98.253.108|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1075150 <span class="o">(</span>1.0M<span class="o">)</span> <span class="o">[</span>application/octet-stream<span class="o">]</span>
+Saving to: â€˜composer.pharâ€™
+
+100%<span class="o">[============================================================================================</span>&gt;<span class="o">]</span> 10,75,150   51.1KB/s   in 39s
+
+2015-03-31 17:40:30 <span class="o">(</span>27.2 KB/s<span class="o">)</span> - â€˜composer.pharâ€™ saved <span class="o">[</span>1075150/1075150<span class="o">]</span>
+
+PHP Warning:  Module <span class="s1">&#39;mcrypt&#39;</span> already loaded in Unknown on line 0
+Loading composer repositories with package information
+Installing dependencies <span class="o">(</span>including require-dev<span class="o">)</span>
+  - Installing phpspec/php-diff <span class="o">(</span>v1.0.2<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing sebastian/recursion-context <span class="o">(</span>1.0.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/finder <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/process <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing phpdocumentor/reflection-docblock <span class="o">(</span>2.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/class-loader <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/yaml <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/translation <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/event-dispatcher <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/dependency-injection <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/filesystem <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/config <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/console <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing behat/transliterator <span class="o">(</span>v1.0.1<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing behat/gherkin <span class="o">(</span>v4.3.0<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing behat/behat <span class="o">(</span>v3.0.15<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing doctrine/instantiator <span class="o">(</span>1.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/exporter <span class="o">(</span>1.2.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/diff <span class="o">(</span>1.2.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/comparator <span class="o">(</span>1.1.1<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpspec/prophecy <span class="o">(</span>1.4.0<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing bossa/phpspec2-expect <span class="o">(</span>1.0.3<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing sebastian/version <span class="o">(</span>1.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/global-state <span class="o">(</span>1.0.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/environment <span class="o">(</span>1.2.1<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-text-template <span class="o">(</span>1.2.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/phpunit-mock-objects <span class="o">(</span>2.3.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-timer <span class="o">(</span>1.0.5<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-token-stream <span class="o">(</span>1.4.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-file-iterator <span class="o">(</span>1.3.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-code-coverage <span class="o">(</span>2.0.15<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/phpunit <span class="o">(</span>4.5.1<span class="o">)</span>
+   Downloading: 100%
+
+phpdocumentor/reflection-docblock suggests installing dflydev/markdown <span class="o">(</span>~1.0<span class="o">)</span>
+phpdocumentor/reflection-docblock suggests installing erusev/parsedown <span class="o">(</span>~1.0<span class="o">)</span>
+symfony/translation suggests installing psr/log <span class="o">(</span>To use logging capability in translator<span class="o">)</span>
+symfony/event-dispatcher suggests installing symfony/http-kernel <span class="o">()</span>
+symfony/dependency-injection suggests installing symfony/proxy-manager-bridge <span class="o">(</span>Generate service proxies to lazy load them<span class="o">)</span>
+symfony/console suggests installing psr/log <span class="o">(</span>For using the console logger<span class="o">)</span>
+behat/behat suggests installing behat/symfony2-extension <span class="o">(</span><span class="k">for </span>integration with Symfony2 web framework<span class="o">)</span>
+behat/behat suggests installing behat/yii-extension <span class="o">(</span><span class="k">for </span>integration with Yii web framework<span class="o">)</span>
+behat/behat suggests installing behat/mink-extension <span class="o">(</span><span class="k">for </span>integration with Mink testing framework<span class="o">)</span>
+sebastian/global-state suggests installing ext-uopz <span class="o">(</span>*<span class="o">)</span>
+phpunit/php-code-coverage suggests installing ext-xdebug <span class="o">(</span>&gt;<span class="o">=</span>2.2.1<span class="o">)</span>
+phpunit/phpunit suggests installing phpunit/php-invoker <span class="o">(</span>~1.1<span class="o">)</span>
+Writing lock file
+Generating autoload files
+Temp File /tmp/ptconfigure-temp-script-55050674265.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
@@ -238,104 +351,19 @@ Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span 
 
 Single App Installer:
 --------------------------------------------
-PHPEdit: Success
+PHPSpec: Success
 ------------------------------
 Installer Finished
 ******************************
 </pre></div>
 </div>
-</div>
-<div class="section" id="desinstallation">
-<h2>désinstallation<a class="headerlink" href="#desinstallation" title="Permalink to this headline">¶</a></h2>
-<p>La commande utilisée pour la désinstallation du module est listé ci-dessous ,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpedit install
-Install PHPEdit? <span class="o">(</span>Y/N<span class="o">)</span>
-y
-*******************************
-*        Pharaoh Tools        *
-*         PHPEdit!        *
-*******************************
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Suggested packages:
- bluefish-dbg libxml2-utils tidy weblint-perl weblint
-The following NEW packages will be installed:
- bluefish
-0 upgraded, 1 newly installed, 0 to remove and 187 not upgraded.
-Need to get 0 B/243 kB of archives.
-After this operation, 762 kB of additional disk space will be used.
-Selecting previously unselected package bluefish.
-<span class="o">(</span>Reading database ... 196191 files and directories currently installed.<span class="o">)</span>
-Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
-Unpacking bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
-Rebuilding /usr/share/applications/bamf-2.index...
-Setting up bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bluefish from the Packager Apt executed correctly
-... All <span class="k">done</span>!
-*******************************
-Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
-******************************
-
-
-Single App Installer:
---------------------------------------------
-PHPEdit: Success
-------------------------------
-Installer Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="option">
-<h2>Option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="table-bordered docutils">
-<colgroup>
-<col width="20%" />
-<col width="41%" />
-<col width="11%" />
-<col width="28%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">paramètres</th>
-<th class="head">paramètres alternatifs</th>
-<th class="head">options</th>
-<th class="head">commentaires</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Install phpedit? (Y/N)</td>
-<td>Au lieu de PHP-Edit, les alternatives suivantes
-peuvent également être utilisés: phpedit,PHPEdit</td>
-<td>Y</td>
-<td>L&#8217;utilisateur souhaite procéder
-le processus d&#8217;installation.</td>
-</tr>
-<tr class="row-odd"><td>Install phpedit? (Y/N)</td>
-<td>Au lieu de PHP-Edit, les alternatives suivantes
-peuvent également être utilisés: phpedit,PHPEdit</td>
-<td>N</td>
-<td>L&#8217;utilisateur souhaite quitter
-le processus d&#8217;installation.|</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Écrivez le code utilisateur plus rapide avec tous les assistants de code disponibles et des générateurs de code.</li>
-<li>Améliorer la qualité de vos projets avec le débogueur intégré, et le module de tests unitaires</li>
-<li>Déployer facilement avec un seul clic les projets utilisateur, et de travailler de façon transparente avec les fichiers distants</li>
-<li>Augmenter la productivité des utilisateurs avec leurs cadres favoris</li>
-<li>Code de l&#8217;intelligence est possible.</li>
-<li>Débogueur et profileur également disponible.</li>
-<li>Sensibilité non de cas agit un rôle vital dans ce module</li>
+<li>Contexte spécifique</li>
+<li>Attente</li>
+<li>La sortie est la documentation</li>
 </ul>
 </div>
 </div>
@@ -396,8 +424,8 @@ le processus d&#8217;installation.|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fphpedit.rst">
-          PHPEdit
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/fphpspec.rst">
+          PHPSpec
         </a> on GitHub.
       </li>
 

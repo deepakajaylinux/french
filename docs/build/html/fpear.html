@@ -95,13 +95,9 @@
 <li><a class="reference internal" href="#">Pear</a><ul>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#creer">créer</a></li>
-<li><a class="reference internal" href="#supprimer">supprimer</a></li>
-<li><a class="reference internal" href="#definir-mot-de-passe">Définir mot de passe</a></li>
-<li><a class="reference internal" href="#existe">existe</a></li>
-<li><a class="reference internal" href="#afficher-les-groupes">Afficher les groupes</a></li>
-<li><a class="reference internal" href="#ajouter-au-groupe">Ajouter au groupe</a></li>
-<li><a class="reference internal" href="#retirer-du-groupe">Retirer du groupe</a></li>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#ensure">Ensure</a></li>
 <li><a class="reference internal" href="#alternative-parametre">Alternative Paramètre</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
@@ -196,86 +192,95 @@
 
  Pear, pear
 
-       - create
-       Create a new system pear, overwriting <span class="k">if </span>it exists
-       example: ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       - install
+       Install
+       example: ptconfigure pear pkg-install --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - remove
-       Remove a system pear
-       example: ptconfigure pear remove --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       Remove
+       example: ptconfigure pear pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
-       - <span class="nb">set</span>-password
-       Set the password of a system pear
-       example: ptconfigure pear <span class="nb">set</span>-password --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
-
-       - exists
-       Check the existence of a pear
-       example: ptconfigure pear exists --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - show-groups
-       Show groups to which a pear belongs
-       example: ptconfigure pear show-groups --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - add-to-group
-       Add pear to a group
-       example: ptconfigure pear add-to-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-
-       - remove-from-group
-       Remove pear from a group
-       example: ptconfigure pear remove-from-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+       - ensure
+       Ensure
+       example: ptconfigure pear pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
 ------------------------------
 End Help
+</pre></div>
+</div>
+</div>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur devez installer une poire , la commande ci-dessous donnée exécuter le processus .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear pkg-install --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear pkg-install --package-name<span class="o">=</span><span class="s2">&quot;file&quot;</span>
+downloading File-1.4.1.tgz ...
+Starting to download File-1.4.1.tgz <span class="o">(</span>8,164 bytes<span class="o">)</span>
+.....done: 8,164 bytes
+install ok: channel://pear.php.net/File-1.4.1
+******************************
+
+
+Pear Modifications:
+--------------------------------------------
+
+Pear: Success
+
+------------------------------
+Pear Mods Finished
 ******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="creer">
-<h2>créer<a class="headerlink" href="#creer" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur a besoin de créer un nouveau système de poire ou doit remplacer l&#8217;existant, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear create - -pearname<span class="o">=</span>”somename”
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur doit supprimer une poire du système , la commande ci-dessous donnée exécuter le processus .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;file&quot;</span>
+pear/File <span class="o">(</span>version &gt;<span class="o">=</span> 1.4.0<span class="o">)</span> is required by installed package <span class="s2">&quot;pear/File_CSV&quot;</span>
+pear/File <span class="o">(</span>version &gt;<span class="o">=</span> 1.4.0<span class="o">)</span> is required by installed package <span class="s2">&quot;pear/File_Util&quot;</span>
+pear/File cannot be uninstalled, other installed packages depend on this package
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing Package file from the Packager Pear did not execute correctly
+******************************
+
+
+Pear Modifications:
+--------------------------------------------
+
+Pear: Failure
+
+------------------------------
+Pear Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="supprimer">
-<h2>supprimer<a class="headerlink" href="#supprimer" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur doit supprimer une poire du système, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove - -pearname<span class="o">=</span>”somename”
+<div class="section" id="ensure">
+<h2>Ensure<a class="headerlink" href="#ensure" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;utilisateur a besoin pour assurer une poire , la commande ci-dessous donnée exécuter le processus .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="definir-mot-de-passe">
-<h2>Définir mot de passe<a class="headerlink" href="#definir-mot-de-passe" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur doit définir un mot de passe d&#8217;une poire du système, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear setpassword - -pearname<span class="o">=</span>”somename”- - new-password<span class="o">=</span>”somepassword”
-</pre></div>
-</div>
-</div>
-<div class="section" id="existe">
-<h2>existe<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur a besoin de connaître l&#8217;existence de la poire, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear exists - -pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
-</div>
-<div class="section" id="afficher-les-groupes">
-<h2>Afficher les groupes<a class="headerlink" href="#afficher-les-groupes" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur doit connaître le groupe auquel appartient une poire, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear show-groups - -pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
-</div>
-<div class="section" id="ajouter-au-groupe">
-<h2>Ajouter au groupe<a class="headerlink" href="#ajouter-au-groupe" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur doit allouer poire à un groupe particulier, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear add-to-group - -pearname<span class="o">=</span>”somename” - - <span class="nv">groupname</span><span class="o">=</span>”somegroupname”
-</pre></div>
-</div>
-</div>
-<div class="section" id="retirer-du-groupe">
-<h2>Retirer du groupe<a class="headerlink" href="#retirer-du-groupe" title="Permalink to this headline">¶</a></h2>
-<p>Lorsque l&#8217;utilisateur doit supprimer la poire d&#8217;un groupe, la commande ci-dessous donnée exécuter le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove-from-group - -pearname<span class="o">=</span>”name” - -groupname<span class="o">=</span>”groupname”
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;file&quot;</span>
+downloading File-1.4.1.tgz ...
+Starting to download File-1.4.1.tgz <span class="o">(</span>8,164 bytes<span class="o">)</span>
+.....done: 8,164 bytes
+install ok: channel://pear.php.net/File-1.4.1
+******************************
+
+
+Pear Modifications:
+--------------------------------------------
+
+Pear: Success
+
+------------------------------
+Pear Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -283,9 +288,6 @@ End Help
 <h2>Alternative Paramètre<a class="headerlink" href="#alternative-parametre" title="Permalink to this headline">¶</a></h2>
 <p>Il ya deux autres paramètres qui peuvent être utilisés dans la ligne de commande.</p>
 <p>Pear, pear</p>
-<div class="highlight-bash"><div class="highlight"><pre>Eg: ptconfigure pear create - -pearname<span class="o">=</span>”somename”/ ptconfigure Pear create - -pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
 </div>
 <div class="section" id="avantages">
 <h2>avantages<a class="headerlink" href="#avantages" title="Permalink to this headline">¶</a></h2>
