@@ -590,6 +590,7 @@ Jouer avec Modules ptconfigure
    fgem
    fgenerator
    fgitbucket
+   fgitcommand
    fgitkeysafe
    fgitlab
    fgittools
@@ -671,6 +672,7 @@ Jouer avec Modules ptconfigure
    frubysystem
    frubyvm
    fruncommand
+   fsaucelab
    fseleniumserver
    fservice
    fsftp_configure
@@ -702,3 +704,4 @@ Jouer avec Modules ptconfigure
    fxvfb
    fzendserver
    fzendstudio
+   fzephir
