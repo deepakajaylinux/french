@@ -6,14 +6,14 @@ Docker
 synopsis
 ----------
 
-	Docker est une plateforme ouverte pour les applications distribuées pour les développeurs et les administrateurs système. Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur virtuel qui peut fonctionner sur n'importe quel serveur Linux. 
+Docker est une plateforme ouverte pour les applications distribuées pour les développeurs et les administrateurs système. Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur virtuel qui peut fonctionner sur n'importe quel serveur Linux. 
 	
-	Il se compose de Docker moteur, un ordinateur portable. runtime léger et outil d'empaquetage. et Docker Hub, un nuage de service pour les applications de partage et automatisation des workflows, Docker permet aux applications d'être rapidement assemblés à partir de composants et élimine la friction entre le développement, QA et environnements de production.
+Il se compose de Docker moteur, un ordinateur portable. runtime léger et outil d'empaquetage. et Docker Hub, un nuage de service pour les applications de partage et automatisation des workflows, Docker permet aux applications d'être rapidement assemblés à partir de composants et élimine la friction entre le développement, QA et environnements de production.
 
 Commande Aide
 ----------------
 
- La commande help guide les utilisateurs concernant l'objectif et ainsi que sur les options qui sont incluses dans le module de docker. Il répertorie les paramètres de remplacement du module de docker. Il décrit également la syntaxe pour l'installation du module de docker. La commande help pour module de docker est montrée ci-dessous.
+La commande help guide les utilisateurs concernant l'objectif et ainsi que sur les options qui sont incluses dans le module de docker. Il répertorie les paramètres de remplacement du module de docker. Il décrit également la syntaxe pour l'installation du module de docker. La commande help pour module de docker est montrée ci-dessous.
 
 
 .. code-block:: bash
