@@ -329,22 +329,44 @@ Est listé ci-dessous la capture d'écran pour la commande ci-dessus,
 
 
  kevell@corp:/# ptconfigure hhvm uninstall
-
- Uninstall HHVM? (Y/N)
+ Uninstall HHVM? (Y/N) 
  y
  *******************************
  *        Pharaoh Tools        *
  *          ! HHVM !        *
  *******************************
- PHP Warning:  Illegal string offset 'object' in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 290
- PHP Warning:  Illegal string offset 'method' in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 290
- PHP Warning:  Illegal string offset 'params' in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 290
- PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'p' not found in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 290
+ [Pharaoh Logging] Removing Package hhvm
+ update-alternatives: warning: alternative /usr/bin/hhvm (part of link group php) doesn't exist; removing from list of alternatives
+ update-alternatives: warning: forcing reinstallation of alternative /usr/bin/php5 because link group php is broken
+ update-alternatives: warning: not replacing /usr/bin/php with a link
+ Reading package lists...
+ Building dependency tree...
+ Reading state information...
+ The following packages were automatically installed and are no longer required:
+  libboost-context1.54.0 libboost-filesystem1.54.0
+  libboost-program-options1.54.0 libboost-regex1.54.0 libboost-thread1.54.0
+  libc-client2007e libgflags2 libgoogle-glog0 libjemalloc1 libonig2 libtbb2
+  libunwind8 mlock
+ Use 'apt-get autoremove' to remove them.
+ The following packages will be REMOVED:
+  hhvm
+ 0 upgraded, 0 newly installed, 1 to remove and 13 not upgraded.
+ After this operation, 0 B of additional disk space will be used.
+ (Reading database ... 401748 files and directories currently installed.)
+ Removing hhvm (3.6.1~trusty) ...
+ ********************************************************************
+ * HHVM is being removed. You can remove it from your webserver with:
+ * 
+ * $ sudo /usr/share/hhvm/uninstall_fastcgi.sh
+ * $ sudo /etc/init.d/nginx restart
+ * $ sudo /etc/init.d/apache restart
+ ********************************************************************
+ Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+ [Pharaoh Logging] Removed Package hhvm from the Packager Apt
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
  ******************************
-
 
  Single App Uninstaller:
  ------------------------------
@@ -352,6 +374,7 @@ Est listé ci-dessous la capture d'écran pour la commande ci-dessus,
  ------------------------------
  Installer Finished
  ******************************
+
 
 avantages
 ------------
