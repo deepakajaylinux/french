@@ -691,6 +691,7 @@ Jouer avec Modules ptconfigure
    fteamcity
    ftemplating
    ftomcat
+   ftracelytics
    fubuntucompiler
    fuser
    fvarnish
