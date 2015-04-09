@@ -45,6 +45,11 @@ Visualiser la sortie et le travail de l'option d'aide en vertu de ce module L'é
         Ensure
         example: ptconfigure gem pkg-ensure --package-name="somename"
 
+        - update
+        Update
+        example: ptconfigure gem update
+
+
  ------------------------------
  End Help
  ******************************
@@ -55,10 +60,39 @@ Différentes caractéristiques de Gem
 
 Comme le montre de la commande d'aide ci-dessus, les diverses caractéristiques de Gem est énumérés ci-dessous,
 
+
+* Install
 * Remove
 * Ensure
+* Update
 
 Voyons en détail sur ces fonctions.
+
+Install
+---------
+
+Cette fonction vous permet d'installer le paquet que l'utilisateur a besoin. Visualiser la sortie La capture d'écran ci-dessous ,
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure gem pkg-install --package-name=cucumber
+ Successfully installed cucumber-2.0.0
+ 1 gem installed
+ Installing ri documentation for cucumber-2.0.0...
+ Installing RDoc documentation for cucumber-2.0.0...
+ ******************************
+
+
+ Gem Modifications:
+ --------------------------------------------
+
+ Gem: Success
+
+ ------------------------------
+ Gem Mods Finished
+ ******************************
+
 
 Remove
 -----------
@@ -73,6 +107,24 @@ A la place de gemname l'utilisateur peut spécifier le nom de la gemme qui doit 
 
 .. code-block:: bash
 
+ kevell@corp:/# ptconfigure gem pkg-remove --package-name=cucumber
+ Removing cucumber
+ Successfully uninstalled cucumber-2.0.0
+ ******************************
+
+
+ Gem Modifications:
+ --------------------------------------------
+
+ Gem: Failure
+
+ ------------------------------
+ Gem Mods Finished
+ ****************************** 
+
+
+
+
 Ensure
 ----------
 
@@ -85,21 +137,42 @@ Cette fonction assure le paquet est installé correctement dans la machine .
 .. code-block:: bash
 
 
- kevell@corp:/# ptconfigure gem pkg-ensure --package="ssh" 
+ kevell@corp:/# ptconfigure gem pkg-ensure
+ Enter Package:
+ cucumber
+ true
+ [Pharaoh Logging] Package cucumber from the Packager Gem is Installed
+ ******************************
 
- true 
- [Pharaoh Logging] Package ssh from the Packager Gem is Installed 
- ****************************** 
+
+ Gem Modifications:
+ --------------------------------------------
+
+ Gem: Success
+
+ ------------------------------
+ Gem Mods Finished
+ ******************************
 
 
- Gem Modifications: 
- -------------------------------------------- 
+.. code-block:: bash
 
- Gem: Success 
+ kevell@corp:/# ptconfigure gem pkg-ensure
+ Enter Package:
+ cucumber
+ false
+ [Pharaoh Logging] Package cucumber from the Packager Gem is not Installed
+ ******************************
 
- ------------------------------ 
- Gem Mods Finished 
- ****************************** 
+
+ Gem Modifications:
+ --------------------------------------------
+
+ Gem: Success
+
+ ------------------------------
+ Gem Mods Finished
+ ******************************
 
 
 

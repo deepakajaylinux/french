@@ -9,8 +9,9 @@ Ce module permet à l'utilisateur d'initialiser Behat suite de tests . Le Behat 
 
 
 Commande Aide
-
 ---------------------
+
+
 La commande help guide l'utilisateur sur le but et les options disponibles en vertu d'un module. Il énumère les autres paramètres qui sont utilisés dans la déclaration . Il décrit la syntaxe pour initialiser et d'exécuter un Behat sous la pttest . La commande utilisée pour déclarer aide est indiqué ci-dessous :
 
 
@@ -46,7 +47,6 @@ La capture d'écran ci-dessous illustre imagée sur le fonctionnement de la comm
 
 
 Comment initialiser Behat
-
 -----------------------------
 
 La commande utilisée pour initialiser la Behat sous pttest se affiche:

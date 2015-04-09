@@ -14,7 +14,7 @@ La commande help guide les utilisateurs au sujet de l'objet et ainsi que sur les
 
 .. code-block:: bash
 	
-		ptconfigure PHPModules help
+	ptconfigure PHPModules help
 
 La syntaxe pour déclarer la commande d'aide ne est pas sensible à la casse qui est un avantage supplémentaire. La capture d'écran ci-dessous vous visualiser sur la commande d'aide pour le module PHP.
 
@@ -78,6 +78,7 @@ Si l'utilisateur procède à l'installation, au cours du processus d'installatio
 
 
 La capture d'écran ci-dessous représente graphiquement le processus décrit ci-dessus de l'installation.
+
 .. code-block:: bash
 
 
@@ -176,7 +177,6 @@ La capture d'écran ci-dessous représente graphiquement le processus décrit ci
  distribution that some required packages have not yet been created
  or been moved out of Incoming.
  The following information may help to resolve the situation: 
-
  The following packages have unmet dependencies:
   php5-imagick : Depends: libmagickcore3 (>= 8:6.6.0.4) but it is not installable
                 Depends: libmagickwand3 (>= 8:6.6.0.4) but it is not installable
@@ -214,7 +214,6 @@ La capture d'écran ci-dessous représente graphiquement le processus décrit ci
  distribution that some required packages have not yet been created
  or been moved out of Incoming.
  The following information may help to resolve the situation: 
-
  The following packages have unmet dependencies:
  php5-memcache : Depends: php5-common (= 5.3.29-1~dotdeb.0) but 5.5.9+dfsg-1ubuntu4.7 is to be installed
  [Pharaoh Logging] Adding Package php5-memcache from the Packager Apt did not execute correctly
