@@ -95,8 +95,9 @@
 <li><a class="reference internal" href="#">DBInstall</a><ul>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
-<li><a class="reference internal" href="#installation">installation</a></li>
-<li><a class="reference internal" href="#derouler">Dérouler</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#save">Save</a></li>
+<li><a class="reference internal" href="#drop">Drop</a></li>
 <li><a class="reference internal" href="#alternative-parametre">Alternative Paramètre</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
@@ -215,77 +216,108 @@ End Help
 </div>
 </div>
 <div class="section" id="installation">
-<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Lorsque l&#8217;utilisateur doit installer, l&#8217;utilisateur peut émettre les commandes suivantes pour DBIstall. Le système exécute le processus d&#8217;installation.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploydbinstall install
 </pre></div>
 </div>
-<p>Le système demande pour l&#8217;hôte Mysql, Appuyez sur Entrée pour utiliser l&#8217;hôte par défaut</p>
-<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy DBInstall install
+Do you want to install a database? (Y/N)
+y
+What&#39;s the Mysql Host? Enter for 127.0.0.1
+
+What&#39;s the MySQL Admin User?
+
+You must enter a value. Please try again.
+What&#39;s the MySQL Admin User?
+
+You must enter a value. Please try again.
+What&#39;s the MySQL Admin User?
+root
+What&#39;s the MySQL Admin Password?
+root
+What&#39;s the application DB User?
+(0) **CREATE NEW USER**
+(1) phpci
+(2) debian-sys-maint
+(3) phpci
+(4) phpmyadmin
+1
+What&#39;s the application DB Password?
+phpci_pass
+What&#39;s the application DB Name?
+Current Db&#39;s are:
+hps
+phpci
+phpmyadmin
+
+phpci
+Database script executed
+**************************************
+Seems Fine...Database Actions Finished
+**************************************
 </pre></div>
 </div>
-<p>Ensuite, le système demandera utilisateur MySQL Admin, le nom d&#8217;utilisateur sera racine et le mot de passe d&#8217;administration MySQL.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
-<span class="s1">root</span>
-<span class="s1">What&#39;</span>s the MySQL Admin Password?
-123456
-</pre></div>
 </div>
-<p>Ensuite, le système demande à l&#8217;utilisateur de l&#8217;application DB, vous pouvez continuer avec les utilisateurs existants ou de créer un nouvel utilisateur. Une fois que vous fournissez avec l&#8217;option «0» pour les nouveaux utilisateurs du système demander le nom d&#8217;utilisateur Nouvelle, l&#8217;application passe DB et l&#8217;application nom de DB.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
-<p>Une fois les détails ci-dessus fournis, le système demande confirmation. Après confirmation, le système exécute le processus.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
+<div class="section" id="save">
+<h2>Save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h2>
 <p>Une fois les détails ci-dessus fournis, le système demande confirmation. Après confirmation, le système exécute le processus.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploydbinstall save
 </pre></div>
 </div>
-<p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy DBInstall save
+Do you want to save a database? (Y/N)
+y
+What&#39;s the Mysql Host? Enter for 127.0.0.1
+
+What&#39;s the MySQL Admin User?
+root
+What&#39;s the MySQL Admin Password?
+root
+What&#39;s the application DB Name?
+Current Db&#39;s are:
+asdf
+hps
+phpci
+
+asdf
+Cannot connect with these details. Sure you want to continue? (Y/N)
+y
+Exporting DB to /opt/db/database.sql
+Database Dumping...
+**************************************
+Seems Fine...Database Actions Finished
+**************************************
 </pre></div>
 </div>
-<p>Le système demande pour l&#8217;hôte Mysql, Appuyez sur Entrée pour utiliser l&#8217;hôte par défaut.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
-</pre></div>
 </div>
-<p>Ensuite, le système demander utilisateur MySQL Admin, le nom d&#8217;utilisateur sera racine ?? et le mot de passe d&#8217;administration MySQL.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
-<span class="s1">root</span>
-<span class="s1">What&#39;</span>s the MySQL Admin Password?
-123456
-</pre></div>
-</div>
-<p>Ensuite, le système demande à l&#8217;utilisateur de l&#8217;application DB.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
-</div>
-<div class="section" id="derouler">
-<h2>Dérouler<a class="headerlink" href="#derouler" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="drop">
+<h2>Drop<a class="headerlink" href="#drop" title="Permalink to this headline">¶</a></h2>
 <p>Lorsque l&#8217;utilisateur a besoin de supprimer la base d&#8217;un projet, la commande ci-dessous donnée exécuter le processus.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploydbinstall drop
 </pre></div>
 </div>
-<p>Avant l&#8217;exécution, le système demander la confirmation de procéder, si vous voulez continuer entrez «Y», si aucune entrez &#8216;N&#8217;.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
-<p>Le système demande pour l&#8217;hôte Mysql, Appuyez sur Entrée pour utiliser l&#8217;hôte par défaut.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
-</pre></div>
-</div>
-<p>Ensuite, le système demandera utilisateur MySQL Admin, le nom d&#8217;utilisateur sera racine et le mot de passe d&#8217;administration MySQL.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
-<span class="s1">root</span>
-<span class="s1">What&#39;</span>s the MySQL Admin Password?
-123456
-</pre></div>
-</div>
-<p>Ensuite, le système demande à l&#8217;utilisateur de l&#8217;application DB.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy db-install drop
+
+Do you want to perform drop actions <span class="o">(</span>user/db<span class="o">)</span>? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Do you want to drop a database? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What<span class="s1">&#39;s the Mysql Host? Enter for 127.0.0.1</span>
+
+<span class="s1">What&#39;</span>s the MySQL Admin User?
+root
+What<span class="s1">&#39;s the MySQL Admin Password?</span>
+<span class="s1">root123</span>
+<span class="s1">What&#39;</span>s the application DB Name?
+<span class="o">(</span>0<span class="o">)</span> karuna
+<span class="o">(</span>1<span class="o">)</span> test1
+<span class="o">(</span>2<span class="o">)</span> test2
+2
+Database test2 dropped
+**************************************
+Seems Fine...Database Actions Finished
+**************************************
 </pre></div>
 </div>
 </div>

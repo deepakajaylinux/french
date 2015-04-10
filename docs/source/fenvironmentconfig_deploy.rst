@@ -20,32 +20,29 @@ La capture d'écran ci-dessous illustre imagée sur le fonctionnement de la comm
 
 .. code-block:: bash
 
-
- kevell@corp:/# ptdeployEnvironmentConfig help
- ******************************
-
+ kevell@corp:/# ptdeploy EnvironmentConfig help
+ **************************************************
 
   This command is part of a default Module and provides you with a method by which you can
   configure environments for your project from the command line. Currently compliant with
-  both ptdeployand Ptconfigure.
+  both ptdeploy and ptconfigure.
 
 
   EnvironmentConfig, environmentconfig, environment-config, envconfig, env-config
 
         - list
         List current environments
-        example: ptconfigure envconfig list --yes
+        example: ptdeploy envconfig list --yes
 
         - configure, config
         Configure the environments for your project to use
-        example: ptconfigure envconfig config
-        example: ptconfigure envconfig config --keep-current-environments
+        example: ptdeploy envconfig config
+        example: ptdeploy envconfig config --keep-current-environments
 
         - delete, del
         Configure the environments for your project to use
-        example: ptconfigure envconfig delete
-        example: ptconfigure envconfig del --environment-name="staging"
-
+        example: ptdeploy envconfig delete
+        example: ptdeploy envconfig del --environment-name="staging"
 
  ------------------------------
  End Help
@@ -95,30 +92,33 @@ Enfin, la configuration de l'environnement obtient le succès comme le montre la
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure envconfig config
+
+ kevell@corp:/# ptdeploy envconfig config
+
  Configure Environments Here? (Y/N) 
- Y
- Environment 1  : 
+ y
+ Do you want to add another environment? (Y/N) 
+ y
+ Environment 3  : 
  Default Settings for Any App not setup for environment  enter them now.
  Value for: Name of this Environment
- kevells
+ deepak
  Value for: Default Temp Dir (should usually be /tmp/)
-
+ /tmp/
  Enter Servers - this is an array of entries
  Enter target ?
- /home/kevells
+ 192.168.1.7
  Enter user ?
- kevells
+ deepak
  Enter password ?
- 123456
+ 123
  Add Another Server? (Y/N)
- N
+ n
  ******************************
-
-
  Success
  In Environment Configuration
- ******************************
+ ****************************** 
+
 
 
 Lors de la configuration d'un environnement, si l'utilisateur souhaite configurer avec l'environnement actuel, ils peuvent utiliser la commande suivante:
@@ -162,19 +162,19 @@ La capture d'écran ci-dessous représente graphiquement le processus mentionné
 .. code-block:: bash
 
 
- kevells@corp:/# ptdeployenvconfig config --keep-current-environments
+ kevell@corp:/# ptdeploy envconfig config --keep-current-environments
+
  Configure Environments Here? (Y/N) 
- Y
+ y
  Use existing environment settings? (Y/N) 
- Y
+ y
  Do you want to add another environment? (Y/N) 
- N
+ n
  ******************************
-
-
  Success
  In Environment Configuration
- ******************************
+ ****************************** 
+
 
 
 
@@ -212,19 +212,19 @@ Enfin, l'environnement spécifié est supprimé comme le montre la capture d'éc
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure envconfig del --environment-name="kevells"
+
+ kevell@corp:/# ptdeploy envconfig del --environment-name="kevells"
+
  Delete Environments Here?
  WARNING: Deleting an environment from papyrus is final. You may be looking for boxify box-destroy instead (Y/N) 
- Y
+ y
  Environment kevells found. Are you sure you want to delete it? (Y/N) 
- Y
+ y
  [Pharaoh Logging] Removing environment kevells.
- ******************************
-
-
+ ****************************
  Success
  In Environment Configuration
- ******************************
+ ****************************
 
 
 
@@ -251,19 +251,20 @@ Enfin, l'environnement est supprimé comme le montre la capture d'écran:
 
 .. code-block:: bash
 
+ kevell@corp:/# ptdeploy envconfig delete
 
- kevell@corp:/# ptdeployenvconfig delete
  Delete Environments Here?
  WARNING: Deleting an environment from papyrus is final. You may be looking for boxify box-destroy instead (Y/N) 
- Y
- PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
- PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
+ y
+ Enter Environment Name To delete
+ deepak
+ Environment deepak found. Are you sure you want to delete it? (Y/N) 
+ y
+ [Pharaoh Logging] Removing environment deepak.
  ******************************
-
-
  Success
  In Environment Configuration
- ******************************
+ ****************************** 
 
 
 
@@ -284,13 +285,11 @@ si l'utilisateur spécifie que Y, il va générer l'affichage de sortie, comme i
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy envconfig list
- List Environments Here? (Y/N) 
- Y
- ******************************
 
+ kevell@corp:/# ptdeploy envconfig list --yes
+ ************************************************
 
- array(2) {
+ array(3) {
   [0]=>
   array(2) {
     ["any-app"]=>
@@ -332,6 +331,28 @@ si l'utilisateur spécifie que Y, il va générer l'affichage de sortie, comme i
         string(5) "local"
         ["password"]=>
         string(5) "local"
+      }
+    }
+  }
+  [2]=>
+  array(2) {
+    ["any-app"]=>
+    array(2) {
+      ["gen_env_name"]=>
+      string(6) "deepak"
+      ["gen_env_tmp_dir"]=>
+      string(5) "/tmp/"
+    }
+    ["servers"]=>
+    array(1) {
+      [0]=>
+      array(3) {
+        ["target"]=>
+        string(11) "192.168.1.7"
+        ["user"]=>
+        string(6) "deepak"
+        ["password"]=>
+        string(3) "123"
       }
     }
   }

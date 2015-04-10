@@ -176,31 +176,29 @@
 </pre></div>
 </div>
 <p>La capture d&#8217;écran ci-dessous illustre imagée sur le fonctionnement de la commande d&#8217;aide.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployEnvironmentConfig <span class="nb">help</span>
-******************************
-
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy EnvironmentConfig <span class="nb">help</span>
+**************************************************
 
  This <span class="nb">command </span>is part of a default Module and provides you with a method by which you can
  configure environments <span class="k">for </span>your project from the <span class="nb">command </span>line. Currently compliant with
- both ptdeployand Ptconfigure.
+ both ptdeploy and ptconfigure.
 
 
  EnvironmentConfig, environmentconfig, environment-config, envconfig, env-config
 
        - list
        List current environments
-       example: ptconfigure envconfig list --yes
+       example: ptdeploy envconfig list --yes
 
        - configure, config
        Configure the environments <span class="k">for </span>your project to use
-       example: ptconfigure envconfig config
-       example: ptconfigure envconfig config --keep-current-environments
+       example: ptdeploy envconfig config
+       example: ptdeploy envconfig config --keep-current-environments
 
        - delete, del
        Configure the environments <span class="k">for </span>your project to use
-       example: ptconfigure envconfig delete
-       example: ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
-
+       example: ptdeploy envconfig delete
+       example: ptdeploy envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 
 ------------------------------
 End Help
@@ -230,27 +228,28 @@ End Help
 <p>Ajouter un autre serveur? (Y / N)</p>
 <p>L&#8217;utilisateur dispose à l&#8217;entrée Y ou N.</p>
 <p>Enfin, la configuration de l&#8217;environnement obtient le succès comme le montre la capture d&#8217;écran ci-dessous.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig config
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig config
+
 Configure Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
-Environment 1  :
+y
+Do you want to add another environment? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Environment 3  :
 Default Settings <span class="k">for </span>Any App not setup <span class="k">for </span>environment  enter them now.
 Value <span class="k">for</span>: Name of this Environment
-kevells
+deepak
 Value <span class="k">for</span>: Default Temp Dir <span class="o">(</span>should usually be /tmp/<span class="o">)</span>
-
+/tmp/
 Enter Servers - this is an array of entries
 Enter target ?
-/home/kevells
+192.168.1.7
 Enter user ?
-kevells
+deepak
 Enter password ?
-123456
+123
 Add Another Server? <span class="o">(</span>Y/N<span class="o">)</span>
-N
+n
 ******************************
-
-
 Success
 In Environment Configuration
 ******************************
@@ -310,16 +309,15 @@ environnement, ils peuvent entrée comme N.|</td>
 </tbody>
 </table>
 <p>La capture d&#8217;écran ci-dessous représente graphiquement le processus mentionné ci-dessus:</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptdeployenvconfig config --keep-current-environments
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig config --keep-current-environments
+
 Configure Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 Use existing environment settings? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 Do you want to add another environment? <span class="o">(</span>Y/N<span class="o">)</span>
-N
+n
 ******************************
-
-
 Success
 In Environment Configuration
 ******************************
@@ -343,19 +341,18 @@ In Environment Configuration
 <p>Étape 2: Environnement Kevells (Nom de l&#8217;environnement spécifié qui est censé supprimer) trouvé. Êtes-vous sûr de vouloir supprimer? (Y / N)</p>
 <p>L&#8217;utilisateur doit spécifier Y ou N</p>
 <p>Enfin, l&#8217;environnement spécifié est supprimé comme le montre la capture d&#8217;écran.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
+
 Delete Environments Here?
 WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 Environment kevells found. Are you sure you want to delete it? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing environment kevells.
-******************************
-
-
+****************************
 Success
 In Environment Configuration
-******************************
+****************************
 </pre></div>
 </div>
 <p>Une autre façon de suppression d&#8217;un environnement en sans préciser le nom de l&#8217;environnement est tel que représenté en utilisant la commande:</p>
@@ -370,15 +367,17 @@ In Environment Configuration
 </div>
 <p>L&#8217;utilisateur doit spécifier Y ou N</p>
 <p>Enfin, l&#8217;environnement est supprimé comme le montre la capture d&#8217;écran:</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployenvconfig delete
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig delete
+
 Delete Environments Here?
 WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
-Y
-PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
-PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
+y
+Enter Environment Name To delete
+deepak
+Environment deepak found. Are you sure you want to delete it? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing environment deepak.
 ******************************
-
-
 Success
 In Environment Configuration
 ******************************
@@ -394,13 +393,10 @@ In Environment Configuration
 <p>Après avoir saisi la commande ci-dessus, il sera demande</p>
 <p>Inscrivez Environnement ici? (Y / N)</p>
 <p>si l&#8217;utilisateur spécifie que Y, il va générer l&#8217;affichage de sortie, comme illustré dans la capture d&#8217;écran:</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig list
-List Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
-******************************
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig list --yes
+************************************************
 
-
-array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
+array<span class="o">(</span>3<span class="o">)</span> <span class="o">{</span>
  <span class="o">[</span>0<span class="o">]=</span>&gt;
  array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
    <span class="o">[</span><span class="s2">&quot;any-app&quot;</span><span class="o">]=</span>&gt;
@@ -442,6 +438,28 @@ array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
        string<span class="o">(</span>5<span class="o">)</span> <span class="s2">&quot;local&quot;</span>
        <span class="o">[</span><span class="s2">&quot;password&quot;</span><span class="o">]=</span>&gt;
        string<span class="o">(</span>5<span class="o">)</span> <span class="s2">&quot;local&quot;</span>
+     <span class="o">}</span>
+   <span class="o">}</span>
+ <span class="o">}</span>
+ <span class="o">[</span>2<span class="o">]=</span>&gt;
+ array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
+   <span class="o">[</span><span class="s2">&quot;any-app&quot;</span><span class="o">]=</span>&gt;
+   array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
+     <span class="o">[</span><span class="s2">&quot;gen_env_name&quot;</span><span class="o">]=</span>&gt;
+     string<span class="o">(</span>6<span class="o">)</span> <span class="s2">&quot;deepak&quot;</span>
+     <span class="o">[</span><span class="s2">&quot;gen_env_tmp_dir&quot;</span><span class="o">]=</span>&gt;
+     string<span class="o">(</span>5<span class="o">)</span> <span class="s2">&quot;/tmp/&quot;</span>
+   <span class="o">}</span>
+   <span class="o">[</span><span class="s2">&quot;servers&quot;</span><span class="o">]=</span>&gt;
+   array<span class="o">(</span>1<span class="o">)</span> <span class="o">{</span>
+     <span class="o">[</span>0<span class="o">]=</span>&gt;
+     array<span class="o">(</span>3<span class="o">)</span> <span class="o">{</span>
+       <span class="o">[</span><span class="s2">&quot;target&quot;</span><span class="o">]=</span>&gt;
+       string<span class="o">(</span>11<span class="o">)</span> <span class="s2">&quot;192.168.1.7&quot;</span>
+       <span class="o">[</span><span class="s2">&quot;user&quot;</span><span class="o">]=</span>&gt;
+       string<span class="o">(</span>6<span class="o">)</span> <span class="s2">&quot;deepak&quot;</span>
+       <span class="o">[</span><span class="s2">&quot;password&quot;</span><span class="o">]=</span>&gt;
+       string<span class="o">(</span>3<span class="o">)</span> <span class="s2">&quot;123&quot;</span>
      <span class="o">}</span>
    <span class="o">}</span>
  <span class="o">}</span>

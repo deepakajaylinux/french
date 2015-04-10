@@ -96,9 +96,11 @@
 <li><a class="reference internal" href="#synopsis">synopsis</a></li>
 <li><a class="reference internal" href="#commande-aide">Commande Aide</a></li>
 <li><a class="reference internal" href="#comment-utiliser">Comment utiliser</a></li>
-<li><a class="reference internal" href="#ajouter">ajouter</a></li>
-<li><a class="reference internal" href="#supprimer">supprimer</a></li>
-<li><a class="reference internal" href="#liste">liste</a></li>
+<li><a class="reference internal" href="#add">Add</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#enable">Enable</a></li>
+<li><a class="reference internal" href="#disable">Disable</a></li>
 <li><a class="reference internal" href="#avantages">avantages</a></li>
 </ul>
 </li>
@@ -225,8 +227,8 @@ End Help
 </ul>
 <p>Voyons comment utiliser ces fonctions intéressantes dans NginxSBEditor.</p>
 </div>
-<div class="section" id="ajouter">
-<h2>ajouter<a class="headerlink" href="#ajouter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
 <p>Le rôle de cette fonction est de créer / ajouter un nouveau bloc de serveur. La commande et le travail d&#8217;ajouter des fonctions est représenté ci-dessous,</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor add
 </pre></div>
@@ -353,8 +355,8 @@ Server Block Enabled Symlink Created
 </pre></div>
 </div>
 </div>
-<div class="section" id="supprimer">
-<h2>supprimer<a class="headerlink" href="#supprimer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
 <p>La fonction de suppression est utilisée pour enlever les blocs de serveurs indésirables. Cela peut être fait en utilisant la commande donnée ci-dessous,</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor rm
 </pre></div>
@@ -446,8 +448,8 @@ Server Block www.nx.com Deleted <span class="k">if </span>existed
 </pre></div>
 </div>
 </div>
-<div class="section" id="liste">
-<h2>liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
 <p>La fonction de l&#8217;option de la liste est de lister les blocs de serveur installés actuelles. La commande utilisée pour la liste est donnée ci-dessous,</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor list
 </pre></div>
@@ -477,6 +479,121 @@ Current Installed ServerBlocks:
 
 
 1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable">
+<h2>Enable<a class="headerlink" href="#enable" title="Permalink to this headline">¶</a></h2>
+<p>La fonction de validation est utilisé pour permettre à un serverblock . La commande utilisée pour activer est indiqué ci-dessous ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy nginxsbe <span class="nb">enable</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe <span class="nb">enable</span>
+
+Do you want to <span class="nb">enable </span>a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is your Enabled Symlink ServerBlock directory? Found <span class="s2">&quot;/etc/nginx/sites-enabled&quot;</span> - Enter nothing to use this
+
+Please Choose ServerBlock:
+--- All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> ServerBlocktemp
+<span class="o">(</span>1<span class="o">)</span> aaaaaa
+<span class="o">(</span>2<span class="o">)</span> as
+<span class="o">(</span>3<span class="o">)</span> ddd
+<span class="o">(</span>4<span class="o">)</span> default
+<span class="o">(</span>5<span class="o">)</span> default.dpkg-old
+<span class="o">(</span>6<span class="o">)</span> dfdkdfsd.com
+<span class="o">(</span>7<span class="o">)</span> dfsdfssfdfdfdf.com
+<span class="o">(</span>8<span class="o">)</span> google
+<span class="o">(</span>9<span class="o">)</span> karuna
+<span class="o">(</span>10<span class="o">)</span> kkkkkkk
+<span class="o">(</span>11<span class="o">)</span> kumark
+<span class="o">(</span>12<span class="o">)</span> sites-available
+<span class="o">(</span>13<span class="o">)</span> vijay
+<span class="o">(</span>14<span class="o">)</span> www.amazon.com
+<span class="o">(</span>15<span class="o">)</span> www.deepak.com
+<span class="o">(</span>16<span class="o">)</span> www.google.com
+<span class="o">(</span>17<span class="o">)</span> www.kkk.com
+
+1
+Server Block Enabled Symlink Created
+******************************
+ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="disable">
+<h2>Disable<a class="headerlink" href="#disable" title="Permalink to this headline">¶</a></h2>
+<p>La fonction de blocage est utilisé pour désactiver un bloc de serveur. La commande pour désactiver est listé ci-dessous ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy nginxsbe disable
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe disable
+
+Do you want to disable a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is your Enabled Symlink ServerBlock directory? Found <span class="s2">&quot;/etc/nginx/sites-enabled&quot;</span> - Enter nothing to use this
+
+Please Choose ServerBlock:
+--- All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> ServerBlocktemp
+<span class="o">(</span>1<span class="o">)</span> aaaaaa
+<span class="o">(</span>2<span class="o">)</span> as
+<span class="o">(</span>3<span class="o">)</span> ddd
+<span class="o">(</span>4<span class="o">)</span> default
+<span class="o">(</span>5<span class="o">)</span> default.dpkg-old
+<span class="o">(</span>6<span class="o">)</span> dfdkdfsd.com
+<span class="o">(</span>7<span class="o">)</span> dfsdfssfdfdfdf.com
+<span class="o">(</span>8<span class="o">)</span> google
+<span class="o">(</span>9<span class="o">)</span> karuna
+<span class="o">(</span>10<span class="o">)</span> kkkkkkk
+<span class="o">(</span>11<span class="o">)</span> kumark
+<span class="o">(</span>12<span class="o">)</span> sites-available
+<span class="o">(</span>13<span class="o">)</span> vijay
+<span class="o">(</span>14<span class="o">)</span> www.amazon.com
+<span class="o">(</span>15<span class="o">)</span> www.deepak.com
+<span class="o">(</span>16<span class="o">)</span> www.google.com
+<span class="o">(</span>17<span class="o">)</span> www.kkk.com
+
+1
+Server Block aaaaaa Disabled  <span class="k">if </span>exist
+******************************
+ServerBlock Creator Finished
+******************************
+
+kevell@corp:/# ptdeploy nginxsbe disable
+
+Do you want to disable a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is your Enabled Symlink ServerBlock directory? Found <span class="s2">&quot;/etc/nginx/sites-enabled&quot;</span> - Enter nothing to use this
+
+Please Choose ServerBlock:
+--- All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> ServerBlocktemp
+<span class="o">(</span>1<span class="o">)</span> aaaaaa
+<span class="o">(</span>2<span class="o">)</span> as
+<span class="o">(</span>3<span class="o">)</span> ddd
+<span class="o">(</span>4<span class="o">)</span> default
+<span class="o">(</span>5<span class="o">)</span> default.dpkg-old
+<span class="o">(</span>6<span class="o">)</span> dfdkdfsd.com
+<span class="o">(</span>7<span class="o">)</span> dfsdfssfdfdfdf.com
+<span class="o">(</span>8<span class="o">)</span> google
+<span class="o">(</span>9<span class="o">)</span> karuna
+<span class="o">(</span>10<span class="o">)</span> kkkkkkk
+<span class="o">(</span>11<span class="o">)</span> kumark
+<span class="o">(</span>12<span class="o">)</span> sites-available
+<span class="o">(</span>13<span class="o">)</span> vijay
+<span class="o">(</span>14<span class="o">)</span> www.amazon.com
+<span class="o">(</span>15<span class="o">)</span> www.deepak.com
+<span class="o">(</span>16<span class="o">)</span> www.google.com
+<span class="o">(</span>17<span class="o">)</span> www.kkk.com
+
+1
+Server Block aaaaaa Disabled  <span class="k">if </span>exist
+******************************
+ServerBlock Creator Finished
 ******************************
 </pre></div>
 </div>
