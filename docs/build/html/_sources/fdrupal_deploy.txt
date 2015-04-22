@@ -471,6 +471,79 @@ Représentant de manière visuelle sur ce processus de dapperfying l'drupal La c
  ******************************
 
 
+Builderfy
+-----------
+
+Il crée des modèles drupal installer construction. L'utilisateur peut ajouter d'autres modèles . Lorsque nous apportons des changements à l'utilisateur référentiel , le déploiement d'une nouvelle version à la Production d'utilisateur cible . La commande utilisée pour builderfy est la suivante ,
+
+
+.. code-block:: bash
+
+        ptdeploy builderfy continuous-drupal
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy builderfy continuous-drupal
+ Install Builderfy? (Y/N) 
+ y
+ *******************************
+ *   Golden Contact Computing  *
+ *           Builderfy!          *
+ *******************************
+ Enter the data handling type
+ (0) code 
+ (1) replication 
+ (2) capture 
+ 0
+ checkWhat is your Jenkins home? Found "/var/lib/jenkins" - use this? 
+
+ What is the target Job Name?
+ my-project-continuous
+ Enter a description for your project
+ This is the Continuous Delivery build for My Project
+ Enter a Primary SCM URL for your project
+ http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+ Enter a Source Branch Spec for your project
+ origin/master
+ Enter a Source SCM URL for your project
+ http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+ Enter the number of days to keep builds for
+ 1
+ Enter the max number of builds results to keep
+ 10
+ Enter the path of the autopilot test environment invoke install file (Relative to project root)
+ build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+ Enter the path of the autopilot prod environment invoke install file (Relative to project root)
+ build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+ Enter the data handling type
+ (0) code 
+ (1) replication 
+ (2) capture 
+ 0
+ Enter build failure Email address. Whitespace-separated list of recipient addresses
+ phpengine@hotmail.co.uk
+ Copying Files...
+ Enter the data handling type
+ (0) code 
+ (1) replication 
+ (2) capture 
+ 0
+ Changing Folder Permissions...
+ Changing Folder Owner...
+ Changing Folder Group...
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.gcsoftshop.co.uk for more
+ ****************************** 
+
+
+ Success
+ In Builderfy
+ ******************************
+
+
+
 
 avantages
 -----------
